@@ -158,6 +158,16 @@ button{font:inherit;color:inherit;cursor:pointer}
 .badge{font-size:10px;font-weight:800;padding:1px 5px;border-radius:5px;letter-spacing:.02em;line-height:1.4}
 .badge.s1{color:var(--star);background:var(--star-soft)}
 .badge.s2{color:var(--star2);background:var(--star2-soft)}
+.move.delaymv{border-color:color-mix(in srgb,var(--star) 55%,var(--line));background:var(--star-soft)}
+.move.delaymv .lv{color:var(--star)}
+.delaypanel{margin-top:18px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}
+.delaygrp+.delaygrp{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.delayhd{font-size:13px;color:var(--ink-2);margin-bottom:9px}
+.delayhd b{color:var(--ink)}
+.delaytbl{width:auto;min-width:min(100%,420px)}
+.delaytbl td{padding:6px 14px 6px 0}
+.delaytbl .dmv{font-weight:640}
+.delaytbl .dvs{color:var(--muted);font-size:12.5px}
 
 /* sprites */
 .spr{image-rendering:pixelated;image-rendering:crisp-edges;display:inline-block;flex:none;object-fit:contain}

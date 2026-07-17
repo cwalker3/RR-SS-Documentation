@@ -172,6 +172,34 @@ const PK=arr(RAW.pokemon.entries).map(e=>({
   _s:(e.dex+' '+e.name+' '+arr(e.attrs).map(a=>a.value).join(' ')+' '+arr(e.moves).map(m=>m.name).join(' ')).toLowerCase()
 }));
 PK.forEach(p=>{const n=normName(p.name);if(!NAME2DEX[n])NAME2DEX[n]=p.dex;});
+// forward evolution map, derived from each species' "Evolve <Pre> (…)" obtain location
+const PK_BY_DEX={};PK.forEach(p=>PK_BY_DEX[p.dex]=p);
+const EVO_NEXT={};
+PK.forEach(q=>{
+  const m=/^Evolve\s+(.+?)\s*(?:\((.*)\))?\s*$/.exec(q.loc||'');
+  if(!m)return;
+  const lv=/Lv\.?\s*(\d+)/i.exec(m[2]||'');
+  const key=normName(m[1]);
+  (EVO_NEXT[key]=EVO_NEXT[key]||[]).push({name:q.name,dex:q.dex,level:lv?+lv[1]:null,method:(m[2]||'').trim()});
+});
+// moves a Pokémon can learn (by level-up) that its next evolution can't, or gets much later.
+// These are the moves worth delaying evolution for.
+function evoDelayInfo(p){
+  const nexts=EVO_NEXT[normName(p.name)];if(!nexts)return [];
+  return nexts.map(q=>{
+    const qe=PK_BY_DEX[q.dex];if(!qe)return null;
+    const thresh=q.level||0;               // you can't evolve before this level anyway
+    const qLvl={};qe.moves.forEach(m=>{const k=m.name.toLowerCase();if(qLvl[k]==null||m.level<qLvl[k])qLvl[k]=m.level;});
+    const moves=[];
+    p.moves.forEach(m=>{
+      if(m.level<=thresh)return;           // already learned before you could evolve
+      const ql=qLvl[m.name.toLowerCase()];
+      if(ql==null)moves.push({name:m.name,pLevel:m.level,qLevel:null,rarity:m.rarity});
+      else if(ql-m.level>=4)moves.push({name:m.name,pLevel:m.level,qLevel:ql,rarity:m.rarity});
+    });
+    return {evo:q,moves};
+  }).filter(x=>x&&x.moves.length);
+}
 const STAT_ORDER=['HP','Attack','Defense','Sp. Attack','Sp. Def','Sp. Defense','Sp. Atk','Speed','Total'];
 const STAT_SET=new Set(STAT_ORDER);
 function changeFlags(p){
@@ -257,16 +285,30 @@ function pokemonDetail(p){
     if(chWrap.innerHTML.trim())left.appendChild(sub('Other changes',chWrap.innerHTML));
   }
 
-  // right: moves
+  // right: moves (highlight moves worth delaying evolution for)
+  const delay=evoDelayInfo(p);
+  const delaySet=new Set();delay.forEach(d=>d.moves.forEach(m=>delaySet.add(m.name.toLowerCase())));
   const right=el('div');
   if(p.moves.length){
-    const mv='<div class="moves">'+p.moves.map(m=>
-      `<div class="move"><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}</span>${m.rarity?`<span class="badge ${m.rarity===2?'s2':'s1'}">${m.rarity===2?'HACK':'OFF'}</span>`:''}</div>`
-    ).join('')+'</div>';
+    const mv='<div class="moves">'+p.moves.map(m=>{
+      const dw=delaySet.has(m.name.toLowerCase());
+      return `<div class="move${dw?' delaymv':''}"${dw?' title="Learned earlier as this stage — worth delaying evolution (see below)"':''}><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}</span>${m.rarity?`<span class="badge ${m.rarity===2?'s2':'s1'}">${m.rarity===2?'HACK':'OFF'}</span>`:''}</div>`;
+    }).join('')+'</div>';
     right.appendChild(sub('Level-up moves',mv));
   }
   cols.append(left,right);
   body.appendChild(cols);
+  if(delay.length){
+    let html='';
+    delay.forEach(d=>{
+      const evLbl=d.evo.level?`into <b>${esc(d.evo.name)}</b> at Lv.&nbsp;${d.evo.level}`:`into <b>${esc(d.evo.name)}</b>${d.evo.method?` (${esc(d.evo.method)})`:''}`;
+      html+=`<div class="delaygrp"><div class="delayhd">Delay evolving ${evLbl} to still learn by level-up:</div>`+
+        `<div class="tblwrap"><table class="data delaytbl"><tbody>`+
+        d.moves.map(m=>`<tr><td class="dmv">${esc(m.name)}</td><td class="mono">Lv. ${m.pLevel}</td><td class="dvs">${esc(d.evo.name)} ${m.qLevel==null?'never learns it':'→ Lv. '+m.qLevel}</td></tr>`).join('')+
+        `</tbody></table></div></div>`;
+    });
+    body.appendChild(el('div','',`<div class="delaypanel"><div class="eyebrow" style="margin-bottom:9px">Evolution delay</div>${html}</div>`));
+  }
   if(p.notes.length){
     body.appendChild(el('div','',`<div class="note plain" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg><div>${p.notes.map(esc).join('<br>')}</div></div>`));
   }
