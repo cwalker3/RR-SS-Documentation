@@ -168,10 +168,12 @@ function collapsibleAbout(id,meta,extra){
 const PK=arr(RAW.pokemon.entries).map(e=>({
   dex:e.dex,name:e.name,attrs:arr(e.attrs),changes:arr(e.changes),moves:arr(e.moves),notes:arr(e.notes),
   stats:e.stats||{},statChg:e.statChg||{},a1:e.a1||'',
+  tms:(e.tms||'').split(' ').filter(Boolean),tmsNew:new Set((e.tmsNew||'').split(' ').filter(Boolean)),tmsExtra:arr(e.tmsExtra),
   loc:(arr(e.attrs).find(a=>a.label==='Location')||{}).value||'',
   _s:(e.dex+' '+e.name+' '+arr(e.attrs).map(a=>a.value).join(' ')+' '+arr(e.moves).map(m=>m.name).join(' ')).toLowerCase()
 }));
 PK.forEach(p=>{const n=normName(p.name);if(!NAME2DEX[n])NAME2DEX[n]=p.dex;});
+const TM_MOVES=RAW.pokemon.tmMoves||{};
 // forward evolution map, derived from each species' "Evolve <Pre> (…)" obtain location
 const PK_BY_DEX={};PK.forEach(p=>PK_BY_DEX[p.dex]=p);
 const EVO_NEXT={};
@@ -310,6 +312,13 @@ function pokemonDetail(p){
   }
   cols.append(left,right);
   body.appendChild(cols);
+  // TM / HM compatibility (ORAS base + hack additions), collapsed by default
+  if(p.tms.length || p.tmsExtra.length){
+    const chips=p.tms.map(k=>{const nu=p.tmsNew.has(k);return `<span class="tmchip${nu?' tmnew':''}"${nu?' title="Added by the hack — not learnable in base ORAS"':''}><span class="tmn">${esc(k)}</span>${esc(TM_MOVES[k]||'')}</span>`;}).join('')
+      + p.tmsExtra.map(mv=>`<span class="tmchip tmnew" title="Hack-added move taught by TM"><span class="tmn">TM</span>${esc(mv)}</span>`).join('');
+    const nNew=p.tmsNew.size+p.tmsExtra.length;
+    body.appendChild(el('div','',`<details class="tmwrap"><summary>TM / HM compatibility · ${p.tms.length+p.tmsExtra.length}${nNew?` <span class="tmnewcount">+${nNew} added</span>`:''}</summary><div class="tmgrid">${chips}</div>${nNew?`<div class="tmcap"><span class="tmswatch"></span> Green = added by this hack (not learnable in base ORAS).</div>`:''}</details>`));
+  }
   if(p.notes.length){
     body.appendChild(el('div','',`<div class="note plain" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg><div>${p.notes.map(esc).join('<br>')}</div></div>`));
   }

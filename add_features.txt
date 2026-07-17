@@ -7,7 +7,7 @@ Quick Features
 6. [DONE] Make the stat numbers line up correctly on pokemon with changed stats.
 7. [DONE] Seperate the file into HtML, CSS, and JS.
 8. [DONE] Show if a pokemon earns a move before its final evolution (for evolution delay purposes)
-9. Show every Tm learnable, using the moves from base ORAS + added compatability.
+9. [DONE] Show every Tm learnable, using the moves from base ORAS + added compatability.
 10. Some areas, like 104 North and South, count as the same area for nuzlockes encounter purposes. I need to figure out how to handle this.
 11. [DONE] When I click a pokemon/area it jumps to the top of the list.
 

@@ -44,6 +44,22 @@ Get-Content "$dir\pokemon_abilities.csv" | Select-Object -Skip 1 | ForEach-Objec
 }
 "vanilla ability-1 loaded: $($a1.Keys.Count)"
 
+# --- TM/HM compatibility: ORAS base (from oras_tms.csv) + hack "New TM/HMs" additions ---
+$mn2move=@{}
+Get-Content "$dir\machines.csv" | Where-Object { $_ -match '^\d+,16,' } | ForEach-Object {
+  $p=$_ -split ','; $n=[int]$p[0]; $key=if($n -le 100){'TM{0:D2}' -f $n}else{'HM{0:D2}' -f ($n-100)}; $mn2move[$key]=[int]$p[3]
+}
+$moveNm=@{}
+Get-Content "$dir\move_names.csv" | Select-Object -Skip 1 | ForEach-Object { $p=$_ -split ','; if($p.Count -ge 3 -and $p[1] -eq '9'){ $moveNm[[int]$p[0]]=$p[2].Trim() } }
+$tmMoves=[ordered]@{}; $name2key=@{}
+foreach($k in ($mn2move.Keys | Sort-Object { if($_ -like 'HM*'){1000+[int]$_.Substring(2)}else{[int]$_.Substring(2)} })){
+  $nm=$moveNm[$mn2move[$k]]; if($nm){ $tmMoves[$k]=$nm; $name2key[$nm.ToLower()]=$k }
+}
+$vanTm=@{}
+Get-Content "$dir\oras_tms.csv" | ForEach-Object { $p=$_ -split ','; if($p.Count -ge 2){ $vanTm[[int]$p[0]]=$p[1] } }
+function Sort-Tm($keys){ $keys | Sort-Object { if($_ -like 'HM*'){1000+[int]$_.Substring(2)}else{[int]$_.Substring(2)} } }
+"TM/HM map: $($tmMoves.Count); pokemon with vanilla TMs: $($vanTm.Count)"
+
 # --- 3. enrich each entry ---
 $d=[System.IO.File]::ReadAllText("$dir\data.json",[Text.Encoding]::UTF8) | ConvertFrom-Json
 $noBase=New-Object System.Collections.ArrayList
@@ -51,6 +67,24 @@ foreach($e in $d.pokemon.entries){
   $id=[int]$e.dex
   $nn=Norm $e.name
   Add-Member -InputObject $e -NotePropertyName a1 -NotePropertyValue ($(if($a1.ContainsKey($id)){$a1[$id]}else{''})) -Force
+  # TM/HM compatibility
+  $vanSet=New-Object System.Collections.Generic.HashSet[string]
+  if($vanTm.ContainsKey($id)){ foreach($k in ($vanTm[$id] -split ' ')){ if($k){[void]$vanSet.Add($k)} } }
+  $newSet=New-Object System.Collections.Generic.HashSet[string]
+  $extra=New-Object System.Collections.ArrayList
+  foreach($a in @($e.attrs)){
+    if($a.label -notmatch 'TM/HM'){ continue }
+    foreach($mv in ($a.value -split ',')){
+      $nm=($mv -replace '\*','').Trim(); if($nm -eq ''){ continue }
+      $k=$name2key[$nm.ToLower()]
+      if($k){ if(-not $vanSet.Contains($k)){ [void]$newSet.Add($k) } } else { if(-not $extra.Contains($nm)){ [void]$extra.Add($nm) } }
+    }
+  }
+  $allSet=New-Object System.Collections.Generic.HashSet[string]
+  foreach($k in $vanSet){[void]$allSet.Add($k)}; foreach($k in $newSet){[void]$allSet.Add($k)}
+  Add-Member -InputObject $e -NotePropertyName tms -NotePropertyValue ((Sort-Tm $allSet) -join ' ') -Force
+  Add-Member -InputObject $e -NotePropertyName tmsNew -NotePropertyValue ((Sort-Tm $newSet) -join ' ') -Force
+  Add-Member -InputObject $e -NotePropertyName tmsExtra -NotePropertyValue (@($extra)) -Force
   $baseArr = if($corr.ContainsKey($nn)){ $corr[$nn] } elseif($api.ContainsKey($id)){ $api[$id] } else { $null }
   if($null -eq $baseArr){ [void]$noBase.Add("$($e.dex) $($e.name)"); $baseArr=@(0,0,0,0,0,0) }
   $base=@{}; for($i=0;$i -lt 6;$i++){ $base[$order[$i]]=$baseArr[$i] }
@@ -76,6 +110,7 @@ foreach($e in $d.pokemon.entries){
 }
 if($noBase.Count){ "NO BASE STATS ($($noBase.Count)): " + ($noBase -join ', ') } else { "all entries have base stats" }
 
+Add-Member -InputObject $d.pokemon -NotePropertyName tmMoves -NotePropertyValue $tmMoves -Force
 $json=$d | ConvertTo-Json -Depth 40 -Compress
 [System.IO.File]::WriteAllText("$dir\data.json",$json,(New-Object System.Text.UTF8Encoding($false)))
 "data.json rewritten: {0:N0} bytes" -f $json.Length
