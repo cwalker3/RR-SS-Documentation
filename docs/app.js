@@ -1,6 +1,17 @@
 "use strict";
-const RAW = window.RRSS_DATA;
-const SPR = window.RRSS_SPR;
+/* ---- multi-game registry: each game's data file self-registers into window.RRSS_GAMES ---- */
+const GAMES = window.RRSS_GAMES || (window.RRSS_DATA ? {rrss:{id:'rrss',name:'Rising Ruby / Sinking Sapphire',short:'RR/SS',data:window.RRSS_DATA}} : {});
+let GAME_ID = (function(){try{const g=localStorage.getItem('rrss-game');if(g&&GAMES[g])return g;}catch(e){}return Object.keys(GAMES)[0];})();
+const GAME = GAMES[GAME_ID];
+const RAW = GAME.data;
+const SPR = window.RRSS_SPR || {};
+const gkey = k => 'rrss-'+GAME_ID+'-'+k;   // per-game localStorage namespace
+// one-time migration of pre-multi-game progress into the rrss namespace
+(function migrateLegacy(){ if(GAME_ID!=='rrss')return;
+  [['caught','rrss-caught'],['trainers','rrss-trainers'],['missed','rrss-missed'],['profile','rrss-profile']].forEach(([k,old])=>{
+    try{ if(localStorage.getItem(gkey(k))==null){ const v=localStorage.getItem(old); if(v!=null)localStorage.setItem(gkey(k),v); } }catch(e){}
+  });
+})();
 function spriteImg(dex,size,cls){const b=SPR[String(parseInt(dex,10))];if(!b)return '';return `<img class="spr ${cls||''}" width="${size}" height="${size}" src="data:image/png;base64,${b}" alt="" loading="lazy">`;}
 const NAME2DEX={};
 function normName(s){return String(s==null?'':s).toLowerCase().replace(/[^a-z0-9]/g,'');}
@@ -10,16 +21,16 @@ function monAttr(name){return isMon(name)?` data-mon="${esc(name)}" role="button
 
 /* ---- caught tracking (global, by national dex) ---- */
 let CAUGHT=new Set();
-try{CAUGHT=new Set(JSON.parse(localStorage.getItem('rrss-caught')||'[]'));}catch(e){}
-function saveCaught(){try{localStorage.setItem('rrss-caught',JSON.stringify([...CAUGHT]));}catch(e){}}
+try{CAUGHT=new Set(JSON.parse(localStorage.getItem(gkey('caught'))||'[]'));}catch(e){}
+function saveCaught(){try{localStorage.setItem(gkey('caught'),JSON.stringify([...CAUGHT]));}catch(e){}}
 function isCaught(name){const d=NAME2DEX[normName(name)];return d?CAUGHT.has(d):false;}
 function toggleCaught(name){const d=NAME2DEX[normName(name)];if(!d)return;if(CAUGHT.has(d))CAUGHT.delete(d);else CAUGHT.add(d);saveCaught();}
 // trainers marked complete (by trainer id) + areas with a missed/killed encounter
-let TRAINERS_DONE=new Set();try{TRAINERS_DONE=new Set(JSON.parse(localStorage.getItem('rrss-trainers')||'[]'));}catch(e){}
-function saveTrainers(){try{localStorage.setItem('rrss-trainers',JSON.stringify([...TRAINERS_DONE]));}catch(e){}}
+let TRAINERS_DONE=new Set();try{TRAINERS_DONE=new Set(JSON.parse(localStorage.getItem(gkey('trainers'))||'[]'));}catch(e){}
+function saveTrainers(){try{localStorage.setItem(gkey('trainers'),JSON.stringify([...TRAINERS_DONE]));}catch(e){}}
 function toggleTrainer(id){if(TRAINERS_DONE.has(id))TRAINERS_DONE.delete(id);else TRAINERS_DONE.add(id);saveTrainers();}
-let AREA_MISSED=new Set();try{AREA_MISSED=new Set(JSON.parse(localStorage.getItem('rrss-missed')||'[]'));}catch(e){}
-function saveMissed(){try{localStorage.setItem('rrss-missed',JSON.stringify([...AREA_MISSED]));}catch(e){}}
+let AREA_MISSED=new Set();try{AREA_MISSED=new Set(JSON.parse(localStorage.getItem(gkey('missed'))||'[]'));}catch(e){}
+function saveMissed(){try{localStorage.setItem(gkey('missed'),JSON.stringify([...AREA_MISSED]));}catch(e){}}
 function toggleMissed(name){if(AREA_MISSED.has(name))AREA_MISSED.delete(name);else AREA_MISSED.add(name);saveMissed();}
 function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size;}
 function resetCaught(){
@@ -41,8 +52,8 @@ function fmtPct(p){return (Math.round(p*10)/10).toString().replace(/\.0$/,'')+'%
 
 /* ---- player profile: gender + starter -> which Brendan/May rival fight ---- */
 let PROFILE={gender:null,starter:null};
-try{const p=JSON.parse(localStorage.getItem('rrss-profile')||'{}');PROFILE.gender=p.gender||null;PROFILE.starter=p.starter||null;}catch(e){}
-function saveProfile(){try{localStorage.setItem('rrss-profile',JSON.stringify(PROFILE));}catch(e){}}
+try{const p=JSON.parse(localStorage.getItem(gkey('profile'))||'{}');PROFILE.gender=p.gender||null;PROFILE.starter=p.starter||null;}catch(e){}
+function saveProfile(){try{localStorage.setItem(gkey('profile'),JSON.stringify(PROFILE));}catch(e){}}
 const RIVAL_COUNTER={Treecko:'Torchic',Torchic:'Mudkip',Mudkip:'Treecko'};
 function rivalGenderOf(name){if(/\bBrendan\b/.test(name))return 'Brendan';if(/\bMay\b/.test(name))return 'May';return null;}
 function rivalStarterOf(team){const s=team.map(m=>m.species).join(' ');
@@ -113,6 +124,21 @@ SECTIONS.forEach(s=>{
   b.onclick=()=>{go(s.id);closeMenu();};
   nav.appendChild(b);
 });
+
+/* ---- brand + game picker (multi-game) ---- */
+(function setupGames(){
+  const brand=document.querySelector('.brand h1');
+  if(brand)brand.innerHTML=esc(GAME.name).replace(/\s\/\s/,' <span class="sl">/</span> ');
+  const ids=Object.keys(GAMES);
+  if(ids.length>1){
+    const wrap=document.querySelector('.brand');
+    const sel=el('select','gamepicker');
+    sel.setAttribute('aria-label','Choose game');
+    sel.innerHTML=ids.map(id=>`<option value="${esc(id)}"${id===GAME_ID?' selected':''}>${esc(GAMES[id].short||GAMES[id].name)}</option>`).join('');
+    sel.onchange=()=>{try{localStorage.setItem('rrss-game',sel.value);}catch(e){}location.reload();};
+    if(wrap)wrap.appendChild(sel);
+  }
+})();
 
 function setActiveNav(){document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.id===state.section));}
 function go(id){state.section=id;state.query='';$('search').value='';render();history.replaceState(null,'','#'+id);}

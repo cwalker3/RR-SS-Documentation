@@ -68,6 +68,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .brand h1{margin:0;font-size:14px;font-weight:750;letter-spacing:-.01em;line-height:1.24;text-wrap:balance}
 .brand h1 .sl{color:var(--accent);font-weight:600;margin:0 1px}
 .brand .tag{font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding-left:2px}
+.gamepicker{margin-top:10px;width:100%;padding:7px 9px;border-radius:9px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font-size:12px;font-weight:600;cursor:pointer}
+.gamepicker:hover{border-color:var(--accent)}
 .navbtn{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:9px 11px;border:0;background:transparent;border-radius:10px;color:var(--ink-2);font-weight:550;transition:background .12s,color .12s}
 .navbtn svg{width:18px;height:18px;flex:none;opacity:.85}
 .navbtn .nm{display:flex;flex-direction:column;line-height:1.15}

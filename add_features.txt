@@ -18,4 +18,4 @@ Quick Features
 
 Bigger changes
 1. [DONE] When a move is clicked on, on a trainer or in a pokemon's info, I want that moves info to be displayed.
-2. Make it so that other games can be added.
+2. [DONE] Make it so that other games can be added.

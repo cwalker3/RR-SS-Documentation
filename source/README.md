@@ -36,3 +36,23 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 
 Regenerates `../docs/data.js` from the `.txt` files. The frontend itself
 (`../docs/index.html`, `app.js`, `styles.css`) is hand-maintained — not generated.
+
+## Adding another game
+
+The site supports multiple games. Each game's data file self-registers into a
+`window.RRSS_GAMES` registry (`{id, name, short, data}`), and the app shows a game
+picker in the sidebar whenever more than one game is loaded. Per-game progress
+(caught / trainers / missed / profile) is stored under its own `rrss-<id>-…`
+localStorage namespace, so switching games keeps each nuzlocke separate.
+
+To add a game (e.g. Omega Ruby / Alpha Sapphire):
+
+1. Copy this whole `source` folder and drop the new game's change `.txt` docs into it.
+2. In `build.ps1`, set `$gameId` / `$gameName` / `$gameShort` to the new game and
+   point `$out` at a new file, e.g. `../docs/data-oras.js`.
+3. Run `powershell -ExecutionPolicy Bypass -File build.ps1`.
+4. Add one line to `../docs/index.html`, right after the existing `data.js` script:
+   `<script src="data-oras.js"></script>`.
+
+The new game then appears automatically in the in-app picker — no frontend code
+changes needed. (`$gameId` must be unique and stable; it keys the saved progress.)
