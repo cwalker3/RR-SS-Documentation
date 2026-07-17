@@ -321,10 +321,11 @@ function pokemonDetail(p){
     const chWrap=el('div');
     Object.keys(byForme).forEach(fk=>{
       const isPrimary=(fk===''||/normal/i.test(fk));
+      const isMega=/mega|primal/i.test(fk);   // mega/primal stats are shown in the Base-stats columns
       const group=byForme[fk];
       const stats=group.filter(g=>STAT_SET.has(g.label));
       const others=group.filter(g=>!STAT_SET.has(g.label)&&!/^(Ability 1|Ability 2|Hidden Ability)$/.test(g.label));
-      const showStats=!isPrimary && stats.length>0;
+      const showStats=!isPrimary && !isMega && stats.length>0;
       if(!showStats && !others.length)return;
       let html='';
       if(fk)html+=`<div class="eyebrow" style="margin:10px 0 8px">${esc(fk)}</div>`;
