@@ -75,3 +75,18 @@ To add a game (e.g. Omega Ruby / Alpha Sapphire):
 
 The new game then appears automatically in the in-app picker — no frontend code
 changes needed. (`$gameId` must be unique and stable; it keys the saved progress.)
+
+### Games that don't fit the shared pipeline
+
+Some games ship their data in a totally different format (different generation,
+spreadsheet exports, etc.) and can't reuse `parse.ps1` / `enrich.ps1`. Those bring
+their **own** build script inside their game folder:
+
+- `games/brutalblack/` — **Brutal Black** (a Gen-5 / Pokémon Black hack). Its
+  `build.ps1` parses the change CSV directly (species typing, abilities, base stats
+  with +/− vs vanilla, and level-up learnsets) and writes `../../../docs/data-brutalblack.js`.
+  Run it with `powershell -ExecutionPolicy Bypass -File games/brutalblack/build.ps1`.
+  First pass is Pokédex-only, so its data ships only the `pokemon` section.
+
+A game may provide only some sections (e.g. a Pokédex-only game). The frontend hides
+any section a game has no data for, so its sidebar shows just the populated sections.

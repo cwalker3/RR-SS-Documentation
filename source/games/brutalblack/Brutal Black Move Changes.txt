@@ -1,0 +1,270 @@
+﻿Normal:
+Double Slap: BP: 15 > 25, Acc: 85 > 100
+Comet Punch: BP: 15 > 25
+Flail: PP: 15 > 3
+Tackle: BP: 50 > 40
+Take Down: Acc: 85 > 100, ¼ recoil > no secondary effect (now has same ai as tackle)
+Thrash: BP: 120 > 140
+Hyper Beam: BP: 150 > 125, Acc: 90 > 100, recharge > -1 priority (now has same ai as vital throw)
+Quick Attack: BP: 40 > 50
+Screech: PP: 40 > 5, Acc: 85 > 100
+Recover: PP: 10 > 5
+Explosion: BP: 250 > 200, Now always crits
+Self Destruct: now a Special move, Now always crits
+Swift: BP: 60 > 80
+Soft Boiled: PP: 10 > 5
+Glare: Acc: 90 > 100
+Hyper Fang: Acc: 90 > 100
+Tri Attack: BP: 80 > 100
+Slash: BP: 70 > 90
+Protect: PP: 10 > 5
+Fake Out: PP: 10 > 5
+Extreme Speed: BP: 80 > 90
+Hyper Voice: BP: 90 > 100, no secondary effect > 20% to drop spdef
+Crush Claw: BP: 75 > 100, Acc: 95 > 100, 50% chance to drop def
+ > 20% chance to drop def
+Giga Impact: BP: 150 > 125, Acc: 90 > 100, recharge > -1 priority (now has same ai as vital throw)
+Double Hit: BP: 35 > 45, Acc: 90 > 100
+Reflect Type: now +1 priority
+Tail Slap: BP: 25 > 28, Acc: 85 > 100
+Head Charge: BP: 120 > 130
+Techno Blast: BP: 85 > 100
+Rapid Spin: BP: 20 > 50, now raises users speed by 1 stage like in the modern games
+Growl: PP: 40 > 3
+Charm: PP: 20 > 2
+
+
+Grass:
+Egg Bomb: now a special Grass type move, Acc: 75 > 100
+Vine Whip: BP: 35 > 45
+Absorb: BP: 20 > 25
+Mega Drain: BP: 40 > 50
+Leech Seed: Acc: 90 > 100
+Razor Leaf: Acc: 95 > 100
+Stun Spore: Acc: 75 > 100
+Sleep Powder: Acc: 75 > 80
+Petal Dance: BP: 120 > 140
+Needle Arm: BP: 60 > 100
+Frenzy Plant: BP: 150 > 120, Acc: 90 > 100, Recharge > drops user’s def and spdef by 1 stage, (now has same ai as brave bird)
+Magical Leaf: BP: 60 > 80
+Seed Bomb: BP: 80 > 90
+Energy Ball: BP: 80 > 90
+Leaf Storm: BP: 140 > 130, Acc: 90 > 100
+Grass Knot: now displays at 70 BP for the ai (effect is still the same)
+Grass Pledge: BP: 50 > 80
+Leaf Tornado: BP: 65 > 80, Acc: 90 > 100, now just hits both enemies and not the ally
+Power Whip: Acc: 85 > 95
+
+
+Water:
+Spike Cannon: now Water type, BP: 20 > 25
+Surf: BP: 95 > 90
+Waterfall: BP: 80 > 90
+Crabhammer: BP: 90 > 100, Acc: 90 > 100
+Octazooka: BP: 65 > 80, Acc: 85 > 100, 50% acc drop > 100% spdef drop
+Whirlpool: BP: 35 > 50, Acc: 85 > 100
+Hydro Cannon: BP: 150 > 130, Acc: 90 > 100, recharge > drops user’s spatk by 2 stages (now has same ai as overheat)
+Muddy Water: BP: 95 > 100, Acc: 85 > 100, 30% acc drop > 30% atk drop
+Water Pulse: BP: 60 > 80, chance to confuse > never miss
+Aqua Tail: BP: 90 > 120, Acc: 90 > 100, now does ⅓ damage in recoil (now has same ai as brave bird)
+Water Pledge: BP: 50 > 80
+Clamp: BP: 35 > 50, Acc: 85 > 100
+Razor Shell: Acc: 95 > 100
+
+
+Fire:
+Fire Punch: BP: 75 > 85
+Flamethrower: BP: 95 > 90
+Fire Spin: BP: 35 > 50, Acc: 85 > 100
+Sacred Fire: Acc: 95 > 100
+Heat Wave: Acc: 90 > 100
+Will-O-Wisp: Acc: 85 > 95
+Blaze Kick: BP: 85 > 90, Acc: 90 > 100
+Blast Burn: BP: 150 > 120, Acc: 90 > 100, Recharge > drops user’s def and spdef by 1 stage (now has same ai as brave bird)
+Overheat: BP: 140 > 130, Acc: 90 > 100
+Fire Fang: BP: 65 > 70, Acc: 95 > 100
+Incinerate: BP: 30 > 60
+Inferno: BP: 100 > 120
+Fire Pledge: BP: 50 > 80
+Heat Crash: now displays at 70 BP for the ai (effect is still the same)
+
+
+Electric:
+Thunder Punch: BP: 75 > 85
+Thunderbolt: BP: 95 > 90
+Thunder: Acc: 70 > 85
+Zap Cannon: BP: 120 > 130, Acc: 50 > 100, 100% to Paralyze > drops user’s spatk by 2 stages
+Shock Wave: BP: 60 > 80
+Thunder Fang: BP: 65 > 70, Acc: 95 > 100
+Charge Beam: Acc: 90 > 100, 70% chance to boost spatk > 100% chance to boost spatk
+Volt Switch: PP: 20 > 5
+Electroweb: Acc: 95 > 100
+Wild Charge: no longer recoil (now has same ai as tackle)
+
+
+Ice:
+Ice Punch: BP: 75 > 85
+Ice Beam: BP: 95 > 90
+Blizzard: Acc: 70 > 85
+Icy Wind: Acc: 95 > 100
+Sheer Cold: BP: 130, Acc: 30 > 100, insta kill > drops user’s spatk by 2 stages (now has the same ai as overheat)
+Avalanche: BP: 60 > 70
+Ice Fang: BP: 65 > 70, Acc: 95 > 100
+Glaciate: Acc: 95 > 100
+Icicle Crash: BP: 85 > 90, Acc: 90 > 100
+Frost Breath: BP: 40 > 50, Acc: 90 > 100
+Aurora Beam: BP: 65 > 75, now never misses
+
+
+Rock:
+Rock Climb: now Rock type, Acc: 85 > 100
+Strength: now Rock type, BP: 80 > 90
+Rock Throw: now a special move, BP: 50 > 60, Acc: 90 > 100
+Rock Slide: Acc: 90 > 100
+Ancient Power: BP: 60 > 75, now never misses
+Rock Tomb: BP: 50 > 60, Acc: 80 > 100
+Rock Blast: Acc: 90 > 100
+Power Gem: BP: 70 > 90
+Rock Wrecker: BP: 150 > 125, Acc: 90 > 100, recharge > -1 priority (now has same ai as vital throw)
+Stone Edge: BP: 100 > 110, Acc: 80 > 95
+Head Smash: Acc: 80 > 100 (now has same ai as brave bird)
+
+Ground:
+Fissure: BP: 120, Acc: 30 > 100, insta kill > drops users def and spdef by 1 stage (now has same ai as brave bird)
+Bone Club: Acc: 85 > 100
+Bonemerang: Acc: 90 > 100
+Sand Tomb: BP: 35 > 50, Acc: 85 > 100
+Mud Shot: Acc: 95 > 100
+Mud Bomb: BP: 65 > 75, Acc: 85 > 100
+Drill Run: BP: 80 > 90, Acc: 95 > 100
+
+
+Steel:
+Guillotine: now Steel type, BP: 125, Acc: 30 > 100, insta kill > -1 priority  (now has same ai as vital throw)
+Steel Wing: Acc: 90 > 100
+Iron Tail: Acc: 75 > 100
+Metal Claw: Acc: 95 > 100
+Meteor Mash: Acc: 85 > 100
+Metal Sound: Acc: 85 > 100
+Mirror Shot: Acc: 85 > 100
+Flash Cannon: BP: 80 > 90
+Iron Head: BP: 80 > 90
+Magnet Bomb: now a special move, BP: 60 > 80
+Gear Grind: Acc: 85 > 100
+
+
+Fighting:
+Close Combat: now has same ai as brave bird
+Rolling Kick: BP: 65 > 95, Acc: 90 > 100
+Submission: BP: 80 > 90, Acc: 80 > 100, ¼ recoil > no secondary effect, (now has same ai as tackle)
+Low Kick: now displays at 70 BP for the ai (effect is still the same)
+Reversal: PP: 15 > 3
+Vital Throw: BP: 70 > 80, -1 priority > neutral priority  (now has same ai as tackle)
+Cross Chop: BP: 100 > 120, Acc: 80 > 85
+Rock Smash: BP: 40 > 60, 50% to drop def > 100% to drop def
+Superpower: drop user’s atk and def by 1 stage > 33% recoil, (now has same ai as brave bird)
+Revenge: BP: 60 > 70 (now has same ai as vital throw)
+Arm Thrust: BP: 15 > 25
+Sky Uppercut: Acc: 90 > 100
+Hammer Arm: BP: 100 > 110, Acc: 90 > 100
+Focus Blast: Acc: 70 > 85
+Storm Throw: BP: 40 > 50
+Circle Throw: Acc: 90 > 100
+Sacred Sword: BP: 90 > 100
+Secret Sword: BP: 85 > 100
+Triple Kick: Acc: 90 > 100
+Wake-Up Slap: now a Special move, BP: 60 > 70
+
+
+Flying:
+Razor Wind: now a Special move, BP: 80 > 130, 2 turn high crit ratio > drops user’s spatk by 2 stages
+Fury Attack: now Flying type, 15 > 25, Acc: 85 > 100
+Fly: BP: 90 > 100, Acc: 95 > 100
+Drill Peck: BP: 80 > 90, no effect > high crit ratio
+Sky Attack: BP: 140 > 120, Acc: 90 > 100, 2 turn high crit ratio > drops user’s def and spdef by 1 stage (now has same ai as brave bird)
+Aeroblast: Acc: 95 > 100
+Air Cutter: Acc: 95 > 100
+Aerial Ace: PP: 60 > 80
+Bounce: Acc: 85 > 100
+Roost: PP: 10 > 5
+Air Slash: Acc: 95 > 100
+Chatter: BP: 65 > 90
+Hurricane: Acc: 70 > 85
+
+
+Dragon:
+Outrage: BP: 120 > 140
+Dragon Claw: BP: 80 > 90, no secondary effect > 10% to raise attack
+Dragon Pulse: BP: 85 > 90, no secondary effect > 10% to drop spdef
+Dragon Rush: BP: 100 > 120, Acc: 75 > 100, 20% chance to flinch > drop user’s def and spdef by 1 stage
+Draco Meteor: BP: 140 > 130, Acc: 90 > 100
+Roar of Time: BP: 150 > 125, Acc: 90 > 100, recharge > -1 priority (now has same ai as vital throw)
+Spacial Rend: Acc: 95 > 100
+Dragon Tail: Acc: 90 > 100
+Dual Chop: Acc: 90 > 100
+
+
+Bug:
+Horn Drill: now a Bug move, BP: 120, Acc: 30 > 100, insta kill > drop user’s def and spdef by 1 stage (now has same ai as brave bird)
+Horn Attack: now a Bug move 
+Cut: now a Bug move, BP: 50 > 60, Acc: 95 > 100
+Twineedle: BP: 25 > 40
+Pin Missile: BP: 14 > 25, Acc: 85 > 100
+String Shot: Acc: 95 > 100
+Leech Life: BP: 20 > 75
+Fury Cutter: BP: 20 > 30, Acc: 95 > 100
+U-Turn: PP: 20 > 5
+X-Scissor: BP: 80 > 90, no secondary effect > high crit ratio
+Attack Order: now a Special move, BP: 90 > 100
+Silver Wind: BP: 60 > 75, now never misses
+String Shot: now lowers speed by 2 stages
+
+
+Dark:
+Thief: BP: 40 > 60
+Feint Attack: BP: 60 > 80
+Pursuit: BP: 40 > 60
+Crunch: BP: 80 > 90
+Knock Off: BP: 20 > 65
+Payback: BP: 50 > 70
+Dark Pulse: BP: 80 > 90, now never misses
+Night Slash: BP: 70 > 90
+Night Daze: BP: 85 > 120, Acc: 95 > 100, PP: 10 > 5, 40% chance to drop acc > drops user’s def and spdef by 1 stage
+Snarl: Acc: 95 > 100
+Dark Void: Acc: 80 > 85
+
+
+Psychic:
+Hypnosis: Acc: 60 > 80
+Dream Eater: BP: 100 > 120
+Future Sight: BP: 100 > 120
+Luster Purge: BP: 70 > 120, 50% chance to drop spdef > drop user’s def and spdef by 1 stage
+Mist Ball: BP: 70 > 100, 50% chance to lower spatk > 100% chance to lower spatk
+Extrasensory: now never misses
+Psycho Boost: BP: 140 > 130, Acc: 90 > 100
+Psycho Cut: BP: 70 > 90
+Zen Headbutt: BP: 80 > 90, Acc: 90 > 100
+Gravity: now +1 priority
+Synchronoise: BP: 70 > 160
+
+
+Ghost:
+Lick: BP: 30 > 50
+Astonish: BP: 30 > 60
+Shadow Punch: BP: 60 > 85
+Shadow Claw: BP: 70 > 90
+Hex: BP: 50 > 65
+Ominous Wind: BP: 60 > 75, now never misses
+
+
+Poison:
+Poison Powder: Acc: 75 > 100
+Poison Gas: Acc: 80 > 100
+Toxic: Acc: 90 > 95
+Smog: Acc: 70 > 100, 40% chance to poison > 100% chance to poison
+Poison Fang: BP: 50 > 75
+Poison Tail: BP: 50 > 75
+Poison Jab: BP: 70 > 90
+Cross Poison: BP: 70 > 90, Acc: 100 > never miss
+Gunk Shot: Acc: 70 > 100
+Sludge Wave: BP: 95 > 120

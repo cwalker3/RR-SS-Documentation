@@ -97,7 +97,7 @@ const ICONS={
   box:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 8l9-5 9 5v8l-9 5-9-5V8Z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>',
   sun:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>'
 };
-const SECTIONS=[
+const ALL_SECTIONS=[
   {id:'pokemon',label:'Pokémon',sub:''},
   {id:'areas',label:'Areas',sub:''},
   {id:'moves',label:'Moves',sub:''},
@@ -107,13 +107,25 @@ const SECTIONS=[
   {id:'thief',label:'Thief Items',sub:''},
   {id:'box',label:'Your Box',sub:'caught Pokémon'},
 ];
+// a game may ship only some sections (e.g. a Pokédex-only game) — show only populated ones
+function sectionHasData(id){switch(id){
+  case 'pokemon': case 'box': return arr(RAW.pokemon&&RAW.pokemon.entries).length>0;
+  case 'areas': return arr(RAW.areas&&RAW.areas.areas).length>0;
+  case 'moves': return Object.keys(RAW.moveInfo||{}).length>0||arr(RAW.attacks&&RAW.attacks.entries).length>0;
+  case 'evolution': return arr(RAW.evolution&&RAW.evolution.blocks).length>0;
+  case 'items': return arr(RAW.items&&RAW.items.blocks).length>0;
+  case 'gifts': return arr(RAW.gifts&&RAW.gifts.blocks).length>0;
+  case 'thief': return arr(RAW.thief&&RAW.thief.stages).length>0;
+  default: return true;
+}}
+const SECTIONS=ALL_SECTIONS.filter(s=>sectionHasData(s.id));
 SECTIONS.forEach(s=>{
   if(s.id==='pokemon')s.sub=arr(RAW.pokemon.entries).length+' species';
   if(s.id==='areas')s.sub=arr(RAW.areas.areas).length+' locations';
-  if(s.id==='moves')s.sub=Object.keys(RAW.moveInfo||{}).length+' moves · '+arr(RAW.attacks.entries).length+' changed';
+  if(s.id==='moves')s.sub=Object.keys(RAW.moveInfo||{}).length+' moves · '+arr(RAW.attacks&&RAW.attacks.entries).length+' changed';
 });
 
-const state={section:'pokemon',query:'',pkSel:0,areaSel:0};
+const state={section:(SECTIONS[0]||{id:'pokemon'}).id,query:'',pkSel:0,areaSel:0};
 const $=id=>document.getElementById(id);
 
 /* ---- build nav ---- */
@@ -444,7 +456,7 @@ function chgRow(o){
 }
 
 /* ================= AREAS ================= */
-const AREAS=arr(RAW.areas.areas).map(a=>{
+const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
   const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));

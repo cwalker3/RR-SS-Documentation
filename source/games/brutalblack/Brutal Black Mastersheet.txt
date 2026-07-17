@@ -1,0 +1,2326 @@
+﻿Brutal Black Mastersheet
+
+
+Notes:
+-all trainers have 31 IVs in all stats
+-read the Pokemon changes doc, there’s a ton of type and stat changes so make sure you’re aware of those
+-all trainers unless noted otherwise are mandatory
+-healing items on trainers like potions and full heals are removed
+-all single battles have an ai value of 7, all double battles have an ai value of 135
+-HMs are deletable
+-Dust clouds now only spawn encounters
+-The Seven Sage battle sprite is the Subway Boss one ik, I couldn’t get a new sprite for them to work and the subway boss one seemed kinda fitting
+-official discord server: https://discord.gg/Mz3JzweZ4s   
+-official calc: https://hzla.github.io/Dynamic-Calc-Decomps/?data=brutalblack&dmgGen=5&gen=5&types=5&view=calculator 
+-AI Docs: https://docs.google.com/document/d/1AziiMPsY1TcABKIwl92677A4nYGtByvjFOR7p6PAXY0/edit?tab=t.0#heading=h.mupwl1rn8rq1 
+Flags: https://drive.google.com/drive/folders/1KVDXGmQOG39bezGwL4R1SBYDe0OYfhnK 
+-if something in this doc is inaccurate, please put it in the bugs channel in the discord server
+
+
+Huge thanks to:
+-Aidan for helping me a ton with the learnset python script, script assistance and much more
+-Kingdom of DS Hacking and Frost’s server for a ton of help (and also for Frost's editor that tool is so convenient)
+-Rosar78 for helping with sprites (even if they didn’t turn up in the end)
+-Mailcord + Jude for playtesting
+-hzla for making the calc
+
+
+Chili/Cress/Cilan Split (Level Cap: 16)
+
+
+Nuvema Town:
+Gift: Snivy/Tepig/Oshawott (100%)
+
+
+*first rival battle is the same
+*mom now gives Super Rod instead of Xtransceiver
+
+
+Route 1:
+Grass (3): Lillipup (20%), Patrat (20%), Rattata (10%), Sentret (10%), Zigzagoon (10%), Bidoof (10%), Skitty (5%), Meowth (5%), Munchlax (4%), Slakoth (4%) Whismur (1%), Spinda (1%)
+Rustling Grass (5): Bulbasaur (34%), Charmander (34%), Squirtle (32%)
+Dark Grass (50) available post surf: Dragonair (20%), Pupitar (20%), Shelgon (20%), Zweilous (20%), Gabite (10%), Metang (10%)
+Fishing (5): Marill (60%), Buizel (40%)
+Fishing Dark Spot (5): Krabby (100%)
+Surfing (50): Starmie (60%), Slowpoke (30%), Luvdisc (10%)
+Surfing Dark Spot (50): Lapras (60%), Kingdra (30%), Feraligatr (10%)
+
+
+*The woman who used to give a potion (moved to right in front of first grass patch) now gives:
+-1 of each Gem (these are the only ones you get until you fight Pheno)
+-1 Exp Share
+-10 Heart Scales
+-30 Quick Balls
+-999 Full Restores
+-999 Max Potions
+-999 Rare Candies
+-999 Max Repels
+–999 Max Elixirs
+
+
+Accumula Town:
+Grass (5): Poochyena (20%), Purrloin (20%), Seedot (10%), Stunky (10%), Glameow (10%), Shinx (10%), Mankey (5%), Vullaby (5%), Spoink (4%), Houndour (4%), Murkrow (1%), Absol (1%)
+*Grass can be found in the far left down the stairs
+  
+
+Pkmn Trainer N 1:
+Lillipup (10) [Mild] Vital Spirit: Tackle, Leer
+Patrat (10) [Hasty] Run Away: Quick Attack, Pursuit
+
+
+Route 2:
+Grass (5): Pidgey (20%), Hoothoot (20%), Taillow (10%), Starly (10%), Pidove (10%), Spearow (10%), Woobat (5%), Swablu (5%), Natu (4%), Hoppip (4%), Chatot (1%), Farfetch’d (1%)
+Rustling Grass (5): Cyndaquil (34%), Chikorita (34%), Totodile (32%)
+
+
+*Potion > TM46 Thief
+
+
+Youngster Jimmy:
+Rattata (12) [Sassy] Guts: Tackle, Poison Sting
+Bidoof (12) [Hardy] Unaware: Quick Attack, Aqua Jet
+Skitty (12) [Quiet] Magic Guard: Round, Charm
+
+
+Lass Mali:
+Ledyba (12) [Timid] Swarm: Struggle Bug, Vacuum Wave
+Spinarak (12) [Lonely] Analytic: Pin Missile, Pursuit
+Venonat (12) [Bashful] Shield Dust: Acid Spray
+
+
+Youngster Roland:
+Woobat (12) [Serious] Unaware: Confusion, Gust, Imprison, Tailwind
+Taillow (12) [Brave] Technician: Gust, Tackle, Thief, Quick Attack
+Spearow (12) [Lonely] Intimidate: Bite, Peck, Feather Dance, Steel Wing
+
+
+Rival Bianca 1:
+If you chose Snivy
+Swablu (12) [Relaxed] Cloud Nine: Metronome
+Minccino (12) [Adamant] Skill Link: Metronome
+Oshawott (13) [Sassy] Shell Armor: Metronome
+
+
+If you chose Tepig
+Swablu (12) [Jolly] Cloud Nine: Metronome
+Minccino (12) [Lax] Skill Link: Metronome
+Snivy (13) [Bashful] Overgrow: Metronome
+
+
+If you chose Oshawott
+Swablu (12) [Bashful] Cloud Nine: Metronome
+Minccino (12) [Modest] Skill Link: Metronome
+Tepig (13) [Quiet] Adaptability: Metronome
+
+
+Striaton City:
+Fishing (5): Goldeen (60%), Surskit (40%)
+Fishing Dark Spot (5): Psyduck (60%), Remoraid (40%)
+Surfing (50): Jellicent (60%), Corsola (40%)
+Surfing Dark Spot (50): Empoleon (60%), Blastoise (30%), Kingler (10%)
+
+
+*Zinc removed
+
+
+Rival Cheren 1:
+If you chose Snivy
+Pidgey (13) [Gentle] Quick Feet: Vacuum Wave, Gust, Sand Attack, Feather Dance
+Slakoth (13) [Relaxed] Truant: Scratch, Bite, Slack Off, Yawn
+Tepig (14) [Timid] Adaptability: Flame Charge, Bite, Tackle, Pursuit
+
+
+If you chose Tepig
+Pidgey (13) [Quiet] Quick Feet: Vacuum Wave, Gust, Sand Attack, Feather Dance
+Slakoth (13) [Adamant] Truant: Scratch, Bite, Slack Off, Yawn
+Oshawott (14) [Bashful] Shell Armor: Bubble Beam, Rock Smash, Tackle, Aqua Jet
+
+
+If you chose Oshawott
+Pidgey (13) [Hardy] Quick Feet: Vacuum Wave, Gust, Sand Attack, Feather Dance
+Slakoth (13) [Hasty] Truant: Scratch, Bite, Slack Off, Yawn
+Snivy (14) [Jolly] Overgrow: Magical Leaf, Twister, Tackle, Mega Drain
+
+
+Dreamyard:
+Grass (5): Munna (20%), Ralts (20%), Drowzee (10%), Spoink (10%), Chingling (10%), Abra (10%), Solosis (5%), Gothita (5%), Exeggcute (4%), Spinda (4%), Mr. Mime (1%), Girafarig (1%)
+Rustling Grass (5): Mudkip (34%), Torchic (34%), Treecko (32%)
+
+
+Gift (5): Pansage/Pansear/Panpour (100%)
+*count this as separate to your Grass encounter
+
+
+*X Defend > TM23 Smack Down
+*Poke Ball > TM76 Struggle Bug
+*Parlyz Heal > TM59 Incinerate
+*Repel > TM88 Pluck
+
+
+Lass Eri:
+Ralts (13) [Lax] Trace: Psybeam, Magical Leaf, Shock Wave, Echoed Voice
+Munna (13) [Sassy] Analytic: Psybeam, Defense Curl, Yawn, Safeguard
+Abra (13) [Quirky] Levitate: Confusion
+
+
+Youngster Joey:
+Rattata (14) [Bashful] Guts: Headbutt, Flame Wheel, Bite, Poison Fang
+
+
+Striaton Gym:
+Waiter Maxwell:
+Oddish (14) [Modest] Chlorophyll: Mega Drain, Sludge, Sleep Powder, Leech Seed
+Ponyta (14) [Brave] Flash Fire: Flame Charge, Bulldoze, Take Down, Rock Tomb
+Seel (14) [Bold] Thick Fat: Water Gun, Powder Snow, Rest, Hail
+
+
+Waitress Tia:
+Petilil (14) [Docile] Chlorophyll: Magical Leaf, Round, Sleep Powder, Leech Seed
+Darumaka (14) [Calm] Sheer Force: Flame Charge, Rock Smash, Thief, Facade
+Ducklett (14) [Adamant] No Guard: Air Cutter, Bubble Beam, Icy Wind, Feather Dance
+
+
+If you chose Snivy
+Gym Leader Chili (Gives TM48 instead of TM83):
+Vanillish (15) [Impish] @ Occa Berry / Weak Armor: Powder Snow, Snarl, Mega Drain, Water Gun
+Makuhita (15) [Modest] @ Payapa Berry / Thick Fat: Fake Out, Force Palm, Astonish, Bulldoze
+Eelektrik (15) [Relaxed] @ Oran Berry / Levitate: Thunder Shock, Acid, Scary Face, Acid Armor
+Houndour (15) [Quiet] @ Black Glasses / Intimidate: Bite, Fire Fang, Taunt, Roar
+Vulpix (15) [Hardy] @ Charcoal / Flash Fire: Incinerate, Will-O-Wisp, Quick Attack, Confusion
+Pansear (16) [Bashful] @ Berry Juice / Blaze: Flame Burst, Bite, Cut, Hone Claws
+
+
+If you chose Tepig
+Gym Leader Cress (Gives TM48 instead of TM83):
+Vanillish (15) [Quiet] @ Occa Berry / Weak Armor: Powder Snow, Snarl, Mega Drain, Water Gun
+Farfetch’d (15) [Modest] @ Payapa Berry / Thick Fat: Fake Out, Force Palm, Astonish, Bulldoze
+Eelektrik (15) [Mild] @ Oran Berry / Levitate: Thunder Shock, Acid, Scary Face, Acid Armor
+Slowpoke (15) [Hasty] @ Twisted Spoon / Oblivious: Bubble Beam, Confusion, Yawn, Withdraw
+Remoraid (15) [Bashful] @ Mystic Water / Storm Drain: Bubble Beam, Mega Drain, Psybeam, Ember
+Panpour (16) [Lax] @ Berry Juice / Torrent: Bubble Beam, Bite, Facade, Hone Claws
+
+
+If you chose Oshawott
+Gym Leader Cilan (Gives TM48 instead of TM83):
+Vanillish (15) [Careful] @ Occa Berry / Weak Armor: Powder Snow, Snarl, Mega Drain, Water Gun
+Makuhita (15) [Bold] @ Payapa Berry / Thick Fat: Fake Out, Force Palm, Astonish, Bulldoze
+Eelektrik (15) [Brave] @ Oran Berry / Levitate: Thunder Shock, Acid, Scary Face, Acid Armor
+Exeggcute (15) [Quirky] @ Twisted Spoon / Chlorophyll: Mega Drain, Confusion, Sleep Powder, Sunny Day
+Cherubi (15) [Docile] @ Miracle Seed / Chlorophyll: Razor Leaf, Flame Wheel, Leech Seed, Sunny Day
+Pansage (16) [Sassy] @ Berry Juice / Overgrow: Magical Leaf, Bite, Cut, Hone Claws
+
+
+Lenora Split (Level Cap: 27)
+
+
+Dreamyard:
+Team Plasma Grunt 1:
+Axew (17) [Bold] @ Oran Berry / Mold Breaker: Dragon Tail, Metal Claw, Bulldoze, Rock Tomb
+Poochyena (17) [Lonely] @ Black Glasses / Intimidate: Bite, Pursuit, Fire Fang, Ice Fang
+Koffing (17) [Bashful] @ Black Sludge / Levitate: Pain Split, Flame Burst, Toxic, Venoshock
+
+
+Team Plasma Grunt 2:
+Deino (17) [Quiet] @ Dragon Fang / Sheer Force: Bite, Dragon Breath, Rock Smash, Thunder Fang
+Timburr (17) [Adamant] @ Leftovers / Iron Fist: Mach Punch, Rock Smash, Rock Tomb, Knock Off
+Gastly (17) [Relaxed] @ Spell Tag / Levitate: Hex, Venoshock, Toxic Spikes, Torment
+
+
+Route 3:
+*count the north and south encounters separate (water and dark grass encounters are only in the south. YOU ARE ONLY ALLOWED TO GET SHAKING GRASS ON EITHER NORTH OR SOUTH, NOT BOTH)
+Grass (10): Butterfree (20%), Beedrill (20%), Ledyba (10%), Spinarak (10%), Wurmple (10%), Kricketune (10%), Venonat (5%), Burmy (5%), Combee (4%), Nincada (4%), Paras (1%), Joltik (1%)
+Rustling Grass (10): Turtwig (34%), Piplup (34%), Chimchar (32%)
+Dark Grass (15): Nidorina (20%), Nidorino (20%), Ekans (10%), Zubat (10%), Gulpin (10%), Koffing (10%), Roselia (5%), Skorupi (5%), Trubbish (4%), Oddish (4%), Seviper (1%), Gastly (1%)
+Fishing (10): Magikarp (60%), Tentacool (40%)
+Fishing Dark Spot (10): Feebas (60%), Chinchou (40%)
+Surfing (50): Crawdaunt (60%), Sharpedo (30%), Huntail (10%)
+Surfing Dark Spot (50): Pelipper (60%), Mantine (30%), Swanna (10%)
+
+
+*Super Potion > TM39 Rock Tomb
+*Repel > TM78 Bulldoze
+*Antidote > TM09 Venoshock
+*Awakening > TM64 Explosion
+*Great Ball > TM90 Natural Gift
+*HP Up removed
+
+
+Twins Kumi and Amy:
+Cleffa (25) [Quiet] @ Life Orb / Magic Guard: Hyper Voice, Ice Beam, Flamethrower, Thunderbolt
+Igglybuff (25) [Impish] @ Eviolite / Cute Charm: Hyper Voice, Moonlight, Yawn, Follow Me
+Togepi (25) [Timid] @ Eviolite / Overcoat: Swift, Defense Curl, Rest, Rollout
+Pichu (25) [Naive] @ Life Orb / Static: Thunderbolt, Earth Power, Water Pulse, Grass Knot
+
+
+Rival Cheren 2:
+If you chose Snivy
+Pidgeotto (20) [Naive] @ Black Belt / Quick Feet: Wake-Up Slap, Air Cutter, Feather Dance, Steel Wing
+Vigoroth (20) [Hasty] @ Leftovers / Vital Spirit: Headbutt, Feint Attack, Slack Off, Yawn
+Pansage (20) [Relaxed] Overgrow: Magical Leaf, Acrobatics, Crunch, Low Sweep
+Pignite (21) [Naive] @ Berry Juice / Adaptability: Flame Charge, Bite, Arm Thrust, Fire Fang
+
+
+If you chose Tepig
+Pidgeotto (20) [Gentle] @ Black Belt / Quick Feet: Wake-Up Slap, Air Cutter, Feather Dance, Steel Wing
+Vigoroth (20) [Relaxed] @ Leftovers / Vital Spirit: Headbutt, Feint Attack, Slack Off, Yawn
+Pansear (20) [Impish] Blaze: Flame Burst, Acrobatics, Crunch, Low Sweep
+Dewott (21) [Careful] @ Berry Juice / Shell Armor: Razor Shell, Low Sweep, Cut, Aqua Jet
+
+
+If you chose Oshawott
+Pidgeotto (20) [Bashful] @ Black Belt / Quick Feet: Wake-Up Slap, Air Cutter, Feather Dance, Steel Wing
+Vigoroth (20) [Modest] @ Leftovers / Vital Spirit: Headbutt, Feint Attack, Slack Off, Yawn
+Panpour (20) [Rash] Torrent: Scald, Acrobatics, Crunch, Low Sweep
+Servine (21) [Relaxed] @ Berry Juice / Overgrow: Magical Leaf, Stun Spore, Leech Seed, Dragon Breath
+
+
+Pokemon Breeder Adelaide:
+Magby (19) [Hardy] Flash Fire: Flamethrower, Flash Cannon, Venoshock, Toxic
+Elekid (19) [Naive] Motor Drive: Thunder Punch, Brick Break, Fire Punch, Rock Tomb
+Smoochum (19) [Brave] Dry Skin: Aurora Beam, Extrasensory, Fake Tears, Lovely Kiss
+
+
+Wait until at least Clay Split before doing this fight):
+Nursery Aide Autumn (GIVES SHED SHELL):
+Wigglytuff (48) [Lonely] @ Chople Berry / Soundproof: Perish Song, Mean Look, Protect, Dark Pulse
+Magmar (48) [Calm] @ Eviolite / No Guard: Magma Storm, Sludge Wave, Focus Blast, Acid Spray
+Weavile (48) [Careful] @ Muscle Band / Technician: Pursuit, Screech, Ice Shard, Fake Out
+Gengar (48) [Hasty] @ Expert Belt / Shadow Tag: Sludge Bomb, Shadow Ball, Psychic, Thunderbolt
+Dodrio (48) [Adamant] @ Soft Sand / Arena Trap: Drill Run, Drill Peck, Blaze Kick, Rock Slide
+Magnezone (48) [Careful] @ Leftovers / Magnet Pull: Flash Cannon, Thunderbolt, Signal Beam, Magnet Rise
+
+
+Wellspring Cave:
+Cave (10): Geodude (20%), Roggenrola (20%), Bonsly (10%), Dwebble (10%), Sandshrew (10%), Onix (10%), Nosepass (5%), Aron (5%), Lunatone (4%), Solrock (4%), Rhyhorn (1%), Sableye (1%)
+Dust Cloud (10): Sandshrew (60%), Drilbur (30%), Diglett (10%)
+Fishing (10): Wooper (100%)
+Fishing Dark Spot (10): Qwilfish (100%)
+Surfing (50): Relicanth (100%)
+Surfing Dark Spot (50): Cloyster (100%)
+
+
+*TM46 > TM95 Snarl
+*PP Up removed
+*Original TM47 location removed
+
+
+Team Plasma Grunt 3 (BACK TO BACK WITH GORM AND GRUNT 4):
+Grimer (20) [Mild] @ Black Sludge / Water Absorb: Toxic Spikes, Dark Pulse, Acid Spray, Sludge Bomb
+Glameow (20) [Mild] @ Normal Gem/ Thick Fat: Fake Out, Feint Attack, Covet, Charm
+Electrike (20) [Bashful] @ Magnet / Intimidate: Spark, Fire Fang, Quick Attack, Howl
+Lickitung (20) [Naive] @ Sitrus Berry / Thick Fat: Stomp, Venoshock, Protect, Bulldoze
+
+
+Seven Sage Bronius and Team Plasma Grunt 4:
+Grunt:
+Dustox (20) [Careful] @ Black Sludge / Multiscale: Sludge, Struggle Bug, Moonlight, String Shot
+Beautifly (20) [Lonely] @ Silver Powder / Swarm: Silver Wind, Air Cutter, Mega Drain, Psybeam
+
+
+Bronius:
+Luxio (21) [Serious] @ Black Glasses / Intimidate: Crunch, Thunder Fang, Fire Fang, Thunder Wave
+Drowee (21) [Modest] @ Eviolite / Bad Dreams: Dark Void, Psybeam, Snarl, Recover
+Fearow (22) [Brave] @ Sitrus Berry / Intimidate: Feint Attack, Aerial Ace, Feather Dance, Steel Wing
+
+
+Partner Cheren:
+If you chose Snivy
+Pidgeotto (20) [Naive] @ Black Belt / Quick Feet: Wake-Up Slap, Air Cutter, Feather Dance, Steel Wing
+Vigoroth (20) [Hasty] @ Leftovers / Vital Spirit: Headbutt, Feint Attack, Slack Off, Yawn
+Pansage (20) [Relaxed] Overgrow: Magical Leaf, Acrobatics, Crunch, Low Sweep
+Pignite (21) [Naive] @ Berry Juice / Adaptability: Flame Charge, Bite, Arm Thrust, Fire Fang
+
+
+If you chose Tepig
+Pidgeotto (20) [Gentle] @ Black Belt / Quick Feet: Wake-Up Slap, Air Cutter, Feather Dance, Steel Wing
+Vigoroth (20) [Relaxed] @ Leftovers / Vital Spirit: Headbutt, Feint Attack, Slack Off, Yawn
+Pansear (20) [Impish] Blaze: Flame Burst, Acrobatics, Crunch, Low Sweep
+Dewott (21) [Careful] @ Berry Juice / Shell Armor: Razor Shell, Low Sweep, Cut, Aqua Jet
+
+
+If you chose Oshawott
+Pidgeotto (20) [Bashful] @ Black Belt / Quick Feet: Wake-Up Slap, Air Cutter, Feather Dance, Steel Wing
+Vigoroth (20) [Modest] @ Leftovers / Vital Spirit: Headbutt, Feint Attack, Slack Off, Yawn
+Panpour (20) [Rash] Torrent: Scald, Acrobatics, Crunch, Low Sweep
+Servine (21) [Relaxed] @ Berry Juice / Overgrow: Magical Leaf, Stun Spore, Leech Seed, Dragon Breath
+
+
+Route 3:
+School Kid Al:
+Sandslash (22) [Docile] @ Passho Berry / Rough Skin: Bulldoze, Rock Tomb, Rock Smash, Metal Claw
+Scraggy (22) [Hasty] @ Sitrus Berry / Intimidate: Dragon Dance, Brick Break, Crunch, Rest
+Shellder (22) [Rash] @ Eviolite / Skill Link: Spike Cannon, Icicle Spear
+
+
+School Kid Marsha:
+Vulpix (22) [Timid] @ Charcoal / Flash Fire: Hypnosis, Flame Burst, Hex, Will-O-Wisp
+Pikachu (22) [Modest] @ Light Ball / Static: Volt Switch, Surf
+Diglett (22) [Hardy] @ Soft Sand / Arena Trap: Dig, Rock Smash, Rock Slide, Sucker Punch
+
+
+School Kid Gina:
+Croagunk (23) [Timid] @ Liechi Berry / Poison Touch: Fake Out, Poison Jab, Submission, Rock Slide
+Golbat (23) [Quiet] @ Starf Berry / Inner Focus: Cross Poison, Acrobatics, Supersonic, Haze
+Gloom (23) [Lax] @ Salac Berry / Chlorophyll: Giga Drain, Sludge Bomb, Sleep Powder, Leech Seed
+
+
+School Kid Edgar:
+Tranquill (23) [Relaxed] @ Scope Lens / Big Pecks: Roost, Drill Peck, Shadow Sneak, U-Turn
+Skiploom (23) [Gentle] @ Eviolite / Prankster: Sleep Powder, Leech Seed, Giga Drain, U-Turn
+Staravia (23) [Bold] @ Muscle Band / Intimidate: Rock Smash, Aerial Ace, U-Turn, Feather Dance
+Doduo (23) [Hasty] @ Shell Bell / Reckless: Dig, Wing Attack, U-Turn, Double-Edge
+
+
+Nacrene City:
+*Archen/Tirtouga is pre Elesa, Aerodactyl is pre Skyla
+Fossil: Archen/Tirtouga/Aerodactyl (100%)
+
+
+Not Pinwheel Forest:
+Grass (15): Timburr (20%), Buneary (20%), Makuhita (10%), Shroomish (10%), Machop (10%), Snubbull (10%), Solosis (10%), Croagunk (10%)
+Rustling Grass (15): Smoochum (34%), Magby (34%), Elekid (32%)
+Dark Grass (15): Riolu (20%), Tyrogue (20%), Mankey (10%), Meditite (10%), Scraggy (10%), Mienfoo (10%), Sawk (5%), Throh (5%), Farfetch’d (5%), Druddigon (5%)
+
+
+*Super Potion > TM47 Low Sweep
+
+
+Nurse Shery (OPTIONAL):
+Happiny (30) [Lax] Serene Grace: Leer, Night Shade
+
+
+Youngster Keita (GIVES SHELL BELL):
+Golduck (23) [Sassy] @ Wide Lens / Quick Feet: Hydro Pump, Psybeam, Ice Punch, Aqua Jet
+Drifloon (23) [Lax] @ Wide Lens / Flare Boost: Hurricane, Thunder, Hex, Tailwind
+Vanillish (23) [Quirky] @ Wide Lens / Weak Armor: Blizzard, Dark Pulse, Hydro Pump, Icy Wind
+Houndour (23) [Sassy] @ Wide Lens / Intimidate: Fire Blast, Sucker Punch, Thunder Fang, Hone Claws
+
+
+Youngster Zachary (OPTIONAL, GIVES EVIOLITE):
+Butterfree (23) [Naughty] @ Wise Glasses / Compound Eyes: Sleep Powder, Bug Buzz, Psychic, Roost
+Noctowl (23) [Mild] @ Leftovers / Compound Eyes: Air Slash, Hypnosis, Psyshock, Night Shade
+Joltik (23) [Relaxed] @ Life Orb / Compound Eyes: Thunder, Bug Buzz, Substitute, Sucker Punch
+Masquerain (23) [Serious] @ Expert Belt / Compound Eyes: Blizzard, Hydro Pump, Mud Shot, Roost
+
+
+Black Belt Kentaro (OPTIONAL, GIVES WIDE LENS):
+Druddigon (31) [Mild] @ Zoom Lens / Rough Skin: Dragon Tail, Stone Edge, Mega Kick, Rock Smash
+Lairon (31) [Careful] @ Zoom Lens / Rock Head: Iron Tail, Stone Edge, Double-Edge, Superpower
+Gurdurr (31) [Relaxed] @ Zoom Lens / Iron Fist: Cross Chop, Stone Edge, Earthquake, Mach Punch
+Duosion (31) [Docile] @ Zoom Lens / Magic Guard: Focus Blast, Psyshock, Recover, Thunder 
+
+
+Battle Girl Lee (OPTIONAL, GIVES ZOOM LENS):
+Machoke (31) [Serious] @ Eviolite / No Guard: Cross Chop, Stone Edge, Bulk Up, Mega Kick
+Pidgeotto (31) [Calm] @ Expert Belt / No Guard: Focus Blast, Hurricane
+Monferno (31) [Hasty] @ Wise Glasses / No Guard: Fire Blast, Focus Blast, Grass Knot, Will-O-Wisp 
+Ducklett (31) [Relaxed] @ Life Orb / No Guard: Hydro Pump, Hurricane, Blizzard, Roost
+
+
+Nacrene City:
+Pkmn Trainer N 2: 
+Beedrill (24) [Lax] @ Muscle Band / Adaptability: Bug Bite, Poison Tail, Knock Off, Screech
+Liepard (24) [Rash] @ Normal Gem / Unburden: Fake Out, Knock Off, Slash, Seed Bomb
+Quagsire (24) [Calm] @ Leftovers / Water Absorb: Waterfall, Bulldoze, Yawn, Body Slam
+Breloom (24) [Timid] @ Toxic Orb / Poison Heal: Giga Drain, Rock Smash, Headbutt, Stun Spore
+Mienfoo (24) [Impish] @ Black Belt / Inner Focus: Aura Sphere, Psyshock, Fake Out, Vacuum Wave
+Boldore (25) [Brave] @ Eviolite / Solid Rock: Rock Throw, Mud Bomb, Flash Cannon, Swift
+
+
+Nacrene Gym:
+School Kid Carter:
+Stantler (24) [Modest] @ Scope Lens / Intimidate: Miracle Eye, Psycho Cut
+Shuppet (24) [Adamant] @ Eviolite / Insomnia: Shadow Claw, Headbutt, Will-O-Wisp, Shadow Sneak
+Kangaskhan (24) [Mild] @ Dragon Fang / Thick Fat: Dragon Breath, Rock Smash, Bulldoze, Rock Tomb
+Tauros (24) [Gentle] @ Soft Sand / Reckless: Bulldoze, Horn Attack, Rock Smash, Leer
+
+
+Scientist Satomi:
+Azumarill (24) [Jolly] @ Rindo Berry / Huge Power: Aqua Jet, Fake Out, Covet, Charm
+Clefairy (24) [Lax] @ Leftovers / Magic Guard: Fake Out, Moonlight, Cosmic Power, Stored Power
+Delcatty (24) [Lonely] @ Lum Berry / Magic Guard: Flamethrower, Thunderbolt, Ice Beam, Fake Out
+Lopunny (24) [Bold] @ Black Belt / Scrappy: Fake Out, Covet, Brick Break, Quick Attack
+
+
+School Kid Lydia:
+Raticate (25) [Quiet] @ Flame Orb / Guts: Retaliate, Poison Fang, Thunder Fang, Fire Fang
+Furret (25) [Serious] @ Toxic Orb / Quick Feet: Protect, Zen Headbutt, Ice Punch, Fire Punch
+Linoone (25) [Bold] @ Silk Scarf / Scrappy: Retaliate
+Bibarel (25) [Adamant] @ Sitrus Berry / Unaware: Curse, Aqua Jet, Bulldoze, Headbutt
+
+
+Gym Leader Lenora: 
+Herdier (26) [Timid] @ Leftovers / Intimidate: Headbutt, Crunch, Charm, Low Sweep
+Porygon2 (26) [Modest] @ Lum Berry / Analytic: Swift, Mirror Shot, Signal Beam, Aurora Beam
+Archen (26) [Mild] Klutz: Acrobatics, Rock Tomb, Thunder Fang, Pursuit
+Anorith (26) [Hardy] @ Charti Berry / Battle Armor: X-Scissor, Rock Slide, Swords Dance, Waterfall
+Granbull (26) [Lax] @ Toxic Orb / Quick Feet: Brick Break, Dizzy Punch, Fire Fang, Protect
+Watchog (27) [Rash] @ Normal Gem / Compound Eyes: Retaliate, Psycho Cut, Hypnosis, Work Up
+
+
+Burgh Split (Level Cap: 35)
+
+
+Pinwheel Forest:
+Grass (20): Swadloon (20%), Whirlipede (20%), Yanma (10%), Illumise (10%), Volbeat (10%), Pinsir (10%), Pineco (5%), Durant (5%), Scyther (4%), Heracross (4%), Karrablast (1%), Shelmet (1%)
+Rustling Grass (20): Audino (100%)
+Dark Grass (50) (available post surf): Whimsicott (20%), Lilligant (20%), Ferrothorn (20%), Roserade (20%), Tangrowth (20%)
+Fishing (20): Psyduck (60%), Clamperl (40%)
+Fishing Dark Spot (20): Finneon (60%), Chinchou (40%)
+Surfing (50): Luvdisc (100%)
+Surfing Dark Spot (50): Alomomola (100%)
+
+
+*Super Potion > TM82
+*Antidote > TM85
+
+
+Team Plasma Grunt 5:
+Vullaby (28) [Serious] @ Eviolite / Prankster: Tailwind, U-Turn
+Nidorino (28) [Mild] @ Life Orb / Sheer Force: Sludge Bomb, Earth Power, Ice Beam, Lovely Kiss
+Pawniard (28) [Rash] @ King’s Rock / Defiant: Swords Dance, Feint Attack, Iron Head, Sucker Punch
+Misdreavus (28) [Modest] @ Colbur Berry / Levitate: Will-O-Wisp, Hex, Psyshock, Energy Ball
+
+
+Team Plasma Grunt 6:
+Krokorok (28) @ Bright Powder / Intimidate: Earthquake, Crunch, Rock Slide, Thunder Fang
+Golbat (28) @ Flying Gem / Infiltrator: Acrobatics, Poison Fang, X-Scissor, Crunch
+Gothorita (28) @ Quick Claw / Shadow Tag: Psyshock, Snarl, Moonlight, Charm
+Lampent (28) @ Eviolite / Flash Fire: Flame Burst, Hex, Extrasensory, Perish Song
+
+
+Pokemon Ranger Forrest:
+Spinda (29) [Naughty] @ Sitrus Berry / Adaptability: Fake Out, Headbutt, Zen Headbutt, Shadow Ball
+Roselia (29) [Relaxed] @ Eviolite / Poison Point: Giga Drain, Sludge, Mud Bomb, Stun Spore
+Deerling (29) [Serious] @ Choice Scarf / Adaptability: Double-Edge, Wood Hammer, Jump Kick, Grass Whistle
+Alomomola (29) [Hardy] @ Leftovers / Regenerator: Toxic, Aqua Ring, Protect, Whirlpool
+
+
+Pokemon Ranger Audra:
+Foongus (29) [Modest] @ Eviolite / Regenerator: Spore, Giga Drain, Synthesis, Sludge Bomb
+Throh (29) [Rash] @ Lum Berry / Mold Breaker: Force Palm, Payback, Fire Punch, Facade
+Ponyta (29) [Bold] @ Focus Sash / Flash Fire: Blaze Kick, Drill Run, Megahorn, Flame Charge
+Palpitoad (29) [Docile] @ Black Sludge / Water Absorb: Sludge Bomb, Muddy Water, Earth Power, Toxic Spikes
+
+
+Team Plasma Grunt 7:
+Sneasel (30) [Mild] @ King’s Rock / Technician: Fake Out, Beat Up
+Qwilfish (30) [Sassy] @ Scope Lens / Intimidate: Dive, Poison Fang, Toxic, Aqua Jet
+Swalot (30) [Mild] @ Black Sludge / Regenerator: Toxic, Venoshock, Energy Ball, Earth Power
+Rufflet (30) [Hasty] @ Choice Band / Rock Head: Double-Edge, Brave Bird
+
+
+Pokemon Ranger Miguel (OPTIONAL, DOUBLES, Guards TM86 and gives an Absorb Bulb):
+Chimecho (30) [Jolly] @ Lum Berry / Levitate: Metal Sound, Psybeam, Mirror Shot, Yawn
+Onix (30) [Hardy] @ Custap Berry / Sturdy: Screech, Stone Edge, Fissure, Iron Tail
+Klang (30) [Brave] @ Eviolite / Levitate: Metal Sound, Flash Cannon, Wild Charge, Dark Pulse
+Carvanha (30) [Hardy] @ Life Orb / Speed Boost: Screech, Crunch, Scald, Ice Fang
+
+
+Seven Sage Gorm:
+Arbok (30) [Hasty] @ King’s Rock / Intimidate: Poison Jab, Dragon Claw, Seed Bomb, Glare
+Huntail (30) [Gentle] @ Sitrus Berry / Shell Armor: Razor Shell, Crunch, Super Fang, Ice Fang
+Raticate (30) [Quirky] @ Scope Lens / Guts: Hyper Fang, Poison Jab, Ice Fang, Submission
+Persian (30) [Gentle] @ Lum Berry / Technician: Fake Out, Covet, Hypnosis, Bite
+Seviper (31) [Bold] @ Life Orb / Sheer Force: Poison Fang, Bite, Sucker Punch, Thunder Fang
+
+
+You have to fight one of the two to get back to Nacrene City:
+School Kid Sammy (Right):
+Arcanine (40) [Sassy] @ Shell Bell / Intimidate: Flare Blitz, Double-Edge, Extreme Speed, Howl
+Houndoom (40) [Quirky] @ White Herb / Intimidate: Overheat, Crunch, Fire Fang, Thunder Fang
+Absol (40) [Careful] @ Scope Lens / Super Luck: Night Slash, Psycho Cut, Leaf Blade, Focus Energy
+Lucario (40) [Lax] @ Expert Belt / Inner Focus: Sky Uppercut, Flash Cannon, Dark Pulse, Thunder Punch
+Mightyena (40) [Calm] @ Black Glasses / Intimidate: Crunch, Super Fang, Fire Fang, Zen Headbutt
+
+
+Lass Eva (DOUBLES) (Left):
+Lanturn (40) [Quiet] @ Sitrus Berry / Volt Absorb: Electroweb, Muddy Water, Thunder Wave, Volt Switch
+Abomasnow (40) [Naughty] @ Custap Berry / Thick Fat: Icy Wind, Giga Drain, Water Pulse, Rock Slide
+Toxicroak (40) [Impish] @ Fighting Gem / Poison Touch: Low Sweep, Rock Tomb, Gunk Shot, Flatter
+Floatzel (40) [Impish] @ Life Orb / Technician: Low Sweep, Rock Tomb, Aqua Jet, Quick Attack
+
+
+Skyarrow Bridge:
+Surprise Egg (look at bottom of doc if u don't care abt being spoiled) (100%)
+
+
+Castelia City:
+Grass (25): Pikachu (20%), Blitzle (20%), Luxio (10%), Flaaffy (10%), Electrike (10%), Tynamo (10%), Plusle (5%), Minun (5%), Pachirisu (4%), Emolga (4%), Stunfisk (1%), Magnemite (1%)
+*Grass can be found right outside the gym
+  
+
+
+
+*The Rest TM, 2nd eviolite and npc that gives either a fire, water or leaf stone can still be found here
+
+
+Plasma Grunt 8:
+Murkrow (31) [Bashful] @ Eviolite / Prankster: Swagger, Foul Play, Drill Peck, Substitute
+Garbodor (31) [Quiet] @ Black Sludge / Heatproof: Poison Jab, Iron Head, Stockpile, Spit Up
+Tangela (31) [Bold] @ Bright Powder / Thick Fat: Sleep Powder, Leech Seed, Energy Ball, Earth Power
+Kingler (31) [Naive] @ Muscle Band / Shell Armor: Razor Shell, Iron Head, Bulldoze, Rock Smash
+
+
+Route 4:
+Walking (25): Palpitoad (20%), Cubone (20%), Donphan (10%), Piloswine (10%), Numel (10%), Hippopotas (10%), Doduo (5%), Teddiursa (5%) Maractus (4%), Pinsir (4%), Tauros (1%), Bouffalant (1%)
+Fishing (25): Shellos (100%)
+Fishing Dark Spot (25): Barboach (100%)
+Surfing (50): Swampert (100%)
+Surfing Dark Spot (50): Seismitoad (100%)
+
+
+*X Accuracy > TM43 Flame Charge
+*Super Potion > TM31 Brick Break
+*Ether > TM77 Magical Leaf
+*Great Ball > TM40 Aerial Ace
+
+
+Castelia Gym:
+Harlequin Jack:
+Ledian (33) [Modest] @ Light Clay / Shield Dust: Reflect, Light Screen, Aura Sphere, Silver Wind
+Ariados (33) [Jolly] @ Sitrus Berry / Insomnia: Leech Life, Payback, Zen Headbutt, Poison Jab
+Mothim (33) [Brave] @ Wise Glasses / Tinted Lens: Struggle Bug, Air Cutter, Psybeam, Roost
+Wormadam-Trash (33) [Sassy] @ Occa Berry / Overcoat: Bug Buzz, Flash Cannon, Protect, Metal Burst (WRONG IN CALC, PUT IT TO RIGHT FORM MANUALLY)
+
+
+Harlequin Kerry (OPTIONAL):
+Forretress (40) [Hasty] @ Normal Gem / Sturdy: Explosion
+
+
+Harlequin Rick (OPTIONAL):
+Ninjask (33) [Timid] @ Life Orb / Technician: Feint Attack, Bug Bite, Wing Attack, Swords Dance
+Vespiquen (33) [Timid] @ Leftovers / Filter: Attack Order, Defend Order, Heal Order, Toxic
+Scolipede (33) [Docile] @ Muscle Band / Speed Boost: Protect, Steam Roller, Poison Jab, Aqua Tail
+Crustle (33) [Careful] @ White Herb / Shell Armor: Shell Smash, X-Scissor, Rock Climb, Earthquake
+
+
+Harlequin Louis (DOUBLES):
+Pinsir (33) [Relaxed] @ Soft Sand / Mold Breaker: Dig, Leech Life, Rock Slide, Wide Guard
+Scizor (33) [Docile] @ Sitrus Berry / Technician: Bug Bite, Bullet Punch, Roost, Swords Dance
+Heracross (33) [Bold] @ Flame Orb / Guts: Leech Life, Drain Punch, Aerial Ace, Knock Off
+Yanmega (33) [Naughty] @ Expert Belt / Speed Boost: Signal Beam, Dragon Breath, Giga Drain, Roost
+
+
+Gym Leader Burgh (Now gives TM81 X-Scissor): 
+Masquerain (34) [Quiet] @ Bug Gem / Compound Eyes: Scald, Signal Beam, Icy Wind, U-Turn
+Hitmontop (34) [Serious] @ Sitrus Berry / Technician: Force Palm, Bulldoze, Rock Tomb, Mach Punch
+Kricketune (34) [Careful] @ Life Orb / Adaptability: X-Scissor, Uproar, Brick Break, Night Slash
+Chatot (34) [Sassy] @ Wise Glasses / Soundproof: Discharge, Air Slash, Roost, Torment
+Ludicolo (34) [Jolly] @ Coba Berry / Swift Swim: Scald, Ice Beam, Giga Drain, Rain Dance
+Leavanny (35) [Modest] @ Focus Sash / Adaptability: Leaf Blade, X-Scissor, Aerial Ace, Swords Dance
+
+
+Elesa Split (Level Cap: 44)
+
+
+Route 4 (PERMA SAND):
+Rival Bianca 2 (No sand for this fight): 
+If you chose Snivy
+Altaria (35) [Careful] @ Lum Berry / Cloud Nine: Dragon Pulse, Air Slash, Roost, Perish Song
+Cinccino (35) [Rash] @ Muscle Band / Skill Link: Double Hit, Seed Bomb, Gunk Shot, Knock Off
+Illumise (35) [Relaxed] @ Wise Glasses / Flash Fire: Encore, Bug Buzz, Psychic, Shadow Ball
+Simisear (35) [Brave] @ Flying Gem / Blaze: Lava Plume, Acrobatics, Grass Knot, Aura Sphere
+Samurott (36) [Rash] @ Sitrus Berry / Shell Armor: Sky Uppercut, Waterfall, X-Scissor, Drill Run
+
+
+If you chose Tepig
+Altaria (35) [Naughty] @ Lum Berry / Cloud Nine: Dragon Pulse, Air Slash, Roost, Perish Song
+Cinccino (35) [Hardy] @ Muscle Band / Skill Link: Double Hit, Seed Bomb, Gunk Shot, Knock Off
+Illumise (35) [Jolly] @ Wise Glasses / Flash Fire: Encore, Bug Buzz, Psychic, Shadow Ball
+Simipour (35) [Calm] @ Flying Gem / Torrent: Scald, Acrobatics, Grass Knot, Aura Sphere
+Serperior (36) [Modest] @ Sitrus Berry / Sheer Force: Giga Drain, Dragon Breath, Glare, Leech Seed
+
+
+If you chose Oshawott
+Altaria (35) [Timid] @ Lum Berry / Cloud Nine: Dragon Pulse, Air Slash, Roost, Perish Song
+Cinccino (35) [Docile] @ Muscle Band / Skill Link: Double Hit, Seed Bomb, Gunk Shot, Knock Off
+Illumise (35) [Rash] @ Wise Glasses / Flash Fire: Encore, Bug Buzz, Psychic, Shadow Ball
+Simisage (35) [Brave] @ Flying Gem / Overgrow: Energy Ball, Acrobatics, Crunch, Aura Sphere
+Emboar (36) [Naive] @ Sitrus Berry / Adaptability: Fire Punch, Night Slash, Drain Punch, Thunder Punch
+
+
+Rival Cheren 3:
+If you chose Snivy
+Pidgeot (36) [Bold] @ Black Belt / Quick Feet: Aura Sphere, Air Slash, Heat Wave, Roost
+Slaking (36) [Brave] @ Silk Scarf / Truant: Crush Claw
+Scolipede (36) [Serious] @ Lum Berry / Speed Boost: X-Scissor, Poison Jab, Rock Slide, Protect
+Whiscash (36) [Bashful] @ Rindo Berry / Mold Breaker: Earthquake, Waterfall, Stone Edge, Dragon Dance
+Simisage (36) [Careful] @ Flying Gem / Overgrow: Giga Drain, Acrobatics, Crunch, Low Kick
+Emboar (37) [Bold] @ Charcoal / Adaptability: Heat Crash, Knock Off, Drain Punch, Thunder Punch
+
+
+If you chose Tepig
+Pidgeot (36) [Serious] @ Black Belt / Quick Feet: Aura Sphere, Air Slash, Heat Wave, Roost
+Slaking (36) [Careful] @ Silk Scarf / Truant: Crush Claw
+Scolipede (36) [Rash] @ Lum Berry / Speed Boost: X-Scissor, Poison Jab, Rock Slide, Protect
+Breloom (36) [Careful] @ Coba Berry / Technician: Force Palm, Rock Tomb, Bullet Seed, Spore
+Simisear (36) [Timid] @ Flying Gem / Blaze: Lava Plume, Acrobatics, Grass Knot, Low Kick
+Samurott (37) [Jolly] @ Mystic Water / Shell Armor: Waterfall, Submission, Rock Climb, Drill Run
+
+
+If you chose Oshawott
+Pidgeot (36) [Lax] @ Black Belt / Quick Feet: Aura Sphere, Air Slash, Heat Wave, Roost
+Slaking (36) [Docile] @ Silk Scarf / Truant: Crush Claw
+Scolipede (36) [Mild] @ Lum Berry / Speed Boost: X-Scissor, Poison Jab, Rock Slide, Protect
+Camerupt (36) [Quiet] @ Passho Berry / Shell Armor: Mud Bomb, Lava Plume, Power Gem, Flash Cannon
+Simipour (36) [Timid] @ Flying Gem / Torrent: Scald, Acrobatics, Grass Knot, Low Kick
+Serperior (37) [Sassy] @ Miracle Seed / Sheer Force: Energy Ball, Thunderbolt, Leech Seed, Substitute
+
+
+Parasol Lady April (YOU CAN GO TO DESERT RESORT AFTER THIS FIGHT):
+Claydol (37) [Hardy] @ Soft Sand / Levitate: Trick Room, Psychic, Earth Power, Shadow Ball
+Gabite (37) [Hasty] @ Eviolite / Sand Force: Dig, Dual Chop, Rock Slide, Iron Head
+Lunatone (37) [Timid] @ Leftovers / Levitate: Power Gem, Shadow Ball, Psychic, Charge Beam
+Clefable (37) [Relaxed] @ Expert Belt / Magic Guard: Charge Beam, Icy Wind, Psyshock, Water Pulse
+
+
+Backpacker Keane (OPTIONAL, MANDATORY TO GET ACCESS TO DESERT RESORT):
+Umbreon (37) [Adamant] @ Chople Berry / Magic Guard: Dark Pulse, Toxic Spikes, Recover, Psychic
+Probopass (37) [Jolly] @ Air Balloon / Sand Force: Power Gem, Flash Cannon, Earth Power, Volt Switch
+Gligar (37) [Adamant] @ Eviolite / Rough Skin: Earthquake, Toxic, Fly, Roost
+Stunfisk (37) [Jolly] @ Leftovers / Water Absorb: Earth Power, Thunderbolt, Power Gem, Muddy Water
+
+
+Backpacker Anna:
+Forretress (38) [Serious] @ Occa Berry / Shell Armor: Bug Buzz, Flash Cannon, Spikes, Light Screen
+Gastrodon (38) [Impish] @ Rindo Berry / Sand Force: Earth Power, Muddy Water, Power Gem, Mirror Coat
+Piloswine (38) [Hardy] @ Eviolite / Thick Fat: Earthquake, Avalanche, Ice Shard, Rock Slide
+Sigilyph (38) [Rash] @ Wise Glasses / Magic Guard: Psyshock, Air Slash, Heat Wave, Shadow Ball
+
+
+Worker Scott:
+Skarmory (38) [Quirky] @ Wacan Berry / Rock Head: Drill Run, Iron Head, Drill Peck, Stealth Rock
+Hippowdon (38) [Gentle] @ Leftovers / Sand Force: Earthquake, Thunder Fang, Rock Slide, Curse
+Sudowoodo (38) [Jolly] @ Dark Gem / Rock Head: Rock Climb, Wood Hammer, Sucker Punch, Hammer Arm
+Hypno (38) [Relaxed] @ Leftovers / Magic Guard: Psyshock, Dark Pulse, Calm Mind, Aura Sphere
+
+
+Backpacker Jerome:
+Relicanth (39) [Adamant] @ Custap Berry / Rock Head: Waterfall, Yawn, Rock Climb, Zen Headbutt
+Steelix (39) [Naughty] @ Life Orb / Sand Force: Iron Head, Drill Run, Ice Fang, Thunder Fang
+Marowak (39) [Bold] @ Thick Club / Rock Head: Bonemerang, Payback, Double-Edge, Rock Slide
+Stoutland (39) [Modest] @ Muscle Band / Sand Rush: Take Down, Thunder Fang, Crunch, Fire Fang
+Dugtrio (39) [Docile] @ Ground Gem / Sand Veil: Bulldoze, Submission, Sucker Punch, Stone Edge
+
+
+Desert Resort (PERMA SAND):
+ACTION REPLAY CODES CAN MAKE THE GAME PRONE TO CRASHING, MAKE SURE TO SAVE BEFORE ENTERING
+Entrance (25): Sandile (20%), Darumaka (20%), Sigilyph (20%), Scraggy (20%), Golett (20%)
+Inside (30): Klang (20%), Pawniard (20%), Magneton (10%), Lairon (10%), Trubbish (10%), Yamask (10%), Heatmor (5%), Durant (5%), Ferroseed (4%), Porygon (4%), Forretress (1%), Skarmory (1%)
+
+
+*Heart Scale removed
+*Original TM39 location removed
+
+
+Doctor Jerry (OPTIONAL):
+Chansey (50) [Calm] Natural Cure: Leer, Growl
+
+
+Veteran Purkat (GUARDS INSIDE OF DESERT RESORT):
+Golett (40) [Gentle] @ Eviolite / Iron Fist: Fire Punch, Thunder Punch, Ice Punch, Shadow Punch
+Diglett (40) [Docile] @ Choice Band / Arena Trap: Earthquake, Close Combat, Stone Edge, Sucker Punch
+Yanma (40) [Rash] @ Wise Glasses / Tinted Lens: Bug Buzz, Aeroblast, Heat Wave, Draco Meteor
+Shuppet (40) [Calm] @ Custap Berry / Shadow Tag: Fake Out, Double-Edge, Shadow Force, Endure
+Skorupi (40) [Mild] @ Eviolite / Battle Armor: Toxic Spikes, Toxic, X-Scissor, Poison Jab
+Elgyem (40) [Rash] @ White Herb / Levitate: Thunderbolt, Psychic, Psycho Boost, Trick Room
+
+
+Backpacker Kelsey (OPTIONAL, GIVES FOCUS BAND):
+Excadrill (44) [Brave] @ Focus Band / Sand Rush: Earthquake, Iron Head, Stone Edge, Swords Dance
+
+
+Backpacker Liz (OPTIONAL, GIVES QUICK CLAW):
+Shuckle (44) [Relaxed] @ Quick Claw / Sturdy: Defense Curl, Rollout, Belly Drum, Rest
+
+
+Backpacker Nate (OPTIONAL, GIVES POWER HERB):
+Ninjask (40) [Brave] @ Power Herb / Technician: Fly, Bug Bite, Pursuit, Rock Smash
+Magcargo (40) [Quiet] @ Power Herb / Water Absorb: Solar Beam, Lava Plume, Power Gem, Iron Defense
+Parasect (40) [Bold] @ Power Herb / Dry Skin: Shadow Force, Leech Life, Spore, Spikes
+Piloswine (40) [Adamant] @ Power Herb / Thick Fat: Freeze Shock, Earthquake, Stealth Rock, Ice Shard
+
+
+Backpacker Elaine (OPTIONAL, GIVES WHITE HERB):
+Sceptile (40) [Quirky] @ White Herb / Unburden: Leaf Storm, Draco Meteor
+Hariyama (40) [Rash] @ White Herb / Thick Fat: Close Combat, Thief, Stone Edge, Focus Punch
+Stunfisk (40) [Docile] @ White Herb / Water Absorb: Zap Cannon, Earth Power, Scald, Mud Shot
+Flareon (40) [Hardy] @ White Herb / Flash Fire: V-Create
+
+
+Psychic Low (OPTIONAL, GIVES METRONOME):
+Sharpedo (40) [Bashful] @ Metronome / Speed Boost: Dark Pulse
+Linoone (40) [Serious] @ Metronome / Scrappy: Echoed Voice
+Sudowoodo (40) [Naive] @ Metronome / Solid Rock: Rollout
+Yanma (40) [Docile] @ Metronome / Speed Boost: Hurricane
+
+
+Pilot Boom (GIVES 3 ROWAP, JABOCA AND CUSTAP BERRIES):
+Politoed (65) [Naive] @ Focus Band / Damp: Perish Song
+Gothitelle (65) [Hasty] @ Quick Claw/ Shadow Tag: Self-Destruct, Mist Ball, Dark Pulse, Signal Beam
+Gengar (65) [Bold] @ King’s Rock / Shadow Tag: Sludge Wave, Thunder, Shadow Ball, Self-Destruct
+Zoroark (65) [Mild] @ Scope Lens / Illusion: Nasty Plot, Night Daze, Focus Blast, Extrasensory
+Ursaring (65) [Adamant] @ Bright Powder / Guts: Earthquake, Body Slam, Rock Climb, Belly Drum
+Arceus (65) [Timid] @ Chople Berry / Multitype: Swords Dance, Extreme Speed, Earthquake, Shadow Claw
+
+
+Relic Castle:
+All Floors (30): Omanyte (20%), Kabuto (20%), Lileep (15%), Anorith (15%), Cranidos (15%), Shieldon (15%)
+
+
+*PP Up removed
+
+
+Nimbasa City:
+Grass (30): Murkrow (20%), Grimer (20%), Cacnea (10%), Stunky (10%), Scraggy (10%), Houndoom (10%), Zoroark (5%), Pawniard (5%), Carnivine (4%), Absol (4%), Seviper (1%), Mawile (1%)
+*Grass can be found right when you enter from route 4
+  
+
+*Juniper gives 900 Ultra Balls in Nimbasa Gate
+
+
+Team Plasma Grunt 9:
+Zangoose (40) [Brave] @ Toxic Orb / Toxic Boost: Protect, Facade, Sky Uppercut, Night Slash
+Muk (40) [Impish] @ Expert Belt / Water Absorb: Poison Jab, Faint Attack, Ice Punch, Drain Punch
+Primeape (40) [Modest] @ Scope Lens / Inner Focus: Substitute, Night Slash, Focus Punch, Rock Slide
+Weezing (40) [Bold] @ Quick Claw / Levitate: Will-O-Wisp, Sludge Bomb, Flamethrower, Hex
+Carnivine (40) [Adamant] @ Bright Powder / Poison Heal: Horn Leech, Crunch, Poison Fang, Leech Seed
+
+
+Route 5:
+Grass (30): Paras (20%), Drifloon (20%), Haunter (15%), Misdreavus (15%), Lunatone (10%), Sableye (10%), Yamask (10%)
+Rustling Grass (30): Audino (50%), Kecleon (50%)
+Dark Grass (30): Shuppet (20%), Zoroark (20%), Golett (20%), Lampent (10%), Duskull (10%), Kecleon (10%), Spiritomb (10%)
+
+
+*Hyper Potion > TM12 Taunt 
+*Zinc removed
+
+
+Baker Jenn (OPTIONAL):
+Cherrim (50) [Serious] @ Salac Berry / Flower Gift: Sunny Day, Flare Blitz, Wood Hammer, Rock Climb
+
+
+Harlequin Paul (OPTIONAL):
+Mr. Mime (50) [Hardy] @ Life Orb / Technician: Psystrike, Focus Blast, Tail Glow, Night Daze
+
+
+Musician Preston (OPTIONAL):
+Kricketune (50) [Gentle] @ Life Orb / Adaptability: Horn Drill, Double-Edge, Close Combat, Night Daze
+
+
+Dancer Brian (OPTIONAL):
+Ludicolo (50) [Careful] @ Life Orb / Swift Swim: Hydro Pump, Energy Ball, Blizzard, Rain Dance
+
+
+Artist Horton (OPTIONAL):
+Smeargle (60) [Naive] @ Chople Berry / Moody: Belly Drum, Extreme Speed, Shadow Claw, Earthquake
+
+
+Route 16:
+Grass (30): Vulpix (20%), Growlithe (20%), Ponyta (20%), Torkoal (20%), Cherrim (20%)
+Rustling Grass (30): Audino (50%), Sunflora (50%)
+Dark Grass (30): Houndour (40%), Koffing (20%), Numel (15%), Slugma (10%), Darumaka (10%), Larvesta (5%)
+
+
+*Rare Candy > TM03
+
+
+Veteran Chrille (GUARDS LOSTLORN FOREST) (DOUBLES):
+Togetic (40) [Bold] @ Sitrus Berry / Serene Grace: Extreme Speed, Air Slash, U-Turn, Tailwind
+Rotom-Wash (40) [Calm] @ Lum Berry / Levitate: Volt Switch, Will-O-Wisp, Brine, Shadow Ball
+Banette (40) [Naive] @ Air Balloon / Insomnia: Astonish, Headbutt, Fake Out, Knock Off
+Marowak (40) [Impish] @ Thick Club / Rock Head: Rock Slide, Earthquake, Submission, Double-Edge
+Klinklang (40) [Relaxed] @ Focus Sash / Levitate: Gear Grind, Shift Gear, Volt Switch, Trick Room
+Cryogonal (40) [Modest] @ Sitrus Berry / Levitate: Mirror Shot, Icy Wind, Mist, Endure
+
+
+Backpacker Lora (GIVES AN AIR BALLOON):
+Manectric (48) [Impish] @ Air Balloon / Intimidate: Thunderbolt, Aurora Beam, Magical Leaf, Flamethrower
+Heatmor (48) [Calm] @ Air Balloon / Flash Fire: Fire Punch, Hone Claws, Thunder Punch, Iron Head
+Magcargo (48) [Modest] @ Air Balloon / Water Absorb: Power Gem, Flamethrower, Amnesia, Earth Power
+Aggron (48) [Gentle] @ Air Balloon / Rock Head: Autotomize, Rock Climb, Iron Tail, Earthquake
+Electrode (48) [Modest] @ Air Balloon / Static: Thunderbolt, Flash Cannon, Reflect, Light Screen
+Garbodor (48) [Mild] @ Air Balloon / Heatproof: Iron Head, Gunk Shot, Toxic, Drain Punch
+
+
+Lostlorn Forest:
+Grass (30): Gloom (20%), Weepinbell (20%), Exeggcute (10%), Nuzleaf (10%), Sawsbuck (10%), Carnivine (10%), Petilil (5%), Cottonee (5%), Snover (4%), Foongus (4%), Tangela (1%), Tropius (1%)
+Rustling Grass (30): Scyther (34%), Heracross (34%), Pinsir (32%)
+Dark Grass (30): Murkrow (20%), Sigilyph (20%), Vullaby (10%), Elgyem (10%), Purugly (10%), Baltoy (10%), Sneasel (5%), Bronzor (5%), Zweilous (5%), Wobbuffet (5%)
+Fishing (30): Lombre (100%)
+Fishing Dark Spot (30): Politoed (100%)
+Surfing (50): Basculin-Red (100%)
+Surfing Dark Spot (50): Basculin-Blue (100%)
+
+
+Nimbasa City:
+Pkmn Trainer N 3 (DOUBLES):
+Scrafty (41) [Impish] @ Sitrus Berry / Intimidate: Drain Punch, Wide Guard, Crunch, Helping Hand
+Darmanitan (41) [Quirky] @ Life Orb / Sheer Force: Fire Fang, Force Palm, Rock Slide, Zen Headbutt
+Basculin-Red (41) [Naughty] @ Muscle Band / Rock Head: Waterfall, Crunch, Aqua Jet, Ice Beam
+Whimsicott (41) [Hasty] @ Miracle Seed / Prankster: Energy Ball, Tailwind, Leech Seed, Encore
+Sigilyph (41) [Naive] @ Expert Belt / Magic Guard: Psychic, Air Slash, Heat Wave, Energy Ball
+Parasect (41) [Brave] @ Leftovers / Dry Skin: Spore, Rage Powder, X-Scissor, Shadow Sneak
+
+
+Nimbasa Gym:
+Lady Magnolia:
+Raichu (41) [Adamant] @ Electric Gem / Volt Absorb: Volt Switch, Earth Power, Encore, Aura Sphere
+Gigalith (41) [Lonely] @ Leftovers / Sturdy: Volt Switch, Power Gem, Mud Bomb, Flash Cannon
+Eelektrik (41) [Bold] @ Eviolite / Levitate: Volt Switch, Sludge Bomb, Scald, Giga Drain
+Manectric (41) [Hasty] @ Expert Belt / Lightning Rod: Volt Switch, Fire Fang, Ice Fang, Crunch
+
+
+Rich Boy Cody:
+Electrode (41) [Jolly] @ Lum Berry / Static: Self-Destruct, Thunderbolt, Flash Cannon, Thunder Wave
+Electabuzz (41) [Rash] @ Eviolite / Iron Fist: Thunder Punch, Sky Uppercut, Ice Punch, Fire Punch
+Ampharos (41) [Hasty] @ Leftovers / Mold Breaker: Tail Glow, Dragon Pulse, Shock Wave, Signal Beam
+Luxray (41) [Mild] @ Flame Orb / Guts: Protect, Facade, Crunch, Wild Charge
+
+
+Rich Boy Rolan (DOUBLES):
+Minun (41) [Docile] @ Sitrus Berry / Volt Absorb: Discharge, Rain Dance, Thunder Wave, Water Pulse
+Plusle (41) [Naive] @ Choice Specs / Motor Drive: Discharge
+Seaking (41) [Calm] @ Mystic Water / Lightning Rod: Waterfall, Hydro Pump, Ice Beam, Poison Jab
+Volbeat (41) [Quirky] @ Muscle Band / Volt Absorb: X-Scissor, Blaze Kick, Wild Charge, Sweet Kiss
+Emolga (41) [Naive] @ Flying Gem / Motor Drive: Discharge, Aerial Ace, Roost, Taunt
+
+
+Lady Colette:
+Rotom-Fan (42) [Naive] @ Life Orb / Motor Drive: Aeroblast, Shock Wave, Nasty Plot, Will-O-Wisp
+Rotom-Wash (42) [Naive] @ Rindo Berry / Levitate: Hydro Pump, Discharge, Shadow Ball, Confuse Ray
+Rotom-Freeze (42) [Naive] @ Wise Glasses / Levitate: Ice Beam, Thunderbolt
+Rotom-Heat (42) [Naive] @ White Herb / Levitate: Overheat, Thunderbolt, Charge Beam, Substitute
+Rotom-Mow (42) [Naive] @ Leftovers / Levitate: Giga Drain, Discharge, Thunder Wave, Charge
+
+
+Gym Leader Elesa (DOUBLES) (Now gives TM93 Wild Charge):
+Togekiss (43) [Quirky] @ Sitrus Berry / Serene Grace: Aura Sphere, Air Slash, Thunder Wave, Safeguard
+Pachirisu (43) [Gentle] @ Air Balloon / Volt Absorb: Thunderbolt, Psyshock, Thunder Wave, Helping Hand
+Glaceon (43) [Timid] @ Expert Belt / Shield Dust: Ice Beam, Earth Power, Shadow Ball, Extrasensory
+Lumineon (43) [Adamant] @ Mystic Water / Water Absorb: Shock Wave, Scald, Aurora Beam, Roost
+Maractus (43) [Sassy] @ Yache Berry / Storm Drain: Giga Drain, Earth Power, Leech Seed, Synthesis
+Zebstrika (44) [Serious] @ Life Orb / Reckless: Wild Charge, Crunch, Blaze Kick, Submission 
+
+
+Clay Split (Level Cap: 51)
+
+
+Route 5:
+Rival Cheren 4: 
+If you chose Snivy
+Unfezant (44) [Naive] @ Sitrus Berry / Unburden: Shadow Claw, Drill Peck, Blaze Kick, Drill Run 
+Beheeyem (44) [Brave] @ Colbur Berry / Levitate: Psychic, Thunderbolt, Aura Sphere, Energy Ball
+Nidoking (44) [Bold] @ Life Orb / Sheer Force: Sludge Bomb, Earth Power, Thunderbolt, Ice Beam
+Whiscash (44) [Gentle] @ Rindo Berry / Adaptability: Aqua Tail, Earthquake, Icicle Crash, Dragon Dance
+Simisage (44) [Modest] @ Flying Gem / Overgrow: Acrobatics, Needle Arm, Focus Blast, Rock Climb
+Emboar (45) [Sassy] @ Charcoal / Adaptability: Blaze Kick, Crunch, Earthquake, Wild Charge
+
+
+If you chose Tepig
+Unfezant (44) [Hasty] @ Sitrus Berry / Unburden: Shadow Claw, Drill Peck, Blaze Kick, Drill Run 
+Beheeyem (44) [Quirky] @ Colbur Berry / Levitate: Psychic, Thunderbolt, Aura Sphere, Energy Ball
+Nidoking (44) [Jolly] @ Life Orb / Sheer Force: Sludge Bomb, Earth Power, Thunderbolt, Ice Beam
+Breloom (44) [Modest] @ Coba Berry / Technician: Drain Punch, Seed Bomb, Rock Tomb, Spore
+Simisear (44) [Brave] @ Flying Gem / Blaze: Acrobatics, Heat Wave, Focus Blast, Grass Knot
+Samurott (45) [Docile] @ Mystic Water / Shell Armor: Sacred Sword, Aqua Tail, Wild Charge, Icicle Crash
+
+
+If you chose Oshawott
+Unfezant (44) [Bashful] @ Sitrus Berry / Unburden: Shadow Claw, Drill Peck, Blaze Kick, Drill Run 
+Beheeyem (44) [Docile] @ Colbur Berry / Levitate: Psychic, Thunderbolt, Aura Sphere, Energy Ball
+Nidoking (44) [Timid] @ Life Orb / Sheer Force: Sludge Bomb, Earth Power, Thunderbolt, Ice Beam
+Camerupt (44) [Lax] @ Passho Berry / Sheer Force: Heat Wave, Earth Power, Power Gem, Shock Wave
+Simipour (44) [Brave]@ Flying Gem / Overgrow: Acrobatics, Muddy Water, Focus Blast, Ice Beam
+Serperior (45) [Hardy] @ Miracle Seed / Sheer Force: Energy Ball, Dragon Pulse, Dark Pulse, Glare
+
+
+Preschooler Billy and Preschooler Sarah (TAG BATTLE CAN’T SWITCH TEAMS BETWEEN THIS AND CHEREN 4):
+Billy:
+Mr. Mime (40) [Lax] @ Light Clay / Technician: Fake Out, Reflect, Light Screen, Psychic
+Snorlax (40) [Naughty] @ Sitrus Berry / Thick Fat: Body Slam, Crunch, Brick Break, Slack Off
+Sudowoodo (40) [Impish] @ Lum Berry / Rock Head: Rock Climb, Wood Hammer, Brick Break, Sucker Punch
+
+
+Sarah:
+Hitmonchan (40) [Brave] @ Muscle Band / Iron Fist: Sky Uppercut, Thunder Punch, Ice Punch, Shadow Punch
+Chimecho (40) [Timid] @ Sitrus Berry / Levitate: Psyshock, Flash Cannon, Yawn, Heal Bell
+Azumarill (40) [Quirky] @ Lum Berry / Huge Power: Waterfall, Fake Out, Aqua Jet, Body Slam
+
+
+Partner Cheren:
+If you chose Snivy
+Unfezant (44) [Careful] @ Sitrus Berry / Unburden: Shadow Claw, Drill Peck, Blaze Kick, Drill Run 
+Nidoking (44) [Naive] @ Life Orb / Sheer Force: Sludge Bomb, Earth Power, Thunderbolt, Ice Beam
+Emboar (45) [Bold] @ Charcoal / Adaptability: Blaze Kick, Crunch, Earthquake, Wild Charge
+
+
+If you chose Tepig
+Unfezant (44) [Rash] @ Sitrus Berry / Unburden: Shadow Claw, Drill Peck, Blaze Kick, Drill Run 
+Nidoking (44) [Gentle] @ Life Orb / Sheer Force: Sludge Bomb, Earth Power, Thunderbolt, Ice Beam
+Samurott (45) [Naive] @ Mystic Water / Shell Armor: Sacred Sword, Aqua Tail, Wild Charge, Icicle Crash
+
+
+If you chose Oshawott
+Unfezant (44) [Brave] @ Sitrus Berry / Unburden: Shadow Claw, Drill Peck, Blaze Kick, Drill Run 
+Nidoking (44) [Bashful] @ Life Orb / Sheer Force: Sludge Bomb, Earth Power, Thunderbolt, Ice Beam
+Serperior (45) [Lax] @ Miracle Seed / Sheer Force: Energy Ball, Dragon Pulse, Dark Pulse, Glare
+
+
+Driftveil Drawbridge:
+Dark Spot (35): Castform (20%), Chatot (20%), Jumpluff (10%), Staraptor (10%), Gliscor (10%), Swellow (10%), Altaria (5%), Pelipper (5%), Delibird (4%), Drifblim (4%), Emolga (1%), Pidgeot (1%)
+
+
+Driftveil City:
+Fishing (35): Luvdisc (60%), Alomomola (40%)
+Fishing Dark Spot (35): Clamperl (100%)
+Surfing (50): Wailord (100%)
+Surfing Dark Spot (50): Walrein (60%), Dewgong (40%)
+
+
+*The Expert Belt and Rocky Helmet are still in their original spots
+*Heart Scale removed 
+
+
+Route 6:
+Grass (35): Ampharos (20%), Altaria (20%), Druddigon (20%), Tropius (20%), Arbok (10%), Vibrava (10%)
+Rustling Grass (35): Audino (50%), Druddigon (50%)
+Dark Grass (35): Dragonair (20%), Shelgon (20%), Gabite (20%), Zweilous (20%), Fraxure (20%)
+Fishing (35): Gyarados (100%)
+Fishing Dark Spot (35): Milotic (100%)
+Surfing (50): Basculin-Red (100%)
+Surfing Dark Spot (50): Basculin-Blue (100%)
+Static: Foongus/Amoonguss (100%)
+
+
+*Hyper Potion > TM53 Energy Ball
+*Elixir > TM36 Sludge Bomb
+
+
+Scientist William:
+Plusle (45) [Quirky] @ Air Balloon / Motor Drive: Thunderbolt, Encore, Grass Knot, Aurora Beam
+Minun (45) [Naive] @ Leftovers / Volt Absorb: Scald, Thunderbolt, Thunder Wave, Substitute
+Pachirisu (45) [Gentle] @ Grass Gem / Volt Absorb: Grass Knot, Thunderbolt, Psychic, Fake Tears
+Emolga (45) [Naughty] @ Life Orb / Motor Drive: Wild Charge, Aeroblast, Energy Ball, Iron Tail
+
+
+Pokemon Ranger Shanti:
+Sunflora (45) [Quirky] @ Coba Berry / Drought: Solar Beam, Fire Blast, Synthesis, Sludge Bomb
+Vileplume (45) [Gentle] @ Lum Berry / Chlorophyll: Solar Beam, Sludge Bomb, Fiery Dance, Sleep Powder
+Sawsbuck (45) [Timid] @ Muscle Band/ Adaptability: Double-Edge, Horn Leech, Wood Hammer, Earthquake
+Shiftry (45) [Docile] @ Scope Lens / Chlorophyll: Leaf Blade, Night Slash, Sacred Sword, Focus Energy
+
+
+Parasol Lady Nicole:
+Pelipper (45) [Jolly] @ Wacan Berry / Drizzle: Hurricane, Surf, U-Turn, Roost
+Floatzel (45) [Modest] @ Water Gem / Swift Swim: Aqua Tail, Fake Out, Double-Edge, Crunch
+Wailord (45) [Relaxed] @ Leftovers / Thick Fat: Ice Beam, Aqua Ring, Whirlpool, Transform
+Ludicolo (45) [Sassy] @ Expert Belt / Swift Swim: Energy Ball, Surf, Ice Beam, Focus Blast
+
+
+Scientist Maria:
+Bronzong (45) [Serious] @ Air Balloon / Heatproof: Flash Cannon, Psyshock, Trick Room, Magnet Rise
+Escavalier (45) [Bashful] @ Occa Berry / Shell Armor: Megahorn, Drill Run, Iron Head, Close Combat
+Scizor (45) [Naughty] @ Steel Gem / Technician: Bullet Punch, Bug Bite, Swords Dance, Force Palm
+Kingler (45) [Docile] @ Life Orb / Sheer Force: Waterfall, Iron Head, Rock Slide, Bulldoze
+
+
+Cold Storage (PERMA HAIL):
+Grass (35): Vanillish (20%), Snorunt (20%), Piloswine (10%), Beartic (10%), Cryogonal (10%), Abomasnow (10%), Jynx (10%), Delibird (5%), Sneasel (5%)
+Rustling Grass (35): Audino (50%), Piloswine (50%)
+Dark Grass (35): Cinccino (20%), Ambipom (20%), Lickilicky (10%), Kangaskhan (10%), Snorlax (10%), Miltank (10%), Clefable (10%), Wigglytuff (10%)
+
+
+*Protein > TM63 Embargo
+*Heart Scale removed
+*PP Up removed 
+
+
+Worker Victor:
+Delibird (45) [Quirky] @ Focus Sash / Technician: Fake Out, Icy Wind, Air Cutter, Seed Bomb
+Delcatty (45) [Brave] @ Life Orb / Magic Guard: Swift, Ice Beam, Shadow Ball, Extrasensory 
+Vanilluxe (45) [Impish] @ Lum Berry / Snow Cloak: Ice Beam, Dark Pulse, Energy Ball, Flash Cannon
+Ninetales (45) [Serious] @ Expert Belt / Flash Fire: Ice Beam, Flamethrower, Shadow Ball, Hypnosis
+Beartic (45) [Careful] @ Fighting Gem / Sheer Force: Ice Punch, Close Combat
+
+
+Worker Glenn (DOUBLES):
+Froslass (45) [Naive] @ Bright Powder / Snow Cloak: Blizzard, Shadow Ball, Thunderbolt, Destiny Bond
+Glalie (45) [Rash] @ Muscle Band / Intimidate: Icicle Crash, Rock Climb, Drill Run, Zen Headbutt
+Walrein (45) [Calm] @ Leftovers / Thick Fat: Waterfall, Ice Shard, Protect, Aqua Ring
+Dewgong (45) [Naive] @ Wise Glasses / Thick Fat: Hydro Pump, Blizzard, Signal Beam, Rest
+
+
+Worker Filipe:
+Alakazam (45) [Jolly] @ Wise Glasses / Magic Guard: Psychic, Aura Sphere, Shadow Ball, Reflect
+Castform (45) [Rash] @ Expert Belt / Forecast: Blizzard, Flamethrower, Thunderbolt, Air Slash
+Jynx (45) [Bold] @ Lum Berry / Dry Skin: Lovely Kiss, Blizzard, Psyshock, Aura Sphere
+Galvantula (45) [Impish] @ Ice Gem / Compound Eyes: Thunderbolt, Bug Buzz, Aurora Beam, Energy Ball
+Octillery (45) [Quirky] @ Shuca Berry / Skill Link: Scald, Lava Plume, Blizzard, Energy Ball
+
+
+Worker Ryan (DOUBLES):
+Noctowl (45) [Relaxed] @ Ice Gem / Magic Guard: Psychic, Hurricane, Blizzard, Magic Room
+Cryogonal (45) [Careful] @ Occa Berry / Levitate: Blizzard, Flash Cannon, Reflect, Light Screen
+Cloyster (45) [Modest] @ King’s Rock/ Skill Link: Spike Cannon, Icicle Spear, Rock Blast, Iron Defense
+Mienshao (45) [Quirky] @ Wise Glasses / Inner Focus: Aura Sphere, Psychic, Shadow Ball, Ice Beam
+Magneton (45) [Naive] @ Eviolite / Magnet Pull: Flash Cannon, Thunderbolt, Ice Beam, Signal Beam
+
+
+The Plasma Grunts and Zinzolin don’t have Perma Hail
+Team Plasma Grunt 10 (far most right grunt):
+Kecleon (46) [Jolly] @ Colbur Berry / Adaptability: Brick Break, Double-Edge, Shadow Claw, Shadow Sneak 
+Zoroark (46) [Naughty] @ King’s Rock / Illusion: Ominous Wind, Dark Pulse, Aura Sphere, Nasty Plot
+Politoed (46) [Quirky] @ Bright Powder / Water Absorb: Giga Drain, Scald, Ice Beam, Synthesis
+Machamp (46) [Calm] @ Coba Berry / No Guard: Dynamic Punch, Mega Kick, Stone Edge, Bulk Up
+Braviary (46) [Adamant] @ Choice Scarf / Reckless: Head Charge, Brave Bird, Superpower
+
+
+Team Plasma Grunt 11 (left of Grunt 10):
+Gorebyss (46) [Rash] @ Wacan Berry / Shell Armor: Iron Defense, Sludge Bomb, Surf, Ice Beam 
+Farfetch’d (46) [Naughty] @ Stick / Defiant: Leaf Blade, Aerial Ace, Sacred Sword, Night Slash
+Gothitelle (46) [Docile] @ Lum Berry / Shadow Tag: Psychic, Dark Pulse, Calm Mind, Moonlight
+Jellicent (46) [Docile] @ Quick Claw / Damp: Scald, Hex, Ice Beam, Energy Ball
+Swoobat (46) [Sassy] @ Bright Powder / Sheer Force: Psyshock, Air Slash, Heat Wave, Shadow Ball
+
+
+Team Plasma Grunt 12 (right of Zinzolin):
+Scyther (46) [Serious] @ Charti Berry / Technician: Wing Attack, Bug Bite, Rock Smash, Tailwind
+Kangaskhan (46) [Serious] @ Persim Berry / Thick Fat: Thrash, Outrage
+Weezing (46) [Docile] @ Payapa Berry / Levitate: Self-Destruct, Flamethrower, Sludge Bomb, Discharge
+Bisharp (46) [Naive] @ Dark Gem / Defiant: Night Slash, Sucker Punch, Iron Head, Thunder Wave
+Swanna (46) [Careful] @ Scope Lens / No Guard: Hydro Pump, Hurricane, Ice Beam, Roost
+
+
+Seven Sage Zinzolin: 
+Abomasnow (46) [Quiet] @ Lum Berry / Snow Warning: Blizzard, Wood Hammer, Focus Blast, Earthquake
+Mamoswine (46) [Quirky] @ Bright Powder / Snow Cloak: Earthquake, Icicle Crash, Stone Edge, Iron Head
+Drifblim (46) [Serious] @ Flying Gem / Unburden: Aeroblast, Ice Beam, Will-O-Wisp, Hex
+Cryogonal (46) [Relaxed] @ Chople Berry / Levitate: Blizzard, Flash Cannon, Ice Shard, Ancient Power
+Lapras (46) [Careful] @ Leftovers / Ice Body: Surf, Dragon Pulse, Ice Beam, Thunderbolt
+Weavile (47) [Naive] @ Life Orb / Technician: Psycho Cut, Brick Break, Night Slash, Icicle Crash
+
+
+Driftveil Gym (PERMA SAND):
+Worker Felix:
+Clefable (47) [Adamant] @ Chople Berry / Magic Guard: Hyper Voice, Thunder Wave, Calm Mind, Stored Power
+Lunatone (47) [Brave] @ Sitrus Berry / Levitate: Power Gem, Shadow Ball, Hypnosis, Icy Wind
+Solrock (47) [Hasty] @ Fire Gem / Levitate: Flare Blitz, Rock Slide, Earthquake, Rock Polish
+Porygon2 (47) [Timid] @ Eviolite / Analytic: Thunderbolt, Flash Cannon, Tri Attack, Conversion
+Krookodile (47) [Gentle] @ Life Orb / Intimidate: Dig, Crunch, Thunder Fang, Rock Slide
+
+
+Clerk Isaac (DOUBLES):
+Marowak (47) [Quiet] @ Thick Club / Rock Head: Earthquake, Night Slash, Strength, Thunder Punch
+Archeops (47) [Lax] Klutz: Acrobatics, Rock Climb, Drill Run, Dragon Claw
+Golem (47) [Quirky] @ Lum Berry / Solid Rock: Strength, Dig, Iron Defense, Fire Punch
+Cofagrigus (47) [Rash] @ Leftovers / Mummy: Shadow Ball, Flash Cannon, Calm Mind, Pain Split
+Durant (47) [Quiet] @ Life Orb / Swarm: X-Scissor, Iron Head, Crunch, Thunder Fang
+
+
+Worker Don:
+Sableye (47) [Careful] @ Lagging Tail / Prankster: Will-O-Wisp, Power Gem, Trick, Confuse Ray
+Carracosta (47) [Serious] @ White Herb / Shell Armor: Shell Smash, Waterfall, Earthquake, Rock Slide
+Ferrothorn (47) [Brave] @ Rocky Helmet / Iron Barbs: Leech Seed, Protect, Power Whip, Thunder Wave
+Mawile (47) [Impish] @ Chople Berry / Sheer Force: Iron Head, Crunch, Fire Punch, Ice Punch
+Donphan (47) [Calm] @ Sitrus Berry / Sand Veil: Earthquake, Stone Edge, Bulk Up, Seed Bomb
+
+
+Worker Sterling:
+Rhydon (47) [Gentle] @ Eviolite / Solid Rock: Rock Wrecker, Fissure, Megahorn, Hammer Arm
+Reuniclus (47) [Docile] @ Life Orb / Magic Guard: Hypnosis, Gravity, Dream Eater, Focus Blast
+Quagsire (47) [Gentle] @ Rindo Berry / Unaware: Waterfall, Earthquake, Ice Punch, Yawn
+Klinklang (47) [Calm] @ Lum Berry / Levitate: Gear Grind, Shift Gear, Wild Charge, Double-Edge
+Miltank (47) [Quiet] @ Chople Berry / Scrappy: Flail, Reversal
+
+
+Clerk Katie:
+Cradily (48) [Timid] @ Toxic Orb / Poison Heal: Protect, Giga Drain, Ingrain, Stealth Rock
+Armaldo (48) [Timid] @ Sitrus Berry / Battle Armor: X-Scissor, Rock Climb, Drill Run, Waterfall
+Omastar (48) [Quirky] @ Lum Berry / Shell Armor: Shell Smash, Surf, Power Gem, Ice Beam
+Kabutops (48) [Lax] @ Choice Band / Rock Head: X-Scissor, Aqua Tail, Rock Climb, Sacred Sword
+Rampardos (48) [Naive] @ Shell Bell / Sheer Force: Rock Climb, Dragon Claw
+Bastiodon (48) [Jolly] @ Chople Berry / Shield Dust: Metal Burst, Magnet Rise, Iron Head, Toxic
+
+
+*Don't forget about the Shed Shell trainer in route 3, it will be very helpful for this fight
+Gym Leader Clay (Now gives TM19 Earth Power):
+Gigalith (50) [Relaxed] @ Leftovers / Solid Rock: Power Gem, Earth Power, Self-Destruct, Thunder Wave
+Dugtrio (50) [Mild] @ Muscle Band / Arena Trap: Earthquake, Close Combat, Rock Slide, Sucker Punch
+Seismitoad (50) [Adamant] @ Black Sludge / Water Absorb: Earth Power, Sludge Bomb, Muddy Water, Switcheroo
+Sandslash (50) [Modest] @ Rock Gem / Sand Force: Rock Climb, Earthquake, X-Scissor, Cross Poison
+Aggron (50) [Quiet] @ Air Balloon / Rock Head: Head Smash, Iron Tail, Earthquake, Hammer Arm
+Excadrill (51) [Relaxed] @ Chople Berry / Sand Rush: Earthquake, X-Scissor, Stone Edge, Iron Tail
+
+
+Skyla Split (Level Cap: 62)
+
+
+Driftveil City:
+Rival Bianca 3 (Can sometimes be raining): 
+If you chose Snivy
+Swellow (50) [Serious] @ Focus Sash / Technician: Hurricane, Hyper Voice, Steel Wing, Heat Wave
+Jynx (50) [Naive] @ Colbur Berry / Dry Skin: Blizzard, Psychic, Aura Sphere, Lovely Kiss
+Nidoqueen (50) [Hardy] @ Black Sludge / Multiscale: Earthquake, Poison Jab, Stone Edge, Hammer Arm
+Lilligant (50) [Quirky] @ Grass Gem / Chlorophyll: Energy Ball, Sleep Powder, Earth Power, Psychic
+Simisear (50) [Sassy] @ Fire Gem / Blaze: Fire Blast, Focus Blast, Grass Knot, Earthquake
+Samurott (51) [Naive] @ Water Gem / Shell Armor: Waterfall, Sacred Sword, Wild Charge, X-Scissor
+
+
+If you chose Tepig
+Swellow (50) [Bashful] @ Focus Sash / Technician: Hurricane, Hyper Voice, Steel Wing, Heat Wave
+Jynx (50) [Calm] @ Colbur Berry / Dry Skin: Blizzard, Psychic, Aura Sphere, Lovely Kiss
+Nidoqueen (50) [Docile] @ Black Sludge / Multiscale: Earthquake, Poison Jab, Stone Edge, Hammer Arm
+Volbeat (50) [Lonely] @ Fire Gem / Volt Absorb: Flame Charge, Flare Blitz, Earthquake, Megahorn
+Simipour (50) [Naive] @ Water Gem / Torrent: Hydro Pump, Focus Blast, Grass Knot, Ice Beam
+Serperior (51) [Timid] @ Grass Gem / Sheer Force: Energy Ball, Dragon Pulse, Earth Power, Glare
+
+
+If you chose Oshawott
+Swellow (50) [Careful] @ Focus Sash / Technician: Hurricane, Hyper Voice, Steel Wing, Heat Wave
+Jynx (50) [Lonely] @ Colbur Berry / Dry Skin: Blizzard, Psychic, Aura Sphere, Lovely Kiss
+Nidoqueen (50) [Serious] @ Black Sludge / Multiscale: Earthquake, Poison Jab, Stone Edge, Hammer Arm
+Dewgong (50) [Hasty] @ Water Gem / Thick Fat: Surf, Ice Beam, Aqua Jet, Signal Beam
+Simisage (50) [Sassy] @ Grass Gem / Overgrow: Power Whip, Focus Blast, Rock Climb, Earthquake
+Emboar (51) [Impish] @ Fire Gem / Adaptability: Blaze Kick, Night Slash, Earthquake, Wild Charge
+
+
+Chargestone Cave:
+1F and B1F (40): Electrode (20%), Magnezone (20%), Galvantula (20%), Electabuzz (10%), Raichu (10%), Eelektross (10%), Zebstrika (10%)
+B2F (40): Klinklang (20%), Ferrothorn (20%), Skarmory (20%), Escavalier (20%), Probopass (20%)
+Dust Cloud (40): Excadrill (60%), Dugtrio (30%), Sandslash (10%)
+
+
+*Revive > HM05 Waterfall
+*Iron > TM91 Flash Cannon
+*Magnet > TM29 Psychic
+*Timer Ball > TM30 Shadow Ball
+*HP Up removed
+
+
+Doctor Wayne:
+Blissey (70) [Adamant] @ Normal Gem / Natural Cure: Self-Destruct 
+
+
+Team Plasma Grunt 13:
+Mismagius (53) [Calm] @ Colbur Berry / Levitate: Shadow Ball, Psychic, Aura Sphere, Destiny Bond
+Fearow (53) [Rash] @ Scope Lens / Sniper: Night Slash, Drill Run, Drill Peck, Focus Energy
+Electrode (53) [Quirky] @ Air Balloon / Static: Swagger, Foul Play, Thunderbolt, Flash Cannon
+Tropius (53) [Mild] @ Quick Claw / Thick Fat: Energy Ball, Dragon Pulse, Earth Power, Synthesis
+Flareon (53) [Adamant] @ Toxic Orb / Guts: Blaze Kick, Wild Charge, Facade, Protect
+
+
+Team Plasma Grunt 14:
+Torkoal (53) [Sassy] @ Quick Claw / Shell Armor: Flamethrower, Explosion, Earthquake, Rock Slide
+Liepard (53) [Gentle] @ Lum Berry / Prankster: Swagger, Thunder Wave, Foul Play, Fake Out
+Zebstrika (53) [Naughty] @ Fire Gem / Motor Drive: Wild Charge, Night Slash, Blaze Kick, Drill Run 
+Parasect (53) [Calm] @ Bright Powder / Dry Skin: X-Scissor, Shadow Claw, Spore, Moonlight
+Leafeon (53) [Quirky] @ Life Orb / Sap Sipper: Leaf Blade, Earthquake, Swords Dance, Wild Charge
+
+
+Team Plasma Grunt 15:
+Aipom (53) [Careful]@ King’s Rock / Skill Link: Bullet Seed, Rock Blast, Tail Slap, Icicle Spear
+Gardevoir (53) [Careful] @ Colbur Berry / Trace: Psychic, Focus Blast, Calm Mind, Shadow Ball
+Arbok (53) [Hardy] @ Black Sludge / Unnerve: Glare, Swagger, Poison Jab, Dragon Claw
+Masquerain (53) [Naive] @ Expert Belt / Compound Eyes: Hydro Pump, Bug Buzz, Blizzard, Soak
+Gengar (53) [Bold] @ Lum Berry / Shadow Tag: Thunderbolt, Shadow Ball, Spite, Perish Song
+
+
+Team Plasma Grunt 16:
+Medicham (54) [Modest] @ Coba Berry / Pure Power: Fake Out, Psycho Cut, Close Combat, Bullet Punch
+Crawdaunt (54) [Naughty] @ Dark Gem / Adaptability: Pursuit, Aqua Jet, Razor Shell, Ice Fang
+Espeon (54) [Timid] @ Life Orb / Magic Bounce: Psychic, Aura Sphere, Water Pulse, Shock Wave
+Raichu (54) [Bold] @ Bright Powder / Mold Breaker: Thunderbolt, Earth Power, Surf, Aura Sphere
+Corsola (54) [Quirky] @ Leftovers / Shell Armor: Calm Mind, Recover, Surf, Destiny Bond
+
+
+Team Plasma Grunt 17:
+Skuntank (54) [Impish] @ Air Balloon / Unnerve: Toxic Spikes, Toxic, Venoshock, Dark Pulse
+Houndoom (54) [Timid] @ Focus Band / Intimidate: Blaze Kick, Thunder Fang, Crunch, Howl
+Skarmory (54) [Jolly] @ Flying Gem / Rock Head: Brave Bird, Iron Head, Drill Run, Spikes
+Musharna (54) [Impish] @ Sitrus Berry / Analytic: Shadow Ball, Psychic, Nightmare, Dark Void
+Milotic (54) [Gentle] @ Leftovers / Multiscale: Muddy Water, Mirror Coat, Ice Beam, Recover
+
+
+Team Plasma Grunt 18:
+Ursaring (54) [Mild] @ Toxic Orb / Quick Feet: Protect, Earthquake, Facade, Shadow Claw
+Eelektross (54) [Sassy] @ Black Sludge / Levitate: Coil, Wild Charge, Poison Jab, Seed Bomb
+Spiritomb (54) [Adamant] @ Leftovers / Unnerve: Ominous Wind, Nasty Plot, Dark Pulse, Dark Void
+Sharpedo (54) [Impish] @ Bright Powder / Speed Boost: Waterfall, Crunch, Close Combat, Protect
+Metagross (54) [Docile] @ Liechi Berry / Iron Fist: Meteor Mash, Psycho Cut, Fire Punch, Agility
+
+
+Seven Sage Rood (DOUBLES):
+Arcanine (54) [Hardy] @ Power Herb / Intimidate: Flare Blitz, Double-Edge, Solar Beam, Crunch
+Honchkrow (54) [Jolly] @ Sitrus Berry / Prankster: Icy Wind, Thunder Wave, Brave Bird, Helping Hand
+Gallade (54) [Naive] @ White Herb / Unburden: Close Combat, Psycho Cut, Night Slash, Leaf Blade
+Mightyena (54) [Lonely] @ Focus Sash / Intimidate: Foul Play, Screech, Endeavor, Sucker Punch
+Stoutland (54) [Calm] @ Normal Gem / Sand Rush: Take Down, Submission, Crunch, Wild Charge
+Swoobat (55) [Quiet] @ Life Orb / Sheer Force: Psychic, Air Slash, Heat Wave, Energy Ball
+
+
+Pkmn Trainer N 4: 
+Probopass (56) [Sassy] @ Chople Berry / Levitate: Stealth Rock, Flash Cannon, Power Gem, Iron Defense
+Galvantula (56) [Lonely] @ Grass Gem / Compound Eyes: Thunder, Bug Buzz, Energy Ball, Gastro Acid
+Electivire (56) [Relaxed] @ Life Orb / Iron Fist: Thunder Punch, Sky Uppercut, Ice Punch, Shadow Punch
+Ferrothorn (56) [Naive] @ Occa Berry / Iron Barbs: Explosion, Leech Seed, Power Whip, Iron Head 
+Magnezone (56) [Bashful] @ Quick Claw / Levitate: Thunderbolt, Flash Cannon, Tri Attack, Mirror Coat
+Klinklang (56) [Gentle] @ Focus Sash / Levitate: Shift Gear, Iron Head, Wild Charge, Iron Defense
+
+
+Mistralton City:
+Grass (40): Raichu (20%), Chimecho (20%), Azumarill (10%), Leavanny (10%), Lopunny (10%), Lucario (10%), Crobat (10%), Swoobat (10%)
+*Grass can be found to the right of the pokecenter
+  
+
+
+
+*Mart guy who gives TM07, TM11, TM18 and TM37 has been removed
+
+
+Route 7:
+Tall Grass (40): Tauros (20%), Bouffalant (20%), Heatmor (10%), Durant (10%), Volbeat (10%), Illumise (10%), Plusle (10%), Minun (10%)
+Rustling Grass (40): Audino (50%), Emolga (50%)
+Doubles Grass (40) (Only available after Elmer and Mary): Zangoose (20%), Seviper (20%), Lunatone (10%), Solrock (10%), Heracross (10%), Scyther (10%), Absol (10%), Pachirisu (10%)
+Static: Foongus/Amoonguss (100%)
+
+
+*TM57 removed
+*TM81 > TM60 Quash
+*PP Up removed
+
+
+Ace Trainer Elmer:
+Bibarel (57) [Jolly] @ Starf Berry / Simple: Swords Dance, Endure, Waterfall, Body Slam
+Snorlax (57) [Relaxed] @ Salac Berry / Thick Fat: Belly Drum, Body Slam, Earthquake, Crunch
+Empoleon (57) [Bold] @ Petaya Berry / Vital Spirit: Surf, Flash Cannon, Ice Beam, Agility
+Hitmonlee (57) [Timid] @ Liechi Berry / Unburden: Endure, Close Combat, Stone Edge, Mega Kick
+Unfezant (57) [Docile] @ Lansat Berry / Super Luck: Shadow Claw, Drill Peck, Blaze Kick, Endure
+
+
+Pokemon Ranger Mary:
+Purugly (57) [Rash] @ Chople Berry / Defiant: Fake Out, Double-Edge, Night Slash, Charm
+Mothim (57) [Adamant] @ Charti Berry / Tinted Lens: Bug Buzz, Air Slash, Psychic, Energy Ball
+Torterra  (57) [Docile] @ Yache Berry / Rock Head: Curse, Seed Bomb, Earthquake, Stone Edge
+Typhlosion (57) [Impish] @ Passho Berry / Blaze: Flare Blitz, Earthquake, Wild Charge, Rock Climb
+Mantine (57) [Jolly] @ Wacan Berry / Water Absorb: Scald, Aeroblast, Supersonic, Roost
+
+
+Pokemon Ranger Pedro:
+Seviper (57) [Mild] @ Dark Gem / Sheer Force: Crunch, Gunk Shot, Fire Fang, Toxic Spikes
+Heatmor (57) [Modest] @ Steel Gem / Flash Fire: Fire Punch, Iron Head, Earthquake, Flame Charge
+Yanmega (57) [Brave] @ Dragon Gem / Speed Boost: Dragon Pulse, Bug Buzz, Protect, Roost
+Butterfree (57) [Brave] @ Bug Gem / Tinted Lens: Bug Buzz, Psychic, Shadow Ball, Sleep Powder
+Relicanth (57) [Serious] @ Rock Gem / Rock Head: Head Smash, Waterfall, Earthquake, Yawn
+
+
+Harlequin Pat (OPTIONAL, Gives a White Herb):
+Accelgor (60) [Quirky] @ Life Orb / Adaptability: Bug Buzz, Night Daze, Focus Blast, Energy Ball
+
+
+Harlequin Ian (OPTIONAL, Gives the Old Amber):
+Scolipede (60) [Timid] @ Life Orb / Speed Boost: Swords Dance, Megahorn, Gunk Shot, Earthquake
+
+
+Celestial Tower:
+2F and 3F (45): Gothitelle (20%), Reuniclus (20%), Beheeyem (20%), Medicham (20%), Bronzong (20%)
+4F and 5F (45): Lampent (20%), Gengar (20%), Mismagius (20%), Dusknoir (10%), Cofagrigus (10%), Zoroark (10%), Spiritomb (10%)
+
+
+*Original TM61 location removed
+
+
+Psychic Doreen (DOUBLES):
+Furret (58) [Rash] @ Silk Scarf / Quick Feet: Belly Drum, Crush Claw, Shadow Claw, Fire Punch
+Parasect (58) [Timid] @ Lum Berry / Dry Skin: Rage Powder, Spore, Leech Life, Shadow Claw
+Blastoise (58) [Timid] @ Sitrus Berry / No Guard: Follow Me, Scald, Flash Cannon, Ice Beam
+Jumpluff (58) [Jolly] @ Yache Berry / Prankster: Taunt, Stun Spore, Giga Drain, Air Slash
+Umbreon (58) [Bashful] @ Leftovers / Magic Guard: Follow Me, Toxic, Moonlight, Dark Pulse
+
+
+Lass Kara (DOUBLES):
+Dusclops (58) [Naughty] @ Eviolite / Pressure: Gravity, Will-O-Wisp, Hex, Dark Void
+Linoone (58) [Careful] @ Life Orb / Scrappy: Hyper Voice, Fire Blast, Blizzard, Thunder
+Stantler (58) [Bold] @ Expert Belt / Intimidate: Zen Headbutt, Slash, Night Slash, Gravity
+Dodrio (58) [Bashful] @ Ground Gem / Arena Trap: Drill Run, Drill Peck, Stone Edge, Quick Attack
+Tentacruel (58) [Jolly] @ Black Sludge / Clear Body: Sludge Bomb, Hydro Pump, Ice Beam, Aqua Ring
+
+
+Pokefan Jude (DOUBLES):
+Mienshao (58) [Impish] @ Focus Sash / Inner Focus: Wide Guard, Aura Sphere, Psychic, Shadow Ball
+Scyther (58) [Sassy] @ Eviolite / Technician: Quick Guard, Wing Attack, Bug Bite, Force Palm
+Alomomola (58) [Naughty] @ Leftovers / Regenerator: Wide Guard, Scald, Ice Beam, Wish
+Lucario (58) [Timid] @ Expert Belt / Inner Focus: Quick Guard, Aura Sphere, Flash Cannon, Psychic
+Magcargo (58) [Bashful] @ Sitrus Berry / Water Absorb: Wide Guard, Power Gem, Flamethrower, Earth Power
+
+
+Pokefan Georgia (DOUBLES):
+Dusknoir (58) [Mild] @ Sitrus Berry / Levitate: Trick Room, Shadow Punch, Hammer Arm, Thunder Punch
+Conkeldurr (58) [Mild] @ Life Orb / Sheer Force: Hammer Arm, Rock Slide, Ice Punch, Fire Punch
+Slowbro (58) [Gentle] @ Leftovers / Shell Armor: Trick Room, Psychic, Scald, Flamethrower
+Exeggutor (58) [Careful] @ Expert Belt / Chlorophyll: Energy Ball, Psychic, Earth Power, Sleep Powder
+Ampharos (58) [Bold] @ Dragon Gem / Mold Breaker: Thunderbolt, Dragon Pulse, Tail Glow, Signal Beam
+
+
+Nurse Sachiko (OPTIONAL):
+Audino (60) [Sassy] @ Bright Powder / Magic Bounce: Minimize
+
+
+Ace Trainer Beckett (DOUBLES) (OPTIONAL, Gives TM13) (YOU CAN PRESS B TO ROTATE BECKETT AND KASSANDRA):
+Hitmontop (58) [Sassy] @ Sitrus Berry / Technician: Fake Out, Force Palm, Thief, Rock Tomb
+Spinda (58) [Hasty] @ Normal Gem / Contrary: Hyper Voice, Psychic, Shadow Ball, Fake Out
+Delibird (58) [Careful] @ Wise Glasses / Technician: Fake Out, Ice Beam, Air Cutter, Water Pulse
+Hariyama (58) [Rash] @ Leftovers / Guts: Fake Out, Belly Drum, Bullet Punch, Mach Punch
+Infernape (58) [Brave] @ Expert Belt / Iron Fist: Fake Out, Fire Punch, Sky Uppercut, Thunder Punch
+
+
+Ace Trainer Kassandra (DOUBLES) (OPTIONAL, Gives TM35):
+Wobbuffet (58) [Rash] @ Leftovers / Shadow Tag: Perish Song
+Altaria (58) [Serious] @ Sitrus Berry / Filter: Aeroblast, Dragon Pulse, Flamethrower, Roost
+Cacturne (58) [Rash] @ Dark Gem / Water Absorb: Pursuit, Sucker Punch, Needle Arm, Thunder Punch
+Banette (58) [Impish] @ Silk Scarf / Shadow Tag: Fake Out, Shadow Claw, Slash, Brick Break
+Gothitelle (58) [Lax] @ Tanga Berry / Magic Bounce: Perish Song, Mean Look
+
+
+Mistralton Gym:
+Worker Cliff:
+Skiploom (75) [Rash] @ Eviolite / Prankster: Leech Seed, Sleep Powder, Giga Drain, Synthesis
+Golbat (75) [Naughty] Inner Focus: Acrobatics, Poison Fang, Leech Life, Roost
+Rufflet (75) [Sassy] @ Muscle Band / Defiant: Submission, Fly, Roost, Zen Headbutt
+Wingull (75) [Rash] @ Expert Belt / Keen Eye: Scald, Air Slash, Shock Wave, Roost
+
+
+Worker Brady:
+Mandibuzz (59) [Sassy] @ Leftovers / Prankster: Tailwind, U-Turn 
+Zangoose (59) [Brave] @ Toxic Orb / Toxic Boost: Protect, Facade, Close Combat, Night Slash 
+Rotom-Heat (59) [Hasty] @ White Herb / Levitate: Thunder, Overheat, Will-O-Wisp, Hex
+Vespiquen (59) [Calm] @ Charti Berry / Filter: Tailwind, Attack Order, Aeroblast, Heal Order
+Feraligatr (59) [Lax] @ Lum Berry / Sheer Force: Waterfall, Swords Dance, Dragon Claw, Ice Punch
+
+
+Pilot Ted (DOUBLES):
+Crobat (59) [Lax] @ Black Sludge / Inner Focus: Tailwind, Screech, Roost, Super Fang
+Heracross (59) [Modest] @ Coba Berry / Guts: Megahorn, Close Combat, Stone Edge, Night Slash
+Murkrow (59) [Sassy] @ Eviolite / Prankster: Tailwind, Foul Play, Taunt, Torment
+Chandelure (59) [Bashful] @ Expert Belt / Flash Fire: Flamethrower, Shadow Ball, Energy Ball, Psychic
+Glalie (59) [Jolly] @ Life Orb / Rock Head: Head Smash, Icicle Crash, Drill Run, Crunch
+
+
+Pilot Chase (YOU CAN’T LEAVE BETWEEN THIS FIGHT AND THE NEXT ONE):
+Gengar (60) [Sassy] @ Life Orb / Levitate: Sludge Bomb, Shadow Ball, Spite, Destiny Bond
+Empoleon (60) [Modest] @ Salac Berry / Vital Spirit: Surf, Flash Cannon, Ice Beam, Grass Knot
+Blaziken (60) [Docile] @ Muscle Band / Reckless: Jump Kick, Blaze Kick, Thunder Punch, Stone Edge
+Claydol (60) [Gentle] @ Leftovers / Levitate: Earth Power, Stored Power, Cosmic Power, Recover
+Carnivine (60) [Quiet] @ Lum Berry / Poison Heal: Power Whip, Crunch, Gunk Shot, Leech Seed
+
+
+Worker Arnold (DOUBLES):
+Staraptor (60) [Hasty] @ Choice Band / Reckless: Close Combat, Sky Attack
+Xatu (60) [Bold] @ Kasib Berry / Magic Guard: Psyshock, Aeroblast, Heat Wave, Shadow Ball
+Dunsparce (60) [Quirky] @ Sitrus Berry / Thick Fat: Drill Run, Aerial Ace, Rock Slide, Roost
+Chatot (60) [Bold] @ Flying Gem / Soundproof: Thunderbolt, Chatter, Heat Wave, Taunt
+
+
+Gym Leader Skyla (DOUBLES):
+Gyarados (61) [Hasty] @ Wacan Berry / Intimidate: Dragon Dance, Waterfall, Ice Fang, Earthquake
+Emolga (61) [Quirky] @ Focus Sash / Lightning Rod: Tailwind, Thunderbolt, Iron Tail, Aeroblast
+Volcarona (61) [Modest] @ Air Balloon / Swarm: Quiver Dance, Fiery Dance, Bug Buzz, Rage Powder
+Mismagius (61) [Quiet] @ Life Orb / Levitate: Shadow Ball, Psychic, Aura Sphere, Nasty Plot
+Chimecho (61) [Calm] @ Sitrus Berry / Levitate: Icy Wind, Mist Ball, Flash Cannon, Yawn
+Swanna (62) [Timid] @ Water Gem / Friend Guard: Hydro Pump, Aeroblast, Ice Beam, Tailwind
+
+
+Brycen Split (Level Cap: 67)
+
+
+Twist Mountain:
+Rival Cheren 5:
+If you chose Snivy
+Durant (62) [Jolly] @ Wide Lens / Hustle: X-Scissor, Iron Head, Drill Run, Hone Claws
+Medicham (62) [Calm] @ Choice Band / Pure Power: High Jump Kick, Zen Headbutt, Ice Punch, Thunder Punch
+Plusle (62) [Gentle] @ Expert Belt / Motor Drive: Thunderbolt, Energy Ball, Focus Blast, Volt Switch
+Azumarill (62) [Docile] @ Custap Berry / Huge Power: Ice Punch, Fake Out, Aqua Tail, Double-Edge
+Simisage (62) [Docile] @ White Herb / Overgrow: Leaf Storm, Focus Blast, Earthquake, Stone Edge
+Emboar (63) [Naive] @ Leftovers / Adaptability: Fire Punch, Sucker Punch, Bulk Up, Wild Charge
+
+
+If you chose Tepig
+Durant (62) [Calm] @ Wide Lens / Hustle: X-Scissor, Iron Head, Drill Run, Hone Claws
+Medicham (62) [Adamant] @ Choice Band / Pure Power: High Jump Kick, Zen Headbutt, Ice Punch, Thunder Punch
+Plusle (62) [Naughty] @ Expert Belt / Motor Drive: Thunderbolt, Energy Ball, Focus Blast, Volt Switch
+Tropius (62) [Modest] @ Custap Berry / Thick Fat: Seed Flare, Dragon Pulse, Earth Power, Leech Seed
+Simisear (62) [Bashful] @ White Herb / Blaze: Overheat, Focus Blast, Energy Ball, Earthquake
+Samurott (63) [Sassy] @ Leftovers / Shell Armor: Waterfall, Sacred Sword, X-Scissor, Shell Smash
+
+
+If you chose Oshawott
+Durant (62) [Quiet] @ Wide Lens / Hustle: X-Scissor, Iron Head, Drill Run, Hone Claws
+Medicham (62) [Quirky] @ Choice Band / Pure Power: High Jump Kick, Zen Headbutt, Ice Punch, Thunder Punch
+Plusle (62) [Hardy] @ Expert Belt / Motor Drive: Thunderbolt, Energy Ball, Focus Blast, Volt Switch
+Torkoal (62) [Impish] @ Custap Berry / Shell Armor: Fire Blast, Earth Power, Self-Destruct, Ancient Power
+Simipour (62) [Rash] @ White Herb / Torrent: Hydro Cannon, Focus Blast, Ice Beam, Energy Ball
+Serperior (63) [Docile] @ Leftovers / Sheer Force: Energy Ball, Dragon Pulse, Earth Power, Leech Seed
+
+
+Mistralton Cave:
+Walking (50): Rhydon (20%), Fraxure (20%), Aggron (20%), Marowak (20%), Magcargo (20%)
+Dust Cloud (50): Audino (50%), Aggron (50%)
+
+
+*Iron removed
+*Carbos removed
+*PP Up removed
+
+
+Lady June (Gives 1 of each resist berry and guards Guidance Chamber encounter):
+Azelf (65) [Quiet] @ Colbur Berry / Levitate: Stealth Rock, Explosion, Psycho Boost, Flamethrower
+Ninjask (65) [Relaxed] @ Focus Band / Technician: Twineedle, U-Turn, Thief, Rock Smash
+Porygon-Z (62) [Relaxed] @ Focus Sash / Adaptability: Flash Cannon, Focus Blast, Hyper Voice, Agility
+Chatot (65) [Naughty] @ Choice Specs / Soundproof: Thunder, Hurricane
+Sharpedo (65) [Jolly] @ Bright Powder / Speed Boost: Protect, Hydro Cannon, Ice Beam, Crunch
+Beheeyem (65) [Impish] @ Quick Claw / Levitate: Mist Ball, Thunder, Bug Buzz, Water Pulse
+
+
+Guidance Chamber:
+Walking (50): Krookodile (20%), Pupitar (20%), Hippowdon (20%), Claydol (20%), Ursaring (20%)
+Dust Cloud (50): Audino (50%), Stunfisk (50%)
+
+
+Route 17 (PERMA RAIN):
+THE FOLLOWING TRAINERS ON ROUTE 17 AND 18 ARE MANDATORY ONLY IF YOU WANT LIFE ORB/LEFTOVERS OR YOU WANT TO PROGRESS THROUGH THE ROUTES
+Fishing (40): Jellicent (60%), Corsola (40%)
+Fishing Dark Spot (40): Seismitoad (60%), Gastrodon (40%)
+Surfing (50): Basculin-Red (60%), Crawdaunt (40%)
+Surfing Dark Spot (50): Basculin-Blue (60%), Sharpedo (40%)
+
+
+*Heart Scale removed
+
+
+Fisherman Lydon (GIVES DOUSE DRIVE):
+Whiscash (64) [Lonely] @ Rindo Berry / Drizzle: Aqua Tail, Earthquake, Stone Edge, Dragon Dance
+Omastar (64) [Relaxed] @ White Herb / Shell Armor: Shell Smash, Surf, Power Gem, Iron Defense
+Qwilfish (64) [Naughty] @ Life Orb / Swift Swim: Poison Jab, Waterfall, Toxic Spikes, Leech Life
+Politoed (64) [Bashful] @ Leftovers / Water Absorb: Scald, Protect, Giga Drain, Aqua Ring
+Crawdaunt (64) [Quirky] @ Mystic Water / Adaptability: Crabhammer, Crunch, Sucker Punch, Superpower
+
+
+Swimmer Joyce (GIVES SHOCK DRIVE):
+Basculin-Blue (64) [Lax] @ Life Orb / Drizzle: Scald, Night Daze, Ice Beam, Soak
+Poliwrath (64) [Quiet] @ Lum Berry / Swift Swim: Close Combat, Ice Punch, Waterfall, Hypnosis
+Kabutops (64) [Adamant] @ Focus Sash / Rock Head: Rock Climb, Waterfall, X-Scissor, Swords Dance
+Lanturn (64) [Impish] @ Sitrus Berry / Volt Absorb: Thunder, Surf, Icy Wind, Volt Switch
+Swampert (64) [Naughty] @ Custap Berry / Water Absorb: Waterfall, Earthquake, Gunk Shot, Amnesia
+
+
+Swimmer Wright (DOUBLES, GIVES BURN DRIVE):
+Lumineon (64) [Hasty] @ Mystic Water / Drizzle: Surf, Thunder, Hurricane, Signal Beam
+Toxicroak (64) [Sassy] @ Life Orb / Dry Skin: Gunk Shot, Cross Chop, Bulk Up, Sucker Punch
+Stunfisk (64) [Naughty] @ Leftovers / Water Absorb: Earth Power, Thunder, Surf, Pain Split
+Cacturne (64) [Naive] @ Poison Gem / Water Absorb: Poison Jab, Needle Arm, Crunch, Destiny Bond
+Gastrodon (64) [Naive] @ Rindo Berry / Water Absorb: Earth Power, Icy Wind, Surf, Recover
+
+
+Route 18:
+Grass (40): Mienshao (20%), Crustle (20%), Amoonguss (20%), Sawk (10%), Throh (10%), Braviary (10%), Mandibuzz (10%)
+Rustling Grass (40): Audino (50%), Hariyama (50%)
+Dark Grass (40): Staraptor (20%), Luxray (20%), Toxicroak (20%), Floatzel (10%), Carnivine (10%), Abomasnow (10%), Burmy (10%)
+Fishing (40): Poliwhirl (100%)
+Fishing Dark Spot (40): Swanna (100%)
+Surfing (50): Luvdisc (100%)
+Surfing Dark Spot: Wailord (100%)
+Surprise Egg (look at bottom of doc if u don't care abt being spoiled) (100%)
+
+
+*Heart Scale removed
+*Calcium removed
+*Original HM05 location removed
+*Original TM19 location removed
+
+
+Hiker Jeremiah (GIVES CHILL DRIVE):
+Wormadam-Sand (64) [Calm] @ Coba Berry / Adaptability: Earthquake, X-Scissor
+Lunatone (64) [Quirky] @ Leftovers / Levitate: Ancient Power, Hex, Will-O-Wisp, Moonlight
+Camerupt (64) [Naughty] @ Focus Sash / Simple: Flamethrower, Earth Power, Rock Polish, Self-Destruct
+Crustle (64) [Bashful] @ White Herb / Shell Armor: Shell Smash, Stone Edge, X-Scissor, Earthquake
+Maractus (64) [Docile] @ Life Orb / Storm Drain: Energy Ball, Earth Power, Sludge Bomb, Power Gem
+
+
+Veteran Ray (GIVES LEFTOVERS):
+Shuckle (64) [Sassy] @ Leftovers / Sturdy: Stealth Rock, Wrap, Rest, Metal Burst
+Milotic (64) [Quirky] @ Leftovers / Multiscale: Calm Mind, Muddy Water, Ice Beam, Recover
+Blissey (64) [Calm] @ Leftovers / Natural Cure: Seismic Toss, Thunder Wave, Soft-Boiled, Transform
+Nidoqueen (64) [Naive] @ Leftovers / Multiscale: Toxic Spikes, Earthquake, Gunk Shot, Rock Slide
+Tangrowth (64) [Gentle] @ Leftovers / Thick Fat: Giga Drain, Sleep Power, Leech Seed, Synthesis
+Wobbuffet (64) [Rash] @ Leftovers / Shadow Tag: Counter, Mirror Coat, Encore, Destiny Bond
+
+
+P2 Laboratory:
+Grass (40): Scizor (20%), Manectric (20%), Ampharos (10%), Mawile (10%), Forretress (10%), Bisharp (10%), Eelektross (10%), Stunfisk (10%)
+Rustling Grass (40): Audino (50%), Bisharp (50%)
+Fishing (45): Tentacruel (100%)
+Fishing Dark Spot (45): Lanturn (100%)
+Surfing (50): Snorlax (100%)
+Surfing Dark Spot (50): Seaking (100%)
+Scientist Nathan (GIVES LIFE ORB):
+Charizard (64) [Hardy] @ Life Orb / Levitate: Flamethrower, Dragon Pulse, Air Slash, Earthquake
+Kingler (64) [Quirky] @ Life Orb / Sheer Force: Waterfall, Meteor Mash, Rock Slide, Swords Dance
+Scrafty (64) [Naughty] @ Life Orb / Intimidate: Drain Punch, Crunch, Thunder Punch, Earthquake
+Girafarig (64) [Gentle] @ Life Orb / Adaptability: Psychic, Dark Pulse, Aura Sphere, Thunderbolt
+Tauros (64) [Quirky] @ Life Orb / Reckless: Double-Edge, Wild Charge, Horn Drill, Earthquake
+Victreebel (64) [Lonely] @ Life Orb / No Guard: Power Whip, Gunk Shot, Sleep Powder, Fire Fang
+
+
+Wellspring Cave:
+B1F:
+Ace Trainer Pheno (GIVES AN EXTRA GEM OF EACH TYPE):
+Crobat (65) [Bashful] @ Bright Powder / Inner Focus: U-Turn, Cross Poison, Fly, Toxic
+Chandelure (65) [Quirky] @ Fire Gem / Shadow Tag: Fire Blast, Shadow Ball, Energy Ball, Calm Mind
+Roserade (65) [Docile] @ Focus Band / Technician: Mega Drain, Sludge Bomb, Earth Power, Sleep Powder
+Hydreigon (65) [Impish] @ Life Orb / Levitate: Draco Meteor, Dark Pulse, Fire Blast, Nasty Plot
+Garchomp (65) [Relaxed] @ Rocky Helmet / Rough Skin: Outrage, Swords Dance, Stone Edge, Earthquake
+Togekiss (65) [Sassy] @ Leftovers / Serene Grace: Air Slash, Thunder Wave, Flamethrower, Ancient Power
+
+
+Twist Mountain:
+Walking (50): Steelix (20%), Mamoswine (20%), Sudowoodo (10%), Gigalith (10%), Golem (10%), Cryogonal (10%), Beartic (10%), Glalie (10%)
+Dust Cloud (50): Audino (50%), Magcargo (50%)
+
+
+*PP Up > TM87 Swagger
+*TM91 > TM71 Stone Edge
+*Protein removed 
+*Iron removed 
+*Original TM90 location removed
+
+
+Hiker Terrell:
+Gigalith (63) [Lonely] @ Custap Berry / Sturdy: Self-Destruct, Ancient Power, Earth Power, Thunder
+Golem (63) [Modest] @ Passho Berry / Solid Rock: Explosion, Fissure, Rock Wrecker, Wild Charge
+Probopass (63) [Serious] @ Chople Berry / Levitate: Self-Destruct, Power Gem, Flash Cannon, Earth Power
+Magcargo (63) [Lonely] @ Power Herb / Water Absorb: Self-Destruct, Power Gem, Flamethrower, Solar Beam
+Tyranitar (63) [Naive] @ Sitrus Berry / Intimidate: Explosion, Strength, Crunch, Ice Punch
+
+
+Hiker Darrell:
+Garchomp (63) [Bashful] @ Yache Berry / Rough Skin: Stealth Rock, Outrage, Earthquake, Rock Slide
+Excadrill (63) [Docile] @ Steel Gem / Mold Breaker: Spikes, Iron Head, Earthquake, Rock Climb
+Mamoswine (63) [Jolly] @ Muscle Band / Thick Fat: Stealth Rock, Earthquake, Icicle Crash, Ice Shard
+Seismitoad (63) [Hasty] @ Black Sludge / Water Absorb: Toxic Spikes, Earth Power, Sludge Wave, Ice Beam
+Gliscor (63) [Rash] @ Toxic Orb / Poison Heal: Spikes, Brave Bird, Facade, Protect
+
+
+Battle Girl Sharon (DOUBLES):
+Zebstrika (63) [Relaxed] @ Power Herb / Motor Drive: Volt Tackle, Flare Blitz, Bounce, Night Slash
+Primeape (63) [Relaxed] @ Muscle Band / Defiant: Close Combat, Crunch, Rock Slide, Thunder Punch 
+Farfetch’d (63) [Impish] @ Stick / Defiant: Sacred Sword, Leaf Blade, Drill Peck, Night Slash
+Blaziken (63) [Mild] @ Life Orb / Reckless: Flare Blitz, High Jump Kick, Wild Charge, Rock Slide
+Throh (63) [Calm] @ Leftovers / Mold Breaker: Wide Guard, Quick Guard, Storm Throw, Rock Slide
+
+
+Worker Heath (OPTIONAL):
+Durant (75) [Impish] @ Muscle Band / Hustle: Hone Claws, Iron Head, X-Scissor, Crunch
+
+
+Worker Rob (OPTIONAL):
+Raticate (75) [Serious] @ Wide Lens / Hustle: Poison Jab, Body Slam, Brick Break, Fire Fang
+
+
+Worker Cairn (OPTIONAL):
+Darmanitan (75) [Jolly] @ Life Orb / Sheer Force: Fire Punch, Sky Uppercut, Rock Slide, Zen Headbutt
+
+
+Icirrus City:
+Puddle (50): Weavile (60%), Jynx (30%), Vanilluxe (10%)
+Fishing (50): Toxicroak (60%), Seismitoad (40%)
+Fishing Dark Spot (50): Muk (60%), Weezing (40%)
+Surfing (50): Cloyster (60%), Dewgong (30%), Walrein (10%)
+Surfing Dark Spot (50): Wailord (60%), Milotic (40%)
+
+
+*original TM31 location removed
+
+
+Route 8:
+Puddle (50): Ludicolo (60%), Poliwhirl (30%), Clamperl (10%)
+Fishing (50): Mantine (60%), Pelipper (40%)
+Fishing Dark Spot (50): Tentacruel (60%), Qwilfish (40%)
+Surfing (50): Masquerain (60%), Swellow (30%), Yanma (10%)
+Surfing Dark Spot (50): Unfezant (60%), Swoobat (40%)
+
+
+*Poison Barb > TM34 Sludge Wave
+
+
+Pokemon Ranger Lewis:
+Snorlax (63) [Relaxed] @ Chople Berry / Scrappy: Explosion
+Lopunny (63) [Bashful] @ Eject Button / Scrappy: Retaliate, Close Combat
+Kecleon (63) [Hardy] @ Normal Gem / Adaptability: Retaliate, Shadow Claw
+Watchog (63) [Hasty] @ Normal Gem / Compound Eyes: Retaliate, Zen Headbutt
+Miltank (63) [Serious] @ Eject Button / Scrappy: Retaliate, Hammer Arm
+
+
+Parasol Lady Melita:
+Slowking (63) [Docile] @ Leftovers / Drizzle: Waterfall, Zen Headbutt, Curse, Icicle Crash
+Mantine (63) [Hardy] @ Life Orb / Swift Swim: Surf, Hurricane, Mirror Coat, Aqua Ring
+Gorebyss (63) [Docile] @ White Herb / Shell Armor: Shell Smash, Surf, Sludge Bomb, Ice Beam
+Seaking (63) [Timid] @ Rindo Berry / Lightning Rod: Waterfall, Drill Run, Megahorn, Drill Peck
+Quagsire (63) [Naive] @ Focus Sash / Water Absorb: Gunk Shot, Waterfall, Earthquake, Recover
+
+
+Pokemon Ranger Annie:
+Castform-Rain (63) [Gentle] @ Expert Belt / Drizzle: Surf, Thunder, Hurricane, Ice Beam
+Wormadam-Plant (63) [Bold] @ Focus Band / Adaptability: Energy Ball, Bug Buzz, Water Pulse. Protect
+Cradily (63) [Jolly] @ Chople Berry / Water Absorb: Giga Drain, Ancient Power, Leech Seed, Recover
+Meganium (63) [Impish] @ Tanga Berry / Thick Fat: Giga Drain, Psychic, Earth Power, Leech Seed
+Azumarill (63) [Naive] @ Sitrus Berry / Huge Power: Waterfall, Payback, Body Slam, Aqua Jet
+
+
+Parasol Lady Lumi (DOUBLES):
+Rotom-Wash (64) [Jolly] @ Sitrus Berry / Levitate: Hydro Pump, Thunder, Will-O-Wisp, Hex
+Sceptile (64) [Naive] @ Life Orb / Technician: Fake Out, Dual Chop, Bullet Seed, Rock Tomb
+Omastar (64) [Modest] @ Wise Glasses / Swift Swim: Scald, Power Gem, Earth Power, Ice Beam
+Swellow (64) [Brave] @ Normal Gem / Technician: Hyper Voice, Hurricane
+Ledian (64) [Lax] @ Coba Berry / Shield Dust: Struggle Bug, Wide Guard, Aura Sphere, Attack Order
+
+
+Moor of Icirrus:
+Puddle (50): Venusaur (25%), Meganium (25%), Sceptile (25%), Torterra (25%)
+Fishing (50): Leavanny (60%), Scolipede (40%)
+Fishing Dark Spot (50): Cacturne (60%), Shiftry (40%)
+Surfing (50): Starmie (60%), Slowpoke (30%), Luvdisc (10%)
+Surfing Dark Spot (50): Parasect (90%), Accelgor (10%)
+
+
+*Carbos removed
+
+
+Pokemon Ranger Chloris (DOUBLES) (GIVES 5 EJECT BUTTONS):
+Mr. Mime (64) [Calm] @ Light Clay / Technician: Fake Out, Reflect, Light Screen, Psychic
+Swoobat (64) [Calm] @ Focus Sash / Simple: Nasty Plot, Psychic, Air Slash, Heat Wave
+Hitmontop (64) [Rash] @ Sitrus Berry / Technician: Fake Out, Close Combat, Wide Guard, Quick Guard
+Torterra (64) [Docile] @ White Herb / Rock Head: Shell Smash, Wood Hammer, Drill Run, Head Smash
+Pachirisu (64) [Lax] @ Leftovers / Volt Absorb: Follow Me, Psychic, Thunderbolt, Aura Sphere
+Masquerain (64) [Impish] @ Focus Sash / Compound Eyes: Quiver Dance, Hydro Pump, Bug Buzz, Ice Beam
+
+
+Not Dragonspiral Tower:
+Grass and Dark Grass (55): Kingdra (20%), Druddigon (20%), Tropius (20%), Arbok (20%), Kangaskhan (20%)
+Rustling Grass (55): Audino (50%), Rampardos (50%)
+Fishing (55): Nidoqueen (60%), Nidoking (40%) 
+Fishing Dark Spot (55): Machamp (60%), Conkeldurr (40%) 
+Surfing (55): Feraligatr (60%), Blastoise (40%) 
+Surfing Dark Spot (55): Swampert (60%), Empoleon (40%)
+
+
+*Heart Scale removed
+*Original TM63 location removed
+
+
+Icirrus Gym (PERMA RAIN):
+Black Belt Grant:
+Forretress (64) [Relaxed] @ Custap Berry / Sturdy: Stealth Rock, Spikes, Toxic, Explosion
+Beautifly (64) [Hasty] @ Life Orb / Swarm: Bug Buzz, Hurricane, Whirlwind, Water Pulse
+Luvdisc (64) [Jolly] @ Lum Berry / Swift Swim: Surf, Psychic, Dragon Tail, Shadow Ball
+Raichu (64) [Hasty] @ Expert Belt / Mold Breaker: Thunder, Earth Power, Surf, Circle Throw
+Ferrothorn (64) [Impish] @ Rocky Helmet / Iron Barbs: Iron Head, Power Whip, Leech Seed, Roar
+
+
+Battle Girl Miriam:
+Jynx (64) [Hardy] @ Focus Sash / Dry Skin: Lovely Kiss, Focus Blast, Ice Beam, Psychic
+Floatzel (64) [Lonely] @ Life Orb / Swift Swim: Crunch, Ice Punch, Waterfall, Crush Claw
+Metagross (64) [Calm] @ Leftovers / Iron Fist: Meteor Mash, Zen Headbutt, Thunder Punch, Ice Punch
+Manectric (64) [Serious] @ Electric Gem / Intimidate: Thunder, Water Pulse, Dark Pulse, Signal Beam
+Swanna (64) [Impish] @ Expert Belt / No Guard: Hydro Pump, Hurricane, Blizzard, Feather Dance
+
+
+Black Belt Kendrew:
+Magnezone (64) [Hasty] @ Chople Berry / Levitate: Thunder, Flash Cannon, Energy Ball, Water Pulse
+Crobat (64) [Careful] @ Lum Berry / Inner Focus: Hurricane, Cross Poison, Water Pulse, Aura Sphere
+Kabutops (64) [Naughty] @ Muscle Band / Swift Swim: Stone Edge, Aqua Tail, X-Scissor, Iron Defense
+Golduck (64) [Calm] @ Expert Belt / Cloud Nine: Surf, Psychic, Petal Dance, Soak
+Illumise (64) [Quirky] @ Life Orb / Flash Fire: Psychic, Bug Buzz, Quiver Dance, Water Pulse
+
+
+Battle Girl Mikiko (DOUBLES):
+Togekiss (64) [Relaxed] @ King’s Rock / Serene Grace: Thunder Wave, Air Slash
+Ludicolo (64) [Hardy] @ Mystic Water / Swift Swim: Scald, Giga Drain, Ice Beam, Focus Blast
+Scizor (64) [Quirky] @ Lum Berry / Technician: Swords Dance, Bullet Punch, Bug Bite, Rock Smash
+Sharpedo (64) [Relaxed] @ Choice Specs / Speed Boost: Hydro Pump, Night Daze, Ice Beam, Ancient Power
+Cryogonal (64) [Hardy] @ Chople Berry / Levitate: Ice Beam, Flash Cannon, Water Pulse, Magic Room
+
+
+Battle Girl Chandra:
+Emolga (65) [Hardy] @ Wise Glasses / Motor Drive: Thunder, Hurricane, Water Pulse, Volt Switch
+Poliwrath (65) [Adamant] @ Water Gem / Water Absorb: Waterfall, Close Combat, Ice Punch, Bulk Up
+Seismitoad (65) [Impish] @ Black Sludge / Swift Swim: Earth Power, Sludge Bomb, Ice Beam, Surf
+Armaldo (65) [Serious] @ Expert Belt / Swift Swim: Waterfall, Rock Slide, X-Scissor, Earthquake
+Lapras (65) [Lax] @ Custap Berry / Shell Armor: Surf, Dragon Pulse, Thunder, Recover
+Escavalier (65) [Calm] @ Sitrus Berry / Shell Armor: Megahorn, Iron Head, Drill Run, Close Combat
+
+
+Black Belt Thomas (DOUBLES):
+Jolteon (65) [Adamant] @ Expert Belt / Volt Absorb: Thunder, Scald, Psychic, Energy Ball
+Vaporeon (65) [Adamant] @ Sitrus Berry / Water Absorb: Muddy Water, Charm, Mirror Coat, Icy Wind
+Umbreon (65) [Relaxed] @ Leftovers / Magic Guard: Acid Spray, Thunder Wave, Confuse Ray, Knock Off
+Espeon (65) [Relaxed] @ Life Orb / Magic Bounce: Psychic, Aura Sphere, Water Pulse, Shadow Ball
+Leafeon (65) [Lonely] @ Focus Sash / Sap Sipper: Leaf Blade, Close Combat, Wild Charge, Swords Dance
+Glaceon (65) [Lonely] @ Never-Melt Ice / Shield Dust: Ice Beam, Earth Power, Hurricane, Water Pulse
+
+
+Gym Leader Brycen:
+Kingdra (66) [Docile] @ Water Gem / Swift Swim: Hydro Pump, Dragon Pulse, Aura Sphere, Ice Beam
+Cryogonal (66) [Brave] @ Chople Berry / Levitate: Blizzard, Flash Cannon, Hydro Pump, Acid Armor
+Accelgor (66) [Rash] @ Lum Berry / Adaptability: Night Daze, Bug Buzz, Focus Blast, Water Pulse
+Froslass (66) [Rash] @ Focus Sash / Levitate: Ice Beam, Shadow Ball, Water Pulse, Thunder
+Roserade (66) [Bold] @ Expert Belt / Technician: Water Pulse, Energy Ball, Sludge Wave, Earth Power
+Beartic (67) [Brave] @ Life Orb / Swift Swim: Ice Punch, Close Combat, Waterfall, Swords Dance
+
+
+Drayden Split (Level Cap: 76)
+
+
+Dragonspiral Tower:
+Walking (55): Dragonite (20%), Salamence (20%), Garchomp (20%), Hydreigon (20%), Haxorus (20%)
+
+
+Team Plasma Grunt 19:
+Smeargle (80) [Mild] @ Focus Sash / Moody: Shell Smash, Baton Pass, Extreme Speed, Crunch
+Spinda (68) [Naughty] @ Leftovers / Contrary: Hyper Voice, Psycho Boost, Superpower, Shadow Claw
+Beedrill (68) [Serious] @ Ground Gem / Sniper: Megahorn, Gunk Shot, Drill Run, Swords Dance
+Salamence (68) [Bashful] @ Life Orb / Intimidate: Hurricane, Hydro Pump, Fire Blast, Dragon Pulse
+Pelipper (68) [Relaxed] @ Bright Powder / Air Lock: Surf, Air Slash, Roost, Shock Wave
+Gengar (68) [Relaxed] @ King’s Rock / Levitate: Shadow Ball, Sludge Bomb, Aura Sphere, Nasty Plot
+
+
+Team Plasma Grunt 20:
+Audino (68) [Lax] @ Chople Berry / Magic Bounce: Trick Room, Self-Destruct
+Hariyama (68) [Impish] @ Flame Orb / Guts: Hammer Arm, Stone Edge, Facade, Fake Out
+Honchkrow (68) [Calm] @ Scope Lens / Prankster: Focus Energy, Night Slash, Drill Peck, Drill Run
+Spiritomb (68) [Jolly] @ Leftovers / Unnerve: Ominous Wind, Silver Wind, Calm Mind, Hypnosis
+Claydol (68) [Naughty] @ Bright Powder / Levitate: Trick Room, Earth Power, Psychic, Gravity
+Gyarados (68) [Impish] @ Wacan Berry / Intimidate: Aqua Tail, Brave Bird, Ice Fang, Earthquake
+
+
+Team Plasma Grunt 21:
+Dustox (68) [Rash] @ Black Sludge / Multiscale: Bug Buzz, Sludge Wave, Earth Power, Quiver Dance
+Bellossom (68) [Quirky] @ Bright Powder / Flash Fire: Fiery Dance, Giga Drain, Synthesis, Earth Power
+Exploud (68) [Lax] @ Life Orb / Compound Eyes: Earth Power, Hyper Voice, Thunder, Blizzard
+Muk (68) [Serious] @ Quick Claw / Water Absorb: Explosion, Poison Jab, Crunch, Fire Punch
+Gallade (68) [Mild] @ White Herb / Unburden: Close Combat, Curse, Zen Headbutt, Night Slash
+Cloyster (68) [Timid] @ King’s Rock / Skill Link: Explosion, Spike Cannon, Icicle Spear, Rock Blast
+
+
+Team Plasma Grunt 22:
+Lilligant (68) [Quirky] @ Wide Lens / Chlorophyll: Seed Flare, Sleep Powder, Earth Power, Silver Wind
+Hydreigon (68) [Modest] @ King’s Rock / Levitate: Dark Pulse, Dragon Pulse, Fire Blast, Ancient Power
+Crobat (68) [Bold] @ Bright Powder / Inner Focus: Brave Bird, Hypnosis, Ominous Wind, Roost
+Weavile (68) [Quiet] @ Focus Band / Technician: Ancient Power, Feint Attack, Ice Shard, Fake Out
+Tentacruel (68) [Serious] @ Scope Lens / Unnerve: Toxic, Venoshock, Scald, Silver Wind
+Chandelure (68) [Brave] @ Quick Claw / Levitate: Flamethrower, Ominous Wind, Psychic, Impison
+
+
+Seven Sage Giallo: 
+Solrock (69) [Naive] @ Air Balloon / Drought: Flare Blitz, Rock Polish, Earthquake, Rock Climb
+Shiftry (69) [Serious] @ Scope Lens / Chlorophyll: Leaf Blade, Night Slash, Heat Wave, Growth
+Glalie (69) [Lax] @ King’s Rock / Rock Head: Icicle Crash, Rock Slide, Earthquake, Flare Blitz
+Girafarig (69) [Sassy] @ Expert Belt / Adaptability: Blaze Kick, Night Daze, Luster Purge, Aura Sphere
+Sunflora (69) [Serious] @ Shell Bell / Solar Power: Fire Blast, Solar Beam, Synthesis, Earth Power
+Houndoom (70) [Sassy] @ Focus Sash / Intimidate: Flamethrower, Night Daze, Solar Beam, Will-O-Wisp
+
+
+Team Plasma Grunt 23 (BACK TO BACK TO BACK TO BACK WITH THE NEXT 3 GRUNTS, NO HEALING IN BETWEEN):
+Ampharos (69) [Careful] @ Air Balloon / Mold Breaker: Thunderbolt, Dragon Pulse, Flamethrower, Tail Glow
+Drapion (69) [Rash] @ Scope Lens / Sniper: Focus Energy, Night Slash, Cross Poison, X-Scissor
+
+
+Team Plasma Grunt 24:
+Lickilicky (69) [Adamant] @ Custap Berry / Thick Fat: Sludge Wave, Hyper Voice, Fire Blast, Blizzard
+Tropius (69) [Lax] @ Jaboca Berry / Thick Fat: Energy Ball, Heat Wave, Earth Power, Dragon Pulse
+
+
+Team Plasma Grunt 25:
+Starmie (69) [Careful] @ Expert Belt / No Guard: Hydro Pump, Psychic, Thunder, Blizzard
+Absol (69) [Docile] @ Scope Lens / Super Luck: Night Slash, Psycho Cut, Sacred Sword, Megahorn
+Hitmonlee (69) [Naive] @ White Herb / Unburden: Curse, Close Combat, Stone Edge, Mega Kick
+
+
+Team Plasma Grunt 26:
+Ninjask (69) [Lax] @ Lum Berry / Technician: Bug Bite, Pursuit, Metal Claw, Swords Dance
+Garbodor (69) [Gentle] @ Shuca Berry / Heatproof: Gunk Shot, Iron Head, Drain Punch, Curse
+Granbull (69) [Docile] @ Quick Claw / Guts: Drain Punch, Body Slam, Crunch, Bulk Up
+
+
+Relic Castle (PERMA SAND):
+*TM30 > TM26 Earthquake
+
+
+Team Plasma Grunt 27:
+Alakazam (70) [Mild] @ Colbur Berry / Magic Guard: Luster Purge, Focus Blast, Shadow Ball, Counter
+Hypno (70) [Timid] @ Quick Claw / Magic Guard: Psychic, Dark Pulse, Bug Buzz, Imprison
+Dugtrio (70) [Timid] @ Choice Band / Arena Trap: Earthquake, Close Combat, Stone Edge, Ice Shard
+Kingler (70) [Relaxed] @ Life Orb / Sheer Force: Waterfall, Iron Head, Hammer Arm, Ice Punch
+Pinsir (70) [Calm] @ Life Orb / Sheer Force: X-Scissor, Earthquake, Rock Climb, Swords Dance
+Tauros (70) [Bashful] @ Life Orb / Sheer Force: Body Slam, Earthquake, Rock Climb, Fire Blast
+
+
+Team Plasma Grunt 28:
+Quagsire (70) @ Quick Claw / Water Absorb: Waterfall, Earthquake, Yawn, Ice Punch
+Scizor (70) @ Focus Band / Technician: Bullet Punch, X-Scissor, Roost, Rock Smash
+Steelix (70) @ Bright Powder / Sheer Force: Earthquake, Iron Head, Ice Fang, Thunder Fang
+Sudowoodo (70) @ Rock Gem / Rock Head: Head Smash, Wood Hammer, Earthquake, Protect
+Magcargo (70) @ White Herb / Simple: Power Gem, Flamethrower, Earth Power, Shell Smash
+Skarmory (70) @ King’s Rock / Rock Head: Agility, Brave Bird, Iron Head, Drill Run
+
+
+Team Plasma Grunt 29:
+Flygon (70) [Rash] @ Yache Berry / Levitate: Dragon Pulse, Earthquake, Flamethrower, Stone Edge
+Delcatty (70) [Lonely] @ Life Orb / Magic Guard: Swift, Destiny Bond, Aura Sphere, Extrasensory
+Swampert (70) [Naive] @ Bright Powder / Water Absorb: Waterfall, Yawn, Bulldoze, Gunk Shot
+Mawile (70) [Adamant] @ Quick Claw / Sheer Force: Iron Head, Crunch, Fire Punch, Rock Slide
+Armaldo (70) [Gentle] @ Scope Lens / Battle Armor: Stone Edge, X-Scissor, Waterfall, Drill Run
+Metagross (70) [Lonely] @ Sitrus Berry / Iron Fist: Meteor Mash, Zen Headbutt, Explosion, Bullet Punch
+
+
+Team Plasma Grunt 30:
+Hippowdon (70) [Rash] @ Focus Band / Sand Force: Earthquake, Thunder Fang, Yawn, Rock Slide
+Garchomp (70) [Lonely] @ Soft Sand / Rough Skin: Earthquake, Dragon Claw, Fire Fang, Swords Dance
+Rhyperior (70) [Hardy] @ Bright Powder / Solid Rock: Earthquake, Stone Edge, Ice Punch, Thunder Punch
+Lucario (70) [Sassy] @ Steel Gem / Inner Focus: Flash Cannon, Vacuum Wave, Nasty Plot, Psychic
+Rampardos (70) [Quirky] @ Life Orb / Sheer Force: Dragon Claw, Rock Climb, Zen Headbutt, Crunch
+Bronzong (70) [Hasty] @ Quick Claw / Levitate: Flash Cannon, Psychic, Hypnosis, Calm Mind
+
+
+Team Plasma Grunt 31:
+Sigilyph (70) [Adamant] @ Bright Powder / Magic Guard: Psychic, Aeroblast, Heat Wave, Energy Ball
+Bouffalant (70) [Lonely] @ Quick Claw / Soundproof: Body Slam, Earthquake, Megahorn, Wild Charge
+Golurk (70) [Sassy] @ Ground Gem / Iron Fist: Earthquake, Shadow Punch, Close Combat, Fire Punch
+Conkeldurr (70) [Lonely] @ Leftovers / Iron Fist: Hammer Arm, Stone Edge, Thunder Punch, Ice Punch
+Excadrill (70) [Rash] @ Scope Lens / Sand Rush: Drill Run, X-Scissor, Stone Edge, Iron Defense
+Heatmor (70) [Impish] @ Air Balloon / Flash Fire: Fire Punch, Iron Tail, Power Whip, Hone Claws
+
+
+Team Plasma Grunt 32:
+Reuniclus (71) [Bold] @ Quick Claw / Magic Guard: Psychic, Aura Sphere, Shadow Ball, Thunder
+Marowak (71) [Rash] @ Thick Club / Rock Head: Payback, Superpower, Bonemerang, Head Smash
+Chimecho (71) [Adamant] @ Leftovers / Levitate: Mist Ball, Flash Cannon, Destiny Bond, Will-O-Wisp
+Typhlosion (71) [Quirky] @ Scope Lens / Sand Rush: Earthquake, Blaze Kick, Thunder Punch, Rock Slide
+Maractus (71) [Hasty] @ Bright Powder / Sand Veil: Double Team, Giga Drain, Earth Power, Sludge Bomb
+Empoleon (71) [Naughty] @ Shuca Berry / Vital Spirit: Aqua Tail, Guillotine, Brave Bird, Swords Dance
+
+
+Seven Sage Ryoku: 
+Tyranitar (72) [Naive] @ Chople Berry / Intimidate: Dragon Dance, Stone Edge, Earthquake, Crunch
+Cacturne (71) [Naive] @ Bright Powder / Sand Veil: Needle Arm, Night Daze, Focus Blast, Destiny Bond
+Gliscor (71) [Quirky] @ Yache Berry / Rough Skin: Earthquake, Aerial Ace, Swords Dance, Stone Edge
+Golem (71) [Bashful] @ Scope Lens / Solid Rock: Earthquake, Stone Edge, Ice Punch, Explosion
+Donphan (71) [Naive] @ Bright Powder / Sand Veil: Earthquake, Stone Edge, Double Team, Fire Fang
+Krookodile (71) [Rash] @ Dark Gem / Tinted Lens: Earthquake, Crunch, Stone Edge, Thunder Punch
+
+
+Route 8 (PERMA RAIN):
+Rival Bianca 4 (DOUBLES): 
+If you chose Snivy
+Dragonite (71) [Careful] @ Choice Specs / Multiscale: Dragon Pulse, Hurricane, Scald, Thunder
+Jynx (71) [Adamant] @ Ice Gem / Dry Skin: Water Pulse, Blizzard, Psychic, Lovely Kiss
+Toxicroak (71) [Jolly] @ Life Orb / Swift Swim: Mud Bomb, Drain Punch, Poison Jab, Dark Pulse
+Venusaur (71) @ Sitrus Berry / Thick Fat: Energy Ball, Sludge Bomb, Water Pulse, Sleep Powder
+Typhlosion (71) @ Fire Gem / Blaze: Flare Blitz, Drill Run, Rock Slide, Wild Charge
+Samurott (72) @ White Herb / Shell Armor: Shell Smash, Sacred Sword, Waterfall, Icicle Crash
+
+
+If you chose Tepig
+Dragonite (71) [Naughty] @ Choice Specs / Multiscale: Dragon Pulse, Hurricane, Scald, Thunder
+Jynx (71) [Lax] @ Ice Gem / Dry Skin: Water Pulse, Blizzard, Psychic, Lovely Kiss
+Toxicroak (71) [Rash] @ Life Orb / Swift Swim: Mud Bomb, Drain Punch, Poison Jab, Dark Pulse
+Charizard (71) [Hardy] @ Fire Gem / Blaze: Fire Blast, Dragon Pulse, Tailwind, Earth Power
+Feraligatr (71) [Bashful] @ Sitrus Berry / Sheer Force: Waterfall, Dragon Claw, Ice Punch, Crunch
+Serperior (72) [Quirky] @ Life Orb / Sheer Force: Energy Ball, Dragon Pulse, Earth Power, Nasty Plot
+
+
+If you chose Oshawott
+Dragonite (71) [Timid] @ Choice Specs / Multiscale: Dragon Pulse, Hurricane, Scald, Thunder
+Jynx (71) [Modest] @ Ice Gem / Dry Skin: Water Pulse, Blizzard, Psychic, Lovely Kiss
+Toxicroak (71) [Quirky] @ Life Orb / Swift Swim: Mud Bomb, Drain Punch, Poison Jab, Dark Pulse
+Blastoise (71) [Careful] @ Leftovers / No Guard: Muddy Water, Flash Cannon, Icy Wind, Follow Me
+Meganium (71) [Naive] @ Sitrus Berry / Filter: Psychic, Energy Ball, Earth Power, Sleep Powder
+Emboar (72) [Sassy] @ Fire Gem / Adaptability: Flare Blitz, Crunch, Wild Charge, Close Combat
+
+
+Tubeline Bridge:
+Surprise Egg (look at bottom of doc if u don't care abt being spoiled) (100%)
+
+
+Route 9:
+Grass (60): Exploud (20%), Camerupt (20%), Zangoose (10%), Kirlia (10%), Medicham (10%), Flygon (10%), Banette (10%), Kecleon (10%)
+Rustling Grass (60): Audino (50%), Wobbuffet (50%)
+Dark Grass (60): Dunsparce (20%), Granbull (20%), Yanmega (10%), Weavile (10%), Ursaring (10%), Stantler (10%), Porygon2 (10%), Sunflora (10%)
+
+
+*HP Up > TM89
+*Vitamin vendor from Shopping Mall Nine has been removed
+*PP Up in Shopping Mall Nine removed
+
+
+Biker Philip:
+Aipom (72) [Docile] @ Life Orb / Technician: Fake Out, Double Hit, Double Kick, Pursuit
+Scizor (72) [Quiet] @ Occa Berry / Technician: Bullet Punch, Bug Bite, Rock Tomb, Pursuit
+Persian (72) [Calm] @ Chople Berry / Technician: Fake Out, Bite, Covet, Rock Smash
+Delibird (72) [Naughty] @ Ice Gem / Technician: Frost Breath, Air Cutter, Force Palm, Ice Shard
+Breloom (72) [Quiet] @ Rowap Berry / Technician: Arm Thrust, Bullet Seed, Spore, Rock Blast
+Kricketune (72) [Calm] @ Focus Sash / Technician: Bug Bite, Covet, Rock Tomb, Bulldoze
+
+
+Roughneck Reese:
+Aerodactyl (72) [Lonely] @ Focus Sash / Rock Head: Head Smash, Brave Bird, Earthquake, Dragon Dance
+Arcanine (72) [Naughty] @ Life Orb / Rock Head: Flare Blitz, Double-Edge, Volt Tackle, Extreme Speed
+Salamence (72) [Rash] @ Yache Berry / Rock Head: Brave Bird, Dragon Claw, Earthquake, Flare Blitz
+Skarmory (72) [Modest] @ Choice Band / Rock Head: Brave Bird, Guillotine
+Relicanth (72) [Jolly] @ Muscle Band / Rock Head: Head Smash, Aqua Tail, Wild Charge, Fissure
+Bouffalant (72) [Bold] @ Leftovers / Rock Head: Fissure, Double-Edge, Head Smash, Megahorn
+
+
+Hooligans Jim and Cas (DOUBLES):
+Fearow (72) [Relaxed] @ Charti Berry / Intimidate: Drill Peck, Night Slash, Drill Run, Captivate
+Manectric (72) [Quirky] @ Air Balloon / Intimidate: Thunderbolt, Heat Wave, Aura Sphere, Snarl
+Mightyena (72) [Quiet] @ Life Orb / Intimidate: Crunch, Ice Fang, Fire Fang, Taunt
+Staraptor (72) @ Black Belt / Intimidate: Close Combat, Brave Bird, Roost, Endeavor
+Stantler (72) @ Muscle Band / Intimidate: Double-Edge, Zen Headbutt, Night Slash, Hypnosis 
+Glalie (72) @ Focus Sash / Intimidate: Rock Slide, Icicle Crash, Drill Run, Zen Headbutt
+
+
+Opelucid City:
+Grass (60): Charizard (25%), Typhlosion (25%), Blaziken (25%), Infernape (25%)
+*Grass can be found on the walkway to Drayden’s house, left of the pokecenter
+  
+
+
+
+Route 10:
+Grass (65): Electivire (20%), Magmortar (20%), Tauros (20%), Rhyperior (20%), Magnezone (20%)
+Rustling Grass (65): Audino (50%), Electrode (50%)
+Dark Grass (65): Arcanine (20%), Ninetales (20%), Primeape (10%), Farfetch’d (10%), Dodrio (10%), Pidgeot (10%), Marowak (10%), Hypno (10%)
+Static: Foongus (100%)
+
+
+*you get an encounter both in the route and badge gate sections
+
+
+*Full Heal > TM72 Volt Switch
+*Hyper Potion > TM92 Trick Room
+*Full Restore > TM61 Will-O-Wisp
+
+
+Opelucid Gym:
+Ace Trainer Webster:
+Dragonair (80) [Rash] @ Eviolite / Marvel Scale: Dragon Pulse, Flamethrower, Thunderbolt, Surf
+Pupitar (80) [Timid] @ Eviolite / Battle Armor: Earthquake, Rock Climb, Crunch, Dragon Dance
+Shelgon (80) [Serious] @ Eviolite / Rock Head: Double-Edge, Earthquake, Dragon Claw, Dragon Dance
+Metang (80) [Lax] @ Eviolite / Iron Fist: Iron Head, Zen Headbutt, Ice Punch, Hammer Arm
+Gabite (80) [Lax] @ Eviolite / Rough Skin: Swords Dance, Earthquake, Dragon Claw, Stone Edge
+Zweilous (80) [Jolly] @ Eviolite / Sheer Force: Dark Pulse, Dragon Pulse, Flamethrower, Flash Cannon
+
+
+Ace Trainer Olwen:
+Seviper (73) [Mild] @ Life Orb / Sheer Force: Crunch, Gunk Shot, Ice Fang, Earthquake
+Ninetales (73) [Jolly] @ Lum Berry / Flash Fire: Tail Glow, Flamethrower, Shadow Ball, Hypnosis
+Lopunny (73) [Mild] @ Choice Band / Scrappy: Mega Kick, High Jump Kick
+Aerodactyl (73) [Mild] @ Muscle Band / Rock Head: Rock Climb, Brave Bird, Earthquake, Iron Tail
+Serperior (73) [Lonely] @ Electric Gem / Sheer Force: Dragon Pulse, Energy Ball, Thunderbolt, Substitute
+Yanmega (73) [Hasty] @ White Herb / Speed Boost: Draco Meteor, Bug Buzz, Protect, Focus Energy 
+
+
+Ace Trainer Jose:
+Torkoal (73) [Impish] @ Passho Berry / Shell Armor: Fire Blast, Earth Power, Shell Smash, Self-Destruct
+Aggron (73) [Mild] @ Choice Band / Rock Head: Head Smash
+Rhyperior (73) [Docile] @ Focus Sash / Solid Rock: Earthquake, Stone Edge, Hammer Arm, Rock Polish
+Tropius (73) [Timid] @ Coba Berry / Thick Fat: Energy Ball, Dragon Pulse, Heat Wave, Sleep Powder
+Lapras (73) [Rash] @ Sitrus Berry / Shell Armor: Surf, Dragon Pulse, Thunderbolt, Sing
+Milotic (73) [Naughty] @ Leftovers / Multiscale: Coil, Waterfall, Zen Headbutt, Hypnosis
+
+
+Ace Trainer Clara (DOUBLES):
+Meganium (73) [Timid] @ Light Clay / Filter: Reflect, Light Screen, Psychic, Giga Drain
+Gyarados (73) [Naughty] @ Choice Scarf / Intimidate: Outrage, Sky Attack, Aqua Tail, Power Whip
+Machamp (73) [Sassy] @ Sitrus Berry / No Guard: Cross Chop, Stone Edge, Bulk Up, Quick Guard
+Rampardos (73) [Serious] @ Choice Band / Sheer Force: Rock Slide
+Arbok (73) [Lax] @ Muscle Band / Intimidate: Gunk Shot, Dragon Claw, Fire Fang, Glare
+Volcarona (73) [Naive] @ Choice Specs / Flash Fire: Fiery Dance, Bug Buzz, Giga Drain. Thunderbolt
+
+
+YOU CAN’T SWITCH TEAMS FOR THE NEXT 3 FIGHTS
+
+
+Veteran Hugo:
+Latios (70) [Timid] @ Soul Dew / Levitate: Luster Purge, Draco Meteor, Heat Wave, Surf
+Latias (70) [Naughty] @ Soul Dew / Levitate: Mist Ball, Dragon Pulse, Calm Mind, Recover
+
+
+Ace Trainer Tom:
+Snorlax (73) [Quiet] @ Custap Berry / Thick Fat: Curse, Slack Off, Body Slam, Crunch
+Arcanine (73) [Timid] @ Normal Gem / Rock Head: Flare Blitz, Double-Edge, Crunch, Wild Charge
+Kingdra (73) [Careful] @ Lum Berry / Swift Swim: Surf, Dragon Pulse, Ice Beam, Flash Cannon
+Ampharos (73) [Brave] @ Leftovers / Thick Fat: Thunderbolt, Dragon Pulse, Thunder Wave, Cotton Guard
+Steelix (73) [Sassy] @ Life Orb / Rock Head: Iron Tail, Earthquake, Head Smash, Thunder Fang
+
+
+Ace Trainer Dara: 
+Lucario (73) [Bold] @ Focus Sash / Inner Focus: Drain Punch, Flash Cannon, Thunder Punch, Dark Pulse
+Blastoise (73) [Naive] @ White Herb / No Guard: Surf, Ice Beam, Flash Cannon, Shell Smash
+Kangaskhan (73) [Lax] @ Chople Berry / Thick Fat: Fake Out, Outrage, Thrash, Fire Punch
+Druddigon (73) [Quiet] @ Sitrus Berry / Solid Rock: Outrage, Hammer Arm
+Altaria (73) [Mild] @ Leftovers / Filter: Hurricane, Dragon Pulse, Heat Wave, Cotton Guard
+
+
+Veteran Kim:
+Dragonite (74) [Quiet] @ Lum Berry / Multiscale: Dragon Pulse, Fire Blast, Hurricane, Hydro Pump
+Tyranitar (74) [Docile] @ Chople Berry / Intimidate: Zen Headbutt, Stone Edge, Crunch, Earthquake
+Salamence (74) [Quirky] @ Choice Band / Rock Head: Brave Bird
+Metagross (74) [Timid] @ Sitrus Berry / Iron Fist: Meteor Mash, Zen Headbutt, Hammer Arm, Bullet Punch
+Garchomp (74) [Naive] @ Yache Berry / Rough Skin: Earthquake, Dragon Claw, Fire Blast, Rock Slide
+Hydreigon (74) [Mild] @ Dragon Gem / Levitate: Haze, Draco Meteor
+
+
+Gym Leader Drayden (DOUBLES) (now gives TM02 Dragon Claw): 
+Flygon (75) [Timid] @ Focus Sash / Sheer Force: Earth Power, Rock Slide, Dragon Pulse, Fire Blast
+Charizard (75) [Careful] @ Haban Berry / Levitate: Heat Wave, Earth Power, Dragon Pulse, Tailwind
+Sceptile (75) [Sassy] @ White Herb / Unburden: Leaf Storm, Dragon Rush, Rock Slide, Focus Blast
+Feraligatr (75) [Impish] @ Life Orb / Sheer Force: Dragon Dance, Waterfall, Dragon Claw, Ice Punch
+Salamence (75) [Quiet] @ Yache Berry / Intimidate: Dragon Rush, Hurricane, Hydro Pump, Helping Hand 
+Haxorus (76) [Naughty] @ Life Orb / Sheer Force: Dragon Claw, Iron Tail, Close Combat, Swords Dance
+
+
+Elite Four Split (Level Cap: 82)
+Route 10:
+Battle Girl Amy:
+Hypno (76) [Rash] @ Tanga Berry / Illusion: Dark Pulse, Psychic, Focus Blast, Dark Void
+Accelgor (76) [Hardy] @ Lum Berry / Illusion: Night Daze, Attack Order, Focus Blast, Surf
+Kecleon (76) [Serious] @ Ghost Gem / Illusion: Shadow Force, Crush Claw, Shadow Sneak, Cross Chop
+Crawdaunt (76) [Adamant] @ Mystic Water / Illusion: Crabhammer, Crunch, Aqua Jet, Close Combat
+Zoroark (76) [Gentle] @ Focus Sash / Illusion: Dark Pulse, Shadow Ball, Aura Sphere, Flamethrower
+Heracross (76) [Hardy] @ Life Orb / Skill Link: Arm Thrust, Pin Missile, Rock Blast, Bullet Seed
+
+
+Ace Trainer Johan:
+Dusknoir (76) [Impish] @ Quick Claw / Iron Fist: Hammer Arm, Shadow Punch, Thunder Punch, Ice Punch
+Exeggutor (76) [Bashful] @ Quick Claw / Chlorophyll: Energy Ball, Psychic, Earth Power, Sleep Powder
+Magnezone (76) [Jolly] @ Quick Claw / Analytic: Thunderbolt, Flash Cannon, Tri Attack, Signal Beam
+Camerupt (76) [Adamant] @ Quick Claw / Sheer Force: Earth Power, Flamethrower, Rock Slide, Flash Cannon
+Carracosta (76) [Quirky] @ Quick Claw / Solid Rock: Rock Slide, Aqua Tail, Superpower, Zen Headbutt
+Machamp (76) [Rash] @ Quick Claw / No Guard: Dynamic Punch, Stone Edge, Earthquake, Shadow Punch
+
+
+Veteran Karla:
+Jumpluff (76) [Relaxed] @ Focus Sash / Prankster: Assist
+Sableye (76) [Quiet] @ Leftovers / Prankster: Assist
+Liepard (76) [Quirky] @ Muscle Band / Prankster: Assist
+Whimsicott (76) [Naive] @ Lum Berry / Prankster: Assist
+Honchkrow (76) [Gentle] @ Sitrus Berry / Prankster: Assist
+Mew (76) [Impish] @ Life Orb / Synchronize: Grass Pledge, Power Gem, Crunch, Brave Bird
+
+
+Rival Cheren 6 (DOUBLES): 
+If you chose Snivy
+Garchomp (76) [Careful] @ Scope Lens / Rough Skin: Drill Run, Rock Slide, Dragon Claw, Fire Fang
+Exploud (76) [Modest] @ Life Orb / Compound Eyes: Hyper Voice, Blizzard, Thunder, Fire Blast
+Zangoose (76) [Jolly] @ Toxic Orb / Toxic Boost: Facade, Close Combat, Quick Attack, Shadow Claw
+Swampert (76) [Gentle] @ Rindo Berry / Water Absorb: Waterfall, Drill Run, Ice Punch, Rock Slide
+Torterra (76) [Mild] @ White Herb / Rock Head: Shell Smash, Wood Hammer, Head Smash, Drill Run
+Emboar (77) [Bold] @ Sitrus Berry / Adaptability: Swords Dance, Sucker Punch, Heat Crash, Wild Charge
+
+
+If you chose Tepig
+Garchomp (76) [Docile] @ Scope Lens / Rough Skin: Drill Run, Rock Slide, Dragon Claw, Fire Fang
+Exploud (76) [Sassy] @ Life Orb / Compound Eyes: Hyper Voice, Blizzard, Thunder, Fire Blast
+Zangoose (76) [Gentle] @ Toxic Orb / Toxic Boost: Facade, Close Combat, Quick Attack, Shadow Claw
+Sceptile (76) [Mild] @ Choice Band / Technician: Dual Chop
+Infernape (76) [Quirky] @ Lum Berry / Iron Fist: Fire Blast, Close Combat, Thunder Punch, Ice Punch
+Samurott (77) [Naive] @ Sitrus Berry / Shell Armor: Waterfall, Shell Smash, Sacred Sword, X-Scissor
+
+
+If you chose Oshawott
+Garchomp (76) [Brave] @ Scope Lens / Rough Skin: Drill Run, Rock Slide, Dragon Claw, Fire Fang
+Exploud (76) [Rash] @ Life Orb / Compound Eyes: Hyper Voice, Blizzard, Thunder, Fire Blast
+Zangoose (76) [Quiet] @ Toxic Orb / Toxic Boost: Facade, Close Combat, Quick Attack, Shadow Claw
+Blaziken (76) [Hardy] @ Choice Band / Reckless: Flare Blitz, High Jump Kick
+Empoleon (76) [Impish] @ Leftovers / Vital Spirit: Hydro Pump, Flash Cannon, Ice Beam, Roost
+Serperior (77) [Lax] @ Sitrus Berry / Sheer Force: Energy Ball, Dragon Pulse, Dark Pulse, Thunderbolt
+
+
+Lady Indigo (GIVES FOCUS SASH):
+Empoleon (70) [Rash] @ Focus Band / Drizzle: Stealth Rock, Scald, Ice Beam, Hurricane
+Qwilfish (70) [Impish] @ Black Sludge / Swift Swim: Explosion, Earthquake, Aqua Tail, Poison Jab
+Metagross (70) [Jolly] @ King’s Rock / Iron Fist: Zen Headbutt, Meteor Mash, Agility, Earthquake
+Lumineon (70) [Modest] @ Life Orb / Swift Swim: Thunder, Volt Switch, Scald, Hurricane
+Delibird (70) [Mild] @ Focus Sash / Tinted Lens: Sheer Cold, Sky Attack, Wild Charge, Earthquake
+Porygon-Z (70) [Timid] @ Chople Berry / Adaptability: Tri Attack, Thunder, Psyshock, Reflect Type
+
+
+Ace Trainer Cheyenne (DOUBLES):
+Mandibuzz (77) [Lax] @ Sitrus Berry / Prankster: Helping Hand, Brave Bird, Foul Play, Wide Guard
+Golduck (77) [Mild] @ Toxic Orb / Quick Feet: Helping Hand, Muddy Water, Psychic, Ice Beam
+Raichu (77) [Quirky] @ Life Orb / Mold Breaker: Helping Hand, Thunderbolt, Earth Power, Psychic
+Torkoal (77) [Jolly] @ Power Herb / Shell Armor: Helping Hand, Fire Blast, Earth Power, Solar Beam
+Hariyama (77) [Jolly] @ Coba Berry / Guts: Helping Hand, Hammer Arm, Rock Slide, Payback
+Furret (77) [Serious] @ Silk Scarf / Quick Feet: Helping Hand, Double-Edge, Shadow Claw, Brick Break
+
+
+Veteran Chester (DOUBLES):
+Delibird (77) [Modest] @ Focus Sash / Technician: Fake Out, Ice Beam, Aeroblast, Imprison
+Breloom (77) [Adamant] @ Coba Berry / Technician: Seed Bomb, Thunder Punch, Spore, Close Combat
+Maractus (77) [Gentle] @ Yache Berry / Storm Drain: Giga Drain, Earth Power, Power Gem, Sludge Bomb
+Weavile (77) [Rash] @ Flying Gem / Technician: Icicle Crash, Acrobatics, Night Slash, Imprison
+Sceptile (77) [Jolly] @ Miracle Seed / Unburden: Energy Ball, Dragon Claw, Focus Blast, X-Scissor
+Gliscor (77) [Sassy] @ Toxic Orb / Poison Heal: Facade, Roost, Drill Run, Sky Attack
+
+
+Victory Road:
+Outside (70): Volcarona (20%), Hydreigon (20%), Haxorus (20%), Tyranitar (20%), Metagross (20%)
+Inside (All Rooms) (70): Bisharp (20%), Drapion (20%), Absol (20%), Scrafty (20%), Zoroark (20%)
+Dust Cloud (70): Excadrill (100%)
+Fishing (70): Jellicent (100%)
+Fishing Dark Spot (70): Crawdaunt (100%)
+Surfing (70): Slowpoke (100%)
+Surfing Dark Spot (70): Starmie (100%)
+
+
+*TM02 > TM50 Overheat
+*Calcium removed
+*Carbos removed
+*Original TM93 location removed
+
+
+Infielder dellcomputer:
+Muk (77) [Adamant] @ Quick Claw/ Water Absorb: Explosion, Knock Off, Gunk Shot, Fire Punch
+Swalot (77) [Mild] @ Bright Powder / Regenerator: Slack Off, Toxic, Acid Spray, Knock Off
+Meganium (77) [Quiet] @ Tanga Berry / Filter: Stun Spore, Leech Seed, Synthesis, Mud-Slap
+Dugtrio (77) [Bashful] @ Choice Band / Arena Trap: Earthquake, Stone Edge, Aqua Tail, Night Slash
+Machamp (77) [Bold] @ Quick Claw / No Guard: Guillotine, Fissure, Sheer Cold, Horn Drill
+Ferrothorn (77) [Lax] @ Occa Berry / Iron Barbs: Leech Seed, Thunder Wave, Guillotine, Protect
+
+
+Linebacker Mortal:
+Chatot (78) [Adamant] @ White Herb / Soundproof: Aeroblast, Zap Cannon, Heat Wave, Water Pulse
+Vanilluxe (78) [Lonely] @ Sitrus Berry / Water Absorb: Ice Beam, Dark Pulse, Muddy Water, Earth Power
+Ariados (78) [Sassy] @ Focus Band / Analytic: Payback, Explosion, Screech, U-Turn
+Flareon (78) [Impish] @ Scope Lens / Flash Fire: Sacred Fire, Extreme Speed, Stone Edge, Superpower
+Haxorus (78) [Hardy] @ Chople Berry / Mold Breaker: Meteor Mash, Outrage, Blaze Kick, Leaf Blade
+Luvdisc (78) [Jolly] @ Focus Sash / Swift Swim: Muddy Water, Luster Purge, Lovely Kiss, Energy Ball
+
+
+Ace Trainer Muttley:
+Zangoose (78) [Jolly] @ Quick Claw / Scrappy: Cross Chop, Crush Claw, Rock Slide, Knock Off
+Galvantula (78) [Naive] @ Focus Sash / Compound Eyes: Zap Cannon, Attack Order, Light Screen, Energy Ball
+Azelf (78) [Brave] @ Twisted Spoon / Levitate: Mist Ball, Future Sight, Nasty Plot, U-Turn
+Dragonite (78) [Naughty] @ Sitrus Berry / Multiscale: Hurricane, Dragon Pulse, Extreme Speed, Flamethrower
+Krookodile (78) [Hardy] @ Life Orb / Tinted Lens: Knock Off, Night Slash, Earthquake, Thunder Fang
+Walrein (78) [Naughty] @ Leftovers / Thick Fat: Avalanche, Razor Shell, Counter, Whirlpool
+
+
+Veteran TFG (DOUBLES):
+Ninetales (78) [Lonely] @ Quick Claw / Drought: Sunny Day, Flamethrower, Shadow Ball, Will-O-Wisp
+Volcarona (78) [Lonely] @ Focus Sash / Flash Fire: Quiver Dance, Energy Ball, Bug Buzz, Heat Wave
+Lilligant (78) [Adamant] @ Life Orb / Chlorophyll: Sleep Powder, Giga Drain, Weather Ball, Psychic
+Groudon (78) [Modest] @ Expert Belt / Drought: Earth Power, Heat Crash, Stone Edge, Hammer Arm
+Flareon (78) [Gentle] @ Life Orb / Flash Fire: Flare Blitz, Sunny Day, Wild Charge, Close Combat
+Emboar (78) [Timid] @ Black Glasses / Adaptability: V-Create, Sucker Punch, Knock Off, Stone Edge
+
+
+Ace Trainer Benjamin:
+Politoed (79) [Quirky] @ Quick Claw / Drizzle: Scald, Protect, Perish Song, Self-Destruct
+Giratina-Origin (79) [Calm] @ Griseous Orb / Levitate: Dragon Pulse, Shadow Force, Protect, Weather Ball
+Palkia (79) [Lonely] @ Lustrous Orb / Pressure: Hydro Pump, Spacial Rend, Thunder, Protect
+Dialga (79) [Hasty]@ Adamant Orb / Pressure: Roar of Time, Flash Cannon, Protect, Weather Ball
+Milotic (79) [Gentle] @ Leftovers / Multiscale: Coil, Protect, Aqua Tail, Zen Headbutt
+Scizor (79) [Jolly] @ Water Gem / Technician: Bullet Punch, Crabhammer, Bug Bite, Protect
+
+
+Lass Loaf (OPTIONAL):
+Spiritomb (79) [Adamant] @ Quick Claw / Wonder Guard: Baton Pass, Tail Glow, Spikes, Explosion
+Mismagius (79) [Lax] @ Focus Band / Shadow Tag: Psycho Boost, Shadow Ball, Focus Blast, Destiny Bond
+Regigigas (79) [Naughty] @ Focus Band / Shadow Tag: Explosion, Night Daze, Earthquake, Hammer Arm
+Palkia (79) [Jolly] @ Quick Claw / Shadow Tag: Hydro Cannon, Roar of Time, Blizzard, Ancient Power
+Dialga (79) [Quirky] @ Air Balloon / Shadow Tag: Dragon Pulse, Earth Power, Fire Blast, Thunder
+Latios (79) [Naughty] @ Soul Dew / Shadow Tag: Dragon Pulse, Psychic, Ice Beam, Fire Blast
+
+
+Waiter John (DOUBLES):
+Empoleon (79) [Quiet] @ Air Balloon / Vital Spirit: Hydro Pump, Icy Wind, Sing, Tailwind
+Zapdos (79) [Relaxed] @ Yache Berry / Lightning Rod: Thunder, Hurricane, U-Turn, Energy Ball
+Armaldo (79) [Bashful] @ Sitrus Berry / Battle Armor: Head Smash, U-Turn, Stealth Rock, Drill Run
+Gengar (79) [Impish] @ Focus Sash / Shadow Tag: Focus Blast, Shadow Ball, Substitute, Sludge Wave
+Victini (79) [Relaxed] @ Fire Gem / Victory Star: Glaciate, V-Create, Bolt Strike, Energy Ball
+Krookodile (79) [Naive] @ Dark Gem / Intimidate: Pursuit, Crunch, Drill Run, Wild Charge
+
+
+Veteran Gongas:
+Salamence (80) [Hardy] @ Focus Sash / Moxie: Dragon Dance, Draco Meteor, Earthquake, Acrobatics
+Qwilfish (80) [Quiet] @ Quick Claw / Intimidate: Explosion, Water Spout, Destiny Bond, Gunk Shot
+Weavile (80) [Naive] @ Focus Band / Technician: Close Combat, Icicle Crash, Beat Up, Ice Shard
+Slowbro (80) [Adamant] @ Bright Powder / Shell Armor: Psychic, Fire Blast, Blizzard, Earthquake
+Musharna (80) [Quirky] @ White Herb / Analytic: Psycho Boost, Moonlight, Shadow Ball, Calm Mind
+Lucario (80) [Naive] @ Choice Band / Inner Focus: Close Combat, Iron Tail, Stone Edge, Earthquake
+
+
+Elite Four Shauntal: 
+Volcarona (81) [Quirky] @ Charti Berry / Drought: Fiery Dance, Bug Buzz, Solar Beam, Quiver Dance
+Golurk (81) [Brave] @ Expert Belt / Iron Fist: Fire Punch, Earthquake, Shadow Punch, Thunder Punch
+Magmortar (81) [Hardy] @ Air Balloon / No Guard: Inferno, Flash Cannon, Focus Blast, Solar Beam
+Banette (81) [Modest] @ Sitrus Berry / Shadow Tag: Shadow Force, Crush Claw, Grudge, Shadow Sneak
+Gengar (81) [Calm] @ Life Orb / Levitate: Shadow Ball, Sludge Bomb, Heat Wave, Hypnosis
+Chandelure (82) [Quirky] @ Ghost Gem / Levitate: Shadow Ball, Fire Blast, Solar Beam, Imprison
+
+
+Elite Four Grimsley: 
+Bisharp (81) [Naive] @ Rocky Helmet / Sturdy: Thunder Wave, Iron Head, Night Slash, Swords Dance
+Mantine (81) [Timid] @ Bright Powder / Water Absorb: Surf, Hurricane, Roost, Tailwind
+Drapion (81) [Rash] @ Scope Lens / Sniper: Night Slash, Cross Poison, X-Scissor, Focus Energy
+Blastoise (81) [Timid] @ White Herb / No Guard: Shell Smash, Hydro Pump, Flash Cannon, Focus Blast
+Absol (81) [Calm] @ King’s Rock / Super Luck: Night Slash, Psycho Cut, Sacred Sword, Swords Dance
+Sharpedo (82) [Serious] @ Focus Sash / Speed Boost: Waterfall, Crunch, Close Combat, Screech
+
+
+Elite Four Caitlin: 
+Spiritomb (81) [Relaxed] @ Leftovers / Magic Bounce: Shadow Ball, Dark Pulse, Trick Room, Disable 
+Darmanitan-Zen (81) [Bashful] @ Life Orb / Sheer Force: Psychic, Fire Blast, Focus Blast, Yawn
+Musharna (81) [Docile] @ Sitrus Berry / Analytic: Psychic, Shadow Ball, Calm Mind, Trick Room
+Escavalier (81) [Bold] @ Muscle Band / Shell Armor: Megahorn, Iron Head, Iron Defense, Razor Shell
+Reuniclus (81) [Docile] @ Life Orb / Magic Guard: Trick Room, Psystrike, Focus Blast, Thunder
+Metagross (82) [Gentle] @ Iron Ball / Iron Fist: Meteor Mash, Zen Headbutt, Hammer Arm, Ice Punch
+
+
+Elite Four Marshal: 
+Aerodactyl (81) [Modest] @ Flying Gem / Rock Head: Brave Bird, Head Smash, Taunt, Swagger
+Mienshao (81) [Naive] @ Psychic Gem / Inner Focus: Psychic, Aura Sphere, Shadow Ball, Calm Mind
+Primeape (81) [Rash] @ Dark Gem / Defiant: Night Slash, Close Combat, Stone Edge, Substitute
+Rampardos (81) [Calm] @ Dragon Gem / Sheer Force: Dragon Claw, Rock Slide, Scary Face, Earthquake
+Sawk (81) [Quirky] @ Fighting Gem / Sturdy: Close Combat, Reversal, Retaliate, Stone Edge
+Conkeldurr (82) [Bashful] @ Rock Gem / Iron Fist: Stone Edge, Hammer Arm, Mach Punch, Ice Punch
+
+
+Cap for N and Ghetsis: 86
+
+
+Team Plasma N:
+Zoroark (84) [Naive] @ Focus Sash / Illusion: Nasty Plot, Night Daze, Focus Blast, Dark Void
+Starmie (84) [Timid] @ Life Orb / No Guard: Hydro Pump, Thunder, Blizzard, Luster Purge
+Electrode (84) [Timid] @ Air Balloon / Static: Thunderbolt, Flash Cannon, Energy Ball, Light Screen
+Pidgeot (84) [Lax] @ Expert Belt / No Guard: Focus Blast, Hurricane, Feather Dance, Thunder
+Rhyperior (84) [Brave] @ Rindo Berry / Solid Rock: Rock Polish, Earthquake, Stone Edge, Ice Punch
+Reshiram (85) [Modest] @ White Herb / Turboblaze: Draco Meteor, Dragon Pulse, Focus Energy, Blue Flare 
+
+
+Team Plasma Ghetsis: 
+Gyarados (85) [Careful] @ Wacan Berry / Intimidate: Dragon Dance, Earthquake, Aqua Tail, Brave Bird 
+Bouffalant (85) [Modest] @ Leftovers / Rock Head: Head Charge, Head Smash, Fissure, Flare Blitz
+Blaziken (85) [Timid] @ Muscle Band / Speed Boost: Blaze Kick, Swords Dance, Close Combat, Thunder Punch 
+Eelektross (85) [Brave] @ Payapa Berry / Levitate: Gunk Shot, Bolt Strike, Power Whip, Coil
+Hydreigon (85) [Naughty] @ Life Orb / Sheer Force: Dark Pulse, Dragon Pulse, Roost, Fire Blast
+Rayquaza (86) [Modest] @ Yache Berry / Air Lock: Sky Attack, V-Create, Extreme Speed, Outrage
+
+
+Skyarrow Egg: Eevee
+Route 18 Egg: Togepi
+Tubeline Egg: Rotom
