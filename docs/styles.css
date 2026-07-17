@@ -158,6 +158,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .badge{font-size:10px;font-weight:800;padding:1px 5px;border-radius:5px;letter-spacing:.02em;line-height:1.4}
 .badge.s1{color:var(--star);background:var(--star-soft)}
 .badge.s2{color:var(--star2);background:var(--star2-soft)}
+.ast{font-weight:800;font-size:.8em;vertical-align:super;line-height:0;margin-left:1px;cursor:help}
+.ast.a1{color:var(--star)}
+.ast.a2{color:var(--star2)}
 .badge.excl{color:var(--up);background:var(--up-soft)}
 .badge.early{color:var(--accent-2);background:var(--accent-soft)}
 .move.mv-excl{border-color:color-mix(in srgb,var(--up) 45%,var(--line))}

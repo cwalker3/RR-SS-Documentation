@@ -60,7 +60,7 @@ const el = (t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=
 /* ---- asterisk badge helper ---- */
 function starOf(str){ const m=/(\*+)\s*$/.exec(str||''); return m?m[1].length:0; }
 function stripStar(str){ return String(str||'').replace(/\s*\*+\s*$/,'').trim(); }
-function starBadge(n){ if(n===2) return ' <span class="badge s2" title="Hack-only — illegal in the base game">HACK</span>'; if(n===1) return ' <span class="badge s1" title="Learnable, but not by level-up (egg / TM / tutor)">OFF-LIST</span>'; return ''; }
+function starBadge(n){ if(!n) return ''; return ` <sup class="ast a${n}" title="${n===2?'Hack-only — not obtainable in the base game':'Learnable, but not by level-up (egg / TM / tutor)'}">${n===2?'**':'*'}</sup>`; }
 
 /* ---- method color mapping ---- */
 function methodTag(m){
@@ -167,7 +167,7 @@ function collapsibleAbout(id,meta,extra){
 /* ================= POKÉMON ================= */
 const PK=arr(RAW.pokemon.entries).map(e=>({
   dex:e.dex,name:e.name,attrs:arr(e.attrs),changes:arr(e.changes),moves:arr(e.moves),notes:arr(e.notes),
-  stats:e.stats||{},statChg:e.statChg||{},
+  stats:e.stats||{},statChg:e.statChg||{},a1:e.a1||'',
   loc:(arr(e.attrs).find(a=>a.label==='Location')||{}).value||'',
   _s:(e.dex+' '+e.name+' '+arr(e.attrs).map(a=>a.value).join(' ')+' '+arr(e.moves).map(m=>m.name).join(' ')).toLowerCase()
 }));
@@ -215,7 +215,7 @@ function changeFlags(p){
 function renderPokemon(c){
   c.appendChild(collapsibleAbout('pokemon',RAW.pokemon.meta,
     `<div class="note" style="margin-top:12px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-     <div><b>OFF-LIST</b> = learnable but not by level-up (egg/TM/tutor). <b>HACK</b> = unobtainable in the base game — omitted from the legal-only build.</div></div>`));
+     <div><b>*</b> = learnable but not by level-up (egg/TM/tutor). <b>**</b> = unobtainable in the base game (hack-only, omitted from the legal-only build).</div></div>`));
   const md=el('div','md');
   const list=el('div','mlist');
   const detail=el('div','detail');
@@ -260,8 +260,15 @@ function pokemonDetail(p){
 
   // left: attributes + changes
   const left=el('div');
-  if(attrsNoLoc.length){
+  // ensure Ability 1 is shown (vanilla value when the hack didn't change it)
+  const hasA1=attrsNoLoc.some(a=>a.label==='Ability 1');
+  const a1chg=p.changes.find(c=>c.label==='Ability 1');
+  if(attrsNoLoc.length || p.a1 || a1chg){
     let dl='<dl class="dl">';
+    if(!hasA1){
+      const a1v=a1chg?stripStar(a1chg.to):p.a1, a1s=a1chg?starOf(a1chg.to):0;
+      if(a1v)dl+=`<dt>Ability 1</dt><dd>${esc(a1v)}${starBadge(a1s)}</dd>`;
+    }
     attrsNoLoc.forEach(a=>{const n=starOf(a.value);dl+=`<dt>${esc(a.label)}</dt><dd>${esc(stripStar(a.value))}${starBadge(n)}</dd>`;});
     dl+='</dl>';
     left.appendChild(sub('Attributes',dl));
@@ -297,7 +304,7 @@ function pokemonDetail(p){
       const dBadge=d?(d.type==='excl'
         ?`<span class="badge excl" title="${esc(nextName)} never learns this by level-up">exclusive</span>`
         :`<span class="badge early" title="${esc(nextName)} learns this ${d.n} levels later">${d.n} lv early</span>`):'';
-      return `<div class="move${d?' mv-'+d.type:''}"><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}</span>${dBadge}${m.rarity?`<span class="badge ${m.rarity===2?'s2':'s1'}">${m.rarity===2?'HACK':'OFF'}</span>`:''}</div>`;
+      return `<div class="move${d?' mv-'+d.type:''}"><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}${starBadge(m.rarity)}</span>${dBadge}</div>`;
     }).join('')+'</div>';
     right.appendChild(sub('Level-up moves',mv));
   }
