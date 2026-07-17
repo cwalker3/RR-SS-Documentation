@@ -36,13 +36,14 @@ $abName=@{}
 Get-Content "$dir\ability_names.csv" | Select-Object -Skip 1 | ForEach-Object {
   $p=$_ -split ','; if($p.Count -ge 3 -and $p[1] -eq '9'){ $abName[[int]$p[0]]=$p[2].Trim() }
 }
-$a1=@{}
+$a1=@{}; $a2=@{}; $ah=@{}   # slot-1 regular, slot-2 regular, hidden
 Get-Content "$dir\pokemon_abilities.csv" | Select-Object -Skip 1 | ForEach-Object {
   $p=$_ -split ','; if($p.Count -lt 4){ return }
   $pkid=[int]$p[0]; if($pkid -lt 1 -or $pkid -gt 721){ return }
-  if($p[2] -eq '0' -and $p[3] -eq '1'){ $a1[$pkid]=$abName[[int]$p[1]] }
+  $nm=$abName[[int]$p[1]]
+  if($p[2] -eq '1'){ $ah[$pkid]=$nm } elseif($p[3] -eq '1'){ $a1[$pkid]=$nm } elseif($p[3] -eq '2'){ $a2[$pkid]=$nm }
 }
-"vanilla ability-1 loaded: $($a1.Keys.Count)"
+"vanilla abilities loaded: slot1=$($a1.Keys.Count) slot2=$($a2.Keys.Count) hidden=$($ah.Keys.Count)"
 
 # --- TM/HM compatibility: ORAS base (from oras_tms.csv) + hack "New TM/HMs" additions ---
 $mn2move=@{}
@@ -67,6 +68,8 @@ foreach($e in $d.pokemon.entries){
   $id=[int]$e.dex
   $nn=Norm $e.name
   Add-Member -InputObject $e -NotePropertyName a1 -NotePropertyValue ($(if($a1.ContainsKey($id)){$a1[$id]}else{''})) -Force
+  Add-Member -InputObject $e -NotePropertyName a2 -NotePropertyValue ($(if($a2.ContainsKey($id) -and $a2[$id] -ne $a1[$id]){$a2[$id]}else{''})) -Force
+  Add-Member -InputObject $e -NotePropertyName ah -NotePropertyValue ($(if($ah.ContainsKey($id)){$ah[$id]}else{''})) -Force
   # TM/HM compatibility
   $vanSet=New-Object System.Collections.Generic.HashSet[string]
   if($vanTm.ContainsKey($id)){ foreach($k in ($vanTm[$id] -split ' ')){ if($k){[void]$vanSet.Add($k)} } }

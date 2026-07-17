@@ -167,7 +167,7 @@ function collapsibleAbout(id,meta,extra){
 /* ================= POKÉMON ================= */
 const PK=arr(RAW.pokemon.entries).map(e=>({
   dex:e.dex,name:e.name,attrs:arr(e.attrs),changes:arr(e.changes),moves:arr(e.moves),notes:arr(e.notes),
-  stats:e.stats||{},statChg:e.statChg||{},a1:e.a1||'',
+  stats:e.stats||{},statChg:e.statChg||{},a1:e.a1||'',a2:e.a2||'',ah:e.ah||'',
   tms:(e.tms||'').split(' ').filter(Boolean),tmsNew:new Set((e.tmsNew||'').split(' ').filter(Boolean)),tmsExtra:arr(e.tmsExtra),
   loc:(arr(e.attrs).find(a=>a.label==='Location')||{}).value||'',
   _s:(e.dex+' '+e.name+' '+arr(e.attrs).map(a=>a.value).join(' ')+' '+arr(e.moves).map(m=>m.name).join(' ')).toLowerCase()
@@ -262,18 +262,22 @@ function pokemonDetail(p){
 
   // left: attributes + changes
   const left=el('div');
-  // ensure Ability 1 is shown (vanilla value when the hack didn't change it)
-  const hasA1=attrsNoLoc.some(a=>a.label==='Ability 1');
-  const a1chg=p.changes.find(c=>c.label==='Ability 1');
-  if(attrsNoLoc.length || p.a1 || a1chg){
+  // abilities: vanilla slots filled in. The docs' "Ability 2"/"Hidden Ability" = the hidden slot.
+  const findChg=re=>p.changes.find(c=>re.test(c.label));
+  const findAttr=re=>attrsNoLoc.find(a=>re.test(a.label));
+  let ab1=p.a1,ab1s=0;const a1c=findChg(/^Ability 1$/),a1a=findAttr(/^Ability 1$/);
+  if(a1c){ab1=stripStar(a1c.to);ab1s=starOf(a1c.to);}else if(a1a){ab1=stripStar(a1a.value);ab1s=starOf(a1a.value);}
+  const ab2=p.a2||'';   // second regular ability (vanilla; hack docs don't track this slot)
+  let hid=p.ah,hids=0;const hc=findChg(/^(Ability 2|Hidden Ability)$/),ha=findAttr(/^(Ability 2|Hidden Ability)$/);
+  if(hc){hid=stripStar(hc.to);hids=starOf(hc.to);}else if(ha){hid=stripStar(ha.value);hids=starOf(ha.value);}
+  const otherAttrs=attrsNoLoc.filter(a=>!/^(Ability 1|Ability 2|Hidden Ability)$/.test(a.label));
+  {
     let dl='<dl class="dl">';
-    if(!hasA1){
-      const a1v=a1chg?stripStar(a1chg.to):p.a1, a1s=a1chg?starOf(a1chg.to):0;
-      if(a1v)dl+=`<dt>Ability 1</dt><dd>${esc(a1v)}${starBadge(a1s)}</dd>`;
-    }
-    attrsNoLoc.forEach(a=>{const n=starOf(a.value);dl+=`<dt>${esc(a.label)}</dt><dd>${esc(stripStar(a.value))}${starBadge(n)}</dd>`;});
-    dl+='</dl>';
-    left.appendChild(sub('Attributes',dl));
+    if(ab1)dl+=`<dt>Ability 1</dt><dd>${esc(ab1)}${starBadge(ab1s)}</dd>`;
+    if(ab2&&ab2!==ab1)dl+=`<dt>Ability 2</dt><dd>${esc(ab2)}</dd>`;
+    if(hid&&hid!==ab1&&hid!==ab2)dl+=`<dt>Hidden Ability</dt><dd>${esc(hid)}${starBadge(hids)}</dd>`;
+    otherAttrs.forEach(a=>{const n=starOf(a.value);dl+=`<dt>${esc(a.label)}</dt><dd>${esc(stripStar(a.value))}${starBadge(n)}</dd>`;});
+    if(dl!=='<dl class="dl">')left.appendChild(sub('Attributes',dl));
   }
   // changes grouped by forme (primary-forme stat changes live in the base-stats panel)
   if(p.changes.length){
@@ -284,7 +288,7 @@ function pokemonDetail(p){
       const isPrimary=(fk===''||/normal/i.test(fk));
       const group=byForme[fk];
       const stats=group.filter(g=>STAT_SET.has(g.label));
-      const others=group.filter(g=>!STAT_SET.has(g.label));
+      const others=group.filter(g=>!STAT_SET.has(g.label)&&!/^(Ability 1|Ability 2|Hidden Ability)$/.test(g.label));
       const showStats=!isPrimary && stats.length>0;
       if(!showStats && !others.length)return;
       let html='';
