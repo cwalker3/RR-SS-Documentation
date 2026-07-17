@@ -182,23 +182,25 @@ PK.forEach(q=>{
   const key=normName(m[1]);
   (EVO_NEXT[key]=EVO_NEXT[key]||[]).push({name:q.name,dex:q.dex,level:lv?+lv[1]:null,method:(m[2]||'').trim()});
 });
-// moves a Pokémon can learn (by level-up) that its next evolution can't, or gets much later.
-// These are the moves worth delaying evolution for.
-function evoDelayInfo(p){
-  const nexts=EVO_NEXT[normName(p.name)];if(!nexts)return [];
-  return nexts.map(q=>{
-    const qe=PK_BY_DEX[q.dex];if(!qe)return null;
-    const thresh=q.level||0;               // you can't evolve before this level anyway
-    const qLvl={};qe.moves.forEach(m=>{const k=m.name.toLowerCase();if(qLvl[k]==null||m.level<qLvl[k])qLvl[k]=m.level;});
-    const moves=[];
-    p.moves.forEach(m=>{
-      if(m.level<=thresh)return;           // already learned before you could evolve
-      const ql=qLvl[m.name.toLowerCase()];
-      if(ql==null)moves.push({name:m.name,pLevel:m.level,qLevel:null,rarity:m.rarity});
-      else if(ql-m.level>=4)moves.push({name:m.name,pLevel:m.level,qLevel:ql,rarity:m.rarity});
+// Per-move evolution-delay tag: 'excl' = the next evolution never learns it by level-up;
+// {early:N} = the evolution learns it N levels later. Only for moves learned after you
+// could already evolve, and only for meaningful early leads (systematic +1/+2 shifts hidden).
+const EARLY_MIN=3;
+function moveDelayMap(p){
+  const nexts=EVO_NEXT[normName(p.name)];const map={};if(!nexts||!nexts.length)return map;
+  p.moves.forEach((m,i)=>{
+    const k=m.name.toLowerCase();let applicable=false,anyLearns=false,minLater=Infinity;
+    nexts.forEach(q=>{
+      if(m.level<=(q.level||0))return;applicable=true;
+      const qe=PK_BY_DEX[q.dex];if(!qe)return;
+      let ql=null;qe.moves.forEach(x=>{if(x.name.toLowerCase()===k&&(ql==null||x.level<ql))ql=x.level;});
+      if(ql!=null){anyLearns=true;if(ql>m.level)minLater=Math.min(minLater,ql-m.level);}
     });
-    return {evo:q,moves};
-  }).filter(x=>x&&x.moves.length);
+    if(!applicable)return;
+    if(!anyLearns)map[i]={type:'excl'};
+    else if(minLater!==Infinity&&minLater>=EARLY_MIN)map[i]={type:'early',n:minLater};
+  });
+  return map;
 }
 const STAT_ORDER=['HP','Attack','Defense','Sp. Attack','Sp. Def','Sp. Defense','Sp. Atk','Speed','Total'];
 const STAT_SET=new Set(STAT_ORDER);
@@ -285,30 +287,22 @@ function pokemonDetail(p){
     if(chWrap.innerHTML.trim())left.appendChild(sub('Other changes',chWrap.innerHTML));
   }
 
-  // right: moves (highlight moves worth delaying evolution for)
-  const delay=evoDelayInfo(p);
-  const delaySet=new Set();delay.forEach(d=>d.moves.forEach(m=>delaySet.add(m.name.toLowerCase())));
+  // right: moves (tag moves you'd keep by delaying evolution)
+  const dmap=moveDelayMap(p);
+  const nextName=(EVO_NEXT[normName(p.name)]||[]).map(q=>q.name).join(' / ');
   const right=el('div');
   if(p.moves.length){
-    const mv='<div class="moves">'+p.moves.map(m=>{
-      const dw=delaySet.has(m.name.toLowerCase());
-      return `<div class="move${dw?' delaymv':''}"${dw?' title="Learned earlier as this stage — worth delaying evolution (see below)"':''}><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}</span>${m.rarity?`<span class="badge ${m.rarity===2?'s2':'s1'}">${m.rarity===2?'HACK':'OFF'}</span>`:''}</div>`;
+    const mv='<div class="moves">'+p.moves.map((m,i)=>{
+      const d=dmap[i];
+      const dBadge=d?(d.type==='excl'
+        ?`<span class="badge excl" title="${esc(nextName)} never learns this by level-up">exclusive</span>`
+        :`<span class="badge early" title="${esc(nextName)} learns this ${d.n} levels later">${d.n} lv early</span>`):'';
+      return `<div class="move${d?' mv-'+d.type:''}"><span class="lv">${m.level}</span><span class="mv">${esc(m.name)}</span>${dBadge}${m.rarity?`<span class="badge ${m.rarity===2?'s2':'s1'}">${m.rarity===2?'HACK':'OFF'}</span>`:''}</div>`;
     }).join('')+'</div>';
     right.appendChild(sub('Level-up moves',mv));
   }
   cols.append(left,right);
   body.appendChild(cols);
-  if(delay.length){
-    let html='';
-    delay.forEach(d=>{
-      const evLbl=d.evo.level?`into <b>${esc(d.evo.name)}</b> at Lv.&nbsp;${d.evo.level}`:`into <b>${esc(d.evo.name)}</b>${d.evo.method?` (${esc(d.evo.method)})`:''}`;
-      html+=`<div class="delaygrp"><div class="delayhd">Delay evolving ${evLbl} to still learn by level-up:</div>`+
-        `<div class="tblwrap"><table class="data delaytbl"><tbody>`+
-        d.moves.map(m=>`<tr><td class="dmv">${esc(m.name)}</td><td class="mono">Lv. ${m.pLevel}</td><td class="dvs">${esc(d.evo.name)} ${m.qLevel==null?'never learns it':'→ Lv. '+m.qLevel}</td></tr>`).join('')+
-        `</tbody></table></div></div>`;
-    });
-    body.appendChild(el('div','',`<div class="delaypanel"><div class="eyebrow" style="margin-bottom:9px">Evolution delay</div>${html}</div>`));
-  }
   if(p.notes.length){
     body.appendChild(el('div','',`<div class="note plain" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg><div>${p.notes.map(esc).join('<br>')}</div></div>`));
   }
