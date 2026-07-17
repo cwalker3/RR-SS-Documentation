@@ -350,7 +350,7 @@ function pokemonDetail(p){
     }).join('')+'</div>';
     right.appendChild(sub('Level-up moves',mv));
   }
-  cols.append(left,right);
+  cols.append(right,left);
   body.appendChild(cols);
   // TM / HM compatibility (ORAS base + hack additions), collapsed by default
   if(p.tms.length || p.tmsExtra.length){
