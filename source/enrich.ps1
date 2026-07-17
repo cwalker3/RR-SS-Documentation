@@ -147,7 +147,8 @@ Add-Member -InputObject $d.pokemon -NotePropertyName tmMoves -NotePropertyValue 
 $typeNm=@{}
 Get-Content "$dir\type_names.csv" | ForEach-Object { $p=$_ -split ','; if($p.Count -ge 3 -and $p[1] -eq '9'){ $typeNm[[int]$p[0]]=$p[2].Trim() } }
 $mvName=@{}
-Get-Content "$dir\move_names.csv" | Select-Object -Skip 1 | ForEach-Object { $p=$_ -split ','; if($p.Count -ge 3 -and $p[1] -eq '9'){ $mvName[[int]$p[0]]=$p[2].Trim() } }
+# name is the last column and may itself contain commas (e.g. "10,000,000 Volt Thunderbolt"), so split into 3 and strip quotes
+Get-Content "$dir\move_names.csv" | Select-Object -Skip 1 | ForEach-Object { $p=$_ -split ',',3; if($p.Count -ge 3 -and $p[1] -eq '9'){ $mvName[[int]$p[0]]=$p[2].Trim().Trim('"') } }
 $mvDesc=@{}
 Get-Content "$dir\move_desc.tsv" | ForEach-Object { $p=$_ -split "`t",2; if($p.Count -eq 2){ $mvDesc[[int]$p[0]]=$p[1] } }
 $catName=@{'1'='Status';'2'='Physical';'3'='Special'}

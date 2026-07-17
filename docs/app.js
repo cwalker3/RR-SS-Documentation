@@ -110,7 +110,7 @@ const SECTIONS=[
 SECTIONS.forEach(s=>{
   if(s.id==='pokemon')s.sub=arr(RAW.pokemon.entries).length+' species';
   if(s.id==='areas')s.sub=arr(RAW.areas.areas).length+' locations';
-  if(s.id==='moves')s.sub=arr(RAW.attacks.entries).length+' changed moves';
+  if(s.id==='moves')s.sub=Object.keys(RAW.moveInfo||{}).length+' moves · '+arr(RAW.attacks.entries).length+' changed';
 });
 
 const state={section:'pokemon',query:'',pkSel:0,areaSel:0};
@@ -144,7 +144,7 @@ function setActiveNav(){document.querySelectorAll('.navbtn').forEach(b=>b.classL
 function go(id){state.section=id;state.query='';$('search').value='';render();history.replaceState(null,'','#'+id);}
 
 /* ---- search placeholder per section ---- */
-const SEARCH_PH={pokemon:'Search species, move, location…',areas:'Search area or a Pokémon in it…',moves:'Search a move…',evolution:'Search a Pokémon…',items:'Search items…',gifts:'Search gifts & statics…',thief:'Search item or Pokémon…',box:'Search your box…'};
+const SEARCH_PH={pokemon:'Search species, move, location…',areas:'Search area or a Pokémon in it…',moves:'Search move, type, or category…',evolution:'Search a Pokémon…',items:'Search items…',gifts:'Search gifts & statics…',thief:'Search item or Pokémon…',box:'Search your box…'};
 
 /* ================= RENDER ROOT ================= */
 function render(){
@@ -202,6 +202,22 @@ PK.forEach(p=>{const n=normName(p.name);if(!NAME2DEX[n])NAME2DEX[n]=p.dex;});
 const TM_MOVES=RAW.pokemon.tmMoves||{};
 const MOVE_INFO=RAW.moveInfo||{};
 function moveData(name){return MOVE_INFO[normName(name)];}
+// before→after change rows for moves the hack modifies (keyed by normalized name)
+const MOVE_CHG={};
+arr(RAW.attacks&&RAW.attacks.entries).forEach(e=>{MOVE_CHG[normName(e.name)]=arr(e.rows);});
+function moveChgRowsHtml(name){
+  const rows=MOVE_CHG[normName(name)];if(!rows||!rows.length)return '';
+  let h='';
+  rows.forEach(r=>{
+    if(r.kind==='change'){
+      const from=+r.from,to=+r.to,d=(!isNaN(from)&&!isNaN(to))?to-from:null;
+      h+=`<div class="chgrow"><span class="cl">${esc(r.label)}</span><span class="was">${esc(r.from)}</span><span class="arrow">→</span><span class="now">${esc(r.to)}</span>${d?`<span class="delta ${d>0?'up':'down'}">${d>0?'+':''}${d}</span>`:''}</div>`;
+    } else if(r.kind!=='note'||r.label!=='Effect'){ // Effect note is already shown as mm-fx
+      h+=`<div class="chgrow"><span class="cl">${esc(r.label||'Effect')}</span><span class="now">${esc(r.value)}</span></div>`;
+    }
+  });
+  return h?`<div class="mm-changes"><div class="mm-changes-h">Changes in this hack</div>${h}</div>`:'';
+}
 const TYPE_COLORS={Normal:'#9099a1',Fire:'#ff9d55',Water:'#4d90d5',Electric:'#f4d23c',Grass:'#63bc5a',Ice:'#73cec0',Fighting:'#ce4069',Poison:'#ab6ac8',Ground:'#d97845',Flying:'#8fa8dd',Psychic:'#f97176',Bug:'#90c12c',Rock:'#c5b78c',Ghost:'#5269ad',Dragon:'#0b6dc3',Dark:'#5a5366',Steel:'#5a8ea1',Fairy:'#ec8fe6'};
 /* ---- move info modal ---- */
 const moveModal=el('div','movemodal-backdrop');moveModal.innerHTML='<div class="movemodal" role="dialog" aria-modal="true"></div>';document.body.appendChild(moveModal);
@@ -219,6 +235,7 @@ function openMove(name){
       `<div class="mm-stats"><div><b>${mi.pow==null?'—':mi.pow}</b><span>Power</span></div><div><b>${mi.acc==null?'—':mi.acc}</b><span>Accuracy</span></div><div><b>${mi.pp==null?'—':mi.pp}</b><span>PP</span></div></div>`+
       (mi.fx?`<div class="mm-fx"><b>Effect:</b> ${esc(mi.fx)}</div>`:'')+
       (mi.d?`<p class="mm-desc">${esc(mi.d)}</p>`:'')+
+      (mi.chg?moveChgRowsHtml(mi.n||name):'')+
       `</div>`;
   }
   moveModal.classList.add('show');
@@ -635,27 +652,36 @@ function teamInline(team){
 }
 
 /* ================= MOVES ================= */
+let movesChangedOnly=false;
 function renderMoves(c){
   c.appendChild(collapsibleAbout('moves',RAW.attacks.meta));
   const q=state.query.toLowerCase().trim();
-  const entries=arr(RAW.attacks.entries).filter(e=>!q||e.name.toLowerCase().includes(q));
-  if(!entries.length){c.insertAdjacentHTML('beforeend',emptyState('No moves match your search.'));return;}
-  const grid=el('div');grid.style.cssText='display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px';
-  entries.forEach(e=>{
-    const p=el('div','panel');
-    let rows='';
-    arr(e.rows).forEach(r=>{
-      if(r.kind==='change'){
-        const from=+r.from,to=+r.to,d=(!isNaN(from)&&!isNaN(to))?to-from:null;
-        rows+=`<div class="chgrow"><span class="cl">${esc(r.label)}</span><span class="was">${esc(r.from)}</span><span class="arrow">→</span><span class="now">${esc(r.to)}</span>${d?`<span class="delta ${d>0?'up':'down'}">${d>0?'+':''}${d}</span>`:''}</div>`;
-      } else {
-        rows+=`<div class="chgrow"><span class="cl">${esc(r.label||'Effect')}</span><span class="now">${esc(r.value)}</span></div>`;
-      }
-    });
-    p.innerHTML=`<div class="phead"><h3><span class="movelink" data-move="${esc(e.name)}" role="button" tabindex="0">${esc(e.name)}</span></h3></div><div class="pbody">${rows}</div>`;
-    grid.appendChild(p);
-  });
-  c.appendChild(grid);
+  const all=Object.keys(MOVE_INFO).map(k=>MOVE_INFO[k]);
+  const changedCount=all.filter(m=>m.chg).length;
+  let list=all.slice();
+  if(movesChangedOnly)list=list.filter(m=>m.chg);
+  if(q)list=list.filter(m=>(m.n||'').toLowerCase().includes(q)||(m.t||'').toLowerCase().includes(q)||(m.c||'').toLowerCase().includes(q));
+  list.sort((a,b)=>(a.n||'').localeCompare(b.n||''));
+  // toolbar: changed-only filter + count
+  const bar=el('div','moves-toolbar');
+  bar.innerHTML=`<label class="chgtoggle"><input type="checkbox"${movesChangedOnly?' checked':''}><span>Changed only</span><span class="cnt">${changedCount}</span></label><span class="moves-count">${list.length} move${list.length===1?'':'s'}</span>`;
+  bar.querySelector('input').onchange=e=>{movesChangedOnly=e.target.checked;render();};
+  c.appendChild(bar);
+  if(!list.length){c.insertAdjacentHTML('beforeend',emptyState('No moves match your search.'));return;}
+  const rows=list.map(mi=>{
+    const tcol=TYPE_COLORS[mi.t]||'var(--surface-3)';
+    return `<tr class="movelink moverow${mi.chg?' changed':''}" data-move="${esc(mi.n)}" role="button" tabindex="0" title="View ${esc(mi.n)}">`+
+      `<td class="mv-name">${mi.chg?'<span class="chgmark" title="Changed in this hack">★</span>':''}<b>${esc(mi.n)}</b></td>`+
+      `<td>${mi.t?`<span class="mv-type" style="background:${tcol}">${esc(mi.t)}</span>`:'—'}</td>`+
+      `<td><span class="mv-cat mv-cat-${(mi.c||'').toLowerCase()}">${esc(mi.c||'—')}</span></td>`+
+      `<td class="mono num">${mi.pow==null?'—':mi.pow}</td>`+
+      `<td class="mono num">${mi.acc==null?'—':mi.acc}</td>`+
+      `<td class="mono num">${mi.pp==null?'—':mi.pp}</td>`+
+    `</tr>`;
+  }).join('');
+  const wrap=el('div','panel');
+  wrap.innerHTML=`<div class="tblwrap"><table class="data moves-tbl"><thead><tr><th>Move</th><th>Type</th><th>Cat.</th><th class="num">Pow</th><th class="num">Acc</th><th class="num">PP</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  c.appendChild(wrap);
 }
 
 /* ============ generic block docs (Evolution / Items / Gifts) ============ */
