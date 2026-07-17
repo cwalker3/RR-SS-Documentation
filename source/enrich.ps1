@@ -1,5 +1,7 @@
+param([string]$GameDir)   # folder holding this game's data.json (shared reference CSVs stay next to this script)
 $ErrorActionPreference='Stop'
 $dir = $PSScriptRoot
+$gameDir = if ($GameDir) { $GameDir } else { $PSScriptRoot }
 
 # --- 1. PokeAPI current base stats: id -> [hp,atk,def,spa,spd,spe] ---
 $api=@{}
@@ -77,7 +79,7 @@ function Sort-Tm($keys){ $keys | Sort-Object { if($_ -like 'HM*'){1000+[int]$_.S
 "TM/HM map: $($tmMoves.Count); pokemon with vanilla TMs: $($vanTm.Count)"
 
 # --- 3. enrich each entry ---
-$d=[System.IO.File]::ReadAllText("$dir\data.json",[Text.Encoding]::UTF8) | ConvertFrom-Json
+$d=[System.IO.File]::ReadAllText("$gameDir\data.json",[Text.Encoding]::UTF8) | ConvertFrom-Json
 $noBase=New-Object System.Collections.ArrayList
 foreach($e in $d.pokemon.entries){
   $id=[int]$e.dex
@@ -180,7 +182,7 @@ foreach($atk in @($d.attacks.entries)){
 Add-Member -InputObject $d -NotePropertyName moveInfo -NotePropertyValue $moveInfo -Force
 
 $json=$d | ConvertTo-Json -Depth 40 -Compress
-[System.IO.File]::WriteAllText("$dir\data.json",$json,(New-Object System.Text.UTF8Encoding($false)))
+[System.IO.File]::WriteAllText("$gameDir\data.json",$json,(New-Object System.Text.UTF8Encoding($false)))
 "data.json rewritten: {0:N0} bytes" -f $json.Length
 # sanity print
 $bulba=$d.pokemon.entries | Where-Object { $_.dex -eq '001' }

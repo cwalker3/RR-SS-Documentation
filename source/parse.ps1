@@ -1,6 +1,7 @@
+param([string]$GameDir)   # folder holding this game's .txt change docs (and where data.json is written)
 $ErrorActionPreference = 'Stop'
-$src = $PSScriptRoot   # the .txt source documents live alongside this script
-$out = $PSScriptRoot
+$src = if ($GameDir) { $GameDir } else { $PSScriptRoot }   # the .txt source documents live here
+$out = $src
 
 function Read-Lines($name){
   return [System.IO.File]::ReadAllLines((Join-Path $src $name), [System.Text.Encoding]::UTF8)

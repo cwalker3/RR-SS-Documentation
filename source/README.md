@@ -4,19 +4,38 @@ The source documents and scripts that generate the site's data. **The live site
 (`../docs`) is fully self-contained and needs nothing in this folder at runtime** —
 everything here is only for (re)generating the data.
 
+## Layout
+
+```
+source/
+  parse.ps1  enrich.ps1  build.ps1  fetch-*.ps1     ← shared scripts (game-agnostic)
+  *.csv  *.tsv  gen6-pokedex.ts  gen7-pokedex.ts    ← shared PokeAPI/Showdown reference data
+  games/
+    rrss/
+      *.txt          ← this game's change docs (the source of truth)
+      data.json      ← generated (gitignored)
+```
+
+The scripts and reference CSVs are shared across every game; only each game's `.txt`
+change docs live in its own `games/<id>/` folder. Adding a game no longer means copying
+`source/` — just add a new `games/<id>/` folder.
+
 ## Pipeline
 
 ```
-*.txt ──parse.ps1──► data.json ──enrich.ps1──► data.json ──build.ps1──► ../docs/data.js
-                                     ▲
-                          PokeAPI + Showdown data files
+games/<id>/*.txt ──parse.ps1──► games/<id>/data.json ──enrich.ps1──► games/<id>/data.json ──build.ps1──► ../docs/data.js
+                                              ▲
+                                   PokeAPI + Showdown data files (in source/)
 ```
+
+`parse.ps1` and `enrich.ps1` take a `-GameDir` parameter (the `games/<id>/` folder);
+`build.ps1` passes it for you.
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `*.txt` | The original RR/SS change documents — the source of truth for all parsed data. |
+| `games/<id>/*.txt` | A game's change documents (e.g. `games/rrss/`) — the source of truth for all parsed data. |
 | `parse.ps1` | Parses the `.txt` files into `data.json` (Pokémon, areas, moves, evolutions, items, gifts, thief). |
 | `enrich.ps1` | Adds base stats (Gen-6-corrected), vanilla abilities (2 regular + hidden), Mega/Primal forme stats, TM/HM compatibility, and move info (type/category/power/accuracy/PP/description + hack changes). |
 | `build.ps1` | Runs parse + enrich and writes `../docs/data.js`. **This is the one to run.** |
@@ -47,9 +66,9 @@ localStorage namespace, so switching games keeps each nuzlocke separate.
 
 To add a game (e.g. Omega Ruby / Alpha Sapphire):
 
-1. Copy this whole `source` folder and drop the new game's change `.txt` docs into it.
+1. Create `games/<id>/` (e.g. `games/oras/`) and drop the new game's change `.txt` docs into it.
 2. In `build.ps1`, set `$gameId` / `$gameName` / `$gameShort` to the new game and
-   point `$out` at a new file, e.g. `../docs/data-oras.js`.
+   point `$out` at a new file, e.g. `../docs/data-oras.js`. (`$gameDir` is derived from `$gameId`.)
 3. Run `powershell -ExecutionPolicy Bypass -File build.ps1`.
 4. Add one line to `../docs/index.html`, right after the existing `data.js` script:
    `<script src="data-oras.js"></script>`.
