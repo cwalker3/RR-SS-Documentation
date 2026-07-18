@@ -462,7 +462,7 @@ function chgRow(o){
 /* ================= AREAS ================= */
 const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
-  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,team:arr(t.team)}))}));
+  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,was:it.was}));
   const mons=new Set();wild.forEach(w=>w.species.forEach(s=>mons.add(s.name.toLowerCase())));
@@ -493,6 +493,7 @@ function groupMissedArea(a){return areaGroup(a).find(x=>AREA_MISSED.has(x.name))
 function areaRosterTrainers(a){
   const rn=rivalName(), rs=rivalStarter(), out=[];
   a.rosters.forEach(r=>{if(r.kind==='rematch')return;r.trainers.forEach(t=>{
+    if(t.choice&&PROFILE.starter&&t.choice!==PROFILE.starter)return;
     if(isRivalTrainer(t)){if(rn&&rivalGenderOf(t.name)!==rn)return;if(rs&&rivalStarterOf(t.team)!==rs)return;}
     out.push(t);});});
   return out;
@@ -514,11 +515,19 @@ function profileBar(){
   const wrap=el('div','profilebar');
   const seg=(label,key,opts)=>`<div class="pfield"><span class="plabel">${label}</span><div class="seg">`+
     opts.map(o=>`<button class="segbtn${PROFILE[key]===o.val?' on':''}" data-pkey="${key}" data-pval="${o.val}">${o.html}</button>`).join('')+`</div></div>`;
-  const genders=[{val:'Brendan',html:'Brendan'},{val:'May',html:'May'}];
-  const starters=['Treecko','Torchic','Mudkip'].map(s=>({val:s,html:spriteByName(s,18,'cspr')+s}));
-  const rn=rivalName(), rs=rivalStarter();
-  const hint=(rn&&rs)?`Rival battles show only <b>${rn}</b> with <b>${rs}</b>`:'Pick both to filter rival (Brendan/May) battles to yours';
-  wrap.innerHTML=`${seg('You play as','gender',genders)}${seg('Your starter','starter',starters)}<div class="pnote">${hint}</div>`;
+  const gameStarters=arr(RAW.areas&&RAW.areas.meta&&RAW.areas.meta.starters);
+  if(gameStarters.length){
+    // starter-only games (e.g. Brutal Black): pick a starter to show its battle variants
+    const starters=gameStarters.map(s=>({val:s,html:spriteByName(s,18,'cspr')+s}));
+    const hint=PROFILE.starter?`Trainer battles show the teams for <b>${esc(PROFILE.starter)}</b>`:'Pick your starter to show the matching (rival & first-gym) battles';
+    wrap.innerHTML=`${seg('Your starter','starter',starters)}<div class="pnote">${hint}</div>`;
+  } else {
+    const genders=[{val:'Brendan',html:'Brendan'},{val:'May',html:'May'}];
+    const starters=['Treecko','Torchic','Mudkip'].map(s=>({val:s,html:spriteByName(s,18,'cspr')+s}));
+    const rn=rivalName(), rs=rivalStarter();
+    const hint=(rn&&rs)?`Rival battles show only <b>${rn}</b> with <b>${rs}</b>`:'Pick both to filter rival (Brendan/May) battles to yours';
+    wrap.innerHTML=`${seg('You play as','gender',genders)}${seg('Your starter','starter',starters)}<div class="pnote">${hint}</div>`;
+  }
   wrap.querySelectorAll('.segbtn').forEach(b=>b.onclick=()=>{const k=b.dataset.pkey,v=b.dataset.pval;PROFILE[k]=(PROFILE[k]===v)?null:v;saveProfile();reRenderKeepScroll();});
   return wrap;
 }
@@ -568,17 +577,24 @@ function speciesChip(s,pct){
     `</span>`;
 }
 function wildRow(w){
-  const isLand=LAND_METHODS.has(w.method);
   const total=w.species.length;
   const caughtN=w.species.filter(s=>isCaught(s.name)).length;
-  // dupes clause: caught species are skipped; rescale the base odds over the uncaught ones
-  let pcts=null;
-  if(isLand){
-    const base=encPcts(w.species);
-    const sum=w.species.reduce((a,s,i)=>a+(isCaught(s.name)?0:base[i]),0);
-    pcts=w.species.map((s,i)=>sum>0?base[i]/sum*100:0);
+  const hasPct=w.species.some(s=>s.pct!=null);
+  let chips;
+  if(hasPct){
+    // the game gives real encounter rates: show them as-is, for every method
+    chips=w.species.map(s=>speciesChip(s,s.pct!=null?s.pct:null)).join('');
+  } else {
+    // dupes clause: caught species are skipped; rescale the base odds over the uncaught ones
+    const isLand=LAND_METHODS.has(w.method);
+    let pcts=null;
+    if(isLand){
+      const base=encPcts(w.species);
+      const sum=w.species.reduce((a,s,i)=>a+(isCaught(s.name)?0:base[i]),0);
+      pcts=w.species.map((s,i)=>sum>0?base[i]/sum*100:0);
+    }
+    chips=w.species.map((s,i)=>isCaught(s.name)?speciesChip(s,'dupe'):speciesChip(s,isLand?pcts[i]:null)).join('');
   }
-  const chips=w.species.map((s,i)=>isCaught(s.name)?speciesChip(s,'dupe'):speciesChip(s,isLand?pcts[i]:null)).join('');
   const summary=`<span class="cc">${caughtN}/${total} caught</span>`;
   return `<tr><td>${methodTag(w.method)}<div class="wsum">${summary}</div></td><td class="mono">${esc(w.level)}</td><td><div class="chips">${chips}</div></td></tr>`;
 }
@@ -611,8 +627,7 @@ function areaDetail(a){
     if(open){
       body.innerHTML=groupNote+`<div class="tblwrap"><table class="data"><thead><tr><th>Method</th><th>Level</th><th>Species</th></tr></thead><tbody>`+
         a.wild.map(w=>wildRow(w)).join('')+
-        `</tbody></table></div>`+
-        ((RAW.areas.meta&&RAW.areas.meta.hideOdds)?'':`<div class="wcap">% = each species' odds of being your encounter under the nuzlocke <b>dupes clause</b> — caught species are skipped and the remaining odds rescale to 100%. Shown for grass/walking methods, which have defined 10% / 5% rates.</div>`);
+        `</tbody></table></div>`;
     } else if(resolvedElse){
       body.innerHTML=`<div class="collapsednote">↔ Your <b>${esc(metLoc(a.name))}</b> encounter was already ${elseCaught?'caught':'missed'} at ${areaLink(elseCaught||elseMissed)} — same met location.</div>`;
     } else if(missed && caughtHere===0){
@@ -629,6 +644,7 @@ function areaDetail(a){
   a.rosters.forEach(r=>{
     if(r.kind==='rematch')return;
     const trainers=r.trainers.filter(t=>{
+      if(t.choice&&PROFILE.starter&&t.choice!==PROFILE.starter)return false;   // starter-variant battle
       if(!isRivalTrainer(t))return true;
       if(rn&&rivalGenderOf(t.name)!==rn)return false;
       if(rs&&rivalStarterOf(t.team)!==rs)return false;
@@ -640,14 +656,15 @@ function areaDetail(a){
     const p=el('div','panel');
     p.innerHTML=`<div class="phead"><h3>${esc(r.title)}</h3><span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span></div>`;
     const body=el('div','pbody');
-    body.innerHTML=`<div class="tblwrap"><table class="data"><thead><tr><th>ID</th><th>Trainer</th><th>Team</th></tr></thead><tbody>`+
+    body.innerHTML=`<div class="tblwrap"><table class="data"><thead><tr><th>Trainer</th><th>Team</th></tr></thead><tbody>`+
       trainers.map(t=>{
         let tag='';const rival=isRivalTrainer(t);
         if(rival){const g=rivalGenderOf(t.name),st=rivalStarterOf(t.team);
           tag=(rn&&rs&&g===rn&&st===rs)?` <span class="rivalpill" title="Your rival, based on your gender & starter">★ Your rival</span>`:` <span class="varpill">${esc(g)} · ${esc(st)}</span>`;}
+        if(t.choice&&!PROFILE.starter)tag+=` <span class="varpill">if ${esc(t.choice)}</span>`;
         const done=track&&TRAINERS_DONE.has(t.id);
         const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
-        return `<tr class="${rival?'rivalrow ':''}${done?'tdone':''}"><td class="mono"><span class="idpill">${esc(t.id)}</span></td><td>${chk}${esc(t.name)}${t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:''}${tag}</td><td>${teamInline(t.team)}</td></tr>`;
+        return `<tr class="${rival?'rivalrow ':''}${done?'tdone':''}"><td>${chk}${esc(t.name)}${t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:''}${tag}</td><td>${teamInline(t.team)}</td></tr>`;
       }).join('')+
       `</tbody></table></div>`;
     p.appendChild(body);wrap.appendChild(p);

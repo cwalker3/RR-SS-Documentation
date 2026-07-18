@@ -37,6 +37,9 @@ Get-Content "$src\pokemon.csv" | Select-Object -Skip 1 | ForEach-Object {
 function Norm($s){ return ([string]$s).ToLower() -replace '[^a-z0-9]','' }
 # fix obvious source-sheet misspellings so the display name matches the real species
 $nameFix = @{ 'Beeheyem' = 'Beheeyem' }
+# fix move-name spellings so learnset/trainer moves match the PokeAPI move info
+$moveFix = @{ 'Faint Attack'='Feint Attack'; 'Hi Jump Kick'='High Jump Kick'; 'Bonemarang'='Bonemerang'; 'ViceGrip'='Vise Grip' }
+function Fix-Move($m){ $m = ([string]$m).Trim(); if ($moveFix.ContainsKey($m)) { return $moveFix[$m] } return $m }
 
 # --- read a CSV grid (quote-aware) into an array of field-arrays ---
 Add-Type -AssemblyName Microsoft.VisualBasic
@@ -132,7 +135,7 @@ function Parse-Grid($rows){
 
       # learnset entry: "LEVEL - Move Name"
       if ($learn -match '^\s*(\d+)\s*-\s*(.+?)\s*$') {
-        [void]$e.moves.Add([ordered]@{ level=[int]$Matches[1]; name=$Matches[2].Trim(); rarity=0 })
+        [void]$e.moves.Add([ordered]@{ level=[int]$Matches[1]; name=(Fix-Move $Matches[2]); rarity=0 })
       }
 
       if ($TYPES.ContainsKey($nm.ToUpper())) {
@@ -324,7 +327,7 @@ function End-BBTrainer(){
   if ($script:trainer -and $script:trainer.team.Count -gt 0 -and $script:area) { [void]$script:area.trainers.Add($script:trainer) }
   $script:trainer = $null
 }
-function New-BBTrainer($name){ return [ordered]@{ id=''; name=$name; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); team=(New-Object System.Collections.ArrayList) } }
+function New-BBTrainer($name){ return [ordered]@{ id=''; name=$name; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; team=(New-Object System.Collections.ArrayList) } }
 function NextIsTeam($idx){
   for ($j=$idx+1; $j -lt $ml.Count; $j++) {
     $s = $ml[$j].Trim()
@@ -352,7 +355,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
       $sp = New-Object System.Collections.ArrayList
       foreach ($sm in $reSp.Matches($mw.Groups['list'].Value)) {
         $nm = $sm.Groups['name'].Value.Trim()
-        if ($nm) { [void]$sp.Add([ordered]@{ name=$nm; rare=([int]$sm.Groups['pct'].Value -le 5) }) }
+        if ($nm) { $pc = [int]$sm.Groups['pct'].Value; [void]$sp.Add([ordered]@{ name=$nm; pct=$pc; rare=($pc -le 5) }) }
       }
       if ($sp.Count) { [void]$area.wild.Add([ordered]@{ method=$mw.Groups['method'].Value.Trim(); level=$mw.Groups['lvl'].Value; species=@($sp) }) }
     }
@@ -360,10 +363,10 @@ for ($i=0; $i -lt $ml.Count; $i++) {
   }
 
   if ($t -match '^If you chose\s+(\w+)') {
-    $choice = "chose $($Matches[1])"
+    $choice = $Matches[1]                                 # the chosen starter (Snivy / Tepig / Oshawott)
     if (NextIsTeam $i) {                                  # variant teams follow directly (pattern 1)
-      if ($trainer -and $trainer.team.Count -gt 0) { End-BBTrainer; $trainer = New-BBTrainer "$baseTName ($choice)" }
-      elseif ($trainer) { $trainer.name = "$baseTName ($choice)" }
+      if ($trainer -and $trainer.team.Count -gt 0) { End-BBTrainer; $trainer = New-BBTrainer $baseTName; $trainer.choice = $choice }
+      elseif ($trainer) { $trainer.choice = $choice }
     } else { End-BBTrainer }                              # a header follows (pattern 2): keep $choice for it
     continue
   }
@@ -372,7 +375,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
   if ($mt.Success) {
     if (-not $trainer) { $baseTName = 'Trainer'; $trainer = New-BBTrainer $baseTName }
     $moves = @()
-    if ($mt.Groups['mv'].Value.Trim()) { $moves = @(($mt.Groups['mv'].Value -split ',') | ForEach-Object { $_.Trim() } | Where-Object { $_ }) }
+    if ($mt.Groups['mv'].Value.Trim()) { $moves = @(($mt.Groups['mv'].Value -split ',') | ForEach-Object { Fix-Move $_ } | Where-Object { $_ }) }
     [void]$trainer.team.Add([ordered]@{
       species=$mt.Groups['sp'].Value.Trim(); level=$mt.Groups['lv'].Value
       item=$(if($mt.Groups['item'].Success){$mt.Groups['item'].Value.Trim()}else{''})
@@ -387,7 +390,8 @@ for ($i=0; $i -lt $ml.Count; $i++) {
     End-BBTrainer
     if (NextIsTeam $i) {                                  # trainer header
       $baseTName = $h
-      $trainer = New-BBTrainer $(if ($choice) { "$h ($choice)" } else { $h })
+      $trainer = New-BBTrainer $h
+      if ($choice) { $trainer.choice = $choice }
     } else { $area = New-BBArea $h }                      # location header
     $choice = ''
     continue
@@ -416,7 +420,7 @@ foreach ($ir in $itemRows) {
 # assign stable trainer ids; wrap into RR/SS's area/roster shape (skip empty locations)
 $areaData = New-Object System.Collections.ArrayList
 foreach ($a in $areas) {
-  $ti = 0; foreach ($tr in $a.trainers) { $tr.id = (Norm $a.name) + '-' + (Norm $tr.name) + "-$ti"; foreach ($m in $tr.team) { $m.moves = @($m.moves) }; $tr.team = @($tr.team); $ti++ }
+  $ti = 0; foreach ($tr in $a.trainers) { $tr.id = (Norm $a.name) + '-' + (Norm $tr.name) + $(if ($tr.choice) { '-' + (Norm $tr.choice) } else { '' }) + "-$ti"; foreach ($m in $tr.team) { $m.moves = @($m.moves) }; $tr.team = @($tr.team); $ti++ }
   $wild = @($a.wild); $trs = @($a.trainers)
   $items = @()
   if ($itemsByLoc.ContainsKey($a.name)) {
@@ -489,7 +493,7 @@ $data = [ordered]@{
     meta = [ordered]@{
       subtitle = ''
       blurb = @('Wild encounters and trainer teams for every location, in story order, from the Brutal Black mastersheet. Tick wild Pokemon as caught and mark trainers beaten to track your run.')
-      hideOdds = $true
+      starters = @('Snivy','Tepig','Oshawott')
     }
     areas = @($areaData)
   }
