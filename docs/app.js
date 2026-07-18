@@ -466,9 +466,10 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,was:it.was}));
   const notes=arr(a.notes);
+  const gifts=arr(a.gifts);
   const mons=new Set();wild.forEach(w=>w.species.forEach(s=>mons.add(s.name.toLowerCase())));
   rosters.forEach(r=>r.trainers.forEach(t=>t.team.forEach(m=>mons.add((m.species||'').toLowerCase()))));
-  return {name:a.name,wild,rosters,special,items,notes,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')).toLowerCase()};
+  return {name:a.name,wild,rosters,special,items,notes,gifts,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
 });
 const wildOpen={};
 const AREA2IDX={};
@@ -639,6 +640,20 @@ function areaDetail(a){
     p.appendChild(body);wrap.appendChild(p);
   } else {
     const p=el('div','panel');p.innerHTML=`<div class="phead"><h3>${esc(a.name)}</h3></div><div class="pbody" style="color:var(--muted);font-size:13px">No wild encounter data for this location.</div>`;wrap.appendChild(p);
+  }
+  // gift / starter choice (e.g. the Nuvema Town starter); highlights your pick
+  if(arr(a.gifts).length){
+    const starters=arr(RAW.areas&&RAW.areas.meta&&RAW.areas.meta.starters);
+    const p=el('div','panel');
+    const isStarterPick=a.gifts.some(g=>{const o=g.replace(/\s*\(\d+%\)\s*$/,'').split('/').map(s=>s.trim());return o.length>1&&o.every(x=>starters.indexOf(x)>-1);});
+    p.innerHTML=`<div class="phead"><h3>${isStarterPick?'Starter':'Gift'}</h3>${isStarterPick&&!PROFILE.starter?`<span class="sub">Pick yours in the bar above</span>`:''}</div>`;
+    const body=el('div','pbody');
+    body.innerHTML=a.gifts.map(g=>{
+      const opts=g.replace(/\s*\(\d+%\)\s*$/,'').split('/').map(s=>s.trim()).filter(Boolean);
+      return `<div class="chips">`+opts.map(o=>{const mine=PROFILE.starter&&PROFILE.starter===o;
+        return `<span class="chip mon${mine?' caught':''}${isMon(o)?' monlink':''}"${monAttr(o)}>${spriteByName(o,22,'cspr')}${esc(o)}${mine?` <span class="pct">yours</span>`:''}</span>`;}).join('')+`</div>`;
+    }).join('');
+    p.appendChild(body);wrap.appendChild(p);
   }
   // notes from the mastersheet (rival hints, item gifts, etc.)
   if(arr(a.notes).length){

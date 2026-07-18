@@ -429,6 +429,13 @@ foreach ($ir in $itemRows) {
   if (-not $itemsByLoc.ContainsKey($loc)) { $itemsByLoc[$loc] = New-Object System.Collections.ArrayList }
   [void]$itemsByLoc[$loc].Add(@($ir[1], $ir[2]))
 }
+# group gifts (incl. the Nuvema starter choice) by location so they show in the area too
+$giftsByLoc = @{}
+foreach ($gr in $giftRows) {
+  $loc = $gr[0]; if (-not $loc) { continue }
+  if (-not $giftsByLoc.ContainsKey($loc)) { $giftsByLoc[$loc] = New-Object System.Collections.ArrayList }
+  [void]$giftsByLoc[$loc].Add($gr[1])
+}
 
 # assign stable trainer ids; wrap into RR/SS's area/roster shape (skip empty locations)
 $areaData = New-Object System.Collections.ArrayList
@@ -442,9 +449,10 @@ foreach ($a in $areas) {
     $items = @($il)
   }
   $notes = @($a.notes)
-  if ($wild.Count -eq 0 -and $trs.Count -eq 0 -and $items.Count -eq 0 -and $notes.Count -eq 0) { continue }
+  $gifts = @(); if ($giftsByLoc.ContainsKey($a.name)) { $gifts = @($giftsByLoc[$a.name]) }
+  if ($wild.Count -eq 0 -and $trs.Count -eq 0 -and $items.Count -eq 0 -and $notes.Count -eq 0 -and $gifts.Count -eq 0) { continue }
   $rosters = @(); if ($trs.Count) { $rosters = @([ordered]@{ title='Trainers'; kind=''; trainers=$trs }) }
-  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@(); items=$items; notes=$notes })
+  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@(); items=$items; notes=$notes; gifts=$gifts })
 }
 
 # ---------- Evolutions: family adjacency (from CSV bands) + level (from "Evolves at level X" notes) ----------
