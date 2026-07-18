@@ -186,6 +186,7 @@ $moveInfo = [ordered]@{}
 Get-Content "$src\moves.csv" | Select-Object -Skip 1 | ForEach-Object {
   $p=$_ -split ','
   $mid=[int]$p[0]; $nm=$mvName[$mid]; if(-not $nm){ return }
+  if ($p[2] -and [int]$p[2] -gt 5) { return }   # Gen-5 hack: drop Gen-6+ moves (Blood Moon, etc.)
   $moveInfo[(Norm $nm)] = [ordered]@{
     n=$nm; t=$(if($p[3]){$typeNm[[int]$p[3]]}else{''}); c=$(if($p[9]){$catName[$p[9]]}else{''})
     pow=$(if($p[4] -ne ''){[int]$p[4]}else{$null}); acc=$(if($p[6] -ne ''){[int]$p[6]}else{$null}); pp=$(if($p[5] -ne ''){[int]$p[5]}else{$null})
