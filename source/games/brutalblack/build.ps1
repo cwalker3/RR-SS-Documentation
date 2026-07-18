@@ -63,6 +63,7 @@ function Field($row,$i){ if($i -lt $row.Count){ return ([string]$row[$i]).Trim()
 
 $entries = New-Object System.Collections.ArrayList
 $unmatched = New-Object System.Collections.ArrayList
+$evoPairs = New-Object System.Collections.ArrayList   # [from, to] adjacent stages within a family band
 
 # three Pokemon per row-band; each occupies base cols (name, value, learnset)
 $bases = @(1,5,9)
@@ -109,6 +110,10 @@ function Finalize($e){
 function Parse-Grid($rows){
   $cur = @{ 1=$null; 5=$null; 9=$null }
   foreach ($row in $rows) {
+    # a name row carries the family's stages left-to-right; record evolution adjacency
+    $band = @()
+    foreach ($b in $bases) { if ((Field $row ($b+2)) -eq 'Learnset') { $nb = Field $row $b; if ($nb) { if ($nameFix.ContainsKey($nb)) { $nb = $nameFix[$nb] }; $band += $nb } } }
+    for ($x = 0; $x -lt $band.Count - 1; $x++) { [void]$script:evoPairs.Add(@($band[$x], $band[$x+1])) }
     foreach ($base in $bases) {
       $nm    = Field $row $base
       $val   = Field $row ($base+1)
@@ -409,6 +414,28 @@ foreach ($a in $areas) {
   [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@() })
 }
 
+# ---------- Evolutions: family adjacency (from CSV bands) + level (from "Evolves at level X" notes) ----------
+$evoLevel = @{}
+foreach ($e in $entries) {
+  foreach ($n in $e.notes) { if ($n -match 'Evolves at level\s*(\d+)') { $evoLevel[(Norm $e.name)] = $Matches[1]; break } }
+}
+$evoObjs = New-Object System.Collections.ArrayList
+$evoSeen = @{}
+foreach ($pair in $evoPairs) {
+  $fk = Norm $pair[0]
+  $k = "$fk>$(Norm $pair[1])"
+  if ($evoSeen.ContainsKey($k)) { continue }
+  $evoSeen[$k] = $true
+  # the sheet writes "Evolves at level X" on the RESULT stage, so the level lives on `to`
+  $tk = Norm $pair[1]
+  $lvl = if ($evoLevel.ContainsKey($tk)) { 'Level ' + $evoLevel[$tk] } else { '' }
+  $dex = if ($name2dex.ContainsKey($fk)) { [int]$name2dex[$fk] } else { 9999 }
+  [void]$evoObjs.Add([pscustomobject]@{ from=$pair[0]; to=$pair[1]; lvl=$lvl; dex=$dex })
+}
+# sort the objects (not the arrays — piping arrays through Sort-Object corrupts them), then emit rows
+$evoRows = New-Object System.Collections.ArrayList
+foreach ($o in ($evoObjs | Sort-Object dex, from)) { [void]$evoRows.Add(@($o.from, $o.to, $o.lvl)) }
+
 $data = [ordered]@{
   pokemon = [ordered]@{
     meta = [ordered]@{
@@ -458,6 +485,15 @@ $data = [ordered]@{
       [ordered]@{ type='table'; columns=@('Location','Was','Now'); rows=@($itemRows) }
     )
   }
+  evolution = [ordered]@{
+    meta = [ordered]@{
+      subtitle = ''
+      blurb = @('Evolution lines from the change sheets. Level is shown where the sheet notes one; stone/trade/other methods are left blank.')
+    }
+    blocks = @(
+      [ordered]@{ type='table'; columns=@('Pokemon','Evolves into','Level'); rows=@($evoRows) }
+    )
+  }
 }
 
 $json = $data | ConvertTo-Json -Depth 12 -Compress
@@ -473,6 +509,7 @@ $wildCount = ($areaData | ForEach-Object { $_.wild.Count } | Measure-Object -Sum
 "Areas: {0} locations, {1} wild tables, {2} trainers" -f $areaData.Count, $wildCount, $trCount
 "Gifts: {0} rows" -f $giftRows.Count
 "Items: {0} TM slot changes, {1} item-ball swaps" -f $tmChangeRows.Count, $itemRows.Count
+"Evolutions: {0} lines ({1} with a level)" -f $evoRows.Count, (@($evoRows | Where-Object { $_[2] }).Count)
 "Wrote {0} ({1:N0} bytes)" -f $out, ((Get-Item $out).Length)
 "Species: {0}" -f $sorted.Count
 if ($dupes.Count) { "Duplicates dropped: {0} -> {1}" -f $dupes.Count, ($dupes -join ', ') }
