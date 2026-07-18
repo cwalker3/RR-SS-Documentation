@@ -269,6 +269,32 @@ foreach ($entry in $attackEntries) {
 # materialize rows arrays for JSON
 foreach ($entry in $attackEntries) { $entry.rows = @($entry.rows) }
 
+# ---------- Thief items ----------
+# "<Gym> Split" headers group "<Location>:" headers, each followed by "-Item (Pokemon)" lines.
+$tiPath = Join-Path $GameDir 'Brutal Black Important Thief Items.txt'
+$thiefStages = New-Object System.Collections.ArrayList
+$split = ''; $stage = $null; $firstLine = $true
+foreach ($line in [System.IO.File]::ReadAllLines($tiPath, [System.Text.Encoding]::UTF8)) {
+  $t = $line.Trim()
+  if (-not $t) { continue }
+  if ($firstLine) { $firstLine = $false; if ($t -match '^Important Thief Items') { continue } }
+  if ($t.StartsWith('-')) {
+    if (-not $stage) { $stage = [ordered]@{ title=$split; rows=(New-Object System.Collections.ArrayList) }; [void]$thiefStages.Add($stage) }
+    if ($t -match '^-\s*(.+?)\s*\(([^)]*)\)\s*$') { [void]$stage.rows.Add([ordered]@{ name=$Matches[2].Trim(); item=$Matches[1].Trim() }) }
+    else { [void]$stage.rows.Add([ordered]@{ name=''; item=$t.TrimStart('-').Trim() }) }
+    continue
+  }
+  if ($t.EndsWith(':')) {
+    $loc = $t.TrimEnd(':').Trim()
+    $stage = [ordered]@{ title=$(if ($split) { "$split - $loc" } else { $loc }); rows=(New-Object System.Collections.ArrayList) }
+    [void]$thiefStages.Add($stage)
+    continue
+  }
+  $split = $t; $stage = $null                                    # gym-split header
+}
+$thiefStages = @($thiefStages | Where-Object { $_.rows.Count -gt 0 })
+foreach ($s in $thiefStages) { $s.rows = @($s.rows) }
+
 $data = [ordered]@{
   pokemon = [ordered]@{
     meta = [ordered]@{
@@ -286,6 +312,10 @@ $data = [ordered]@{
     entries = @($attackEntries)
   }
   moveInfo = $moveInfo
+  thief = [ordered]@{
+    intro = 'Important items you can steal with Thief / Covet from wild Pokemon, by location. Grouped by gym split in story order.'
+    stages = @($thiefStages)
+  }
 }
 
 $json = $data | ConvertTo-Json -Depth 12 -Compress
@@ -295,6 +325,7 @@ $reg = 'window.RRSS_GAMES=window.RRSS_GAMES||{};window.RRSS_GAMES["brutalblack"]
 "Parsed {0} region sheets: {1}" -f $csvFiles.Count, (($csvFiles | ForEach-Object { $_.Name -replace '^.*- (.+)\.csv$','$1' }) -join ', ')
 "Moves: {0} total, {1} changed" -f $moveInfo.Count, $attackEntries.Count
 if ($mcNoMatch.Count) { "Move changes with no base-info match: {0} -> {1}" -f $mcNoMatch.Count, ($mcNoMatch -join ', ') }
+"Thief: {0} location cards, {1} items" -f $thiefStages.Count, (($thiefStages | ForEach-Object { $_.rows.Count } | Measure-Object -Sum).Sum)
 "Wrote {0} ({1:N0} bytes)" -f $out, ((Get-Item $out).Length)
 "Species: {0}" -f $sorted.Count
 if ($dupes.Count) { "Duplicates dropped: {0} -> {1}" -f $dupes.Count, ($dupes -join ', ') }
