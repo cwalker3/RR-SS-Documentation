@@ -168,6 +168,107 @@ foreach ($e in $entries) {
 # sort by dex (unknowns last, then by name)
 $sorted = $deduped | Sort-Object @{ Expression = { if ($_.dex -eq '000') { 9999 } else { [int]$_.dex } } }, name
 
+# ---------- Moves: base info from the shared PokeAPI dump + Brutal Black's move-change overlay ----------
+# Same base-info build as the RR/SS enrich step (type / category / power / accuracy / PP / desc).
+$typeNm = @{}
+Get-Content "$src\type_names.csv" | ForEach-Object { $p=$_ -split ','; if($p.Count -ge 3 -and $p[1] -eq '9'){ $typeNm[[int]$p[0]]=$p[2].Trim() } }
+$mvName = @{}
+Get-Content "$src\move_names.csv" | Select-Object -Skip 1 | ForEach-Object { $p=$_ -split ',',3; if($p.Count -ge 3 -and $p[1] -eq '9'){ $mvName[[int]$p[0]]=$p[2].Trim().Trim('"') } }
+$mvDesc = @{}
+Get-Content "$src\move_desc.tsv" | ForEach-Object { $p=$_ -split "`t",2; if($p.Count -eq 2){ $mvDesc[[int]$p[0]]=$p[1] } }
+$catName = @{'1'='Status';'2'='Physical';'3'='Special'}
+$moveInfo = [ordered]@{}
+Get-Content "$src\moves.csv" | Select-Object -Skip 1 | ForEach-Object {
+  $p=$_ -split ','
+  $mid=[int]$p[0]; $nm=$mvName[$mid]; if(-not $nm){ return }
+  $moveInfo[(Norm $nm)] = [ordered]@{
+    n=$nm; t=$(if($p[3]){$typeNm[[int]$p[3]]}else{''}); c=$(if($p[9]){$catName[$p[9]]}else{''})
+    pow=$(if($p[4] -ne ''){[int]$p[4]}else{$null}); acc=$(if($p[6] -ne ''){[int]$p[6]}else{$null}); pp=$(if($p[5] -ne ''){[int]$p[5]}else{$null})
+    d=$(if($mvDesc.ContainsKey($mid)){$mvDesc[$mid]}else{''})
+  }
+}
+
+# Parse "Brutal Black Move Changes.txt": grouped by type header, one move per line as
+# "Name: change, change, …". Pull the numeric BP/Acc/PP (and type/category) into structured
+# rows; keep any remaining prose as an Effect note.
+$typeAlt = (($TYPES.Values | ForEach-Object { [regex]::Escape($_) }) -join '|')
+$mcPath  = Join-Path $GameDir 'Brutal Black Move Changes.txt'
+$attackEntries = New-Object System.Collections.ArrayList
+$mcNoMatch = New-Object System.Collections.ArrayList
+$prev = $null
+foreach ($line in [System.IO.File]::ReadAllLines($mcPath, [System.Text.Encoding]::UTF8)) {
+  $t = $line.Trim()
+  if (-not $t) { continue }
+  if ($t -match "^($typeAlt):$") { $prev = $null; continue }          # type header
+  if ($t -notmatch ':' -or $t -match '^>') {                          # continuation / stray
+    if ($prev) {
+      $fx = ($prev.rows | Where-Object { $_.kind -eq 'note' -and $_.label -eq 'Effect' } | Select-Object -First 1)
+      if ($fx) { $fx.value = ($fx.value + '; ' + $t).Trim('; ') }
+      else { [void]$prev.rows.Add([ordered]@{ kind='note'; label='Effect'; value=$t }) }
+    }
+    continue
+  }
+  $ci   = $t.IndexOf(':')
+  $name = $t.Substring(0, $ci).Trim()
+  $body = $t.Substring($ci + 1).Trim()
+  $key  = Norm $name
+  $van  = if ($moveInfo.Contains($key)) { $moveInfo[$key] } else { $null }
+  $rows = New-Object System.Collections.ArrayList
+
+  if     ($body -match 'BP:\s*(\d+)\s*>\s*(\d+)') { [void]$rows.Add([ordered]@{ kind='change'; label='Power'; from=$Matches[1]; to=$Matches[2] }) }
+  elseif ($body -match 'BP:\s*(\d+)')             { [void]$rows.Add([ordered]@{ kind='change'; label='Power'; from=$(if($van -and $van.pow -ne $null){"$($van.pow)"}else{''}); to=$Matches[1] }) }
+  if ($body -match 'Acc:\s*(\d+)\s*>\s*(\d+)')    { [void]$rows.Add([ordered]@{ kind='change'; label='Accuracy'; from=$Matches[1]; to=$Matches[2] }) }
+  if ($body -match 'PP:\s*(\d+)\s*>\s*(\d+)')     { [void]$rows.Add([ordered]@{ kind='change'; label='PP'; from=$Matches[1]; to=$Matches[2] }) }
+  if ($body -match "now\s+(?:a\s+)?(?:special\s+)?($typeAlt)\s+(?:type|move)") { [void]$rows.Add([ordered]@{ kind='change'; label='Type'; from=$(if($van){$van.t}else{''}); to=$Matches[1] }) }
+  if ($body -match 'now\s+a\s+[Ss]pecial')        { [void]$rows.Add([ordered]@{ kind='change'; label='Category'; from=$(if($van){$van.c}else{''}); to='Special' }) }
+
+  # leftover prose (after removing the structured bits) -> Effect note
+  $rem = $body
+  $rem = [regex]::Replace($rem, 'BP:\s*\d+\s*>\s*\d+', '')
+  $rem = [regex]::Replace($rem, 'BP:\s*\d+', '')
+  $rem = [regex]::Replace($rem, 'Acc:\s*\d+\s*>\s*\d+', '')
+  $rem = [regex]::Replace($rem, 'PP:\s*\d+\s*>\s*\d+', '')
+  $rem = [regex]::Replace($rem, "now\s+(?:a\s+)?(?:special\s+)?($typeAlt)\s+(?:type(?:\s+move)?|move)", '')
+  $rem = [regex]::Replace($rem, 'now\s+a\s+[Ss]pecial\s+move', '')
+  $rem = ($rem -replace '\s+', ' ').Trim(" ,;")
+  if ($rem -match '[A-Za-z0-9]') { [void]$rows.Add([ordered]@{ kind='note'; label='Effect'; value=$rem }) }
+
+  if (-not $van) { [void]$mcNoMatch.Add($name) }
+  $entry = [ordered]@{ name=$name; rows=$rows }
+  [void]$attackEntries.Add($entry)
+  $prev = $entry
+}
+
+# merge duplicate move lines (a few moves are listed twice in the doc, e.g. String Shot)
+$byKey = [ordered]@{}
+foreach ($entry in $attackEntries) {
+  $k = Norm $entry.name
+  if ($byKey.Contains($k)) { foreach ($r in $entry.rows) { [void]$byKey[$k].rows.Add($r) } }
+  else { $byKey[$k] = $entry }
+}
+$attackEntries = @($byKey.Values)
+
+# overlay the changes onto moveInfo (mirrors the RR/SS enrich overlay)
+foreach ($entry in $attackEntries) {
+  $key = Norm $entry.name
+  if (-not $moveInfo.Contains($key)) { $moveInfo[$key] = [ordered]@{ n=$entry.name; t=''; c=''; pow=$null; acc=$null; pp=$null; d='' } }
+  $mi = $moveInfo[$key]; $tmp = 0
+  foreach ($r in $entry.rows) {
+    if ($r.kind -eq 'change') {
+      switch ($r.label) {
+        'Power'    { if ([int]::TryParse([string]$r.to, [ref]$tmp)) { $mi.pow = $tmp } }
+        'Accuracy' { if ([int]::TryParse([string]$r.to, [ref]$tmp)) { $mi.acc = $tmp } }
+        'PP'       { if ([int]::TryParse([string]$r.to, [ref]$tmp)) { $mi.pp = $tmp } }
+        'Type'     { $mi.t = $r.to }
+        'Category' { $mi.c = $r.to }
+      }
+    } elseif ($r.kind -eq 'note' -and $r.label -eq 'Effect') { $mi['fx'] = $r.value }
+  }
+  $mi['chg'] = $true
+}
+# materialize rows arrays for JSON
+foreach ($entry in $attackEntries) { $entry.rows = @($entry.rows) }
+
 $data = [ordered]@{
   pokemon = [ordered]@{
     meta = [ordered]@{
@@ -177,7 +278,14 @@ $data = [ordered]@{
     entries = @($sorted)
     tmMoves = [ordered]@{}
   }
-  moveInfo = [ordered]@{}
+  attacks = [ordered]@{
+    meta = [ordered]@{
+      subtitle = ''
+      blurb = @('Move changes for Brutal Black. Power / accuracy / PP tweaks plus type, category, and effect reworks. Every move''s base info is shown; changed moves are marked.')
+    }
+    entries = @($attackEntries)
+  }
+  moveInfo = $moveInfo
 }
 
 $json = $data | ConvertTo-Json -Depth 12 -Compress
@@ -185,6 +293,8 @@ $reg = 'window.RRSS_GAMES=window.RRSS_GAMES||{};window.RRSS_GAMES["brutalblack"]
 [System.IO.File]::WriteAllText($out, $reg, (New-Object System.Text.UTF8Encoding($false)))
 
 "Parsed {0} region sheets: {1}" -f $csvFiles.Count, (($csvFiles | ForEach-Object { $_.Name -replace '^.*- (.+)\.csv$','$1' }) -join ', ')
+"Moves: {0} total, {1} changed" -f $moveInfo.Count, $attackEntries.Count
+if ($mcNoMatch.Count) { "Move changes with no base-info match: {0} -> {1}" -f $mcNoMatch.Count, ($mcNoMatch -join ', ') }
 "Wrote {0} ({1:N0} bytes)" -f $out, ((Get-Item $out).Length)
 "Species: {0}" -f $sorted.Count
 if ($dupes.Count) { "Duplicates dropped: {0} -> {1}" -f $dupes.Count, ($dupes -join ', ') }
