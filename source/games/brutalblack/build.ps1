@@ -316,18 +316,18 @@ $reSp   = [regex]'(?<name>[^,()]+?)\s*\((?<pct>\d+)%\)'   # global: tolerant of 
 $areas = New-Object System.Collections.ArrayList
 $giftRows = New-Object System.Collections.ArrayList
 $itemRows = New-Object System.Collections.ArrayList
-$area = $null; $trainer = $null; $baseTName = ''; $choice = ''; $noteBuf = $null
+$area = $null; $trainer = $null; $baseTName = ''; $choice = ''; $noteBuf = $null; $curSplit = ''
 
 function New-BBArea($name){
   foreach ($a in $script:areas) { if ($a.name -eq $name) { return $a } }   # merge repeat visits
-  $a = [ordered]@{ name=$name; wild=(New-Object System.Collections.ArrayList); trainers=(New-Object System.Collections.ArrayList); notes=(New-Object System.Collections.ArrayList) }
+  $a = [ordered]@{ name=$name; wild=(New-Object System.Collections.ArrayList); trainers=(New-Object System.Collections.ArrayList); notes=(New-Object System.Collections.ArrayList); homeSplit=$script:curSplit }
   [void]$script:areas.Add($a); return $a
 }
 function End-BBTrainer(){
   if ($script:trainer -and $script:trainer.team.Count -gt 0 -and $script:area) { [void]$script:area.trainers.Add($script:trainer) }
   $script:trainer = $null
 }
-function New-BBTrainer($name){ return [ordered]@{ id=''; name=$name; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; team=(New-Object System.Collections.ArrayList) } }
+function New-BBTrainer($name){ return [ordered]@{ id=''; name=$name; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; team=(New-Object System.Collections.ArrayList) } }
 function NextIsTeam($idx){
   for ($j=$idx+1; $j -lt $ml.Count; $j++) {
     $s = $ml[$j].Trim()
@@ -344,7 +344,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
   if ($noteBuf -ne $null -and $t.Length -gt 0 -and (@('-',[char]0x2013,[char]0x2014,[char]0x2022) -contains $t.Substring(0,1))) { $noteBuf += [char]10 + $t; continue }
   # any other line ends a pending note
   if ($noteBuf -ne $null) { if ($area) { [void]$area.notes.Add($noteBuf) }; $noteBuf = $null }
-  if ($t -match '\(Level Cap:') { continue }
+  if ($t -match '\(Level Cap:') { $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim(); continue }   # gym split / phase
   if ($t.StartsWith('*')) {
     $n = $t.TrimStart('*').Trim()
     if ($n -match '^(.+?)\s*>\s*(.+)$') { [void]$itemRows.Add(@($(if($area){$area.name}else{''}), $Matches[1].Trim(), $Matches[2].Trim())) }  # item-ball swap
@@ -440,7 +440,13 @@ foreach ($gr in $giftRows) {
 # assign stable trainer ids; wrap into RR/SS's area/roster shape (skip empty locations)
 $areaData = New-Object System.Collections.ArrayList
 foreach ($a in $areas) {
-  $ti = 0; foreach ($tr in $a.trainers) { $tr.id = (Norm $a.name) + '-' + (Norm $tr.name) + $(if ($tr.choice) { '-' + (Norm $tr.choice) } else { '' }) + "-$ti"; foreach ($m in $tr.team) { $m.moves = @($m.moves) }; $tr.team = @($tr.team); $ti++ }
+  $ti = 0; foreach ($tr in $a.trainers) {
+    $tr.id = (Norm $a.name) + '-' + (Norm $tr.name) + $(if ($tr.choice) { '-' + (Norm $tr.choice) } else { '' }) + "-$ti"
+    # tag a fight that belongs to a different gym split than the area's first visit
+    if ($tr.splitAt -and $a.homeSplit -and $tr.splitAt -ne $a.homeSplit) { $tr.split = $tr.splitAt } else { $tr.split = '' }
+    [void]$tr.Remove('splitAt')
+    foreach ($m in $tr.team) { $m.moves = @($m.moves) }; $tr.team = @($tr.team); $ti++
+  }
   $wild = @($a.wild); $trs = @($a.trainers)
   $items = @()
   if ($itemsByLoc.ContainsKey($a.name)) {
