@@ -306,6 +306,7 @@ $reSp   = [regex]'(?<name>[^,()]+?)\s*\((?<pct>\d+)%\)'   # global: tolerant of 
 
 $areas = New-Object System.Collections.ArrayList
 $giftRows = New-Object System.Collections.ArrayList
+$itemRows = New-Object System.Collections.ArrayList
 $area = $null; $trainer = $null; $baseTName = ''; $choice = ''
 
 function New-BBArea($name){
@@ -329,7 +330,12 @@ function NextIsTeam($idx){
 
 for ($i=0; $i -lt $ml.Count; $i++) {
   $t = $ml[$i].Trim()
-  if (-not $t -or $t -match '\(Level Cap:' -or $t.StartsWith('*')) { continue }
+  if (-not $t -or $t -match '\(Level Cap:') { continue }
+  if ($t.StartsWith('*')) {                              # prose note; keep the "was > now" item-ball swaps
+    $n = $t.TrimStart('*').Trim()
+    if ($n -match '^(.+?)\s*>\s*(.+)$') { [void]$itemRows.Add(@($(if($area){$area.name}else{''}), $Matches[1].Trim(), $Matches[2].Trim())) }
+    continue
+  }
 
   $mg = $reGift.Match($t)
   if ($mg.Success) { [void]$giftRows.Add(@($(if($area){$area.name}else{''}), $mg.Groups['g'].Value.Trim())); continue }
@@ -383,6 +389,16 @@ for ($i=0; $i -lt $ml.Count; $i++) {
 }
 End-BBTrainer
 
+# TM slot changes (which move each TM now teaches)
+$tmChangeRows = New-Object System.Collections.ArrayList
+$tmcPath = Join-Path $GameDir 'Brutal Black Pokemon Changes + Movesets - TM Changes.csv'
+if (Test-Path $tmcPath) {
+  foreach ($cl in [System.IO.File]::ReadAllLines($tmcPath, [System.Text.Encoding]::UTF8)) {
+    $p = $cl -split ','
+    if ($p.Count -ge 4 -and $p[1].Trim() -match '^TM\d+') { [void]$tmChangeRows.Add(@($p[1].Trim(), $p[2].Trim(), $p[3].Trim())) }
+  }
+}
+
 # assign stable trainer ids; wrap into RR/SS's area/roster shape (skip empty locations)
 $areaData = New-Object System.Collections.ArrayList
 foreach ($a in $areas) {
@@ -430,6 +446,18 @@ $data = [ordered]@{
       [ordered]@{ type='table'; columns=@('Location','Gift'); rows=@($giftRows) }
     )
   }
+  items = [ordered]@{
+    meta = [ordered]@{
+      subtitle = ''
+      blurb = @('Item changes in Brutal Black: which move each TM now teaches, and the item balls that were swapped for TMs (by location).')
+    }
+    blocks = @(
+      [ordered]@{ type='heading'; text='TM slot changes' }
+      [ordered]@{ type='table'; columns=@('TM','Old move','New move'); rows=@($tmChangeRows) }
+      [ordered]@{ type='heading'; text='Item ball swaps' }
+      [ordered]@{ type='table'; columns=@('Location','Was','Now'); rows=@($itemRows) }
+    )
+  }
 }
 
 $json = $data | ConvertTo-Json -Depth 12 -Compress
@@ -444,6 +472,7 @@ $trCount = ($areaData | ForEach-Object { ($_.rosters | ForEach-Object { $_.train
 $wildCount = ($areaData | ForEach-Object { $_.wild.Count } | Measure-Object -Sum).Sum
 "Areas: {0} locations, {1} wild tables, {2} trainers" -f $areaData.Count, $wildCount, $trCount
 "Gifts: {0} rows" -f $giftRows.Count
+"Items: {0} TM slot changes, {1} item-ball swaps" -f $tmChangeRows.Count, $itemRows.Count
 "Wrote {0} ({1:N0} bytes)" -f $out, ((Get-Item $out).Length)
 "Species: {0}" -f $sorted.Count
 if ($dupes.Count) { "Duplicates dropped: {0} -> {1}" -f $dupes.Count, ($dupes -join ', ') }
