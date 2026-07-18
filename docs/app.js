@@ -650,8 +650,12 @@ function areaDetail(a){
     const body=el('div','pbody');
     body.innerHTML=a.gifts.map(g=>{
       const opts=g.replace(/\s*\(\d+%\)\s*$/,'').split('/').map(s=>s.trim()).filter(Boolean);
-      return `<div class="chips">`+opts.map(o=>{const mine=PROFILE.starter&&PROFILE.starter===o;
-        return `<span class="chip mon${mine?' caught':''}${isMon(o)?' monlink':''}"${monAttr(o)}>${spriteByName(o,22,'cspr')}${esc(o)}${mine?` <span class="pct">yours</span>`:''}</span>`;}).join('')+`</div>`;
+      return `<div class="chips">`+opts.map(o=>{
+        const mine=PROFILE.starter&&PROFILE.starter===o, caught=isCaught(o), link=isMon(o);
+        return `<span class="chip mon${link?' monlink':''}${caught?' caught':''}"${monAttr(o)}>`+
+          (link?`<button class="catch" data-catch="${esc(o)}" aria-pressed="${caught}" title="${caught?'Caught — click to unmark':'Mark this gift as caught (adds it to your box)'}"></button>`:'')+
+          `${spriteByName(o,22,'cspr')}${esc(o)}${mine?` <span class="pct">yours</span>`:''}</span>`;
+      }).join('')+`</div>`;
     }).join('');
     p.appendChild(body);wrap.appendChild(p);
   }
