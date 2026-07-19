@@ -1,7 +1,11 @@
 "use strict";
 /* ---- multi-game registry: each game's data file self-registers into window.RRSS_GAMES ---- */
 const GAMES = window.RRSS_GAMES || (window.RRSS_DATA ? {rrss:{id:'rrss',name:'Rising Ruby / Sinking Sapphire',short:'RR/SS',data:window.RRSS_DATA}} : {});
-let GAME_ID = (function(){try{const g=localStorage.getItem('rrss-game');if(g&&GAMES[g])return g;}catch(e){}return Object.keys(GAMES)[0];})();
+let GAME_ID = (function(){
+  try{const u=new URLSearchParams(location.search).get('game');if(u&&GAMES[u])return u;}catch(e){}
+  try{const g=localStorage.getItem('rrss-game');if(g&&GAMES[g])return g;}catch(e){}
+  return Object.keys(GAMES)[0];
+})();
 const GAME = GAMES[GAME_ID];
 const RAW = GAME.data;
 const SPR = window.RRSS_SPR || {};
@@ -129,7 +133,7 @@ SECTIONS.forEach(s=>{
   if(s.id==='moves')s.sub=Object.keys(RAW.moveInfo||{}).length+' moves · '+arr(RAW.attacks&&RAW.attacks.entries).length+' changed';
 });
 
-const state={section:(SECTIONS[0]||{id:'pokemon'}).id,query:'',pkSel:0,areaSel:0};
+const state={section:(SECTIONS.find(s=>s.id==='areas')||SECTIONS[0]||{id:'pokemon'}).id,query:'',pkSel:0,areaSel:0};
 const $=id=>document.getElementById(id);
 
 /* ---- build nav ---- */
@@ -151,9 +155,11 @@ SECTIONS.forEach(s=>{
     const sel=el('select','gamepicker');
     sel.setAttribute('aria-label','Choose game');
     sel.innerHTML=ids.map(id=>`<option value="${esc(id)}"${id===GAME_ID?' selected':''}>${esc(GAMES[id].short||GAMES[id].name)}</option>`).join('');
-    sel.onchange=()=>{try{localStorage.setItem('rrss-game',sel.value);}catch(e){}location.reload();};
+    sel.onchange=()=>{try{localStorage.setItem('rrss-game',sel.value);}catch(e){}const u=new URL(location.href);u.searchParams.set('game',sel.value);location.href=u.toString();};
     if(wrap)wrap.appendChild(sel);
   }
+  // keep the URL in sync with the selected game
+  try{const u=new URL(location.href);if(u.searchParams.get('game')!==GAME_ID){u.searchParams.set('game',GAME_ID);history.replaceState(null,'',u.toString());}}catch(e){}
 })();
 
 function setActiveNav(){document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.id===state.section));}

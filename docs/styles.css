@@ -219,7 +219,8 @@ h3 .movelink:hover{color:var(--accent)}
 .spr{image-rendering:pixelated;image-rendering:crisp-edges;display:inline-block;flex:none;object-fit:contain}
 .litem .lspr{width:34px;height:34px;margin:-5px -2px -5px -3px}
 .pkhero .hspr{width:96px;height:96px;align-self:center;filter:drop-shadow(0 3px 6px rgba(0,0,0,.28))}
-.cspr{width:22px;height:22px;vertical-align:middle}
+.cspr{width:28px;height:28px;vertical-align:middle}
+.disclaimer{padding:10px 4px 2px;font-size:10.5px;line-height:1.4;color:var(--muted);opacity:.75}
 .pkid{display:flex;flex-direction:column;gap:3px}
 .chip.mon{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 5px}
 .monname{display:inline-flex;align-items:center;gap:8px}
