@@ -40,6 +40,21 @@ $nameFix = @{ 'Beeheyem' = 'Beheeyem' }
 # fix move-name spellings so learnset/trainer moves match the PokeAPI move info
 $moveFix = @{ 'Faint Attack'='Feint Attack'; 'Hi Jump Kick'='High Jump Kick'; 'Bonemarang'='Bonemerang'; 'ViceGrip'='Vise Grip' }
 function Fix-Move($m){ $m = ([string]$m).Trim(); if ($moveFix.ContainsKey($m)) { return $moveFix[$m] } return $m }
+# branching families: the CSV lays stages left-to-right, which is wrong for splits
+# (e.g. Eevee's eeveelutions). Map each branch child (normalized) to its true pre-evo.
+$branchParent = @{
+  'vaporeon'='Eevee';'jolteon'='Eevee';'flareon'='Eevee';'espeon'='Eevee';'umbreon'='Eevee';'leafeon'='Eevee';'glaceon'='Eevee';'sylveon'='Eevee'
+  'gardevoir'='Kirlia';'gallade'='Kirlia'
+  'hitmonlee'='Tyrogue';'hitmonchan'='Tyrogue';'hitmontop'='Tyrogue'
+  'vileplume'='Gloom';'bellossom'='Gloom'
+  'poliwrath'='Poliwhirl';'politoed'='Poliwhirl'
+  'slowbro'='Slowpoke';'slowking'='Slowpoke'
+  'ninjask'='Nincada';'shedinja'='Nincada'
+  'glalie'='Snorunt';'froslass'='Snorunt'
+  'huntail'='Clamperl';'gorebyss'='Clamperl'
+  'silcoon'='Wurmple';'beautifly'='Silcoon';'cascoon'='Wurmple';'dustox'='Cascoon'
+  'wormadam'='Burmy';'mothim'='Burmy'
+}
 
 # --- read a CSV grid (quote-aware) into an array of field-arrays ---
 Add-Type -AssemblyName Microsoft.VisualBasic
@@ -68,10 +83,9 @@ $entries = New-Object System.Collections.ArrayList
 $unmatched = New-Object System.Collections.ArrayList
 $evoPairs = New-Object System.Collections.ArrayList   # [from, to] adjacent stages within a family band
 
-# up to four Pokemon per row-band (branching families like Ralts/Kirlia/Gardevoir/Gallade);
+# up to eight Pokemon per row-band (wide branches like Eevee's eeveelutions);
 # each occupies base cols (name, value, learnset)
-$bases = @(1,5,9,13)
-$cur = @{ 1=$null; 5=$null; 9=$null; 13=$null }
+$bases = @(1,5,9,13,17,21,25,29)
 
 function Finalize($e){
   if ($null -eq $e) { return }
@@ -112,7 +126,7 @@ function Finalize($e){
 }
 
 function Parse-Grid($rows){
-  $cur = @{ 1=$null; 5=$null; 9=$null; 13=$null }
+  $cur = @{}; foreach ($b in $bases) { $cur[$b] = $null }
   foreach ($row in $rows) {
     # a name row is any row whose learnset-header cell says "Learnset" in some column.
     # (a few blocks omit the header and put the first move there instead, e.g. Ralts)
@@ -121,7 +135,11 @@ function Parse-Grid($rows){
     if ($isNameRow) {
       $band = @()
       foreach ($b in $bases) { $nb = Field $row $b; if ($nb) { if ($nameFix.ContainsKey($nb)) { $nb = $nameFix[$nb] }; $band += $nb } }
-      for ($x = 0; $x -lt $band.Count - 1; $x++) { [void]$script:evoPairs.Add(@($band[$x], $band[$x+1])) }
+      for ($x = 1; $x -lt $band.Count; $x++) {
+        $child = $band[$x]
+        $parent = if ($branchParent.ContainsKey((Norm $child))) { $branchParent[(Norm $child)] } else { $band[$x-1] }
+        [void]$script:evoPairs.Add(@($parent, $child))
+      }
     }
     foreach ($base in $bases) {
       $nm    = Field $row $base
@@ -161,7 +179,7 @@ function Parse-Grid($rows){
           if ($Matches[2]) { $e.chg[$key] = [ordered]@{ from=($bv - [int]$Matches[2]); to=$bv } }
         }
       }
-      elseif ($nm -match '^(Evolves at level|Now learns)') { [void]$e.notes.Add($nm) }
+      elseif ($nm -match '^(Evolves|Now learns)') { [void]$e.notes.Add($nm) }
     }
   }
   foreach ($base in $bases) { Finalize $cur[$base] }
@@ -485,9 +503,15 @@ foreach ($a in $areas) {
 }
 
 # ---------- Evolutions: family adjacency (from CSV bands) + level (from "Evolves at level X" notes) ----------
-$evoLevel = @{}
+$evoLevel = @{}; $evoMethod = @{}
 foreach ($e in $entries) {
-  foreach ($n in $e.notes) { if ($n -match 'Evolves at level\s*(\d+)') { $evoLevel[(Norm $e.name)] = $Matches[1]; break } }
+  foreach ($n in $e.notes) {
+    if ($n -match '^Evolves at level\s*(\d+)') { $evoLevel[(Norm $e.name)] = $Matches[1]; $evoMethod[(Norm $e.name)] = "Level $($Matches[1])"; break }
+    elseif ($n -match '^Evolves\s+(?:via\s+)?(.+?)\.?\s*$') {
+      $m = $Matches[1] -replace '^leveling up while holding (.+?) during the (day|night)$','$1 ($2)' -replace '^using (?:an? )?','' -replace '^a (.+? Stone)$','$1'
+      $evoMethod[(Norm $e.name)] = $m; break
+    }
+  }
 }
 $evoObjs = New-Object System.Collections.ArrayList
 $evoSeen = @{}
@@ -496,9 +520,9 @@ foreach ($pair in $evoPairs) {
   $k = "$fk>$(Norm $pair[1])"
   if ($evoSeen.ContainsKey($k)) { continue }
   $evoSeen[$k] = $true
-  # the sheet writes "Evolves at level X" on the RESULT stage, so the level lives on `to`
+  # the sheet writes the method ("Evolves at level X" / "Evolves via …") on the RESULT stage
   $tk = Norm $pair[1]
-  $lvl = if ($evoLevel.ContainsKey($tk)) { 'Level ' + $evoLevel[$tk] } else { '' }
+  $lvl = if ($evoMethod.ContainsKey($tk)) { $evoMethod[$tk] } else { '' }
   $dex = if ($name2dex.ContainsKey($fk)) { [int]$name2dex[$fk] } else { 9999 }
   [void]$evoObjs.Add([pscustomobject]@{ from=$pair[0]; to=$pair[1]; lvl=$lvl; dex=$dex })
 }
@@ -517,7 +541,7 @@ foreach ($o in $evoObjs) {
 foreach ($e in $sorted) {
   $k = Norm $e.name
   $e.evo = if ($evoInto.ContainsKey($k)) { @($evoInto[$k]) } else { @() }
-  $e.notes = @($e.notes | Where-Object { $_ -notmatch '^Evolves at level' })
+  $e.notes = @($e.notes | Where-Object { $_ -notmatch '^Evolves' })
 }
 
 # ---------- keep only moves actually in Brutal Black ----------
@@ -633,7 +657,7 @@ $data = [ordered]@{
       blurb = @('Evolution lines from the change sheets. Level is shown where the sheet notes one; stone/trade/other methods are left blank.')
     }
     blocks = @(
-      [ordered]@{ type='table'; columns=@('Pokemon','Evolves into','Level'); rows=@($evoRows) }
+      [ordered]@{ type='table'; columns=@('Pokemon','Evolves into','Method'); rows=@($evoRows) }
     )
   }
 }
