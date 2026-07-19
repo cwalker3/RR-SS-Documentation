@@ -479,7 +479,7 @@ function chgRow(o){
 /* ================= AREAS ================= */
 const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
-  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',team:arr(t.team)}))}));
+  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',notes:arr(t.notes),team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,was:it.was}));
   const notes=arr(a.notes);
@@ -710,7 +710,8 @@ function areaDetail(a){
         if(t.split)tag+=` <span class="varpill" title="You fight this on a later visit here, during the ${esc(t.split)}">${esc(t.split)}</span>`;
         const done=track&&TRAINERS_DONE.has(t.id);
         const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
-        return `<tr class="${rival?'rivalrow ':''}${done?'tdone':''}"><td>${chk}${esc(t.name)}${t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:''}${tag}</td><td>${teamInline(t.team)}</td></tr>`;
+        const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(esc).join('<br>')}</div>`:'';
+        return `<tr class="${rival?'rivalrow ':''}${done?'tdone':''}"><td>${chk}${esc(t.name)}${t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:''}${tag}${tnote}</td><td>${teamInline(t.team)}</td></tr>`;
       }).join('')+
       `</tbody></table></div>`;
     p.appendChild(body);wrap.appendChild(p);

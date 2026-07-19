@@ -325,17 +325,27 @@ $areas = New-Object System.Collections.ArrayList
 $giftRows = New-Object System.Collections.ArrayList
 $itemRows = New-Object System.Collections.ArrayList
 $area = $null; $trainer = $null; $baseTName = ''; $choice = ''; $noteBuf = $null; $curSplit = ''
+$pendingNotes = New-Object System.Collections.ArrayList
 
 function New-BBArea($name){
-  foreach ($a in $script:areas) { if ($a.name -eq $name) { return $a } }   # merge repeat visits
-  $a = [ordered]@{ name=$name; wild=(New-Object System.Collections.ArrayList); trainers=(New-Object System.Collections.ArrayList); notes=(New-Object System.Collections.ArrayList); homeSplit=$script:curSplit }
+  $split = $script:curSplit
+  # same location in the same split = one area; a revisit in a later split becomes its own
+  # area (kept in story order) labelled with the split, so trainers stay ordered
+  foreach ($a in $script:areas) { if ($a.baseName -eq $name -and $a.homeSplit -eq $split) { return $a } }
+  $exists = $false; foreach ($a in $script:areas) { if ($a.baseName -eq $name) { $exists = $true; break } }
+  $disp = if ($exists -and $split) { "$name ($split)" } else { $name }
+  $a = [ordered]@{ name=$disp; baseName=$name; wild=(New-Object System.Collections.ArrayList); trainers=(New-Object System.Collections.ArrayList); notes=(New-Object System.Collections.ArrayList); homeSplit=$split }
   [void]$script:areas.Add($a); return $a
 }
 function End-BBTrainer(){
   if ($script:trainer -and $script:trainer.team.Count -gt 0 -and $script:area) { [void]$script:area.trainers.Add($script:trainer) }
   $script:trainer = $null
 }
-function New-BBTrainer($name){ return [ordered]@{ id=''; name=$name; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; team=(New-Object System.Collections.ArrayList) } }
+function New-BBTrainer($name){ return [ordered]@{ id=''; name=$name; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; notes=(New-Object System.Collections.ArrayList); team=(New-Object System.Collections.ArrayList) } }
+# a note that reads like it's about the upcoming battle attaches to that trainer, not the area
+function Is-FightNote($n){ return ($n -match '(?i)\bfight\b|\bbattle\b|do this|doing this|wait until|before you|can.?t switch|tag battle|rematch') }
+function Flush-Notes(){ foreach ($n in $script:pendingNotes) { if ($script:area) { [void]$script:area.notes.Add($n) } }; $script:pendingNotes.Clear() }
+function Assign-Notes($tr){ foreach ($n in $script:pendingNotes) { if (Is-FightNote $n) { [void]$tr.notes.Add($n) } elseif ($script:area) { [void]$script:area.notes.Add($n) } }; $script:pendingNotes.Clear() }
 function NextIsTeam($idx){
   for ($j=$idx+1; $j -lt $ml.Count; $j++) {
     $s = $ml[$j].Trim()
@@ -350,9 +360,9 @@ for ($i=0; $i -lt $ml.Count; $i++) {
   if (-not $t) { continue }
   # bullet continuation of a note (e.g. the "now gives: -1 Exp Share …" gift list); handles - and en/em dashes / bullet
   if ($noteBuf -ne $null -and $t.Length -gt 0 -and (@('-',[char]0x2013,[char]0x2014,[char]0x2022) -contains $t.Substring(0,1))) { $noteBuf += [char]10 + $t; continue }
-  # any other line ends a pending note
-  if ($noteBuf -ne $null) { if ($area) { [void]$area.notes.Add($noteBuf) }; $noteBuf = $null }
-  if ($t -match '\(Level Cap:') { $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim(); continue }   # gym split / phase
+  # any other line ends a pending note (buffered; assigned to the next trainer or area)
+  if ($noteBuf -ne $null) { [void]$pendingNotes.Add($noteBuf); $noteBuf = $null }
+  if ($t -match '\(Level Cap:') { Flush-Notes; $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim(); continue }   # gym split / phase
   if ($t.StartsWith('*')) {
     $n = $t.TrimStart('*').Trim()
     if ($n -match '^(.+?)\s*>\s*(.+)$') { [void]$itemRows.Add(@($(if($area){$area.name}else{''}), $Matches[1].Trim(), $Matches[2].Trim())) }  # item-ball swap
@@ -361,10 +371,11 @@ for ($i=0; $i -lt $ml.Count; $i++) {
   }
 
   $mg = $reGift.Match($t)
-  if ($mg.Success) { [void]$giftRows.Add(@($(if($area){$area.name}else{''}), $mg.Groups['g'].Value.Trim())); continue }
+  if ($mg.Success) { Flush-Notes; [void]$giftRows.Add(@($(if($area){$area.name}else{''}), $mg.Groups['g'].Value.Trim())); continue }
 
   $mw = $reWild.Match($t)
   if ($mw.Success -and $mw.Groups['list'].Value -match '\(\d+%\)') {
+    Flush-Notes
     if ($area) {
       $sp = New-Object System.Collections.ArrayList
       foreach ($sm in $reSp.Matches($mw.Groups['list'].Value)) {
@@ -406,18 +417,21 @@ for ($i=0; $i -lt $ml.Count; $i++) {
       $baseTName = $h
       $trainer = New-BBTrainer $h
       if ($choice) { $trainer.choice = $choice }
+      Assign-Notes $trainer                              # pending fight notes attach to this trainer
     }
     # a ':' line that reads like a sentence (lowercase function words) is a note that
-    # introduces a fight, not a location — keep the following trainers in the current area
+    # introduces a fight, not a location — buffer it for the next trainer / area
     elseif ($h -cmatch '\b(you|your|have|has|to|and|get|got|back|this|that|until|before|after|when|while|if|can|will|would|should|must|one|two|three|do|does|doing|done|fight|fights|wait|instead|only|available|between|make|sure|switch|teams|first|down|far|least|but|so|then|give|gives)\b') {
-      if ($area) { [void]$area.notes.Add($h) }
+      [void]$pendingNotes.Add($h)
     }
-    elseif ($h -ne 'Notes') { $area = New-BBArea $h }     # location header ('Notes' = doc intro, skip)
+    elseif ($h -match '^B?\d+F$') { Flush-Notes }         # a floor sub-header (B1F, 1F, …) — stay in the current area
+    elseif ($h -ne 'Notes') { Flush-Notes; $area = New-BBArea $h }   # location ('Notes' = doc intro, skip)
     $choice = ''
     continue
   }
 }
-if ($noteBuf -ne $null -and $area) { [void]$area.notes.Add($noteBuf) }
+if ($noteBuf -ne $null) { [void]$pendingNotes.Add($noteBuf); $noteBuf = $null }
+Flush-Notes
 End-BBTrainer
 
 # TM slot changes (which move each TM now teaches)
@@ -453,6 +467,7 @@ foreach ($a in $areas) {
     # tag a fight that belongs to a different gym split than the area's first visit
     if ($tr.splitAt -and $a.homeSplit -and $tr.splitAt -ne $a.homeSplit) { $tr.split = $tr.splitAt } else { $tr.split = '' }
     [void]$tr.Remove('splitAt')
+    $tr.notes = @($tr.notes)
     foreach ($m in $tr.team) { $m.moves = @($m.moves) }; $tr.team = @($tr.team); $ti++
   }
   $wild = @($a.wild); $trs = @($a.trainers)
