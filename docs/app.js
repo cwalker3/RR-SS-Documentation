@@ -9,7 +9,30 @@ let GAME_ID = (function(){
 const GAME = GAMES[GAME_ID];
 const RAW = GAME.data;
 const SPR = window.RRSS_SPR || {};
-const gkey = k => 'rrss-'+GAME_ID+'-'+k;   // per-game localStorage namespace
+/* ---- attempts: each is its own independent run/tracking, per game ---- */
+const attemptsKey = 'rrss-'+GAME_ID+'-attempts';
+let ATTEMPTS=[];try{ATTEMPTS=JSON.parse(localStorage.getItem(attemptsKey)||'[]');}catch(e){}
+if(!Array.isArray(ATTEMPTS)||!ATTEMPTS.length){ATTEMPTS=[{id:'a1',name:'Attempt 1'}];try{localStorage.setItem(attemptsKey,JSON.stringify(ATTEMPTS));}catch(e){}}
+let ATTEMPT_ID=(function(){try{const a=localStorage.getItem('rrss-'+GAME_ID+'-attempt');if(a&&ATTEMPTS.some(x=>x.id===a))return a;}catch(e){}return ATTEMPTS[0].id;})();
+function saveAttempts(){try{localStorage.setItem(attemptsKey,JSON.stringify(ATTEMPTS));}catch(e){}}
+// 'a1' keeps the un-suffixed (legacy) keys so existing progress is preserved
+const gkey = k => 'rrss-'+GAME_ID+(ATTEMPT_ID==='a1'?'':'-'+ATTEMPT_ID)+'-'+k;
+function switchAttempt(id){try{localStorage.setItem('rrss-'+GAME_ID+'-attempt',id);}catch(e){}location.reload();}
+function newAttempt(){
+  const name=(prompt('Name this attempt:', 'Attempt '+(ATTEMPTS.length+1))||'').trim()||('Attempt '+(ATTEMPTS.length+1));
+  const id='a'+Date.now();ATTEMPTS.push({id,name});saveAttempts();switchAttempt(id);
+}
+function renameAttempt(){
+  const cur=ATTEMPTS.find(a=>a.id===ATTEMPT_ID);if(!cur)return;
+  const name=(prompt('Rename attempt:', cur.name)||'').trim();if(name){cur.name=name;saveAttempts();reRenderKeepScroll();}
+}
+function deleteAttempt(){
+  if(ATTEMPTS.length<2)return;
+  const cur=ATTEMPTS.find(a=>a.id===ATTEMPT_ID);
+  if(!confirm('Delete "'+(cur?cur.name:'this attempt')+'" and all its tracking? This cannot be undone.'))return;
+  ['caught','trainers','missed','items','profile'].forEach(k=>{try{localStorage.removeItem(gkey(k));}catch(e){}});
+  ATTEMPTS=ATTEMPTS.filter(a=>a.id!==ATTEMPT_ID);saveAttempts();switchAttempt(ATTEMPTS[0].id);
+}
 // one-time migration of pre-multi-game progress into the rrss namespace
 (function migrateLegacy(){ if(GAME_ID!=='rrss')return;
   [['caught','rrss-caught'],['trainers','rrss-trainers'],['missed','rrss-missed'],['profile','rrss-profile']].forEach(([k,old])=>{
@@ -557,9 +580,19 @@ function renderAreas(c){
   const bar=el('div','areabar');
   const nc=CAUGHT.size, nt=TRAINERS_DONE.size, nm=AREA_MISSED.size;
   const parts=[];if(nc)parts.push(`<b>${nc}</b> caught`);if(nt)parts.push(`<b>${nt}</b> trainers beaten`);if(nm)parts.push(`<b>${nm}</b> missed`);
-  bar.innerHTML=`<span class="caughtcount">${parts.length?parts.join(' · '):'No progress yet'}</span>`+
+  bar.innerHTML=`<div class="attempts"><span class="plabel">Attempt</span>`+
+      `<select class="attemptsel" aria-label="Choose attempt">${ATTEMPTS.map(a=>`<option value="${esc(a.id)}"${a.id===ATTEMPT_ID?' selected':''}>${esc(a.name)}</option>`).join('')}</select>`+
+      `<button class="attbtn attnew" title="Start a new attempt with fresh tracking">+ New</button>`+
+      `<button class="attbtn attren" title="Rename this attempt">Rename</button>`+
+      (ATTEMPTS.length>1?`<button class="attbtn attdel" title="Delete this attempt and its tracking">Delete</button>`:'')+
+    `</div>`+
+    `<span class="caughtcount">${parts.length?parts.join(' · '):'No progress yet'}</span>`+
     `<button class="resetbtn"${trackTotal()?'':' disabled'}>Reset progress</button>`;
   bar.querySelector('.resetbtn').onclick=resetCaught;
+  bar.querySelector('.attemptsel').onchange=e=>switchAttempt(e.target.value);
+  bar.querySelector('.attnew').onclick=newAttempt;
+  bar.querySelector('.attren').onclick=renameAttempt;
+  const _del=bar.querySelector('.attdel');if(_del)_del.onclick=deleteAttempt;
   c.appendChild(bar);
   const md=el('div','md');const list=el('div','mlist');const detail=el('div','detail');
   md.append(list,detail);c.appendChild(md);

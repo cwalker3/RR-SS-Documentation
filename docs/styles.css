@@ -247,7 +247,14 @@ h3 .movelink:hover{color:var(--accent)}
 .areacheck{margin-left:auto;color:var(--up);font-weight:800;font-size:13px;flex:none}
 .litem.active .areacheck{color:var(--up)}
 .subcaught{color:var(--up);font-weight:700}
-.areabar{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.areabar{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.attempts{display:flex;align-items:center;gap:6px}
+.attempts .plabel{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.attemptsel{padding:6px 9px;border-radius:8px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font-size:12.5px;font-weight:650;cursor:pointer}
+.attemptsel:hover{border-color:var(--accent)}
+.attbtn{font-size:12px;font-weight:600;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink-2);cursor:pointer}
+.attbtn:hover{border-color:var(--accent);color:var(--accent-2)}
+.attbtn.attdel:hover{border-color:var(--down);color:var(--down);background:var(--down-soft)}
 .caughtcount{font-size:13px;color:var(--muted)}
 .caughtcount b{color:var(--up);font-weight:750;font-variant-numeric:tabular-nums}
 .resetbtn{margin-left:auto;flex:none;font-size:12.5px;font-weight:650;padding:8px 15px;border:1px solid var(--line-2);border-radius:9px;background:var(--surface);color:var(--ink-2)}
