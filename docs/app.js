@@ -40,6 +40,14 @@ function deleteAttempt(){
   });
 })();
 function spriteImg(dex,size,cls){const b=SPR[String(parseInt(dex,10))];if(!b)return '';return `<img class="spr ${cls||''}" width="${size}" height="${size}" src="data:image/png;base64,${b}" alt="" loading="lazy">`;}
+const ITEMSPR=window.RRSS_ITEMSPR||{};
+function itemSpriteImg(name){
+  if(!name)return '';
+  let b;
+  if(/^TM\d/i.test(name))b=ITEMSPR._tm;else if(/^HM\d/i.test(name))b=ITEMSPR._hm;else b=ITEMSPR[normName(name)];
+  if(!b)return '';
+  return `<img class="itemspr" width="22" height="22" src="data:image/png;base64,${b}" alt="" loading="lazy">`;
+}
 const NAME2DEX={};
 function normName(s){return String(s==null?'':s).toLowerCase().replace(/[^a-z0-9]/g,'');}
 function spriteByName(name,size,cls){const d=NAME2DEX[normName(name)];return d?spriteImg(d,size,cls):'';}
@@ -768,7 +776,7 @@ function areaDetail(a){
     const body=el('div','pbody');
     body.innerHTML=`<div class="tblwrap"><table class="data"><tbody>`+
       items.map(it=>{const done=ITEMS_DONE.has(it.id);
-        return `<tr class="${done?'tdone':''}"><td style="width:1%"><button class="tcheck catch" data-item="${esc(it.id)}" aria-pressed="${done}" title="${done?'Picked up — click to unmark':'Mark as picked up'}"></button></td><td><b>${esc(it.name)}</b>${it.was?` <span style="color:var(--muted);font-size:12px">· was ${esc(it.was)}</span>`:''}</td></tr>`;
+        return `<tr class="${done?'tdone':''}"><td style="width:1%"><button class="tcheck catch" data-item="${esc(it.id)}" aria-pressed="${done}" title="${done?'Picked up — click to unmark':'Mark as picked up'}"></button></td><td>${itemSpriteImg(it.name)}<b>${esc(it.name)}</b>${it.was?` <span style="color:var(--muted);font-size:12px">· was ${itemSpriteImg(it.was)}${esc(it.was)}</span>`:''}</td></tr>`;
       }).join('')+
       `</tbody></table></div>`;
     p.appendChild(body);wrap.appendChild(p);
@@ -818,7 +826,8 @@ function cellWithMon(cell){
   if(isMon(c))return `${spriteByName(c,20,'cspr')}<span class="monlink celllink" data-mon="${esc(c)}" role="button" tabindex="0">${esc(c)}</span>`;
   const ci=c.lastIndexOf(',');
   if(ci>=0){const tail=c.slice(ci+1).trim();if(tail&&isMon(tail))return `${esc(c.slice(0,ci+1))} ${spriteByName(tail,20,'cspr')}<span class="monlink celllink" data-mon="${esc(tail)}" role="button" tabindex="0">${esc(tail)}</span>`;}
-  return esc(c);
+  const ic=itemSpriteImg(c);
+  return (ic?ic:'')+esc(c);
 }
 function renderBlocks(c,doc,id,q){
   const blocks=arr(doc.blocks);
@@ -901,7 +910,7 @@ function renderThief(c){
     const notes=showAll?arr(s.notes):arr(s.notes).filter(hit);
     if(q && !showAll && !rows.length && !notes.length)return;
     let bodyHtml='';
-    if(rows.length)bodyHtml+=`<div class="tblwrap"><table class="data thief-tbl"><tbody>${rows.map(r=>`<tr><td class="tname">${monCell(r.name)}</td><td class="titem">${esc(r.item)}</td></tr>`).join('')}</tbody></table></div>`;
+    if(rows.length)bodyHtml+=`<div class="tblwrap"><table class="data thief-tbl"><tbody>${rows.map(r=>`<tr><td class="tname">${monCell(r.name)}</td><td class="titem">${itemSpriteImg(r.item)}${esc(r.item)}</td></tr>`).join('')}</tbody></table></div>`;
     notes.forEach(n=>bodyHtml+=thiefNote(n));
     if(!rows.length&&!notes.length)bodyHtml=`<div style="color:var(--muted);font-size:13px">Nothing new to steal here.</div>`;
     const p=el('div','panel thief-card');
