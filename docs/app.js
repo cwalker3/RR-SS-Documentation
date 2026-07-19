@@ -484,14 +484,15 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,was:it.was}));
   const notes=arr(a.notes);
   const gifts=arr(a.gifts);
+  const giftMons=[];gifts.forEach(g=>g.replace(/\s*\(\d+%\)\s*$/,'').split('/').forEach(s=>{s=s.trim();if(s)giftMons.push(s);}));
   const mons=new Set();wild.forEach(w=>w.species.forEach(s=>mons.add(s.name.toLowerCase())));
   rosters.forEach(r=>r.trainers.forEach(t=>t.team.forEach(m=>mons.add((m.species||'').toLowerCase()))));
-  return {name:a.name,wild,rosters,special,items,notes,gifts,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
+  return {name:a.name,wild,rosters,special,items,notes,gifts,giftMons,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
 });
 const wildOpen={};
 const AREA2IDX={};
 AREAS.forEach((a,i)=>{const n=normName(a.name);if(AREA2IDX[n]==null)AREA2IDX[n]=i;});
-function areaCaughtCount(a){return a.wild.reduce((n,w)=>n+w.species.filter(s=>isCaught(s.name)).length,0);}
+function areaCaughtCount(a){return a.wild.reduce((n,w)=>n+w.species.filter(s=>isCaught(s.name)).length,0)+a.giftMons.filter(s=>isCaught(s)).length;}
 // in-game "met location": areas sharing one count as a single nuzlocke encounter (e.g. Route 104 South/North -> Route 104)
 function metLoc(name){
   let s=name.replace(/\s*\(.*\)\s*$/,'');
@@ -518,10 +519,10 @@ function areaRosterTrainers(a){
   return out;
 }
 function areaStatus(a){
-  const caught=areaCaughtCount(a)>0, missed=AREA_MISSED.has(a.name), hasEnc=a.wild.length>0;
+  const caught=areaCaughtCount(a)>0, missed=AREA_MISSED.has(a.name), hasEnc=a.wild.length>0||a.giftMons.length>0;
   const grp=areaGroup(a);
   const grpCaught=grp.some(x=>areaCaughtCount(x)>0), grpMissed=grp.some(x=>AREA_MISSED.has(x.name));
-  const grpHasEnc=grp.some(x=>x.wild.length>0);
+  const grpHasEnc=grp.some(x=>x.wild.length>0||x.giftMons.length>0);
   const trs=areaRosterTrainers(a), hasTr=trs.length>0;
   const trainersDone=hasTr?trs.every(t=>TRAINERS_DONE.has(t.id)):true;
   const encResolved=!grpHasEnc||grpCaught||grpMissed;
@@ -655,7 +656,7 @@ function areaDetail(a){
       body.innerHTML=`<div class="collapsednote">Caught here: <span class="chips" style="display:inline-flex;vertical-align:middle">${caughtList.map(s=>speciesChip(s,'dupe')).join('')}</span></div>`;
     }
     p.appendChild(body);wrap.appendChild(p);
-  } else {
+  } else if(!arr(a.gifts).length){
     const p=el('div','panel');p.innerHTML=`<div class="phead"><h3>${esc(a.name)}</h3></div><div class="pbody" style="color:var(--muted);font-size:13px">No wild encounter data for this location.</div>`;wrap.appendChild(p);
   }
   // gift / starter choice (e.g. the Nuvema Town starter); highlights your pick
