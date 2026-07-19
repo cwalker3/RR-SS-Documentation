@@ -223,6 +223,22 @@ h3 .movelink:hover{color:var(--accent)}
 .disclaimer{padding:10px 4px 2px;font-size:10.5px;line-height:1.4;color:var(--muted);opacity:.75}
 .tnote{margin-top:4px;font-size:11.5px;line-height:1.35;color:var(--m-static,#c9973f);font-style:italic}
 .itemspr{width:28px;height:28px;vertical-align:middle;margin-right:6px;image-rendering:pixelated}
+/* collapsible trainer */
+.trainer{border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:var(--surface-2)}
+.trainer[open]{border-color:var(--line-2);background:var(--surface)}
+.trainer>summary{list-style:none;cursor:pointer;padding:10px 13px}
+.trainer>summary::-webkit-details-marker{display:none}
+.tsumhead{display:flex;align-items:center;gap:8px;font-weight:650;font-size:14.5px}
+.tsumhead::before{content:"▸";color:var(--muted);font-size:11px;flex:none}
+.trainer[open] .tsumhead::before{content:"▾"}
+.tsumhead .tname{display:inline-flex;align-items:center;flex-wrap:wrap;gap:4px}
+.trainer .tpreview{margin-top:7px;margin-left:19px}
+.trainer[open] .tpreview{display:none}
+.tdetail{padding:2px 13px 12px}
+.trainer.tdone>summary .tname{opacity:.55}
+.faint{color:var(--faint)}
+.trainer-team td{font-size:13px}
+.trainer-team .chip{font-size:12.5px;padding:3px 8px}
 .pkid{display:flex;flex-direction:column;gap:3px}
 .chip.mon{display:inline-flex;align-items:center;gap:6px;padding:4px 12px 4px 6px}
 .monname{display:inline-flex;align-items:center;gap:8px}

@@ -743,8 +743,7 @@ function areaDetail(a){
     const p=el('div','panel');
     p.innerHTML=`<div class="phead"><h3>${esc(r.title)}</h3><span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span></div>`;
     const body=el('div','pbody');
-    body.innerHTML=`<div class="tblwrap"><table class="data"><thead><tr><th>Trainer</th><th>Team</th></tr></thead><tbody>`+
-      trainers.map(t=>{
+    body.innerHTML=trainers.map(t=>{
         let tag='';const rival=isRivalTrainer(t);
         if(rival){const g=rivalGenderOf(t.name),st=rivalStarterOf(t.team);
           tag=(rn&&rs&&g===rn&&st===rs)?` <span class="rivalpill" title="Your rival, based on your gender & starter">★ Your rival</span>`:` <span class="varpill">${esc(g)} · ${esc(st)}</span>`;}
@@ -753,9 +752,12 @@ function areaDetail(a){
         const done=track&&TRAINERS_DONE.has(t.id);
         const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
         const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(esc).join('<br>')}</div>`:'';
-        return `<tr class="${rival?'rivalrow ':''}${done?'tdone':''}"><td>${chk}${esc(t.name)}${t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:''}${tag}${tnote}</td><td>${teamInline(t.team)}</td></tr>`;
-      }).join('')+
-      `</tbody></table></div>`;
+        const badge=t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:'';
+        const detail=`<div class="tblwrap"><table class="data trainer-team"><thead><tr><th>Pokémon</th><th>Lv</th><th>Item</th><th>Ability</th><th>Moves</th></tr></thead><tbody>`+
+          arr(t.team).map(m=>`<tr><td><span class="monname${isMon(m.species)?' monlink':''}"${monAttr(m.species)}>${spriteByName(m.species,26,'cspr')}<b>${esc(m.species)}</b></span></td><td class="mono">${esc(m.level)}</td><td>${m.item?itemSpriteImg(m.item)+esc(m.item):'<span class="faint">—</span>'}</td><td>${m.ability?esc(m.ability):'<span class="faint">—</span>'}</td><td>${arr(m.moves).map(mv=>`<span class="chip movelink" data-move="${esc(mv)}" role="button" tabindex="0">${esc(mv)}${moveChgMark(mv)}</span>`).join(' ')||'<span class="faint">—</span>'}</td></tr>`).join('')+
+          `</tbody></table></div>`;
+        return `<details class="trainer${done?' tdone':''}${rival?' rivalrow':''}"><summary><span class="tsumhead">${chk}<span class="tname">${esc(t.name)}${badge}${tag}</span></span>${tnote}<div class="tpreview">${teamInline(t.team)}</div></summary><div class="tdetail">${detail}</div></details>`;
+      }).join('');
     p.appendChild(body);wrap.appendChild(p);
   });
   // special battles
