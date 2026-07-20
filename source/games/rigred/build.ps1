@@ -204,6 +204,53 @@ $sorted = $deduped | Sort-Object @{ Expression = { if ($_.dex -eq '000') { 9999 
 # ---------- Moves: Gen-3 base info from the shared PokeAPI dump + Rigorous Red's overlay ----------
 $typeNm = @{}
 Get-Content "$src\type_names.csv" | ForEach-Object { $p=$_ -split ','; if($p.Count -ge 3 -and $p[1] -eq '9'){ $typeNm[[int]$p[0]]=$p[2].Trim() } }
+
+# ---------- ability / type changes vs vanilla (Gen-3 accurate) -> entry.changes ----------
+# the change sheet lists every mon's ability/type whether or not it changed, so detect changes
+# by comparing to the base game; this drives the sidebar A / T marks and the "what changed" list.
+$abilNm = @{}
+Get-Content "$src\ability_names.csv" | Select-Object -Skip 1 | ForEach-Object { $p=$_ -split ',',3; if($p.Count -ge 3 -and $p[1] -eq '9'){ $abilNm[[int]$p[0]]=$p[2].Trim().Trim('"') } }
+$vanAbil = @{}   # national dex -> @{ s1; s2 } (non-hidden only; hidden abilities are Gen-4+)
+Get-Content "$src\pokemon_abilities.csv" | Select-Object -Skip 1 | ForEach-Object {
+  $p=$_ -split ','; if($p.Count -lt 4 -or $p[2] -ne '0'){ return }
+  $pkid=[int]$p[0]; if(-not $vanAbil.ContainsKey($pkid)){ $vanAbil[$pkid]=@{ s1=''; s2='' } }
+  if($p[3] -eq '1'){ $vanAbil[$pkid].s1=$abilNm[[int]$p[1]] } elseif($p[3] -eq '2'){ $vanAbil[$pkid].s2=$abilNm[[int]$p[1]] }
+}
+$curType = @{}   # national dex -> @{ slot -> name } (current)
+Get-Content "$src\pokemon_types.csv" | Select-Object -Skip 1 | ForEach-Object {
+  $p=$_ -split ','; if($p.Count -lt 3){ return }
+  $pkid=[int]$p[0]; if(-not $curType.ContainsKey($pkid)){ $curType[$pkid]=@{} }; $curType[$pkid][[int]$p[2]]=$typeNm[[int]$p[1]]
+}
+$pastType = @{}  # national dex -> @{ gen; slots } for the earliest past-gen entry that still covers Gen 3
+Get-Content "$src\pokemon_types_past.csv" | Select-Object -Skip 1 | ForEach-Object {
+  $p=$_ -split ','; if($p.Count -lt 4){ return }
+  $pkid=[int]$p[0]; $gen=[int]$p[1]; if($gen -lt 3){ return }
+  if(-not $pastType.ContainsKey($pkid) -or $gen -lt $pastType[$pkid].gen){ $pastType[$pkid]=@{ gen=$gen; slots=@{} } }
+  if($gen -eq $pastType[$pkid].gen){ $pastType[$pkid].slots[[int]$p[3]]=$typeNm[[int]$p[2]] }
+}
+function VanSlots($pkid){ if($pastType.ContainsKey($pkid)){ return $pastType[$pkid].slots } elseif($curType.ContainsKey($pkid)){ return $curType[$pkid] } else { return $null } }
+function VanTypeKey($pkid){   # sorted set of the mon's Gen-3 types, e.g. "grass+poison"
+  $slots = VanSlots $pkid; if(-not $slots){ return '' }
+  return (($slots.Values | ForEach-Object { Norm $_ } | Sort-Object) -join '+')
+}
+function VanTypeStr($pkid){   # display form in slot order, e.g. "Grass / Poison"
+  $slots = VanSlots $pkid; if(-not $slots){ return '' }
+  $t=$slots[1]; if($slots.ContainsKey(2) -and $slots[2]){ $t="$t / " + $slots[2] }; return $t
+}
+function HackTypeKey($s){ return (($s -split '/' | ForEach-Object { Norm $_ } | Where-Object { $_ } | Sort-Object) -join '+') }
+foreach ($e in $sorted) {
+  if ($e.dex -eq '000') { continue }
+  $pkid=[int]$e.dex; $chg = New-Object System.Collections.ArrayList
+  $hackType=''; foreach($at in $e.attrs){ if($at.label -eq 'Type'){ $hackType=$at.value } }
+  $vtk = VanTypeKey $pkid
+  if ($hackType -and $vtk -and (HackTypeKey $hackType) -ne $vtk) { [void]$chg.Add([ordered]@{ kind='change'; label='Type'; from=(VanTypeStr $pkid); to=$hackType }) }
+  if ($vanAbil.ContainsKey($pkid)) {
+    $va=$vanAbil[$pkid]
+    if ($e.a1 -and $va.s1 -and (Norm $e.a1) -ne (Norm $va.s1)) { [void]$chg.Add([ordered]@{ kind='change'; label='Ability 1'; from=$va.s1; to=$e.a1 }) }
+    if ($e.a2 -and $va.s2 -and (Norm $e.a2) -ne (Norm $va.s2)) { [void]$chg.Add([ordered]@{ kind='change'; label='Ability 2'; from=$va.s2; to=$e.a2 }) }
+  }
+  if ($chg.Count) { $e.changes = @($e.changes) + $chg.ToArray() }
+}
 $mvName = @{}
 Get-Content "$src\move_names.csv" | Select-Object -Skip 1 | ForEach-Object { $p=$_ -split ',',3; if($p.Count -ge 3 -and $p[1] -eq '9'){ $mvName[[int]$p[0]]=$p[2].Trim().Trim('"') } }
 $mvDesc = @{}
