@@ -350,6 +350,9 @@ tr.rivalrow{background:color-mix(in srgb,var(--accent) 6%,transparent)}
 .wcap.grpnote{margin:0 0 12px;color:var(--accent-2);background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:9px;padding:8px 11px}
 .wcap.grpnote b{color:var(--accent-2)}
 .areacheck.done{color:var(--muted)}
+.areacheck.optleft{color:var(--accent-2)}
+.litem.active .areacheck.optleft{color:var(--accent-2)}
+.litem.done.optleft{opacity:.82}
 .tcheck{margin-right:8px;vertical-align:-2px}
 tr.tdone td{opacity:.55}
 tr.tdone .idpill,tr.tdone .tcheck{opacity:1}

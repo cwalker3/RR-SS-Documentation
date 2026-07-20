@@ -626,8 +626,9 @@ function areaStatus(a){
   const trainersDone=reqTrs.every(t=>TRAINERS_DONE.has(t.id));
   const encResolved=!grpHasEnc||grpCaught||grpMissed;
   const complete=(hasEnc||hasTr)&&encResolved&&trainersDone;
+  const optionalsLeft=trs.some(t=>t.optional&&!TRAINERS_DONE.has(t.id));
   const resolvedElsewhere=hasEnc&&!caught&&!missed&&(grpCaught||grpMissed);
-  return {caught,missed,hasEnc,hasTr,trainersDone,complete,trs,resolvedElsewhere};
+  return {caught,missed,hasEnc,hasTr,trainersDone,complete,optionalsLeft,trs,resolvedElsewhere};
 }
 
 function profileBar(){
@@ -705,7 +706,9 @@ function renderAreas(c){
     const tc=a.rosters.reduce((n,r)=>n+(r.kind==='rematch'?0:r.trainers.length),0);
     const st=areaStatus(a);
     b.classList.toggle('done',st.complete);
-    const marker=st.complete?`<span class="areacheck done" title="Route complete">✓</span>`
+    b.classList.toggle('optleft',st.complete&&st.optionalsLeft);
+    const marker=st.complete&&st.optionalsLeft?`<span class="areacheck optleft" title="Done — optional trainers still available">◑</span>`
+      :st.complete?`<span class="areacheck done" title="Route complete">✓</span>`
       :st.caught?`<span class="areacheck" title="Pokémon caught here">✓</span>`
       :st.missed?`<span class="areamiss" title="Encounter missed here">✕</span>`
       :st.resolvedElsewhere?`<span class="arealinked" title="Encounter used elsewhere at this met location">↔</span>`:'';
