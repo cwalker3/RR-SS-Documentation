@@ -531,7 +531,12 @@ function gymKey(n){return n.replace(/\s*\(.*\)\s*$/,'').toLowerCase().trim();}
 const GYMS=AREAS.filter(a=>/\bgym\b/i.test(a.name)).filter((a,i,arr)=>arr.findIndex(x=>gymKey(x.name)===gymKey(a.name))===i);
 const AREA2IDX={};
 AREAS.forEach((a,i)=>{const n=normName(a.name);if(AREA2IDX[n]==null)AREA2IDX[n]=i;});
-function areaCaughtCount(a){return a.wild.reduce((n,w)=>n+w.species.filter(s=>isCaught(s.name)).length,0)+a.giftMons.filter(s=>isCaught(s)).length;}
+function areaCaughtCount(a){
+  const wildC=a.wild.reduce((n,w)=>n+w.species.filter(s=>isCaught(s.name)).length,0);
+  // a gift (e.g. the starter) is its own separate encounter only where there's no wild
+  const giftC=a.wild.length?0:a.giftMons.filter(s=>isCaught(s)).length;
+  return wildC+giftC;
+}
 // in-game "met location": areas sharing one count as a single nuzlocke encounter (e.g. Route 104 South/North -> Route 104)
 function metLoc(name){
   let s=name.replace(/\s*\(.*\)\s*$/,'');

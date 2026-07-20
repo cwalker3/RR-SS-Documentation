@@ -507,7 +507,11 @@ foreach ($ir in $itemRows) {
   if (-not $itemsByLoc.ContainsKey($loc)) { $itemsByLoc[$loc] = New-Object System.Collections.ArrayList }
   [void]$itemsByLoc[$loc].Add(@($ir[1], $ir[2]))
 }
-# group gifts (incl. the Nuvema starter choice) by location so they show in the area too
+# the Kanto starter is given in Pallet Town but isn't a "Gift:" line in the doc — add it
+if (($areaData | Where-Object { $_.name -eq 'Pallet Town' }) -or ($areas | Where-Object { $_.name -eq 'Pallet Town' })) {
+  [void]$giftRows.Add(@('Pallet Town', 'Bulbasaur/Charmander/Squirtle (100%)'))
+}
+# group gifts (incl. the starter choice) by location so they show in the area too
 $giftsByLoc = @{}
 foreach ($gr in $giftRows) {
   $loc = $gr[0]; if (-not $loc) { continue }
@@ -664,7 +668,7 @@ $data = [ordered]@{
     meta = [ordered]@{
       subtitle = ''
       blurb = @('Wild encounters and trainer teams for every location, in story order, from the Rigorous Red mastersheet. Tick wild Pokemon as caught and mark trainers beaten to track your run.')
-      starters = @('Snivy','Tepig','Oshawott')
+      starters = @('Bulbasaur','Charmander','Squirtle')
     }
     areas = @($areaData)
   }
