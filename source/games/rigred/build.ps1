@@ -295,6 +295,7 @@ Get-Content "$src\moves.csv" | Select-Object -Skip 1 | ForEach-Object {
 # "Name: change, change, …". Pull the numeric BP/Acc/PP (and type/category) into structured
 # rows; keep any remaining prose as an Effect note.
 $typeAlt = (($TYPES.Values | ForEach-Object { [regex]::Escape($_) }) -join '|')
+function TType($s){ $u=([string]$s).ToUpper(); if($TYPES.ContainsKey($u)){ $TYPES[$u] } else { $s } }   # canonical casing, e.g. "fighting" -> "Fighting"
 $mcPath  = Join-Path $GameDir 'Rigorous Red Move Changes.txt'
 $attackEntries = New-Object System.Collections.ArrayList
 $mcNoMatch = New-Object System.Collections.ArrayList
@@ -328,7 +329,8 @@ foreach ($line in [System.IO.File]::ReadAllLines($mcPath, [System.Text.Encoding]
   elseif ($body -match 'BP:\s*(\d+)')             { [void]$rows.Add([ordered]@{ kind='change'; label='Power'; from=$(if($van -and $van.pow -ne $null){"$($van.pow)"}else{''}); to=$Matches[1] }) }
   if ($body -match 'Acc:\s*(\d+)\s*>\s*(\d+)')    { [void]$rows.Add([ordered]@{ kind='change'; label='Accuracy'; from=$Matches[1]; to=$Matches[2] }) }
   if ($body -match 'PP:\s*(\d+)\s*>\s*(\d+)')     { [void]$rows.Add([ordered]@{ kind='change'; label='PP'; from=$Matches[1]; to=$Matches[2] }) }
-  if ($body -match "now\s+(?:a\s+)?(?:special\s+)?($typeAlt)\s+(?:type|move)") { [void]$rows.Add([ordered]@{ kind='change'; label='Type'; from=$(if($van){$van.t}else{''}); to=$Matches[1] }) }
+  if ($body -match "now\s+(?:a\s+)?(?:special\s+)?($typeAlt)\s+(?:type|move)") { [void]$rows.Add([ordered]@{ kind='change'; label='Type'; from=$(if($van){$van.t}else{''}); to=(TType $Matches[1]) }) }
+  elseif ($body -match "\b($typeAlt)\s*>\s*($typeAlt)\b") { [void]$rows.Add([ordered]@{ kind='change'; label='Type'; from=(TType $Matches[1]); to=(TType $Matches[2]) }) }   # "Cut: Normal > Bug"
   if ($body -match 'now\s+a\s+[Ss]pecial')        { [void]$rows.Add([ordered]@{ kind='change'; label='Category'; from=$(if($van){$van.c}else{''}); to='Special' }) }
 
   # leftover prose (after removing the structured bits) -> Effect note
@@ -338,6 +340,7 @@ foreach ($line in [System.IO.File]::ReadAllLines($mcPath, [System.Text.Encoding]
   $rem = [regex]::Replace($rem, 'Acc:\s*\d+\s*>\s*\d+', '')
   $rem = [regex]::Replace($rem, 'PP:\s*\d+\s*>\s*\d+', '')
   $rem = [regex]::Replace($rem, "now\s+(?:a\s+)?(?:special\s+)?($typeAlt)\s+(?:type(?:\s+move)?|move)", '')
+  $rem = [regex]::Replace($rem, "\b($typeAlt)\s*>\s*($typeAlt)\b", '')
   $rem = [regex]::Replace($rem, 'now\s+a\s+[Ss]pecial\s+move', '')
   $rem = ($rem -replace '\s+', ' ').Trim(" ,;")
   if ($rem -match '[A-Za-z0-9]') { [void]$rows.Add([ordered]@{ kind='note'; label='Effect'; value=$rem }) }
