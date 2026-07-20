@@ -733,9 +733,15 @@ function wildRow(w){
 }
 function areaDetail(a){
   const wrap=el('div');
+  // a plain (non-starter) gift is its own encounter, so it shows as a "Gift" method row in the
+  // encounters table; the multi-option starter choice keeps its dedicated picker panel below.
+  const starters=arr(RAW.areas&&RAW.areas.meta&&RAW.areas.meta.starters);
+  const isStarterGift=g=>{const o=g.replace(/\s*\(\d+%\)\s*$/,'').split('/').map(s=>s.trim());return o.length>1&&o.every(x=>starters.indexOf(x)>-1);};
+  const giftRows=arr(a.gifts).filter(g=>!isStarterGift(g)).map(g=>({method:'Gift',level:'',species:g.replace(/\s*\(\d+%\)\s*$/,'').split('/').map(s=>s.trim()).filter(Boolean).map(n=>({name:n}))})).filter(r=>r.species.length);
+  const wildRows=a.wild.concat(giftRows);
   // wild
-  if(a.wild.length){
-    const caughtList=[];a.wild.forEach(w=>w.species.forEach(s=>{if(isCaught(s.name))caughtList.push(s);}));
+  if(wildRows.length){
+    const caughtList=[];wildRows.forEach(w=>w.species.forEach(s=>{if(isCaught(s.name))caughtList.push(s);}));
     const caughtHere=caughtList.length;
     const missed=AREA_MISSED.has(a.name);
     // shared met-location: this route's encounter may be used at a sibling area
@@ -759,7 +765,7 @@ function areaDetail(a){
     const groupNote=sibs.length?`<div class="wcap grpnote">↔ Counts as <b>one nuzlocke encounter</b> (same met location) with: ${sibs.map(areaLink).join(', ')}</div>`:'';
     if(open){
       body.innerHTML=groupNote+`<div class="tblwrap"><table class="data"><thead><tr><th>Method</th><th>Level</th><th>Species</th></tr></thead><tbody>`+
-        a.wild.map(w=>wildRow(w)).join('')+
+        wildRows.map(w=>wildRow(w)).join('')+
         `</tbody></table></div>`;
     } else if(resolvedElse){
       body.innerHTML=`<div class="collapsednote">↔ Your <b>${esc(metLoc(a.name))}</b> encounter was already ${elseCaught?'caught':'missed'} at ${areaLink(elseCaught||elseMissed)} — same met location.</div>`;
@@ -772,14 +778,13 @@ function areaDetail(a){
   } else if(!arr(a.gifts).length){
     const p=el('div','panel');p.innerHTML=`<div class="phead"><h3>${esc(a.name)}</h3></div><div class="pbody" style="color:var(--muted);font-size:13px">No wild encounter data for this location.</div>`;wrap.appendChild(p);
   }
-  // gift / starter choice (e.g. the Nuvema Town starter); highlights your pick
-  if(arr(a.gifts).length){
-    const starters=arr(RAW.areas&&RAW.areas.meta&&RAW.areas.meta.starters);
+  // starter choice (e.g. the Nuvema Town starter); highlights your pick. plain gifts are
+  // shown as a "Gift" encounter method row in the table above instead.
+  if(arr(a.gifts).some(isStarterGift)){
     const p=el('div','panel');
-    const isStarterPick=a.gifts.some(g=>{const o=g.replace(/\s*\(\d+%\)\s*$/,'').split('/').map(s=>s.trim());return o.length>1&&o.every(x=>starters.indexOf(x)>-1);});
-    p.innerHTML=`<div class="phead"><h3>${isStarterPick?'Starter':'Gift'}</h3>${isStarterPick&&!PROFILE.starter?`<span class="sub">Pick yours in the bar above</span>`:''}</div>`;
+    p.innerHTML=`<div class="phead"><h3>Starter</h3>${!PROFILE.starter?`<span class="sub">Pick yours in the bar above</span>`:''}</div>`;
     const body=el('div','pbody');
-    body.innerHTML=a.gifts.map(g=>{
+    body.innerHTML=a.gifts.filter(isStarterGift).map(g=>{
       const opts=g.replace(/\s*\(\d+%\)\s*$/,'').split('/').map(s=>s.trim()).filter(Boolean);
       return `<div class="chips">`+opts.map(o=>{
         const mine=PROFILE.starter&&PROFILE.starter===o, caught=isCaught(o), link=isMon(o);
