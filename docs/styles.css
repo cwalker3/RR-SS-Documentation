@@ -180,7 +180,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 /* clickable moves + move-info modal */
 .movelink{cursor:pointer}
 .mvdot{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none;margin-right:5px;vertical-align:middle;box-shadow:0 0 0 1px rgba(0,0,0,.12) inset}
-.chgmark{color:var(--star);font-size:10px;font-weight:800;margin-left:3px;vertical-align:1px;cursor:help}
+.chgmark{display:inline-block;width:7px;height:7px;margin-left:5px;background:var(--star);transform:rotate(45deg);border-radius:1px;vertical-align:middle;cursor:help;flex:none}
 .move.movelink:hover{border-color:var(--accent)}
 .tmchip.movelink:hover{border-color:var(--accent)}
 .chip.movelink:hover{border-color:var(--accent);color:var(--accent-2)}
@@ -406,7 +406,7 @@ table.data td.mono,table.data td .mono{font-family:var(--mono);font-variant-nume
 .moverow.changed{background:var(--star-soft,rgba(240,180,40,.06))}
 .moverow.changed:hover{background:var(--star-soft,rgba(240,180,40,.14))}
 .mv-name{white-space:nowrap}
-.mv-name .chgmark{margin-right:5px}
+.mv-name .chgmark{margin-left:0;margin-right:7px}
 .mv-type{display:inline-block;min-width:58px;text-align:center;color:#fff;font-weight:650;font-size:11px;padding:3px 9px;border-radius:999px;text-shadow:0 1px 1px rgba(0,0,0,.18)}
 .mv-cat{display:inline-block;font-weight:650;font-size:11px;padding:2px 9px;border-radius:999px;background:var(--surface-3);color:var(--ink-2)}
 .mv-cat-physical{background:rgba(224,101,68,.16);color:#e06544}

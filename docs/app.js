@@ -309,7 +309,7 @@ function openMove(name){
     const tcol=TYPE_COLORS[mi.t]||'var(--surface-3)';
     box.innerHTML=`<div class="mm-head"><h3>${esc(mi.n||name)}</h3><button class="mm-close" aria-label="Close">✕</button></div>`+
       `<div class="mm-body">`+
-      `<div class="mm-tags"><span class="mm-type" style="background:${tcol}">${esc(mi.t||'—')}</span><span class="mm-cat mm-cat-${(mi.c||'').toLowerCase()}">${esc(mi.c||'—')}</span>${mi.chg?'<span class="mm-chg" title="Modified in this hack">★ Changed in hack</span>':''}</div>`+
+      `<div class="mm-tags"><span class="mm-type" style="background:${tcol}">${esc(mi.t||'—')}</span><span class="mm-cat mm-cat-${(mi.c||'').toLowerCase()}">${esc(mi.c||'—')}</span>${mi.chg?'<span class="mm-chg" title="Modified in this hack"><span class="chgmark"></span> Changed in hack</span>':''}</div>`+
       `<div class="mm-stats"><div><b>${mi.pow==null?'—':mi.pow}</b><span>Power</span></div><div><b>${mi.acc==null?'—':mi.acc}</b><span>Accuracy</span></div><div><b>${mi.pp==null?'—':mi.pp}</b><span>PP</span></div></div>`+
       (mi.fx?`<div class="mm-fx"><b>Effect:</b> ${esc(mi.fx)}</div>`:'')+
       (mi.d?`<p class="mm-desc">${esc(mi.d)}</p>`:'')+
@@ -319,7 +319,7 @@ function openMove(name){
   moveModal.classList.add('show');
 }
 function moveChip(name,extra){return `<span class="movelink ${extra||''}" data-move="${esc(name)}" role="button" tabindex="0">${esc(name)}</span>`;}
-function moveChgMark(name){const m=moveData(name);return (m&&m.chg)?'<span class="chgmark" title="Move changed in this hack — click for details">★</span>':'';}
+function moveChgMark(name){const m=moveData(name);return (m&&m.chg)?'<span class="chgmark" title="Move changed in this hack — click for details" aria-label="changed in this hack"></span>':'';}
 // small type-colored dot shown before a move name so its element reads at a glance
 function moveTypeDot(name){const m=moveData(name),t=m&&m.t;if(!t)return '';return `<span class="mvdot" style="background:${TYPE_COLORS[t]||'var(--surface-3)'}" title="${esc(t)}"></span>`;}
 // forward evolution map, derived from each species' "Evolve <Pre> (…)" obtain location
@@ -875,7 +875,7 @@ function renderMoves(c){
   const rows=list.map(mi=>{
     const tcol=TYPE_COLORS[mi.t]||'var(--surface-3)';
     return `<tr class="movelink moverow${mi.chg?' changed':''}" data-move="${esc(mi.n)}" role="button" tabindex="0" title="View ${esc(mi.n)}">`+
-      `<td class="mv-name">${mi.chg?'<span class="chgmark" title="Changed in this hack">★</span>':''}<b>${esc(mi.n)}</b></td>`+
+      `<td class="mv-name">${mi.chg?'<span class="chgmark" title="Changed in this hack" aria-label="changed in this hack"></span>':''}<b>${esc(mi.n)}</b></td>`+
       `<td>${mi.t?`<span class="mv-type" style="background:${tcol}">${esc(mi.t)}</span>`:'—'}</td>`+
       `<td><span class="mv-cat mv-cat-${(mi.c||'').toLowerCase()}">${esc(mi.c||'—')}</span></td>`+
       `<td class="mono num">${mi.pow==null?'—':mi.pow}</td>`+
