@@ -478,7 +478,10 @@ for ($i=0; $i -lt $ml.Count; $i++) {
       [void]$pendingNotes.Add($h)
     }
     elseif ($h -match '^B?\d+F$') { Flush-Notes }         # a floor sub-header (B1F, 1F, …) — stay in the current area
-    elseif ($h -ne 'Notes') { Flush-Notes; $area = New-BBArea $h }   # location ('Notes' = doc intro, skip)
+    elseif ($h -match '^\s*[-–—•]') { Flush-Notes }        # a bullet that ends in ':' (e.g. "-official calc:") — not a location
+    # real locations only start after the first gym split; the intro (Notes, Credits,
+    # Mart changes, official calc, …) all sits before it, so skip headers until then
+    elseif ($curSplit -and $h -ne 'Notes') { Flush-Notes; $area = New-BBArea $h }
     $choice = ''
     continue
   }
