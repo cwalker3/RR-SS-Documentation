@@ -422,7 +422,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
     [void]$trainer.team.Add([ordered]@{
       species=$mt.Groups['sp'].Value.Trim(); level=$mt.Groups['lv'].Value
       item=$(if($mt.Groups['item'].Success){$mt.Groups['item'].Value.Trim()}else{''})
-      ability=$mt.Groups['ab'].Value.Trim(); moves=$moves
+      ability=$mt.Groups['ab'].Value.Trim(); nature=$(if($mt.Groups['nat'].Success){$mt.Groups['nat'].Value.Trim()}else{''}); moves=$moves
     })
     continue
   }

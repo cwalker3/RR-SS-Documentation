@@ -512,6 +512,7 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
   const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',notes:arr(t.notes),team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
+  // note: rosters below already keep the full team objects (species/level/item/ability/nature/moves)
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,was:it.was}));
   const notes=arr(a.notes);
   const gifts=arr(a.gifts);
@@ -753,9 +754,17 @@ function areaDetail(a){
         const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
         const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(esc).join('<br>')}</div>`:'';
         const badge=t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:'';
-        const detail=`<div class="tblwrap"><table class="data trainer-team"><thead><tr><th>Pokémon</th><th>Lv</th><th>Item</th><th>Ability</th><th>Moves</th></tr></thead><tbody>`+
-          arr(t.team).map(m=>`<tr><td><span class="monname${isMon(m.species)?' monlink':''}"${monAttr(m.species)}>${spriteByName(m.species,26,'cspr')}<b>${esc(m.species)}</b></span></td><td class="mono">${esc(m.level)}</td><td>${m.item?itemSpriteImg(m.item)+esc(m.item):'<span class="faint">—</span>'}</td><td>${m.ability?esc(m.ability):'<span class="faint">—</span>'}</td><td>${arr(m.moves).map(mv=>`<span class="chip movelink" data-move="${esc(mv)}" role="button" tabindex="0">${esc(mv)}${moveChgMark(mv)}</span>`).join(' ')||'<span class="faint">—</span>'}</td></tr>`).join('')+
-          `</tbody></table></div>`;
+        const team=arr(t.team);
+        const tcell=(fn)=>team.map(m=>`<td>${fn(m)}</td>`).join('');
+        const hasItem=team.some(m=>m.item), hasAb=team.some(m=>m.ability), hasNat=team.some(m=>m.nature);
+        const detail=`<div class="tblwrap"><table class="data teamsheet">`+
+          `<tr><th>Pokémon</th>${tcell(m=>`<div class="tsmon${isMon(m.species)?' monlink':''}"${monAttr(m.species)}>${spriteByName(m.species,60,'tsspr')}<div class="tsname">${esc(m.species)}</div></div>`)}</tr>`+
+          `<tr><th>Level</th>${tcell(m=>`<span class="mono">${esc(m.level)}</span>`)}</tr>`+
+          (hasItem?`<tr><th>Held Item</th>${tcell(m=>m.item?`<span class="tsitem">${itemSpriteImg(m.item)}${esc(m.item)}</span>`:'<span class="faint">—</span>')}</tr>`:'')+
+          (hasAb?`<tr><th>Ability</th>${tcell(m=>m.ability?esc(m.ability):'<span class="faint">—</span>')}</tr>`:'')+
+          (hasNat?`<tr><th>Nature</th>${tcell(m=>m.nature?esc(m.nature):'<span class="faint">—</span>')}</tr>`:'')+
+          `<tr><th>Moves</th>${tcell(m=>arr(m.moves).map(mv=>`<div class="tsmove movelink" data-move="${esc(mv)}" role="button" tabindex="0">${esc(mv)}${moveChgMark(mv)}</div>`).join('')||'<span class="faint">—</span>')}</tr>`+
+          `</table></div>`;
         return `<details class="trainer${done?' tdone':''}${rival?' rivalrow':''}"><summary><span class="tsumhead">${chk}<span class="tname">${esc(t.name)}${badge}${tag}</span></span>${tnote}<div class="tpreview">${teamInline(t.team)}</div></summary><div class="tdetail">${detail}</div></details>`;
       }).join('');
     p.appendChild(body);wrap.appendChild(p);

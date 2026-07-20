@@ -237,8 +237,19 @@ h3 .movelink:hover{color:var(--accent)}
 .tdetail{padding:2px 13px 12px}
 .trainer.tdone>summary .tname{opacity:.55}
 .faint{color:var(--faint)}
-.trainer-team td{font-size:13px}
-.trainer-team .chip{font-size:12.5px;padding:3px 8px}
+/* team sheet: attributes down the left, one Pokémon per column (like the source docs) */
+.data.teamsheet{border-collapse:collapse}
+.data.teamsheet th{position:static;text-align:right;text-transform:none;letter-spacing:0;color:var(--accent-2);font-weight:700;font-size:12px;white-space:nowrap;padding:8px 12px;background:var(--surface-2);border:1px solid var(--line);vertical-align:middle;width:1%}
+.data.teamsheet td{text-align:center;padding:8px 12px;border:1px solid var(--line);vertical-align:middle;min-width:118px;font-size:13.5px}
+.tsmon{display:inline-flex;flex-direction:column;align-items:center;gap:1px}
+.tsspr{width:60px;height:60px}
+.tsname{font-weight:700;font-size:13.5px}
+.tsmon.monlink{cursor:pointer}
+.tsmon.monlink:hover .tsname{color:var(--accent-2)}
+.tsitem{display:inline-flex;align-items:center;justify-content:center}
+.tsmove{padding:2px 0;font-size:13px;line-height:1.35}
+.tsmove.movelink{cursor:pointer;border-radius:5px}
+.tsmove.movelink:hover{color:var(--accent-2)}
 .pkid{display:flex;flex-direction:column;gap:3px}
 .chip.mon{display:inline-flex;align-items:center;gap:6px;padding:4px 12px 4px 6px}
 .monname{display:inline-flex;align-items:center;gap:8px}
