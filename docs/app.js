@@ -71,11 +71,15 @@ function toggleMissed(name){if(AREA_MISSED.has(name))AREA_MISSED.delete(name);el
 let ITEMS_DONE=new Set();try{ITEMS_DONE=new Set(JSON.parse(localStorage.getItem(gkey('items'))||'[]'));}catch(e){}
 function saveItems(){try{localStorage.setItem(gkey('items'),JSON.stringify([...ITEMS_DONE]));}catch(e){}}
 function toggleItem(id){if(ITEMS_DONE.has(id))ITEMS_DONE.delete(id);else ITEMS_DONE.add(id);saveItems();}
-function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size+ITEMS_DONE.size;}
+// gym badges earned (by normalized gym name)
+let BADGES=new Set();try{BADGES=new Set(JSON.parse(localStorage.getItem(gkey('badges'))||'[]'));}catch(e){}
+function saveBadges(){try{localStorage.setItem(gkey('badges'),JSON.stringify([...BADGES]));}catch(e){}}
+function toggleBadge(k){if(BADGES.has(k))BADGES.delete(k);else BADGES.add(k);saveBadges();}
+function trackTotal(){return CAUGHT.size+TRAINERS_DONE.size+AREA_MISSED.size+ITEMS_DONE.size+BADGES.size;}
 function resetCaught(){
   if(!trackTotal())return;
   if(!confirm('Reset all run progress? This clears every caught Pokémon, missed encounter, completed trainer, and picked-up item.'))return;
-  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();ITEMS_DONE.clear();saveCaught();saveTrainers();saveMissed();saveItems();
+  CAUGHT.clear();TRAINERS_DONE.clear();AREA_MISSED.clear();ITEMS_DONE.clear();BADGES.clear();saveCaught();saveTrainers();saveMissed();saveItems();saveBadges();
   Object.keys(wildOpen).forEach(k=>delete wildOpen[k]);
   reRenderKeepScroll();
 }
@@ -522,6 +526,9 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   return {name:a.name,wild,rosters,special,items,notes,gifts,giftMons,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
 });
 const wildOpen={};
+// gym badges: the gym locations, in story order, de-duped by name (ignoring "(…)" suffixes)
+function gymKey(n){return n.replace(/\s*\(.*\)\s*$/,'').toLowerCase().trim();}
+const GYMS=AREAS.filter(a=>/\bgym\b/i.test(a.name)).filter((a,i,arr)=>arr.findIndex(x=>gymKey(x.name)===gymKey(a.name))===i);
 const AREA2IDX={};
 AREAS.forEach((a,i)=>{const n=normName(a.name);if(AREA2IDX[n]==null)AREA2IDX[n]=i;});
 function areaCaughtCount(a){return a.wild.reduce((n,w)=>n+w.species.filter(s=>isCaught(s.name)).length,0)+a.giftMons.filter(s=>isCaught(s)).length;}
@@ -586,6 +593,14 @@ function profileBar(){
 function renderAreas(c){
   c.appendChild(collapsibleAbout('areas',RAW.areas.meta));
   c.appendChild(profileBar());
+  if(GYMS.length){
+    const earned=GYMS.filter(g=>BADGES.has(gymKey(g.name))).length;
+    const bd=el('div','badgebar');
+    bd.innerHTML=`<span class="plabel">Badges <span class="badgecount">${earned}/${GYMS.length}</span></span>`+
+      GYMS.map(g=>{const k=gymKey(g.name),on=BADGES.has(k),nm=g.name.replace(/\s*\(.*\)\s*$/,'');
+        return `<button class="badgechip${on?' on':''}" data-badge="${esc(k)}" title="${esc(nm)}${on?' — earned':' — click when earned'}"><span class="bmark"></span>${esc(nm.replace(/\s*Gym$/,''))}</button>`;}).join('');
+    c.appendChild(bd);
+  }
   const bar=el('div','areabar');
   const nc=CAUGHT.size, nt=TRAINERS_DONE.size, nm=AREA_MISSED.size;
   const parts=[];if(nc)parts.push(`<b>${nc}</b> caught`);if(nt)parts.push(`<b>${nt}</b> trainers beaten`);if(nm)parts.push(`<b>${nm}</b> missed`);
@@ -1003,6 +1018,8 @@ contentEl.addEventListener('click',e=>{
   if(tc){e.preventDefault();e.stopPropagation();if(tc.dataset.item!=null)toggleItem(tc.dataset.item);else toggleTrainer(tc.dataset.trainer);reRenderKeepScroll();return;}
   const cb=e.target.closest('.catch');
   if(cb){e.preventDefault();e.stopPropagation();toggleCaught(cb.dataset.catch);reRenderKeepScroll();return;}
+  const bg=e.target.closest('.badgechip');
+  if(bg){e.preventDefault();toggleBadge(bg.dataset.badge);reRenderKeepScroll();return;}
   const mb=e.target.closest('.missbtn');
   if(mb){e.preventDefault();toggleMissed(mb.dataset.miss);reRenderKeepScroll();return;}
   const wb=e.target.closest('.collapsebtn');
