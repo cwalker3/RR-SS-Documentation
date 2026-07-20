@@ -606,8 +606,8 @@ function areaRosterTrainers(a){
 }
 // run-wide totals for the progress bar: trainers you'd face, and nuzlocke encounters
 // (one per met-location group that has a wild table, plus each gift-only encounter)
-function trainerTotal(){return AREAS.reduce((n,a)=>n+areaRosterTrainers(a).length,0);}
-function trainerOptionalTotal(){return AREAS.reduce((n,a)=>n+areaRosterTrainers(a).filter(t=>t.optional).length,0);}
+// mandatory / optional trainer totals and beaten counts, tracked separately
+function trainerCounts(){let mT=0,oT=0,mB=0,oB=0;AREAS.forEach(a=>areaRosterTrainers(a).forEach(t=>{const done=TRAINERS_DONE.has(t.id);if(t.optional){oT++;if(done)oB++;}else{mT++;if(done)mB++;}}));return{mT,oT,mB,oB};}
 function encounterTotal(){
   const seen=new Set();let n=0;
   AREAS.forEach(a=>{const key=a.sep?(' '+a.name):metLoc(a.name);if(seen.has(key))return;seen.add(key);
@@ -673,8 +673,10 @@ function renderAreas(c){
     c.appendChild(lc);
   }
   const bar=el('div','areabar');
-  const nc=CAUGHT.size, nt=TRAINERS_DONE.size, nm=AREA_MISSED.size, tTot=trainerTotal(), eTot=encounterTotal();
-  const parts=[`<b>${nc}</b>/<b>${eTot}</b> caught`,`<b>${nt}</b>/<b>${tTot}</b> trainers beaten`];if(nm)parts.push(`<b>${nm}</b> missed`);
+  const nc=CAUGHT.size, nm=AREA_MISSED.size, eTot=encounterTotal(), tc=trainerCounts();
+  const parts=[`<b>${nc}</b>/<b>${eTot}</b> caught`,`<b>${tc.mB}</b>/<b>${tc.mT}</b> trainers beaten`];
+  if(tc.oT)parts.push(`<b>${tc.oB}</b>/<b>${tc.oT}</b> optional beaten`);
+  if(nm)parts.push(`<b>${nm}</b> missed`);
   bar.innerHTML=`<div class="attempts"><span class="plabel">Attempt</span>`+
       `<select class="attemptsel" aria-label="Choose attempt">${ATTEMPTS.map(a=>`<option value="${esc(a.id)}"${a.id===ATTEMPT_ID?' selected':''}>${esc(a.name)}</option>`).join('')}</select>`+
       `<button class="attbtn attnew" title="Start a new attempt with fresh tracking">+ New</button>`+
@@ -693,8 +695,7 @@ function renderAreas(c){
   md.append(list,detail);c.appendChild(md);
   const q=state.query.toLowerCase().trim();
   const items=q?AREAS.filter(a=>a._s.includes(q)):AREAS;
-  const oTot=trainerOptionalTotal();
-  list.appendChild(el('div','count',items.length+' location'+(items.length===1?'':'s')+(q?'':` · ${eTot} encounters · ${tTot} trainers${oTot?` (${oTot} optional)`:''}`)));
+  list.appendChild(el('div','count',items.length+' location'+(items.length===1?'':'s')+(q?'':` · ${eTot} encounters · ${tc.mT} trainers${tc.oT?` + ${tc.oT} optional`:''}`)));
   if(!items.length){detail.innerHTML=emptyState('No areas match your search.');return;}
   // on first open, jump to the first area you still have work left in
   if(!state.areaInit&&!q){state.areaInit=true;for(let i=0;i<AREAS.length;i++){const st=areaStatus(AREAS[i]);if((st.hasEnc||st.hasTr)&&!st.complete){state.areaSel=i;break;}}}
