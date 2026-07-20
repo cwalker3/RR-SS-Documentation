@@ -552,7 +552,10 @@ $celIdx = -1
 for ($x = 0; $x -lt $areaData.Count; $x++) { if ($areaData[$x].name -eq 'Celadon City') { $celIdx = $x; break } }
 if ($celIdx -ge 0) {
   $dept = [ordered]@{ name='Celadon Department Store'; wild=@(); rosters=@(); special=@(); items=@(); notes=@('Eevee is on 1F (counts as its own encounter). TM40, TM03, TM20 and TM34 can also be found here.'); gifts=@('Eevee (100%)') }
-  $corner = [ordered]@{ name='Celadon Game Corner'; wild=@(); rosters=@(); special=@(); items=@(); notes=@('The Game Corner encounter counts as a separate encounter here.'); gifts=@() }
+  # the mastersheet doesn't list the prize species, so use the classic FireRed Game Corner set
+  $cornerMons = @('Abra','Clefairy','Dratini','Scyther','Porygon') | ForEach-Object { [ordered]@{ name=$_ } }
+  $corner = [ordered]@{ name='Celadon Game Corner'; wild=@([ordered]@{ method='Game Corner'; level=''; species=@($cornerMons) }); rosters=@(); special=@(); items=@();
+    notes=@('Prize Pokemon bought with coins (classic FireRed set): Abra (180), Clefairy (500), Dratini (2800), Scyther (5500), Porygon (9999). Pick one - it counts as a separate encounter.'); gifts=@() }
   $areaData.Insert($celIdx + 1, $corner)
   $areaData.Insert($celIdx + 1, $dept)
 }
