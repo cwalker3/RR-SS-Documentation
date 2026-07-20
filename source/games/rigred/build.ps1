@@ -433,6 +433,18 @@ $splitCaps = @{}                                       # split name -> level cap
 $pendingNotes = New-Object System.Collections.ArrayList
 
 function New-BBArea($name){
+  # a long prose parenthetical (e.g. "(even if you answer correctly, you still have to fight
+  # the trainers)") belongs in the area's notes, not its title; short tags like "(PERMA SUN)"
+  # or "(east)" stay in the title.
+  $noteText = ''
+  foreach ($m in ([regex]::Matches($name, '\([^)]{15,}\)'))) {
+    if ($m.Value -cmatch '[a-z]') {
+      $inner = ($m.Value -replace '^\(','' -replace '\)$','').Trim()
+      $noteText = (@($noteText, $inner) | Where-Object { $_ }) -join '; '
+      $name = $name.Replace($m.Value, '')
+    }
+  }
+  $name = ($name -replace '\s{2,}', ' ').Trim()
   $split = $script:curSplit
   # same location in the same split = one area; a revisit in a later split becomes its own
   # area (kept in story order) labelled with the split, so trainers stay ordered
@@ -440,6 +452,7 @@ function New-BBArea($name){
   $exists = $false; foreach ($a in $script:areas) { if ($a.baseName -eq $name) { $exists = $true; break } }
   $disp = if ($exists -and $split) { "$name ($split)" } else { $name }
   $a = [ordered]@{ name=$disp; baseName=$name; wild=(New-Object System.Collections.ArrayList); trainers=(New-Object System.Collections.ArrayList); notes=(New-Object System.Collections.ArrayList); homeSplit=$split }
+  if ($noteText) { [void]$a.notes.Add($noteText) }
   [void]$script:areas.Add($a); return $a
 }
 function End-BBTrainer(){
