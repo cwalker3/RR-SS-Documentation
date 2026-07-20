@@ -394,7 +394,13 @@ function End-BBTrainer(){
   if ($script:trainer -and $script:trainer.team.Count -gt 0 -and $script:area) { [void]$script:area.trainers.Add($script:trainer) }
   $script:trainer = $null
 }
-function New-BBTrainer($name){ return [ordered]@{ id=''; name=$name; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; notes=(New-Object System.Collections.ArrayList); team=(New-Object System.Collections.ArrayList) } }
+function New-BBTrainer($name){
+  # optional fights are tagged "(OPTIONAL…)" in the sheet; item-guard bosses read "(To get …)".
+  # flag them and strip the bare OPTIONAL marker (keeping any "GIVES X" detail as a plain aside).
+  $opt = $false
+  if ($name -match '(?i)\(OPTIONAL\b') { $opt = $true; $name = ($name -replace '(?i)\(OPTIONAL,\s*', '(' -replace '(?i)\s*\(OPTIONAL\)', '').Trim() }
+  elseif ($name -match '(?i)\(To get ') { $opt = $true }
+  return [ordered]@{ id=''; name=$name; optional=$opt; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; notes=(New-Object System.Collections.ArrayList); team=(New-Object System.Collections.ArrayList) } }
 # a note that reads like it's about the upcoming battle attaches to that trainer, not the area
 function Is-FightNote($n){ return ($n -match '(?i)\bfight\b|\bbattle\b|do this|doing this|wait until|before you|can.?t switch|tag battle|rematch') }
 function Flush-Notes(){ foreach ($n in $script:pendingNotes) { if ($script:area) { [void]$script:area.notes.Add($n) } }; $script:pendingNotes.Clear() }

@@ -535,7 +535,7 @@ function chgRow(o){
 /* ================= AREAS ================= */
 const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
-  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',notes:arr(t.notes),team:arr(t.team)}))}));
+  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,notes:arr(t.notes),team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   // note: rosters below already keep the full team objects (species/level/item/ability/nature/moves)
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,was:it.was}));
@@ -601,6 +601,7 @@ function areaRosterTrainers(a){
 // run-wide totals for the progress bar: trainers you'd face, and nuzlocke encounters
 // (one per met-location group that has a wild table, plus each gift-only encounter)
 function trainerTotal(){return AREAS.reduce((n,a)=>n+areaRosterTrainers(a).length,0);}
+function trainerOptionalTotal(){return AREAS.reduce((n,a)=>n+areaRosterTrainers(a).filter(t=>t.optional).length,0);}
 function encounterTotal(){
   const seen=new Set();let n=0;
   AREAS.forEach(a=>{const key=a.sep?(' '+a.name):metLoc(a.name);if(seen.has(key))return;seen.add(key);
@@ -614,7 +615,9 @@ function areaStatus(a){
   const grpCaught=grp.some(x=>areaCaughtCount(x)>0), grpMissed=grp.some(x=>AREA_MISSED.has(x.name));
   const grpHasEnc=grp.some(x=>x.wild.length>0||x.giftMons.length>0);
   const trs=areaRosterTrainers(a), hasTr=trs.length>0;
-  const trainersDone=hasTr?trs.every(t=>TRAINERS_DONE.has(t.id)):true;
+  // optional fights (item-guard bosses, side trainers) don't block area completion
+  const reqTrs=trs.filter(t=>!t.optional);
+  const trainersDone=reqTrs.every(t=>TRAINERS_DONE.has(t.id));
   const encResolved=!grpHasEnc||grpCaught||grpMissed;
   const complete=(hasEnc||hasTr)&&encResolved&&trainersDone;
   const resolvedElsewhere=hasEnc&&!caught&&!missed&&(grpCaught||grpMissed);
@@ -674,7 +677,8 @@ function renderAreas(c){
   md.append(list,detail);c.appendChild(md);
   const q=state.query.toLowerCase().trim();
   const items=q?AREAS.filter(a=>a._s.includes(q)):AREAS;
-  list.appendChild(el('div','count',items.length+' location'+(items.length===1?'':'s')+(q?'':` · ${eTot} encounters · ${tTot} trainers`)));
+  const oTot=trainerOptionalTotal();
+  list.appendChild(el('div','count',items.length+' location'+(items.length===1?'':'s')+(q?'':` · ${eTot} encounters · ${tTot} trainers${oTot?` (${oTot} optional)`:''}`)));
   if(!items.length){detail.innerHTML=emptyState('No areas match your search.');return;}
   if(!items.includes(AREAS[state.areaSel]))state.areaSel=AREAS.indexOf(items[0]);
   const frag=document.createDocumentFragment();
@@ -817,6 +821,7 @@ function areaDetail(a){
           tag=(rn&&rs&&g===rn&&st===rs)?` <span class="rivalpill" title="Your rival, based on your gender & starter">★ Your rival</span>`:` <span class="varpill">${esc(g)} · ${esc(st)}</span>`;}
         if(t.choice&&!PROFILE.starter)tag+=` <span class="varpill">if ${esc(t.choice)}</span>`;
         if(t.split)tag+=` <span class="varpill" title="You fight this on a later visit here, during the ${esc(t.split)}">${esc(t.split)}</span>`;
+        if(t.optional)tag+=` <span class="optpill" title="Optional — skippable; doesn't block this area from counting as done">optional</span>`;
         const done=track&&TRAINERS_DONE.has(t.id);
         const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
         const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(esc).join('<br>')}</div>`:'';

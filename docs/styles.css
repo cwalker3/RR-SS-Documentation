@@ -323,6 +323,7 @@ h3 .movelink:hover{color:var(--accent)}
 .pnote b{color:var(--accent-2)}
 .rivalpill{font-size:10px;font-weight:800;letter-spacing:.02em;padding:2px 8px;border-radius:6px;background:var(--accent);color:var(--accent-ink);white-space:nowrap}
 .varpill{font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;background:var(--surface-3);color:var(--muted);white-space:nowrap}
+.optpill{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;padding:2px 7px;border-radius:6px;background:color-mix(in srgb,var(--accent-2) 16%,transparent);color:var(--accent-2);border:1px solid color-mix(in srgb,var(--accent-2) 35%,transparent);white-space:nowrap}
 tr.rivalrow{background:color-mix(in srgb,var(--accent) 6%,transparent)}
 .collapsebtn{flex:none;font-size:11.5px;font-weight:650;padding:4px 11px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--muted)}
 .collapsebtn:hover{color:var(--ink);border-color:var(--accent-line)}
