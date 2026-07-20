@@ -501,7 +501,7 @@ function statRow(lbl,v,c,scale){
   let cls='',ghost='',ann='<span class="sann"></span>';
   if(c){const d=(+c.to)-(+c.from);cls=d>0?'up':'down';
     ghost=`<i class="ghost" style="width:${Math.min(100,Math.round((+c.from)/scale*100))}%"></i>`;
-    ann=`<span class="sann"><span class="was">${esc(c.from)}</span><span class="delta ${d>0?'up':'down'}">${d>0?'+':''}${d}</span></span>`;}
+    ann=`<span class="sann"><span class="delta ${d>0?'up':'down'}" title="was ${esc(c.from)} in the base game">${d>0?'+':''}${d}</span></span>`;}
   return `<div class="strow ${cls}${lbl==='Total'?' total':''}"><span class="sl">${lbl}</span><span class="sbar">${ghost}<i style="width:${w}%"></i></span>${ann}<span class="sv"><b>${v}</b></span></div>`;
 }
 function statsPanelOf(s,chg){
@@ -523,7 +523,7 @@ function statBlock(stats){
     return `<div class="statrow">
       <span class="sn">${esc(s.label)}</span>
       <span class="bar"><i style="width:${wT}%;opacity:.28"></i><i class="now" style="width:${wF}%"></i></span>
-      <span class="val"><span class="was">${esc(s.from)}</span><span class="arrow">→</span><span class="to">${esc(s.to)}</span>${d?`<span class="delta ${d>0?'up':'down'}">${d>0?'+':''}${d}</span>`:''}</span>
+      <span class="val"><span class="to">${esc(s.to)}</span>${d?`<span class="delta ${d>0?'up':'down'}" title="was ${esc(s.from)} in the base game">${d>0?'+':''}${d}</span>`:''}</span>
     </div>`;
   }).join('')+'</div>';
 }
