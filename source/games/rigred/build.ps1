@@ -430,6 +430,7 @@ $itemRows = New-Object System.Collections.ArrayList
 $area = $null; $trainer = $null; $baseTName = ''; $choice = ''; $noteBuf = $null; $curSplit = ''
 $splitList = New-Object System.Collections.ArrayList   # split names in story order
 $splitCaps = @{}                                       # split name -> level cap
+$optCtx = $false                                       # inside an optional "For N …" fight group
 $pendingNotes = New-Object System.Collections.ArrayList
 
 function New-BBArea($name){
@@ -487,7 +488,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
   # any other line ends a pending note (buffered; assigned to the next trainer or area)
   if ($noteBuf -ne $null) { [void]$pendingNotes.Add($noteBuf); $noteBuf = $null }
   if ($t -match '\(Level Cap:\s*(\d+)') {                                  # gym split / phase
-    Flush-Notes; $cap = [int]$Matches[1]; $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim()
+    Flush-Notes; $optCtx = $false; $cap = [int]$Matches[1]; $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim()
     if (-not $splitCaps.ContainsKey($curSplit)) { $splitCaps[$curSplit] = $cap; [void]$splitList.Add($curSplit) }
     continue
   }
@@ -544,9 +545,13 @@ for ($i=0; $i -lt $ml.Count; $i++) {
     if (NextIsTeam $i) {                                  # trainer header
       $baseTName = $h
       $trainer = New-BBTrainer $h
+      if ($optCtx) { $trainer.optional = $true }          # fights in a "For N …" berry group are optional
       if ($choice) { $trainer.choice = $choice }
       Assign-Notes $trainer                              # pending fight notes attach to this trainer
     }
+    # "For 2 Salac's:" etc. — an optional berry-access fight group; keep its fights in the
+    # current area (Route 20 West) and mark them optional, rather than making a new location
+    elseif ($h -match '^For\s+\d+\b') { $optCtx = $true; [void]$pendingNotes.Add($h) }
     # a ':' line that reads like a sentence (lowercase function words) is a note that
     # introduces a fight, not a location — buffer it for the next trainer / area.
     # ignore words inside "(…)" so a real location with a parenthetical aside
@@ -558,7 +563,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
     elseif ($h -match '^\s*[-–—•]') { Flush-Notes }        # a bullet that ends in ':' (e.g. "-official calc:") — not a location
     # real locations only start after the first gym split; the intro (Notes, Credits,
     # Mart changes, official calc, …) all sits before it, so skip headers until then
-    elseif ($curSplit -and $h -ne 'Notes') { Flush-Notes; $area = New-BBArea $h }
+    elseif ($curSplit -and $h -ne 'Notes') { Flush-Notes; $optCtx = $false; $area = New-BBArea $h }
     $choice = ''
     continue
   }
