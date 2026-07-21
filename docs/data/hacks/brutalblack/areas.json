@@ -14,9 +14,9 @@
         "name": "Chili/Cress/Cilan Split",
         "cap": 16,
         "bosses": [
-          "striatongym-gymleaderchiligivestm48insteadoftm83-snivy-2",
-          "striatongym-gymleadercressgivestm48insteadoftm83-tepig-3",
-          "striatongym-gymleadercilangivestm48insteadoftm83-oshawott-4"
+          "striatongym-gymleaderchili-snivy-2",
+          "striatongym-gymleadercress-3",
+          "striatongym-gymleadercilan-4"
         ]
       },
       {
@@ -72,10 +72,12 @@
       "wild": [],
       "rosters": [],
       "special": [],
-      "items": [],
+      "items": [
+        "Super Rod",
+        "given by Mom"
+      ],
       "notes": [
-        "first rival battle is the same",
-        "mom now gives Super Rod instead of Xtransceiver"
+        "First rival battle is the same"
       ],
       "gifts": [
         "Snivy/Tepig/Oshawott (100%)"
@@ -1440,7 +1442,7 @@
               ]
             },
             {
-              "id": "striatongym-gymleadercressgivestm48insteadoftm83-tepig-3",
+              "id": "striatongym-gymleadercress-3",
               "name": "Gym Leader Cress",
               "reward": "TM48 instead of TM83",
               "optional": false,
@@ -1531,7 +1533,7 @@
               ]
             },
             {
-              "id": "striatongym-gymleadercilangivestm48insteadoftm83-oshawott-4",
+              "id": "striatongym-gymleadercilan-4",
               "name": "Gym Leader Cilan",
               "reward": "TM48 instead of TM83",
               "optional": false,
@@ -2160,7 +2162,7 @@
               "id": "route3-nurseryaideautumngivesshedshell-5",
               "name": "Nursery Aide Autumn",
               "reward": "Shed Shell",
-              "optional": false,
+              "optional": true,
               "b2b": "",
               "badge": "",
               "choice": "",
@@ -2248,219 +2250,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "id": "route3-schoolkidal-6",
-              "name": "School Kid Al",
-              "optional": false,
-              "b2b": "",
-              "badge": "",
-              "choice": "",
-              "split": "",
-              "notes": [],
-              "team": [
-                {
-                  "species": "Sandslash",
-                  "level": "22",
-                  "item": "Passho Berry",
-                  "ability": "Rough Skin",
-                  "nature": "Docile",
-                  "moves": [
-                    "Bulldoze",
-                    "Rock Tomb",
-                    "Rock Smash",
-                    "Metal Claw"
-                  ]
-                },
-                {
-                  "species": "Scraggy",
-                  "level": "22",
-                  "item": "Sitrus Berry",
-                  "ability": "Intimidate",
-                  "nature": "Hasty",
-                  "moves": [
-                    "Dragon Dance",
-                    "Brick Break",
-                    "Crunch",
-                    "Rest"
-                  ]
-                },
-                {
-                  "species": "Shellder",
-                  "level": "22",
-                  "item": "Eviolite",
-                  "ability": "Skill Link",
-                  "nature": "Rash",
-                  "moves": [
-                    "Spike Cannon",
-                    "Icicle Spear"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "route3-schoolkidmarsha-7",
-              "name": "School Kid Marsha",
-              "optional": false,
-              "b2b": "",
-              "badge": "",
-              "choice": "",
-              "split": "",
-              "notes": [],
-              "team": [
-                {
-                  "species": "Vulpix",
-                  "level": "22",
-                  "item": "Charcoal",
-                  "ability": "Flash Fire",
-                  "nature": "Timid",
-                  "moves": [
-                    "Hypnosis",
-                    "Flame Burst",
-                    "Hex",
-                    "Will-O-Wisp"
-                  ]
-                },
-                {
-                  "species": "Pikachu",
-                  "level": "22",
-                  "item": "Light Ball",
-                  "ability": "Static",
-                  "nature": "Modest",
-                  "moves": [
-                    "Volt Switch",
-                    "Surf"
-                  ]
-                },
-                {
-                  "species": "Diglett",
-                  "level": "22",
-                  "item": "Soft Sand",
-                  "ability": "Arena Trap",
-                  "nature": "Hardy",
-                  "moves": [
-                    "Dig",
-                    "Rock Smash",
-                    "Rock Slide",
-                    "Sucker Punch"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "route3-schoolkidgina-8",
-              "name": "School Kid Gina",
-              "optional": false,
-              "b2b": "",
-              "badge": "",
-              "choice": "",
-              "split": "",
-              "notes": [],
-              "team": [
-                {
-                  "species": "Croagunk",
-                  "level": "23",
-                  "item": "Liechi Berry",
-                  "ability": "Poison Touch",
-                  "nature": "Timid",
-                  "moves": [
-                    "Fake Out",
-                    "Poison Jab",
-                    "Submission",
-                    "Rock Slide"
-                  ]
-                },
-                {
-                  "species": "Golbat",
-                  "level": "23",
-                  "item": "Starf Berry",
-                  "ability": "Inner Focus",
-                  "nature": "Quiet",
-                  "moves": [
-                    "Cross Poison",
-                    "Acrobatics",
-                    "Supersonic",
-                    "Haze"
-                  ]
-                },
-                {
-                  "species": "Gloom",
-                  "level": "23",
-                  "item": "Salac Berry",
-                  "ability": "Chlorophyll",
-                  "nature": "Lax",
-                  "moves": [
-                    "Giga Drain",
-                    "Sludge Bomb",
-                    "Sleep Powder",
-                    "Leech Seed"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "route3-schoolkidedgar-9",
-              "name": "School Kid Edgar",
-              "optional": false,
-              "b2b": "",
-              "badge": "",
-              "choice": "",
-              "split": "",
-              "notes": [],
-              "team": [
-                {
-                  "species": "Tranquill",
-                  "level": "23",
-                  "item": "Scope Lens",
-                  "ability": "Big Pecks",
-                  "nature": "Relaxed",
-                  "moves": [
-                    "Roost",
-                    "Drill Peck",
-                    "Shadow Sneak",
-                    "U-Turn"
-                  ]
-                },
-                {
-                  "species": "Skiploom",
-                  "level": "23",
-                  "item": "Eviolite",
-                  "ability": "Prankster",
-                  "nature": "Gentle",
-                  "moves": [
-                    "Sleep Powder",
-                    "Leech Seed",
-                    "Giga Drain",
-                    "U-Turn"
-                  ]
-                },
-                {
-                  "species": "Staravia",
-                  "level": "23",
-                  "item": "Muscle Band",
-                  "ability": "Intimidate",
-                  "nature": "Bold",
-                  "moves": [
-                    "Rock Smash",
-                    "Aerial Ace",
-                    "U-Turn",
-                    "Feather Dance"
-                  ]
-                },
-                {
-                  "species": "Doduo",
-                  "level": "23",
-                  "item": "Shell Bell",
-                  "ability": "Reckless",
-                  "nature": "Hasty",
-                  "moves": [
-                    "Dig",
-                    "Wing Attack",
-                    "U-Turn",
-                    "Double-Edge"
-                  ]
-                }
-              ]
             }
           ]
         }
@@ -2494,249 +2283,7 @@
         }
       ],
       "notes": [
-        "Shaking (rustling) grass can only be caught on North OR South, not both.",
-        "HP Up removed"
-      ],
-      "gifts": [],
-      "sep": true
-    },
-    {
-      "name": "Route 3 South",
-      "wild": [
-        {
-          "method": "Grass",
-          "level": "10",
-          "species": [
-            {
-              "name": "Butterfree",
-              "pct": 20,
-              "rare": false
-            },
-            {
-              "name": "Beedrill",
-              "pct": 20,
-              "rare": false
-            },
-            {
-              "name": "Ledyba",
-              "pct": 10,
-              "rare": false
-            },
-            {
-              "name": "Spinarak",
-              "pct": 10,
-              "rare": false
-            },
-            {
-              "name": "Wurmple",
-              "pct": 10,
-              "rare": false
-            },
-            {
-              "name": "Kricketune",
-              "pct": 10,
-              "rare": false
-            },
-            {
-              "name": "Venonat",
-              "pct": 5,
-              "rare": true
-            },
-            {
-              "name": "Burmy",
-              "pct": 5,
-              "rare": true
-            },
-            {
-              "name": "Combee",
-              "pct": 4,
-              "rare": true
-            },
-            {
-              "name": "Nincada",
-              "pct": 4,
-              "rare": true
-            },
-            {
-              "name": "Paras",
-              "pct": 1,
-              "rare": true
-            },
-            {
-              "name": "Joltik",
-              "pct": 1,
-              "rare": true
-            }
-          ]
-        },
-        {
-          "method": "Rustling Grass",
-          "level": "10",
-          "species": [
-            {
-              "name": "Turtwig",
-              "pct": 34,
-              "rare": false
-            },
-            {
-              "name": "Piplup",
-              "pct": 34,
-              "rare": false
-            },
-            {
-              "name": "Chimchar",
-              "pct": 32,
-              "rare": false
-            }
-          ]
-        },
-        {
-          "method": "Dark Grass",
-          "level": "15",
-          "species": [
-            {
-              "name": "Nidorina",
-              "pct": 20,
-              "rare": false
-            },
-            {
-              "name": "Nidorino",
-              "pct": 20,
-              "rare": false
-            },
-            {
-              "name": "Ekans",
-              "pct": 10,
-              "rare": false
-            },
-            {
-              "name": "Zubat",
-              "pct": 10,
-              "rare": false
-            },
-            {
-              "name": "Gulpin",
-              "pct": 10,
-              "rare": false
-            },
-            {
-              "name": "Koffing",
-              "pct": 10,
-              "rare": false
-            },
-            {
-              "name": "Roselia",
-              "pct": 5,
-              "rare": true
-            },
-            {
-              "name": "Skorupi",
-              "pct": 5,
-              "rare": true
-            },
-            {
-              "name": "Trubbish",
-              "pct": 4,
-              "rare": true
-            },
-            {
-              "name": "Oddish",
-              "pct": 4,
-              "rare": true
-            },
-            {
-              "name": "Seviper",
-              "pct": 1,
-              "rare": true
-            },
-            {
-              "name": "Gastly",
-              "pct": 1,
-              "rare": true
-            }
-          ]
-        },
-        {
-          "method": "Fishing",
-          "level": "10",
-          "species": [
-            {
-              "name": "Magikarp",
-              "pct": 60,
-              "rare": false
-            },
-            {
-              "name": "Tentacool",
-              "pct": 40,
-              "rare": false
-            }
-          ]
-        },
-        {
-          "method": "Fishing Dark Spot",
-          "level": "10",
-          "species": [
-            {
-              "name": "Feebas",
-              "pct": 60,
-              "rare": false
-            },
-            {
-              "name": "Chinchou",
-              "pct": 40,
-              "rare": false
-            }
-          ]
-        },
-        {
-          "method": "Surfing",
-          "level": "50",
-          "species": [
-            {
-              "name": "Crawdaunt",
-              "pct": 60,
-              "rare": false
-            },
-            {
-              "name": "Sharpedo",
-              "pct": 30,
-              "rare": false
-            },
-            {
-              "name": "Huntail",
-              "pct": 10,
-              "rare": false
-            }
-          ]
-        },
-        {
-          "method": "Surfing Dark Spot",
-          "level": "50",
-          "species": [
-            {
-              "name": "Pelipper",
-              "pct": 60,
-              "rare": false
-            },
-            {
-              "name": "Mantine",
-              "pct": 30,
-              "rare": false
-            },
-            {
-              "name": "Swanna",
-              "pct": 10,
-              "rare": false
-            }
-          ]
-        }
-      ],
-      "rosters": [],
-      "special": [],
-      "items": [],
-      "notes": [
-        "Shaking (rustling) grass can only be caught on North OR South, not both.",
-        "Water and Dark Grass encounters are only here in the south."
+        "Rustling grass can only be caught on North OR South, not both.",
       ],
       "gifts": [],
       "sep": true
@@ -3241,11 +2788,463 @@
         }
       ],
       "notes": [
-        "PP Up removed",
-        "Original TM47 location removed",
         "Seven Sage Bronius and Team Plasma Grunt 4"
       ],
       "gifts": []
+    },
+    {
+      "name": "Route 3 South",
+      "wild": [
+        {
+          "method": "Grass",
+          "level": "10",
+          "species": [
+            {
+              "name": "Butterfree",
+              "pct": 20,
+              "rare": false
+            },
+            {
+              "name": "Beedrill",
+              "pct": 20,
+              "rare": false
+            },
+            {
+              "name": "Ledyba",
+              "pct": 10,
+              "rare": false
+            },
+            {
+              "name": "Spinarak",
+              "pct": 10,
+              "rare": false
+            },
+            {
+              "name": "Wurmple",
+              "pct": 10,
+              "rare": false
+            },
+            {
+              "name": "Kricketune",
+              "pct": 10,
+              "rare": false
+            },
+            {
+              "name": "Venonat",
+              "pct": 5,
+              "rare": true
+            },
+            {
+              "name": "Burmy",
+              "pct": 5,
+              "rare": true
+            },
+            {
+              "name": "Combee",
+              "pct": 4,
+              "rare": true
+            },
+            {
+              "name": "Nincada",
+              "pct": 4,
+              "rare": true
+            },
+            {
+              "name": "Paras",
+              "pct": 1,
+              "rare": true
+            },
+            {
+              "name": "Joltik",
+              "pct": 1,
+              "rare": true
+            }
+          ]
+        },
+        {
+          "method": "Rustling Grass",
+          "level": "10",
+          "species": [
+            {
+              "name": "Turtwig",
+              "pct": 34,
+              "rare": false
+            },
+            {
+              "name": "Piplup",
+              "pct": 34,
+              "rare": false
+            },
+            {
+              "name": "Chimchar",
+              "pct": 32,
+              "rare": false
+            }
+          ]
+        },
+        {
+          "method": "Dark Grass",
+          "level": "15",
+          "species": [
+            {
+              "name": "Nidorina",
+              "pct": 20,
+              "rare": false
+            },
+            {
+              "name": "Nidorino",
+              "pct": 20,
+              "rare": false
+            },
+            {
+              "name": "Ekans",
+              "pct": 10,
+              "rare": false
+            },
+            {
+              "name": "Zubat",
+              "pct": 10,
+              "rare": false
+            },
+            {
+              "name": "Gulpin",
+              "pct": 10,
+              "rare": false
+            },
+            {
+              "name": "Koffing",
+              "pct": 10,
+              "rare": false
+            },
+            {
+              "name": "Roselia",
+              "pct": 5,
+              "rare": true
+            },
+            {
+              "name": "Skorupi",
+              "pct": 5,
+              "rare": true
+            },
+            {
+              "name": "Trubbish",
+              "pct": 4,
+              "rare": true
+            },
+            {
+              "name": "Oddish",
+              "pct": 4,
+              "rare": true
+            },
+            {
+              "name": "Seviper",
+              "pct": 1,
+              "rare": true
+            },
+            {
+              "name": "Gastly",
+              "pct": 1,
+              "rare": true
+            }
+          ]
+        },
+        {
+          "method": "Fishing",
+          "level": "10",
+          "species": [
+            {
+              "name": "Magikarp",
+              "pct": 60,
+              "rare": false
+            },
+            {
+              "name": "Tentacool",
+              "pct": 40,
+              "rare": false
+            }
+          ]
+        },
+        {
+          "method": "Fishing Dark Spot",
+          "level": "10",
+          "species": [
+            {
+              "name": "Feebas",
+              "pct": 60,
+              "rare": false
+            },
+            {
+              "name": "Chinchou",
+              "pct": 40,
+              "rare": false
+            }
+          ]
+        },
+        {
+          "method": "Surfing",
+          "level": "50",
+          "species": [
+            {
+              "name": "Crawdaunt",
+              "pct": 60,
+              "rare": false
+            },
+            {
+              "name": "Sharpedo",
+              "pct": 30,
+              "rare": false
+            },
+            {
+              "name": "Huntail",
+              "pct": 10,
+              "rare": false
+            }
+          ]
+        },
+        {
+          "method": "Surfing Dark Spot",
+          "level": "50",
+          "species": [
+            {
+              "name": "Pelipper",
+              "pct": 60,
+              "rare": false
+            },
+            {
+              "name": "Mantine",
+              "pct": 30,
+              "rare": false
+            },
+            {
+              "name": "Swanna",
+              "pct": 10,
+              "rare": false
+            }
+          ]
+        }
+      ],
+      "rosters": [
+        {
+              "id": "route3-schoolkidal-6",
+              "name": "School Kid Al",
+              "optional": false,
+              "b2b": "",
+              "badge": "",
+              "choice": "",
+              "split": "",
+              "notes": [],
+              "team": [
+                {
+                  "species": "Sandslash",
+                  "level": "22",
+                  "item": "Passho Berry",
+                  "ability": "Rough Skin",
+                  "nature": "Docile",
+                  "moves": [
+                    "Bulldoze",
+                    "Rock Tomb",
+                    "Rock Smash",
+                    "Metal Claw"
+                  ]
+                },
+                {
+                  "species": "Scraggy",
+                  "level": "22",
+                  "item": "Sitrus Berry",
+                  "ability": "Intimidate",
+                  "nature": "Hasty",
+                  "moves": [
+                    "Dragon Dance",
+                    "Brick Break",
+                    "Crunch",
+                    "Rest"
+                  ]
+                },
+                {
+                  "species": "Shellder",
+                  "level": "22",
+                  "item": "Eviolite",
+                  "ability": "Skill Link",
+                  "nature": "Rash",
+                  "moves": [
+                    "Spike Cannon",
+                    "Icicle Spear"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "route3-schoolkidmarsha-7",
+              "name": "School Kid Marsha",
+              "optional": false,
+              "b2b": "",
+              "badge": "",
+              "choice": "",
+              "split": "",
+              "notes": [],
+              "team": [
+                {
+                  "species": "Vulpix",
+                  "level": "22",
+                  "item": "Charcoal",
+                  "ability": "Flash Fire",
+                  "nature": "Timid",
+                  "moves": [
+                    "Hypnosis",
+                    "Flame Burst",
+                    "Hex",
+                    "Will-O-Wisp"
+                  ]
+                },
+                {
+                  "species": "Pikachu",
+                  "level": "22",
+                  "item": "Light Ball",
+                  "ability": "Static",
+                  "nature": "Modest",
+                  "moves": [
+                    "Volt Switch",
+                    "Surf"
+                  ]
+                },
+                {
+                  "species": "Diglett",
+                  "level": "22",
+                  "item": "Soft Sand",
+                  "ability": "Arena Trap",
+                  "nature": "Hardy",
+                  "moves": [
+                    "Dig",
+                    "Rock Smash",
+                    "Rock Slide",
+                    "Sucker Punch"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "route3-schoolkidgina-8",
+              "name": "School Kid Gina",
+              "optional": false,
+              "b2b": "",
+              "badge": "",
+              "choice": "",
+              "split": "",
+              "notes": [],
+              "team": [
+                {
+                  "species": "Croagunk",
+                  "level": "23",
+                  "item": "Liechi Berry",
+                  "ability": "Poison Touch",
+                  "nature": "Timid",
+                  "moves": [
+                    "Fake Out",
+                    "Poison Jab",
+                    "Submission",
+                    "Rock Slide"
+                  ]
+                },
+                {
+                  "species": "Golbat",
+                  "level": "23",
+                  "item": "Starf Berry",
+                  "ability": "Inner Focus",
+                  "nature": "Quiet",
+                  "moves": [
+                    "Cross Poison",
+                    "Acrobatics",
+                    "Supersonic",
+                    "Haze"
+                  ]
+                },
+                {
+                  "species": "Gloom",
+                  "level": "23",
+                  "item": "Salac Berry",
+                  "ability": "Chlorophyll",
+                  "nature": "Lax",
+                  "moves": [
+                    "Giga Drain",
+                    "Sludge Bomb",
+                    "Sleep Powder",
+                    "Leech Seed"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "route3-schoolkidedgar-9",
+              "name": "School Kid Edgar",
+              "optional": false,
+              "b2b": "",
+              "badge": "",
+              "choice": "",
+              "split": "",
+              "notes": [],
+              "team": [
+                {
+                  "species": "Tranquill",
+                  "level": "23",
+                  "item": "Scope Lens",
+                  "ability": "Big Pecks",
+                  "nature": "Relaxed",
+                  "moves": [
+                    "Roost",
+                    "Drill Peck",
+                    "Shadow Sneak",
+                    "U-Turn"
+                  ]
+                },
+                {
+                  "species": "Skiploom",
+                  "level": "23",
+                  "item": "Eviolite",
+                  "ability": "Prankster",
+                  "nature": "Gentle",
+                  "moves": [
+                    "Sleep Powder",
+                    "Leech Seed",
+                    "Giga Drain",
+                    "U-Turn"
+                  ]
+                },
+                {
+                  "species": "Staravia",
+                  "level": "23",
+                  "item": "Muscle Band",
+                  "ability": "Intimidate",
+                  "nature": "Bold",
+                  "moves": [
+                    "Rock Smash",
+                    "Aerial Ace",
+                    "U-Turn",
+                    "Feather Dance"
+                  ]
+                },
+                {
+                  "species": "Doduo",
+                  "level": "23",
+                  "item": "Shell Bell",
+                  "ability": "Reckless",
+                  "nature": "Hasty",
+                  "moves": [
+                    "Dig",
+                    "Wing Attack",
+                    "U-Turn",
+                    "Double-Edge"
+                  ]
+                }
+              ]
+            }
+      ],
+      "special": [],
+      "items": [],
+      "notes": [
+        "Rustling grass can only be caught on North OR South, not both."
+      ],
+      "gifts": [],
+      "sep": true
     },
     {
       "name": "Nacrene City",
@@ -9003,9 +9002,11 @@
       ],
       "rosters": [],
       "special": [],
-      "items": [],
+      "items": [
+        "Expert Belt",
+        "Rocky Helmet"
+      ],
       "notes": [
-        "The Expert Belt and Rocky Helmet are still in their original spots",
         "Heart Scale removed"
       ],
       "gifts": []

@@ -14,21 +14,26 @@
       ],
       "rows": [
         [
+          "Pallet Town",
+          "Bulbasaur/Charmander/Squirtle (100%)"
+        ],
+        [
           "Route 4",
           "Magikarp"
+        ],
+        [
+          "Underground Tunnel",
+          "Hoppip"
         ],
         [
           "Saffron City",
           "Hitmonchan/Hitmonlee/Hitmontop (100%)"
         ],
         [
-          "Silph Co (PERMA SAND)",
+          "Silph Co",
           "Lapras (100%)"
-        ],
-        [
-          "Pallet Town",
-          "Bulbasaur/Charmander/Squirtle (100%)"
         ]
+
       ]
     }
   ]
