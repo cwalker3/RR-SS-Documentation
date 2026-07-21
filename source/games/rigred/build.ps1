@@ -431,6 +431,8 @@ $area = $null; $trainer = $null; $baseTName = ''; $choice = ''; $noteBuf = $null
 $splitList = New-Object System.Collections.ArrayList   # split names in story order
 $splitCaps = @{}                                       # split name -> level cap
 $optCtx = $false                                       # inside an optional "For N …" fight group
+$optNote = ''                                          # what that group rewards (e.g. "Liechi Berries")
+$grpCtx = ''                                           # a named fight group within the current area (e.g. "Gauntlet")
 $pendingNotes = New-Object System.Collections.ArrayList
 
 function New-BBArea($name){
@@ -466,7 +468,7 @@ function New-BBTrainer($name){
   $opt = $false
   if ($name -match '(?i)\(OPTIONAL\b') { $opt = $true; $name = ($name -replace '(?i)\(OPTIONAL,\s*', '(' -replace '(?i)\s*\(OPTIONAL\)', '').Trim() }
   elseif ($name -match '(?i)\(To get ') { $opt = $true }
-  return [ordered]@{ id=''; name=$name; optional=$opt; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; notes=(New-Object System.Collections.ArrayList); team=(New-Object System.Collections.ArrayList) } }
+  return [ordered]@{ id=''; name=$name; optional=$opt; group=$script:grpCtx; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; notes=(New-Object System.Collections.ArrayList); team=(New-Object System.Collections.ArrayList) } }
 # a note that reads like it's about the upcoming battle attaches to that trainer, not the area
 function Is-FightNote($n){ return ($n -match '(?i)\bfight\b|\bbattle\b|do this|doing this|wait until|before you|can.?t switch|tag battle|rematch') }
 function Flush-Notes(){ foreach ($n in $script:pendingNotes) { if ($script:area) { [void]$script:area.notes.Add($n) } }; $script:pendingNotes.Clear() }
@@ -488,7 +490,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
   # any other line ends a pending note (buffered; assigned to the next trainer or area)
   if ($noteBuf -ne $null) { [void]$pendingNotes.Add($noteBuf); $noteBuf = $null }
   if ($t -match '\(Level Cap:\s*(\d+)') {                                  # gym split / phase
-    Flush-Notes; $optCtx = $false; $cap = [int]$Matches[1]; $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim()
+    Flush-Notes; $optCtx = $false; $optNote = ''; $grpCtx = ''; $cap = [int]$Matches[1]; $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim()
     if (-not $splitCaps.ContainsKey($curSplit)) { $splitCaps[$curSplit] = $cap; [void]$splitList.Add($curSplit) }
     continue
   }
@@ -545,13 +547,16 @@ for ($i=0; $i -lt $ml.Count; $i++) {
     if (NextIsTeam $i) {                                  # trainer header
       $baseTName = $h
       $trainer = New-BBTrainer $h
-      if ($optCtx) { $trainer.optional = $true }          # fights in a "For N …" berry group are optional
+      if ($optCtx) { $trainer.optional = $true; if ($optNote) { [void]$trainer.notes.Add($optNote) } }   # berry-group fights
       if ($choice) { $trainer.choice = $choice }
       Assign-Notes $trainer                              # pending fight notes attach to this trainer
     }
     # "For 2 Salac's:" etc. — an optional berry-access fight group; keep its fights in the
-    # current area (Route 20 West) and mark them optional, rather than making a new location
-    elseif ($h -match '^For\s+\d+\b') { $optCtx = $true; [void]$pendingNotes.Add($h) }
+    # current area (Route 20 West), mark them optional, and note which berry they reward
+    elseif ($h -match '^For\s+(\d+)\s+([A-Za-z]+)') { $optCtx = $true; $optNote = "Optional - gives access to $($Matches[1]) $($Matches[2]) Berries"; [void]$pendingNotes.Add($h) }
+    # "Gauntlet …:" — a back-to-back fight gauntlet within the current area (e.g. on Route 15),
+    # not its own location; group its trainers under a "Gauntlet" roster
+    elseif ($h -match '^Gauntlet\b') { $grpCtx = 'Gauntlet'; [void]$pendingNotes.Add($h) }
     # a ':' line that reads like a sentence (lowercase function words) is a note that
     # introduces a fight, not a location — buffer it for the next trainer / area.
     # ignore words inside "(…)" so a real location with a parenthetical aside
@@ -563,7 +568,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
     elseif ($h -match '^\s*[-–—•]') { Flush-Notes }        # a bullet that ends in ':' (e.g. "-official calc:") — not a location
     # real locations only start after the first gym split; the intro (Notes, Credits,
     # Mart changes, official calc, …) all sits before it, so skip headers until then
-    elseif ($curSplit -and $h -ne 'Notes') { Flush-Notes; $optCtx = $false; $area = New-BBArea $h }
+    elseif ($curSplit -and $h -ne 'Notes') { Flush-Notes; $optCtx = $false; $optNote = ''; $grpCtx = ''; $area = New-BBArea $h }
     $choice = ''
     continue
   }
@@ -636,8 +641,19 @@ foreach ($a in $areas) {
   $notes = @($a.notes)
   $gifts = @(); if ($giftsByLoc.ContainsKey($a.name)) { $gifts = @($giftsByLoc[$a.name]) }
   if ($wild.Count -eq 0 -and $trs.Count -eq 0 -and $items.Count -eq 0 -and $notes.Count -eq 0 -and $gifts.Count -eq 0) { continue }
-  $rosters = @(); if ($trs.Count) { $rosters = @([ordered]@{ title='Trainers'; kind=''; trainers=$trs }) }
-  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@(); items=$items; notes=$notes; gifts=$gifts })
+  # split trainers into rosters by their fight group, preserving story order; a named group
+  # (e.g. "Gauntlet") becomes its own roster so the UI can mark and group it.
+  $rosters = @()
+  if ($trs.Count) {
+    $groupOrder = New-Object System.Collections.ArrayList
+    foreach ($tr in $trs) { $g = [string]$tr.group; if (-not $groupOrder.Contains($g)) { [void]$groupOrder.Add($g) } }
+    foreach ($g in $groupOrder) {
+      $gt = @($trs | Where-Object { [string]$_.group -eq $g })
+      foreach ($tr in $gt) { [void]$tr.Remove('group') }
+      $rosters += [ordered]@{ title=$(if ($g) { $g } else { 'Trainers' }); kind=$(if ($g -eq 'Gauntlet') { 'gauntlet' } else { '' }); trainers=$gt }
+    }
+  }
+  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=@($rosters); special=@(); items=$items; notes=$notes; gifts=$gifts })
 }
 
 # areas the doc only mentions in prose around Celadon City: the Eevee at the Department
@@ -751,29 +767,36 @@ if ($stubs.Count) {
   $sorted = $all | Sort-Object @{ Expression = { if ($_.dex -eq '000') { 9999 } else { [int]$_.dex } } }, name
 }
 
-# ---------- TM / HM compatibility (FireRed/LeafGreen baseline; vg 7) ----------
-$tmKeyByMove = @{}; $tmMoveByKey = [ordered]@{}
-foreach ($cl in [System.IO.File]::ReadAllLines("$src\machines.csv")) {
-  $p = $cl -split ','; if ($p.Count -lt 4 -or $p[1] -ne '7') { continue }
-  $mnum = [int]$p[0]; $mid = [int]$p[3]; $nm = $mvName[$mid]; if (-not $nm) { continue }
-  $key = if ($mnum -le 50) { 'TM{0:D2}' -f $mnum } else { 'HM{0:D2}' -f ($mnum - 100) }
-  $tmKeyByMove[$mid] = $key; $tmMoveByKey[$key] = (Fix-Move $nm)
-}
-$monTms = @{}
-$tmCompatPath = "$src\pokemon_moves_frlg_tm.csv"
-if (Test-Path $tmCompatPath) {
-  foreach ($cl in [System.IO.File]::ReadAllLines($tmCompatPath)) {
-    $p = $cl -split ','; if ($p.Count -lt 3 -or $p[1] -ne '7' -or $p[0] -notmatch '^\d+$') { continue }
-    $mid = [int]$p[2]; if (-not $tmKeyByMove.ContainsKey($mid)) { continue }
-    $pk = [int]$p[0]; if (-not $monTms.ContainsKey($pk)) { $monTms[$pk] = @{} }
-    $monTms[$pk][$tmKeyByMove[$mid]] = $true
+# ---------- TM / HM compatibility ----------
+# Disabled for now (#58): the FireRed/LeafGreen baseline below isn't accurate for this hack.
+# Re-enable once real per-species compatibility is exported from HexManiac Advance; the
+# scaffolding (machines.csv + pokemon_moves_frlg_tm.csv) is kept for that.
+$tmMoveByKey = [ordered]@{}
+$emitTms = $false
+if ($emitTms) {
+  $tmKeyByMove = @{}
+  foreach ($cl in [System.IO.File]::ReadAllLines("$src\machines.csv")) {
+    $p = $cl -split ','; if ($p.Count -lt 4 -or $p[1] -ne '7') { continue }
+    $mnum = [int]$p[0]; $mid = [int]$p[3]; $nm = $mvName[$mid]; if (-not $nm) { continue }
+    $key = if ($mnum -le 50) { 'TM{0:D2}' -f $mnum } else { 'HM{0:D2}' -f ($mnum - 100) }
+    $tmKeyByMove[$mid] = $key; $tmMoveByKey[$key] = (Fix-Move $nm)
   }
-}
-function TmSortKey($k){ if ($k.StartsWith('HM')) { 100 + [int]$k.Substring(2) } else { [int]$k.Substring(2) } }
-foreach ($e in $sorted) {
-  if ($e.dex -eq '000') { continue }
-  $pk = [int]$e.dex
-  if ($monTms.ContainsKey($pk)) { $e.tms = ((@($monTms[$pk].Keys) | Sort-Object { TmSortKey $_ }) -join ' ') }
+  $monTms = @{}
+  $tmCompatPath = "$src\pokemon_moves_frlg_tm.csv"
+  if (Test-Path $tmCompatPath) {
+    foreach ($cl in [System.IO.File]::ReadAllLines($tmCompatPath)) {
+      $p = $cl -split ','; if ($p.Count -lt 3 -or $p[1] -ne '7' -or $p[0] -notmatch '^\d+$') { continue }
+      $mid = [int]$p[2]; if (-not $tmKeyByMove.ContainsKey($mid)) { continue }
+      $pk = [int]$p[0]; if (-not $monTms.ContainsKey($pk)) { $monTms[$pk] = @{} }
+      $monTms[$pk][$tmKeyByMove[$mid]] = $true
+    }
+  }
+  function TmSortKey($k){ if ($k.StartsWith('HM')) { 100 + [int]$k.Substring(2) } else { [int]$k.Substring(2) } }
+  foreach ($e in $sorted) {
+    if ($e.dex -eq '000') { continue }
+    $pk = [int]$e.dex
+    if ($monTms.ContainsKey($pk)) { $e.tms = ((@($monTms[$pk].Keys) | Sort-Object { TmSortKey $_ }) -join ' ') }
+  }
 }
 
 # level caps per split, in story order, with the boss whose defeat raises the cap

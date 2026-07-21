@@ -1112,7 +1112,7 @@ Route 15:
 Grass (50): Absol (20%), Weezing (20%), Porygon2 (20%), Aipom (20%), Heracross (20%)
 
 
-*TM18 > Elixir
+*Elixir > TM18
 
 
 Picnicker Yazmin:
