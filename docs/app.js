@@ -571,6 +571,9 @@ const SPLITS=arr(RAW.areas&&RAW.areas.meta&&RAW.areas.meta.splits);
 function currentSplitIdx(){for(let i=0;i<SPLITS.length;i++){const bs=arr(SPLITS[i].bosses);if(!bs.length||!bs.some(b=>TRAINERS_DONE.has(b)))return i;}return SPLITS.length;}
 function currentCap(){const i=currentSplitIdx();return i<SPLITS.length?SPLITS[i].cap:(SPLITS.length?SPLITS[SPLITS.length-1].cap:null);}
 function splitLabel(n){return n.replace(/\s*Split$/i,'');}
+// areas that hold a split boss (beating it raises the level cap) get highlighted in the list
+const BOSS_IDS=new Set();SPLITS.forEach(s=>arr(s.bosses).forEach(b=>{if(b)BOSS_IDS.add(b);}));
+function areaHasBoss(a){return a.rosters.some(r=>r.trainers.some(t=>BOSS_IDS.has(t.id)));}
 const AREA2IDX={};
 AREAS.forEach((a,i)=>{const n=normName(a.name);if(AREA2IDX[n]==null)AREA2IDX[n]=i;});
 function areaCaughtCount(a){
@@ -708,12 +711,14 @@ function renderAreas(c){
     const st=areaStatus(a);
     b.classList.toggle('done',st.complete);
     b.classList.toggle('optleft',st.complete&&st.optionalsLeft);
-    const marker=st.complete&&st.optionalsLeft?`<span class="areacheck optleft" title="Done — optional trainers still available">◑</span>`
+    const boss=areaHasBoss(a);b.classList.toggle('hasboss',boss);
+    const optN=st.trs.filter(t=>t.optional&&!TRAINERS_DONE.has(t.id)).length;
+    const marker=st.complete&&st.optionalsLeft?`<span class="areacheck optleft" title="Done — ${optN} optional trainer${optN===1?'':'s'} still available here">◑</span>`
       :st.complete?`<span class="areacheck done" title="Route complete">✓</span>`
       :st.caught?`<span class="areacheck" title="Pokémon caught here">✓</span>`
       :st.missed?`<span class="areamiss" title="Encounter missed here">✕</span>`
       :st.resolvedElsewhere?`<span class="arealinked" title="Encounter used elsewhere at this met location">↔</span>`:'';
-    b.innerHTML=`<span class="lname">${esc(a.name)}</span><span class="lmeta">${a.wild.length?a.wild.length+' wild':''}${a.wild.length&&tc?' · ':''}${tc?tc+' trn':''}</span>${marker}`;
+    b.innerHTML=`<span class="lname">${boss?`<span class="bosstag" title="Contains a split boss — beating it raises the level cap">★</span>`:''}${esc(a.name)}</span><span class="lmeta">${a.wild.length?a.wild.length+' wild':''}${a.wild.length&&tc?' · ':''}${tc?tc+' trn':''}</span>${marker}`;
     b.onclick=()=>{state.areaSel=idx;reRenderKeepScroll();};
     frag.appendChild(b);
   });
@@ -838,8 +843,9 @@ function areaDetail(a){
     if(!trainers.length)return;
     const track=r.kind!=='rematch';
     const doneN=track?trainers.filter(t=>TRAINERS_DONE.has(t.id)).length:0;
-    const p=el('div','panel');
-    p.innerHTML=`<div class="phead"><h3>${esc(r.title)}</h3><span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span></div>`;
+    const p=el('div','panel'+(r.kind==='gauntlet'?' gauntlet':''));
+    const gtag=r.kind==='gauntlet'?`<span class="gauntpill" title="A gauntlet: back-to-back fights with no healing in between">⚔ Gauntlet</span>`:'';
+    p.innerHTML=`<div class="phead"><h3>${esc(r.title)}</h3>${gtag}<span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span></div>`;
     const body=el('div','pbody');
     body.innerHTML=trainers.map(t=>{
         let tag='';const rival=isRivalTrainer(t);
