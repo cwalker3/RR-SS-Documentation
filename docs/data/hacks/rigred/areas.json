@@ -215,7 +215,13 @@
       ],
       "rosters": [],
       "special": [],
-      "items": [],
+      "items": [
+        {
+          "id": "viridiancity-noteitem-0",
+          "name": "White Herb",
+          "how": "×5 from the sleeping guy (NPC)"
+        }
+      ],
       "notes": [
         "The sleeping guy now gives 5 White Herbs, these are the only White Herbs you get in the whole game so use them sparingly"
       ],
@@ -764,7 +770,8 @@
           "trainers": [
             {
               "id": "pewtercity-professorsadatogettheoldamber-0",
-              "name": "Professor Sada (To get the Old Amber)",
+              "name": "Professor Sada",
+              "reward": "Old Amber",
               "weather": "sun",
               "optional": true,
               "b2b": "",
@@ -5933,7 +5940,8 @@
             },
             {
               "id": "route8-bikerjarenfortm44resttotherightofaidan-5",
-              "name": "Biker Jaren (for TM44 Rest) (to the right of Aidan)",
+              "name": "Biker Jaren (to the right of Aidan)",
+              "reward": "TM44 Rest",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -10287,7 +10295,8 @@
             },
             {
               "id": "route15-beautyoliviaoneontheleftfortm42facade-6",
-              "name": "Beauty Olivia (one on the left, for TM42 Facade)",
+              "name": "Beauty Olivia (one on the left)",
+              "reward": "TM42 Facade",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -10377,7 +10386,8 @@
             },
             {
               "id": "route15-birdkeeperedwinoneontherightfortm17protect-7",
-              "name": "Bird Keeper Edwin (one on the right, for TM17 Protect)",
+              "name": "Bird Keeper Edwin (one on the right)",
+              "reward": "TM17 Protect",
               "optional": false,
               "b2b": "",
               "badge": "",
