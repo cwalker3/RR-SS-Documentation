@@ -1349,6 +1349,20 @@
       "gifts": []
     },
     {
+      "name": "Route 4",
+      "wild": [],
+      "rosters": [],
+      "special": [],
+      "items": [],
+      "notes": [
+        "The Magikarp salesman is here — counts as its own encounter, separate from the Route 4 grass / fish / surf."
+      ],
+      "gifts": [
+        "Magikarp"
+      ],
+      "sep": true
+    },
+    {
       "name": "Mt Moon",
       "wild": [],
       "rosters": [
@@ -1589,13 +1603,15 @@
             },
             {
               "id": "mtmoon-teamrocketariana1thegruntrightbeforefossilnerd-6",
-              "name": "Team Rocket Ariana 1 (the grunt right before Fossil Nerd)",
+              "name": "Team Rocket Ariana 1",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "",
               "split": "",
-              "notes": [],
+              "notes": [
+                "the grunt right before Fossil Nerd"
+              ],
               "team": [
                 {
                   "species": "Smoochum",
@@ -1786,12 +1802,8 @@
       "rosters": [],
       "special": [],
       "items": [],
-      "notes": [
-        "count the Magikarp as a separate encounter to the grass/fish/surf encounter"
-      ],
-      "gifts": [
-        "Magikarp"
-      ]
+      "notes": [],
+      "gifts": []
     },
     {
       "name": "Cerulean City",
