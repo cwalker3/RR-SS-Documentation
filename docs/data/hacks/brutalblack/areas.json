@@ -1230,12 +1230,22 @@
           "how": "Item ball"
         }
       ],
+      "notes": [],
+      "gifts": []
+    },
+    {
+      "name": "Dreamyard",
+      "wild": [],
+      "rosters": [],
+      "special": [],
+      "items": [],
       "notes": [
-        "count this as separate to your Grass encounter"
+        "The gift monkey (Pansage / Pansear / Panpour) — counts as its own encounter, separate from the Dreamyard grass."
       ],
       "gifts": [
         "Pansage/Pansear/Panpour (100%)"
-      ]
+      ],
+      "sep": true
     },
     {
       "name": "Striaton Gym",
@@ -1636,11 +1646,11 @@
       "wild": [],
       "rosters": [
         {
-          "title": "Trainers",
-          "kind": "",
+          "title": "Back-to-back",
+          "kind": "gauntlet",
           "reward": "",
-          "note": "",
           "optional": false,
+          "note": "The two grunts are fought back-to-back (no healing in between).",
           "trainers": [
             {
               "id": "dreamyardlenorasplit-teamplasmagrunt1-0",
