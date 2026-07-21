@@ -779,7 +779,8 @@
       "items": [
         {
           "id": "route2-item-0",
-          "name": "TM46 Thief"
+          "name": "TM46 Thief",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -1208,19 +1209,23 @@
       "items": [
         {
           "id": "dreamyard-item-0",
-          "name": "TM23 Smack Down"
+          "name": "TM23 Smack Down",
+          "how": "Item ball"
         },
         {
           "id": "dreamyard-item-1",
-          "name": "TM76 Struggle Bug"
+          "name": "TM76 Struggle Bug",
+          "how": "Item ball"
         },
         {
           "id": "dreamyard-item-2",
-          "name": "TM59 Incinerate"
+          "name": "TM59 Incinerate",
+          "how": "Item ball"
         },
         {
           "id": "dreamyard-item-3",
-          "name": "TM88 Pluck"
+          "name": "TM88 Pluck",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -2464,23 +2469,28 @@
       "items": [
         {
           "id": "route3-item-0",
-          "name": "TM39 Rock Tomb"
+          "name": "TM39 Rock Tomb",
+          "how": "Item ball"
         },
         {
           "id": "route3-item-1",
-          "name": "TM78 Bulldoze"
+          "name": "TM78 Bulldoze",
+          "how": "Item ball"
         },
         {
           "id": "route3-item-2",
-          "name": "TM09 Venoshock"
+          "name": "TM09 Venoshock",
+          "how": "Item ball"
         },
         {
           "id": "route3-item-3",
-          "name": "TM64 Explosion"
+          "name": "TM64 Explosion",
+          "how": "Item ball"
         },
         {
           "id": "route3-item-4",
-          "name": "TM90 Natural Gift"
+          "name": "TM90 Natural Gift",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -3226,7 +3236,8 @@
       "items": [
         {
           "id": "wellspringcave-item-0",
-          "name": "TM95 Snarl"
+          "name": "TM95 Snarl",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -3770,7 +3781,8 @@
       "items": [
         {
           "id": "notpinwheelforest-item-0",
-          "name": "TM47 Low Sweep"
+          "name": "TM47 Low Sweep",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -4852,11 +4864,13 @@
       "items": [
         {
           "id": "pinwheelforest-item-0",
-          "name": "TM82"
+          "name": "TM82",
+          "how": "Item ball"
         },
         {
           "id": "pinwheelforest-item-1",
-          "name": "TM85"
+          "name": "TM85",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -5134,19 +5148,23 @@
       "items": [
         {
           "id": "route4-item-0",
-          "name": "TM43 Flame Charge"
+          "name": "TM43 Flame Charge",
+          "how": "Item ball"
         },
         {
           "id": "route4-item-1",
-          "name": "TM31 Brick Break"
+          "name": "TM31 Brick Break",
+          "how": "Item ball"
         },
         {
           "id": "route4-item-2",
-          "name": "TM77 Magical Leaf"
+          "name": "TM77 Magical Leaf",
+          "how": "Item ball"
         },
         {
           "id": "route4-item-3",
-          "name": "TM40 Aerial Ace"
+          "name": "TM40 Aerial Ace",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -7420,7 +7438,8 @@
       "items": [
         {
           "id": "route5-item-0",
-          "name": "TM12 Taunt"
+          "name": "TM12 Taunt",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -7711,7 +7730,8 @@
       "items": [
         {
           "id": "route16-item-0",
-          "name": "TM03"
+          "name": "TM03",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -9392,11 +9412,13 @@
       "items": [
         {
           "id": "route6-item-0",
-          "name": "TM53 Energy Ball"
+          "name": "TM53 Energy Ball",
+          "how": "Item ball"
         },
         {
           "id": "route6-item-1",
-          "name": "TM36 Sludge Bomb"
+          "name": "TM36 Sludge Bomb",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -10146,7 +10168,8 @@
       "items": [
         {
           "id": "coldstorage-item-0",
-          "name": "TM63 Embargo"
+          "name": "TM63 Embargo",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -11655,19 +11678,23 @@
       "items": [
         {
           "id": "chargestonecave-item-0",
-          "name": "HM05 Waterfall"
+          "name": "HM05 Waterfall",
+          "how": "Item ball"
         },
         {
           "id": "chargestonecave-item-1",
-          "name": "TM91 Flash Cannon"
+          "name": "TM91 Flash Cannon",
+          "how": "Item ball"
         },
         {
           "id": "chargestonecave-item-2",
-          "name": "TM29 Psychic"
+          "name": "TM29 Psychic",
+          "how": "Item ball"
         },
         {
           "id": "chargestonecave-item-3",
-          "name": "TM30 Shadow Ball"
+          "name": "TM30 Shadow Ball",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -12144,7 +12171,8 @@
       "items": [
         {
           "id": "route7-item-0",
-          "name": "TM60 Quash"
+          "name": "TM60 Quash",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -13776,11 +13804,13 @@
       "items": [
         {
           "id": "twistmountain-item-0",
-          "name": "TM87 Swagger"
+          "name": "TM87 Swagger",
+          "how": "Item ball"
         },
         {
           "id": "twistmountain-item-1",
-          "name": "TM71 Stone Edge"
+          "name": "TM71 Stone Edge",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -15483,7 +15513,8 @@
       "items": [
         {
           "id": "route8-item-0",
-          "name": "TM34 Sludge Wave"
+          "name": "TM34 Sludge Wave",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -17752,7 +17783,8 @@
       "items": [
         {
           "id": "reliccastle-item-0",
-          "name": "TM26 Earthquake"
+          "name": "TM26 Earthquake",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -18443,7 +18475,8 @@
       "items": [
         {
           "id": "route9-item-0",
-          "name": "TM89"
+          "name": "TM89",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -18592,15 +18625,18 @@
       "items": [
         {
           "id": "route10-item-0",
-          "name": "TM72 Volt Switch"
+          "name": "TM72 Volt Switch",
+          "how": "Item ball"
         },
         {
           "id": "route10-item-1",
-          "name": "TM92 Trick Room"
+          "name": "TM92 Trick Room",
+          "how": "Item ball"
         },
         {
           "id": "route10-item-2",
-          "name": "TM61 Will-O-Wisp"
+          "name": "TM61 Will-O-Wisp",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -21519,7 +21555,8 @@
       "items": [
         {
           "id": "victoryroad-item-0",
-          "name": "TM50 Overheat"
+          "name": "TM50 Overheat",
+          "how": "Item ball"
         }
       ],
       "notes": [

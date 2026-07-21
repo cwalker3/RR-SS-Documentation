@@ -690,7 +690,8 @@
       "items": [
         {
           "id": "viridianforest-item-0",
-          "name": "Exp Share"
+          "name": "Exp Share",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -763,7 +764,8 @@
           "trainers": [
             {
               "id": "pewtercity-professorsadatogettheoldamber-0",
-              "name": "Professor Sada (To get the Old Amber) (PERMA SUN)",
+              "name": "Professor Sada (To get the Old Amber)",
+              "weather": "sun",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -3959,7 +3961,8 @@
       "items": [
         {
           "id": "route11-item-0",
-          "name": "Thick Club"
+          "name": "Thick Club",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -6492,19 +6495,23 @@
       "items": [
         {
           "id": "celadondepartmentstore-noteitem-0",
-          "name": "TM40"
+          "name": "TM40",
+          "how": "Item ball"
         },
         {
           "id": "celadondepartmentstore-noteitem-1",
-          "name": "TM03"
+          "name": "TM03",
+          "how": "Item ball"
         },
         {
           "id": "celadondepartmentstore-noteitem-2",
-          "name": "TM20"
+          "name": "TM20",
+          "how": "Item ball"
         },
         {
           "id": "celadondepartmentstore-noteitem-3",
-          "name": "TM34"
+          "name": "TM34",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -7882,7 +7889,8 @@
       "items": [
         {
           "id": "rockethideout-item-0",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -9285,7 +9293,8 @@
       "items": [
         {
           "id": "route16-noteitem-0",
-          "name": "HM02"
+          "name": "HM02",
+          "how": "Item ball"
         }
       ],
       "notes": [
@@ -10200,7 +10209,8 @@
             },
             {
               "id": "route15-bikerernest-5",
-              "name": "Biker Ernest (PERMA SUN)",
+              "name": "Biker Ernest",
+              "weather": "sun",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -10736,7 +10746,8 @@
       "items": [
         {
           "id": "route15-item-0",
-          "name": "TM18"
+          "name": "TM18",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -10945,7 +10956,8 @@
       "items": [
         {
           "id": "route14-item-0",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -11028,7 +11040,8 @@
           "trainers": [
             {
               "id": "route13-birdkeeperbeck-0",
-              "name": "Bird Keeper Beck (PERMA SUN)",
+              "name": "Bird Keeper Beck",
+              "weather": "sun",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -11188,7 +11201,8 @@
           "trainers": [
             {
               "id": "route12-fisherandrew-0",
-              "name": "Fisher Andrew (PERMA RAIN)",
+              "name": "Fisher Andrew",
+              "weather": "rain",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -11270,7 +11284,8 @@
       "items": [
         {
           "id": "route12-item-0",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -11329,15 +11344,18 @@
       "items": [
         {
           "id": "safarizone-item-0",
-          "name": "Max Potion"
+          "name": "Max Potion",
+          "how": "Item ball"
         },
         {
           "id": "safarizone-item-1",
-          "name": "Revive"
+          "name": "Revive",
+          "how": "Item ball"
         },
         {
           "id": "safarizone-item-2",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -13607,13 +13625,15 @@
             },
             {
               "id": "silphco-rivalblue5noforthisfight-bulbasaur-8",
-              "name": "Rival Blue 5 (NO PERMA SAND FOR THIS FIGHT)",
+              "name": "Rival Blue 5",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "Bulbasaur",
               "split": "",
-              "notes": [],
+              "notes": [
+                "No permanent sandstorm for this fight."
+              ],
               "team": [
                 {
                   "species": "Skarmory",
@@ -13697,13 +13717,15 @@
             },
             {
               "id": "silphco-rivalblue5noforthisfight-squirtle-9",
-              "name": "Rival Blue 5 (NO PERMA SAND FOR THIS FIGHT)",
+              "name": "Rival Blue 5",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "Squirtle",
               "split": "",
-              "notes": [],
+              "notes": [
+                "No permanent sandstorm for this fight."
+              ],
               "team": [
                 {
                   "species": "Skarmory",
@@ -13787,13 +13809,15 @@
             },
             {
               "id": "silphco-rivalblue5noforthisfight-charmander-10",
-              "name": "Rival Blue 5 (NO PERMA SAND FOR THIS FIGHT)",
+              "name": "Rival Blue 5",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "Charmander",
               "split": "",
-              "notes": [],
+              "notes": [
+                "No permanent sandstorm for this fight."
+              ],
               "team": [
                 {
                   "species": "Skarmory",
@@ -13877,7 +13901,8 @@
             },
             {
               "id": "silphco-teamrocketarcher2thetrainerrightbeforegiovanni2-11",
-              "name": "Team Rocket Archer 2 (the trainer right before Giovanni 2) (PERMA SAND)",
+              "name": "Team Rocket Archer 2 (the trainer right before Giovanni 2)",
+              "weather": "sand",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -13967,7 +13992,8 @@
             },
             {
               "id": "silphco-teamrocketgiovanni2-12",
-              "name": "Team Rocket Giovanni 2 (PERMA SAND)",
+              "name": "Team Rocket Giovanni 2",
+              "weather": "sand",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -14062,27 +14088,33 @@
       "items": [
         {
           "id": "silphco-item-0",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "silphco-item-1",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "silphco-item-2",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "silphco-item-3",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "silphco-item-4",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "silphco-item-5",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -15755,27 +15787,33 @@
       "items": [
         {
           "id": "pokemonmansion-item-0",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "pokemonmansion-item-1",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "pokemonmansion-item-2",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "pokemonmansion-item-3",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "pokemonmansion-item-4",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         },
         {
           "id": "pokemonmansion-item-5",
-          "name": "Potion"
+          "name": "Potion",
+          "how": "Item ball"
         }
       ],
       "notes": [],
@@ -15871,7 +15909,8 @@
             },
             {
               "id": "route20west-cooltraineraj-1",
-              "name": "Cooltrainer AJ (PERMA SAND)",
+              "name": "Cooltrainer AJ",
+              "weather": "sand",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -15957,7 +15996,8 @@
           "trainers": [
             {
               "id": "route20west-swimmerfizzo-2",
-              "name": "Swimmer Fizzo (PERMA SUN)",
+              "name": "Swimmer Fizzo",
+              "weather": "sun",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -16021,7 +16061,8 @@
             },
             {
               "id": "route20west-swimmerdoge-3",
-              "name": "Swimmer Doge (PERMA SUN)",
+              "name": "Swimmer Doge",
+              "weather": "sun",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -16094,7 +16135,8 @@
           "trainers": [
             {
               "id": "route20west-birdkeeperintekam-4",
-              "name": "Bird Keeper Intekam (PERMA SUN)",
+              "name": "Bird Keeper Intekam",
+              "weather": "sun",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -17928,7 +17970,8 @@
           "trainers": [
             {
               "id": "victoryroad-cooltrainersmv-0",
-              "name": "Cooltrainer smv (PERMA SUN)",
+              "name": "Cooltrainer smv",
+              "weather": "sun",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -18105,7 +18148,8 @@
             },
             {
               "id": "victoryroad-cooltrainerindigo-2",
-              "name": "Cooltrainer Indigo (PERMA RAIN)",
+              "name": "Cooltrainer Indigo",
+              "weather": "rain",
               "optional": false,
               "b2b": "",
               "badge": "",

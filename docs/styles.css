@@ -340,7 +340,13 @@ h3 .movelink:hover{color:var(--accent)}
 .panel.optroster{border-color:color-mix(in srgb,var(--accent-2) 30%,var(--line))}
 .trainer.optrow{border-left:3px solid color-mix(in srgb,var(--accent-2) 55%,transparent)}
 .bosstag{color:var(--star);font-size:11px;margin-right:5px;vertical-align:1px}
+.ihow{font-size:11px;color:var(--muted);margin-left:6px;padding:1px 7px;border-radius:5px;background:var(--surface-3)}
 .wxicon{font-size:13px;margin-left:4px;vertical-align:1px}
+.wxpill{font-size:10px;font-weight:700;text-transform:capitalize;padding:2px 7px;border-radius:6px;border:1px solid var(--line);background:var(--surface-3);white-space:nowrap}
+.wxpill.wx-sun{border-color:color-mix(in srgb,#ff9d55 45%,var(--line));background:color-mix(in srgb,#ff9d55 12%,transparent)}
+.wxpill.wx-rain{border-color:color-mix(in srgb,#4d90d5 45%,var(--line));background:color-mix(in srgb,#4d90d5 12%,transparent)}
+.wxpill.wx-sand{border-color:color-mix(in srgb,#c5b78c 55%,var(--line));background:color-mix(in srgb,#c5b78c 14%,transparent)}
+.wxpill.wx-hail{border-color:color-mix(in srgb,#73cec0 45%,var(--line));background:color-mix(in srgb,#73cec0 12%,transparent)}
 .wxbanner{display:flex;align-items:center;gap:12px;padding:11px 14px;margin-bottom:16px;border-radius:12px;border:1px solid var(--line);background:var(--surface-2)}
 .wxbanner .wxbig{font-size:26px;line-height:1;flex:none}
 .wxbanner b{font-size:14px}

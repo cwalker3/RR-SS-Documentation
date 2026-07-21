@@ -537,10 +537,10 @@ function chgRow(o){
 /* ================= AREAS ================= */
 const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
-  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,reward:r.reward||'',note:r.note||'',optional:!!r.optional,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,b2b:t.b2b||'',reward:t.reward||'',notes:arr(t.notes),team:arr(t.team)}))}));
+  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,reward:r.reward||'',note:r.note||'',optional:!!r.optional,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,b2b:t.b2b||'',reward:t.reward||'',weather:t.weather||'',notes:arr(t.notes),team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   // note: rosters below already keep the full team objects (species/level/item/ability/nature/moves)
-  const items=arr(a.items).map(it=>({id:it.id,name:it.name}));
+  const items=arr(a.items).map(it=>({id:it.id,name:it.name,how:it.how||''}));
   const notes=arr(a.notes);
   const gifts=arr(a.gifts);
   const giftMons=[];gifts.forEach(g=>g.replace(/\s*\(\d+%\)\s*$/,'').split('/').forEach(s=>{s=s.trim();if(s)giftMons.push(s);}));
@@ -875,6 +875,7 @@ function areaDetail(a){
         if(t.b2b&&r.kind!=='gauntlet')tag+=` <span class="b2bpill" title="${esc(t.b2b)}">⚔ back-to-back</span>`;
         if(t.optional&&r.kind!=='gauntlet')tag+=` <span class="optpill" title="Optional — skippable; doesn't block this area from counting as done">optional</span>`;
         if(t.reward)tag+=` <span class="rewardpill" title="Beating this trainer gives you this">🎁 ${esc(t.reward)}</span>`;
+        const tw=weatherOf(t);if(tw)tag+=` <span class="wxpill wx-${t.weather}" title="Permanent ${esc(tw.label.replace(/^Permanent /,''))} during this fight">${tw.icon} ${esc(t.weather)}</span>`;
         const done=track&&TRAINERS_DONE.has(t.id);
         const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
         const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(esc).join('<br>')}</div>`:'';
@@ -912,7 +913,7 @@ function areaDetail(a){
     const body=el('div','pbody');
     body.innerHTML=`<div class="tblwrap"><table class="data"><tbody>`+
       items.map(it=>{const done=ITEMS_DONE.has(it.id);
-        return `<tr class="${done?'tdone':''}"><td style="width:1%"><button class="tcheck catch" data-item="${esc(it.id)}" aria-pressed="${done}" title="${done?'Picked up — click to unmark':'Mark as picked up'}"></button></td><td>${itemSpriteImg(it.name)}<b>${esc(it.name)}</b></td></tr>`;
+        return `<tr class="${done?'tdone':''}"><td style="width:1%"><button class="tcheck catch" data-item="${esc(it.id)}" aria-pressed="${done}" title="${done?'Picked up — click to unmark':'Mark as picked up'}"></button></td><td>${itemSpriteImg(it.name)}<b>${esc(it.name)}</b>${it.how?` <span class="ihow">${esc(it.how)}</span>`:''}</td></tr>`;
       }).join('')+
       `</tbody></table></div>`;
     p.appendChild(body);wrap.appendChild(p);
