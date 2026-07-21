@@ -2425,17 +2425,17 @@
       ],
       "rosters": [
         {
-          "title": "Trainers",
-          "kind": "",
+          "title": "Back-to-back",
+          "kind": "gauntlet",
           "reward": "",
-          "note": "",
           "optional": false,
+          "note": "Grunt 3 first, then immediately a tag battle — you and Partner Cheren vs Team Plasma Grunt 4 & Seven Sage Bronius. No healing in between.",
           "trainers": [
             {
               "id": "wellspringcave-teamplasmagrunt3-0",
               "name": "Team Plasma Grunt 3",
               "optional": false,
-              "b2b": "BACK TO BACK WITH GORM AND GRUNT 4",
+              "b2b": "",
               "badge": "",
               "choice": "",
               "split": "",
@@ -2497,13 +2497,15 @@
             },
             {
               "id": "wellspringcave-grunt-1",
-              "name": "Grunt",
+              "name": "Team Plasma Grunt 4",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "",
               "split": "",
-              "notes": [],
+              "notes": [
+                "Tag battle — fought together with Seven Sage Bronius."
+              ],
               "team": [
                 {
                   "species": "Dustox",
@@ -2535,13 +2537,15 @@
             },
             {
               "id": "wellspringcave-bronius-2",
-              "name": "Bronius",
+              "name": "Seven Sage Bronius",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "",
               "split": "",
-              "notes": [],
+              "notes": [
+                "Tag battle — fought together with Team Plasma Grunt 4."
+              ],
               "team": [
                 {
                   "species": "Luxio",
@@ -2583,7 +2587,16 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Partner Cheren",
+          "kind": "partner",
+          "reward": "",
+          "optional": false,
+          "note": "Your ally in the tag battle — Cheren's team depends on your starter.",
+          "trainers": [
             {
               "id": "wellspringcave-partnercheren-snivy-3",
               "name": "Partner Cheren",
@@ -3025,218 +3038,218 @@
       ],
       "rosters": [
         {
-              "id": "route3-schoolkidal-6",
-              "name": "School Kid Al",
-              "optional": false,
-              "b2b": "",
-              "badge": "",
-              "choice": "",
-              "split": "",
-              "notes": [],
-              "team": [
-                {
-                  "species": "Sandslash",
-                  "level": "22",
-                  "item": "Passho Berry",
-                  "ability": "Rough Skin",
-                  "nature": "Docile",
-                  "moves": [
-                    "Bulldoze",
-                    "Rock Tomb",
-                    "Rock Smash",
-                    "Metal Claw"
-                  ]
-                },
-                {
-                  "species": "Scraggy",
-                  "level": "22",
-                  "item": "Sitrus Berry",
-                  "ability": "Intimidate",
-                  "nature": "Hasty",
-                  "moves": [
-                    "Dragon Dance",
-                    "Brick Break",
-                    "Crunch",
-                    "Rest"
-                  ]
-                },
-                {
-                  "species": "Shellder",
-                  "level": "22",
-                  "item": "Eviolite",
-                  "ability": "Skill Link",
-                  "nature": "Rash",
-                  "moves": [
-                    "Spike Cannon",
-                    "Icicle Spear"
-                  ]
-                }
+          "id": "route3-schoolkidal-6",
+          "name": "School Kid Al",
+          "optional": false,
+          "b2b": "",
+          "badge": "",
+          "choice": "",
+          "split": "",
+          "notes": [],
+          "team": [
+            {
+              "species": "Sandslash",
+              "level": "22",
+              "item": "Passho Berry",
+              "ability": "Rough Skin",
+              "nature": "Docile",
+              "moves": [
+                "Bulldoze",
+                "Rock Tomb",
+                "Rock Smash",
+                "Metal Claw"
               ]
             },
             {
-              "id": "route3-schoolkidmarsha-7",
-              "name": "School Kid Marsha",
-              "optional": false,
-              "b2b": "",
-              "badge": "",
-              "choice": "",
-              "split": "",
-              "notes": [],
-              "team": [
-                {
-                  "species": "Vulpix",
-                  "level": "22",
-                  "item": "Charcoal",
-                  "ability": "Flash Fire",
-                  "nature": "Timid",
-                  "moves": [
-                    "Hypnosis",
-                    "Flame Burst",
-                    "Hex",
-                    "Will-O-Wisp"
-                  ]
-                },
-                {
-                  "species": "Pikachu",
-                  "level": "22",
-                  "item": "Light Ball",
-                  "ability": "Static",
-                  "nature": "Modest",
-                  "moves": [
-                    "Volt Switch",
-                    "Surf"
-                  ]
-                },
-                {
-                  "species": "Diglett",
-                  "level": "22",
-                  "item": "Soft Sand",
-                  "ability": "Arena Trap",
-                  "nature": "Hardy",
-                  "moves": [
-                    "Dig",
-                    "Rock Smash",
-                    "Rock Slide",
-                    "Sucker Punch"
-                  ]
-                }
+              "species": "Scraggy",
+              "level": "22",
+              "item": "Sitrus Berry",
+              "ability": "Intimidate",
+              "nature": "Hasty",
+              "moves": [
+                "Dragon Dance",
+                "Brick Break",
+                "Crunch",
+                "Rest"
               ]
             },
             {
-              "id": "route3-schoolkidgina-8",
-              "name": "School Kid Gina",
-              "optional": false,
-              "b2b": "",
-              "badge": "",
-              "choice": "",
-              "split": "",
-              "notes": [],
-              "team": [
-                {
-                  "species": "Croagunk",
-                  "level": "23",
-                  "item": "Liechi Berry",
-                  "ability": "Poison Touch",
-                  "nature": "Timid",
-                  "moves": [
-                    "Fake Out",
-                    "Poison Jab",
-                    "Submission",
-                    "Rock Slide"
-                  ]
-                },
-                {
-                  "species": "Golbat",
-                  "level": "23",
-                  "item": "Starf Berry",
-                  "ability": "Inner Focus",
-                  "nature": "Quiet",
-                  "moves": [
-                    "Cross Poison",
-                    "Acrobatics",
-                    "Supersonic",
-                    "Haze"
-                  ]
-                },
-                {
-                  "species": "Gloom",
-                  "level": "23",
-                  "item": "Salac Berry",
-                  "ability": "Chlorophyll",
-                  "nature": "Lax",
-                  "moves": [
-                    "Giga Drain",
-                    "Sludge Bomb",
-                    "Sleep Powder",
-                    "Leech Seed"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "route3-schoolkidedgar-9",
-              "name": "School Kid Edgar",
-              "optional": false,
-              "b2b": "",
-              "badge": "",
-              "choice": "",
-              "split": "",
-              "notes": [],
-              "team": [
-                {
-                  "species": "Tranquill",
-                  "level": "23",
-                  "item": "Scope Lens",
-                  "ability": "Big Pecks",
-                  "nature": "Relaxed",
-                  "moves": [
-                    "Roost",
-                    "Drill Peck",
-                    "Shadow Sneak",
-                    "U-Turn"
-                  ]
-                },
-                {
-                  "species": "Skiploom",
-                  "level": "23",
-                  "item": "Eviolite",
-                  "ability": "Prankster",
-                  "nature": "Gentle",
-                  "moves": [
-                    "Sleep Powder",
-                    "Leech Seed",
-                    "Giga Drain",
-                    "U-Turn"
-                  ]
-                },
-                {
-                  "species": "Staravia",
-                  "level": "23",
-                  "item": "Muscle Band",
-                  "ability": "Intimidate",
-                  "nature": "Bold",
-                  "moves": [
-                    "Rock Smash",
-                    "Aerial Ace",
-                    "U-Turn",
-                    "Feather Dance"
-                  ]
-                },
-                {
-                  "species": "Doduo",
-                  "level": "23",
-                  "item": "Shell Bell",
-                  "ability": "Reckless",
-                  "nature": "Hasty",
-                  "moves": [
-                    "Dig",
-                    "Wing Attack",
-                    "U-Turn",
-                    "Double-Edge"
-                  ]
-                }
+              "species": "Shellder",
+              "level": "22",
+              "item": "Eviolite",
+              "ability": "Skill Link",
+              "nature": "Rash",
+              "moves": [
+                "Spike Cannon",
+                "Icicle Spear"
               ]
             }
+          ]
+        },
+        {
+          "id": "route3-schoolkidmarsha-7",
+          "name": "School Kid Marsha",
+          "optional": false,
+          "b2b": "",
+          "badge": "",
+          "choice": "",
+          "split": "",
+          "notes": [],
+          "team": [
+            {
+              "species": "Vulpix",
+              "level": "22",
+              "item": "Charcoal",
+              "ability": "Flash Fire",
+              "nature": "Timid",
+              "moves": [
+                "Hypnosis",
+                "Flame Burst",
+                "Hex",
+                "Will-O-Wisp"
+              ]
+            },
+            {
+              "species": "Pikachu",
+              "level": "22",
+              "item": "Light Ball",
+              "ability": "Static",
+              "nature": "Modest",
+              "moves": [
+                "Volt Switch",
+                "Surf"
+              ]
+            },
+            {
+              "species": "Diglett",
+              "level": "22",
+              "item": "Soft Sand",
+              "ability": "Arena Trap",
+              "nature": "Hardy",
+              "moves": [
+                "Dig",
+                "Rock Smash",
+                "Rock Slide",
+                "Sucker Punch"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "route3-schoolkidgina-8",
+          "name": "School Kid Gina",
+          "optional": false,
+          "b2b": "",
+          "badge": "",
+          "choice": "",
+          "split": "",
+          "notes": [],
+          "team": [
+            {
+              "species": "Croagunk",
+              "level": "23",
+              "item": "Liechi Berry",
+              "ability": "Poison Touch",
+              "nature": "Timid",
+              "moves": [
+                "Fake Out",
+                "Poison Jab",
+                "Submission",
+                "Rock Slide"
+              ]
+            },
+            {
+              "species": "Golbat",
+              "level": "23",
+              "item": "Starf Berry",
+              "ability": "Inner Focus",
+              "nature": "Quiet",
+              "moves": [
+                "Cross Poison",
+                "Acrobatics",
+                "Supersonic",
+                "Haze"
+              ]
+            },
+            {
+              "species": "Gloom",
+              "level": "23",
+              "item": "Salac Berry",
+              "ability": "Chlorophyll",
+              "nature": "Lax",
+              "moves": [
+                "Giga Drain",
+                "Sludge Bomb",
+                "Sleep Powder",
+                "Leech Seed"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "route3-schoolkidedgar-9",
+          "name": "School Kid Edgar",
+          "optional": false,
+          "b2b": "",
+          "badge": "",
+          "choice": "",
+          "split": "",
+          "notes": [],
+          "team": [
+            {
+              "species": "Tranquill",
+              "level": "23",
+              "item": "Scope Lens",
+              "ability": "Big Pecks",
+              "nature": "Relaxed",
+              "moves": [
+                "Roost",
+                "Drill Peck",
+                "Shadow Sneak",
+                "U-Turn"
+              ]
+            },
+            {
+              "species": "Skiploom",
+              "level": "23",
+              "item": "Eviolite",
+              "ability": "Prankster",
+              "nature": "Gentle",
+              "moves": [
+                "Sleep Powder",
+                "Leech Seed",
+                "Giga Drain",
+                "U-Turn"
+              ]
+            },
+            {
+              "species": "Staravia",
+              "level": "23",
+              "item": "Muscle Band",
+              "ability": "Intimidate",
+              "nature": "Bold",
+              "moves": [
+                "Rock Smash",
+                "Aerial Ace",
+                "U-Turn",
+                "Feather Dance"
+              ]
+            },
+            {
+              "species": "Doduo",
+              "level": "23",
+              "item": "Shell Bell",
+              "ability": "Reckless",
+              "nature": "Hasty",
+              "moves": [
+                "Dig",
+                "Wing Attack",
+                "U-Turn",
+                "Double-Edge"
+              ]
+            }
+          ]
+        }
       ],
       "special": [],
       "items": [],

@@ -608,10 +608,10 @@ function areaGroup(a){return a.sep?[a]:(MET_GROUP[metLoc(a.name)]||[a]);}
 function groupSiblings(a){return areaGroup(a).filter(x=>x!==a);}
 function groupCaughtArea(a){return areaGroup(a).find(x=>areaCaughtCount(x)>0);}
 function groupMissedArea(a){return areaGroup(a).find(x=>AREA_MISSED.has(x.name));}
-// roster (non-rematch) trainers you'd actually face, rival variants filtered by profile
+// roster trainers you'd actually face (excludes rematches and partner allies), rival variants filtered
 function areaRosterTrainers(a){
   const rn=rivalName(), rs=rivalStarter(), out=[];
-  a.rosters.forEach(r=>{if(r.kind==='rematch')return;r.trainers.forEach(t=>{
+  a.rosters.forEach(r=>{if(r.kind==='rematch'||r.kind==='partner')return;r.trainers.forEach(t=>{
     if(t.choice&&PROFILE.starter&&t.choice!==PROFILE.starter)return;
     if(isRivalTrainer(t)){if(rn&&rivalGenderOf(t.name)!==rn)return;if(rs&&rivalStarterOf(t.team)!==rs)return;}
     out.push(t);});});
@@ -717,7 +717,7 @@ function renderAreas(c){
   items.forEach(a=>{
     const idx=AREAS.indexOf(a);
     const b=el('button','litem');b.classList.toggle('active',idx===state.areaSel);
-    const tc=a.rosters.reduce((n,r)=>n+(r.kind==='rematch'?0:r.trainers.length),0);
+    const tc=a.rosters.reduce((n,r)=>n+(r.kind==='rematch'||r.kind==='partner'?0:r.trainers.length),0);
     const st=areaStatus(a);
     b.classList.toggle('done',st.complete);
     b.classList.toggle('optleft',st.complete&&st.optionalsLeft);
@@ -857,14 +857,16 @@ function areaDetail(a){
       return true;
     });
     if(!trainers.length)return;
-    const track=r.kind!=='rematch';
+    const track=r.kind!=='rematch'&&r.kind!=='partner';   // partner allies are shown but not tracked
     const doneN=track?trainers.filter(t=>TRAINERS_DONE.has(t.id)).length:0;
-    const p=el('div','panel'+(r.kind==='gauntlet'?' gauntlet':'')+(r.optional?' optroster':''));
-    const gicon=r.kind==='gauntlet'?`<span class="gicon" title="A gauntlet: back-to-back fights with no healing in between">⚔</span> `:'';
+    const partner=r.kind==='partner';
+    const p=el('div','panel'+(r.kind==='gauntlet'?' gauntlet':'')+(r.optional?' optroster':'')+(partner?' partnerroster':''));
+    const gicon=r.kind==='gauntlet'?`<span class="gicon" title="A gauntlet: back-to-back fights with no healing in between">⚔</span> `:(partner?`<span class="gicon" title="An ally who fights on your side — not a trainer you beat">🤝</span> `:'');
     const otag=r.optional?`<span class="optpill big" title="Optional — you can skip this whole group; it doesn't block the area">optional</span>`:'';
     const rtag=r.reward?`<span class="rewardpill" title="What clearing this gauntlet gets you">🎁 ${esc(r.reward)}</span>`:'';
     const gnote=r.note?`<div class="gauntnote">${esc(r.note)}</div>`:'';
-    p.innerHTML=`<div class="phead"><h3>${gicon}${esc(r.title)}</h3>${otag}${rtag}<span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span></div>${gnote}`;
+    const sub=partner?`<span class="sub">fights on your side</span>`:`<span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span>`;
+    p.innerHTML=`<div class="phead"><h3>${gicon}${esc(r.title)}</h3>${otag}${rtag}${sub}</div>${gnote}`;
     const body=el('div','pbody');
     body.innerHTML=trainers.map(t=>{
         let tag='';const rival=isRivalTrainer(t);
