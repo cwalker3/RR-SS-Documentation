@@ -779,8 +779,7 @@
       "items": [
         {
           "id": "route2-item-0",
-          "name": "TM46 Thief",
-          "was": "Potion"
+          "name": "TM46 Thief"
         }
       ],
       "notes": [],
@@ -1209,23 +1208,19 @@
       "items": [
         {
           "id": "dreamyard-item-0",
-          "name": "TM23 Smack Down",
-          "was": "X Defend"
+          "name": "TM23 Smack Down"
         },
         {
           "id": "dreamyard-item-1",
-          "name": "TM76 Struggle Bug",
-          "was": "Poke Ball"
+          "name": "TM76 Struggle Bug"
         },
         {
           "id": "dreamyard-item-2",
-          "name": "TM59 Incinerate",
-          "was": "Parlyz Heal"
+          "name": "TM59 Incinerate"
         },
         {
           "id": "dreamyard-item-3",
-          "name": "TM88 Pluck",
-          "was": "Repel"
+          "name": "TM88 Pluck"
         }
       ],
       "notes": [
@@ -1350,7 +1345,8 @@
             },
             {
               "id": "striatongym-gymleaderchiligivestm48insteadoftm83-snivy-2",
-              "name": "Gym Leader Chili (Gives TM48 instead of TM83)",
+              "name": "Gym Leader Chili",
+              "reward": "TM48 instead of TM83",
               "optional": false,
               "b2b": "",
               "badge": "Leader",
@@ -1440,7 +1436,8 @@
             },
             {
               "id": "striatongym-gymleadercressgivestm48insteadoftm83-tepig-3",
-              "name": "Gym Leader Cress (Gives TM48 instead of TM83)",
+              "name": "Gym Leader Cress",
+              "reward": "TM48 instead of TM83",
               "optional": false,
               "b2b": "",
               "badge": "Leader",
@@ -1530,7 +1527,8 @@
             },
             {
               "id": "striatongym-gymleadercilangivestm48insteadoftm83-oshawott-4",
-              "name": "Gym Leader Cilan (Gives TM48 instead of TM83)",
+              "name": "Gym Leader Cilan",
+              "reward": "TM48 instead of TM83",
               "optional": false,
               "b2b": "",
               "badge": "Leader",
@@ -2155,7 +2153,8 @@
             },
             {
               "id": "route3-nurseryaideautumngivesshedshell-5",
-              "name": "Nursery Aide Autumn (GIVES SHED SHELL)",
+              "name": "Nursery Aide Autumn",
+              "reward": "Shed Shell",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -2465,28 +2464,23 @@
       "items": [
         {
           "id": "route3-item-0",
-          "name": "TM39 Rock Tomb",
-          "was": "Super Potion"
+          "name": "TM39 Rock Tomb"
         },
         {
           "id": "route3-item-1",
-          "name": "TM78 Bulldoze",
-          "was": "Repel"
+          "name": "TM78 Bulldoze"
         },
         {
           "id": "route3-item-2",
-          "name": "TM09 Venoshock",
-          "was": "Antidote"
+          "name": "TM09 Venoshock"
         },
         {
           "id": "route3-item-3",
-          "name": "TM64 Explosion",
-          "was": "Awakening"
+          "name": "TM64 Explosion"
         },
         {
           "id": "route3-item-4",
-          "name": "TM90 Natural Gift",
-          "was": "Great Ball"
+          "name": "TM90 Natural Gift"
         }
       ],
       "notes": [
@@ -3232,8 +3226,7 @@
       "items": [
         {
           "id": "wellspringcave-item-0",
-          "name": "TM95 Snarl",
-          "was": "TM46"
+          "name": "TM95 Snarl"
         }
       ],
       "notes": [
@@ -3514,7 +3507,8 @@
             },
             {
               "id": "notpinwheelforest-youngsterkeitagivesshellbell-1",
-              "name": "Youngster Keita (GIVES SHELL BELL)",
+              "name": "Youngster Keita",
+              "reward": "Shell Bell",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -3578,7 +3572,8 @@
             },
             {
               "id": "notpinwheelforest-youngsterzacharygiveseviolite-2",
-              "name": "Youngster Zachary (GIVES EVIOLITE)",
+              "name": "Youngster Zachary",
+              "reward": "Eviolite",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -3642,7 +3637,8 @@
             },
             {
               "id": "notpinwheelforest-blackbeltkentarogiveswidelens-3",
-              "name": "Black Belt Kentaro (GIVES WIDE LENS)",
+              "name": "Black Belt Kentaro",
+              "reward": "Wide Lens",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -3706,7 +3702,8 @@
             },
             {
               "id": "notpinwheelforest-battlegirlleegiveszoomlens-4",
-              "name": "Battle Girl Lee (GIVES ZOOM LENS)",
+              "name": "Battle Girl Lee",
+              "reward": "Zoom Lens",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -3773,8 +3770,7 @@
       "items": [
         {
           "id": "notpinwheelforest-item-0",
-          "name": "TM47 Low Sweep",
-          "was": "Super Potion"
+          "name": "TM47 Low Sweep"
         }
       ],
       "notes": [],
@@ -4566,7 +4562,8 @@
             },
             {
               "id": "pinwheelforest-pokemonrangermigueldoublesguardstm86andgivesanabsorbbulb-5",
-              "name": "Pokemon Ranger Miguel (DOUBLES, Guards TM86 and gives an Absorb Bulb)",
+              "name": "Pokemon Ranger Miguel (DOUBLES, Guards TM86)",
+              "reward": "Absorb Bulb",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -4855,13 +4852,11 @@
       "items": [
         {
           "id": "pinwheelforest-item-0",
-          "name": "TM82",
-          "was": "Super Potion"
+          "name": "TM82"
         },
         {
           "id": "pinwheelforest-item-1",
-          "name": "TM85",
-          "was": "Antidote"
+          "name": "TM85"
         }
       ],
       "notes": [],
@@ -5139,23 +5134,19 @@
       "items": [
         {
           "id": "route4-item-0",
-          "name": "TM43 Flame Charge",
-          "was": "X Accuracy"
+          "name": "TM43 Flame Charge"
         },
         {
           "id": "route4-item-1",
-          "name": "TM31 Brick Break",
-          "was": "Super Potion"
+          "name": "TM31 Brick Break"
         },
         {
           "id": "route4-item-2",
-          "name": "TM77 Magical Leaf",
-          "was": "Ether"
+          "name": "TM77 Magical Leaf"
         },
         {
           "id": "route4-item-3",
-          "name": "TM40 Aerial Ace",
-          "was": "Great Ball"
+          "name": "TM40 Aerial Ace"
         }
       ],
       "notes": [],
@@ -5389,7 +5380,8 @@
             },
             {
               "id": "casteliagym-gymleaderburghnowgivestm81xscissor-4",
-              "name": "Gym Leader Burgh (Now gives TM81 X-Scissor)",
+              "name": "Gym Leader Burgh",
+              "reward": "TM81 X-Scissor",
               "optional": false,
               "b2b": "",
               "badge": "Leader",
@@ -6555,7 +6547,8 @@
             },
             {
               "id": "desertresort-backpackerkelseygivesfocusband-2",
-              "name": "Backpacker Kelsey (GIVES FOCUS BAND)",
+              "name": "Backpacker Kelsey",
+              "reward": "Focus Band",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -6580,7 +6573,8 @@
             },
             {
               "id": "desertresort-backpackerlizgivesquickclaw-3",
-              "name": "Backpacker Liz (GIVES QUICK CLAW)",
+              "name": "Backpacker Liz",
+              "reward": "Quick Claw",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -6605,7 +6599,8 @@
             },
             {
               "id": "desertresort-backpackernategivespowerherb-4",
-              "name": "Backpacker Nate (GIVES POWER HERB)",
+              "name": "Backpacker Nate",
+              "reward": "Power Herb",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -6669,7 +6664,8 @@
             },
             {
               "id": "desertresort-backpackerelainegiveswhiteherb-5",
-              "name": "Backpacker Elaine (GIVES WHITE HERB)",
+              "name": "Backpacker Elaine",
+              "reward": "White Herb",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -6728,7 +6724,8 @@
             },
             {
               "id": "desertresort-psychiclowgivesmetronome-6",
-              "name": "Psychic Low (GIVES METRONOME)",
+              "name": "Psychic Low",
+              "reward": "Metronome",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -6780,7 +6777,8 @@
             },
             {
               "id": "desertresort-pilotboomgives3rowapjabocaandcustapberries-7",
-              "name": "Pilot Boom (GIVES 3 ROWAP, JABOCA AND CUSTAP BERRIES)",
+              "name": "Pilot Boom",
+              "reward": "3 Rowap, Jaboca and Custap Berries",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -7422,8 +7420,7 @@
       "items": [
         {
           "id": "route5-item-0",
-          "name": "TM12 Taunt",
-          "was": "Hyper Potion"
+          "name": "TM12 Taunt"
         }
       ],
       "notes": [
@@ -7618,7 +7615,8 @@
             },
             {
               "id": "route16-backpackerloragivesanairballoon-1",
-              "name": "Backpacker Lora (GIVES AN AIR BALLOON)",
+              "name": "Backpacker Lora",
+              "reward": "Air Balloon",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -7713,8 +7711,7 @@
       "items": [
         {
           "id": "route16-item-0",
-          "name": "TM03",
-          "was": "Rare Candy"
+          "name": "TM03"
         }
       ],
       "notes": [],
@@ -8207,7 +8204,8 @@
             },
             {
               "id": "nimbasagym-gymleaderelesadoublesnowgivestm93wildcharge-4",
-              "name": "Gym Leader Elesa (DOUBLES) (Now gives TM93 Wild Charge)",
+              "name": "Gym Leader Elesa (DOUBLES)",
+              "reward": "TM93 Wild Charge",
               "optional": false,
               "b2b": "",
               "badge": "Leader",
@@ -9394,13 +9392,11 @@
       "items": [
         {
           "id": "route6-item-0",
-          "name": "TM53 Energy Ball",
-          "was": "Hyper Potion"
+          "name": "TM53 Energy Ball"
         },
         {
           "id": "route6-item-1",
-          "name": "TM36 Sludge Bomb",
-          "was": "Elixir"
+          "name": "TM36 Sludge Bomb"
         }
       ],
       "notes": [],
@@ -10150,8 +10146,7 @@
       "items": [
         {
           "id": "coldstorage-item-0",
-          "name": "TM63 Embargo",
-          "was": "Protein"
+          "name": "TM63 Embargo"
         }
       ],
       "notes": [
@@ -10568,7 +10563,8 @@
             },
             {
               "id": "driftveilgym-gymleaderclaynowgivestm19earthpower-5",
-              "name": "Gym Leader Clay (Now gives TM19 Earth Power)",
+              "name": "Gym Leader Clay",
+              "reward": "TM19 Earth Power",
               "optional": false,
               "b2b": "",
               "badge": "Leader",
@@ -11659,23 +11655,19 @@
       "items": [
         {
           "id": "chargestonecave-item-0",
-          "name": "HM05 Waterfall",
-          "was": "Revive"
+          "name": "HM05 Waterfall"
         },
         {
           "id": "chargestonecave-item-1",
-          "name": "TM91 Flash Cannon",
-          "was": "Iron"
+          "name": "TM91 Flash Cannon"
         },
         {
           "id": "chargestonecave-item-2",
-          "name": "TM29 Psychic",
-          "was": "Magnet"
+          "name": "TM29 Psychic"
         },
         {
           "id": "chargestonecave-item-3",
-          "name": "TM30 Shadow Ball",
-          "was": "Timer Ball"
+          "name": "TM30 Shadow Ball"
         }
       ],
       "notes": [
@@ -12095,7 +12087,8 @@
             },
             {
               "id": "route7-harlequinpatgivesawhiteherb-3",
-              "name": "Harlequin Pat (Gives a White Herb)",
+              "name": "Harlequin Pat",
+              "reward": "White Herb",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -12120,7 +12113,8 @@
             },
             {
               "id": "route7-harlequiniangivestheoldamber-4",
-              "name": "Harlequin Ian (Gives the Old Amber)",
+              "name": "Harlequin Ian",
+              "reward": "Old Amber",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -12150,8 +12144,7 @@
       "items": [
         {
           "id": "route7-item-0",
-          "name": "TM60 Quash",
-          "was": "TM81"
+          "name": "TM60 Quash"
         }
       ],
       "notes": [
@@ -12503,7 +12496,8 @@
             },
             {
               "id": "celestialtower-acetrainerbeckettdoublesgivestm13youcanpressbtorotatebeckettandkassandra-5",
-              "name": "Ace Trainer Beckett (DOUBLES) (Gives TM13) (YOU CAN PRESS B TO ROTATE BECKETT AND KASSANDRA)",
+              "name": "Ace Trainer Beckett (DOUBLES) (YOU CAN PRESS B TO ROTATE BECKETT AND KASSANDRA)",
+              "reward": "TM13",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -12580,7 +12574,8 @@
             },
             {
               "id": "celestialtower-acetrainerkassandradoublesgivestm35-6",
-              "name": "Ace Trainer Kassandra (DOUBLES) (Gives TM35)",
+              "name": "Ace Trainer Kassandra (DOUBLES)",
+              "reward": "TM35",
               "optional": true,
               "b2b": "",
               "badge": "",
@@ -13781,13 +13776,11 @@
       "items": [
         {
           "id": "twistmountain-item-0",
-          "name": "TM87 Swagger",
-          "was": "PP Up"
+          "name": "TM87 Swagger"
         },
         {
           "id": "twistmountain-item-1",
-          "name": "TM71 Stone Edge",
-          "was": "TM91"
+          "name": "TM71 Stone Edge"
         }
       ],
       "notes": [
@@ -13858,7 +13851,8 @@
           "trainers": [
             {
               "id": "mistraltoncave-ladyjunegives1ofeachresistberryandguardsguidancechamberencounter-0",
-              "name": "Lady June (Gives 1 of each resist berry and guards Guidance Chamber encounter)",
+              "name": "Lady June",
+              "reward": "1 of each resist berry and guards Guidance Chamber encounter",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -14092,7 +14086,8 @@
           "trainers": [
             {
               "id": "route17-fishermanlydongivesdousedrive-0",
-              "name": "Fisherman Lydon (GIVES DOUSE DRIVE)",
+              "name": "Fisherman Lydon",
+              "reward": "Douse Drive",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -14169,7 +14164,8 @@
             },
             {
               "id": "route17-swimmerjoycegivesshockdrive-1",
-              "name": "Swimmer Joyce (GIVES SHOCK DRIVE)",
+              "name": "Swimmer Joyce",
+              "reward": "Shock Drive",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -14246,7 +14242,8 @@
             },
             {
               "id": "route17-swimmerwrightdoublesgivesburndrive-2",
-              "name": "Swimmer Wright (DOUBLES, GIVES BURN DRIVE)",
+              "name": "Swimmer Wright (DOUBLES)",
+              "reward": "Burn Drive",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -14476,7 +14473,8 @@
           "trainers": [
             {
               "id": "route18-hikerjeremiahgiveschilldrive-0",
-              "name": "Hiker Jeremiah (GIVES CHILL DRIVE)",
+              "name": "Hiker Jeremiah",
+              "reward": "Chill Drive",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -14551,7 +14549,8 @@
             },
             {
               "id": "route18-veteranraygivesleftovers-1",
-              "name": "Veteran Ray (GIVES LEFTOVERS)",
+              "name": "Veteran Ray",
+              "reward": "Leftovers",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -14772,7 +14771,8 @@
           "trainers": [
             {
               "id": "p2laboratory-scientistnathangiveslifeorb-0",
-              "name": "Scientist Nathan (GIVES LIFE ORB)",
+              "name": "Scientist Nathan",
+              "reward": "Life Orb",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -14881,7 +14881,8 @@
           "trainers": [
             {
               "id": "wellspringcavebrycensplit-acetrainerphenogivesanextragemofeachtype-0",
-              "name": "Ace Trainer Pheno (GIVES AN EXTRA GEM OF EACH TYPE)",
+              "name": "Ace Trainer Pheno",
+              "reward": "Extra Gem of each Type",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -15482,8 +15483,7 @@
       "items": [
         {
           "id": "route8-item-0",
-          "name": "TM34 Sludge Wave",
-          "was": "Poison Barb"
+          "name": "TM34 Sludge Wave"
         }
       ],
       "notes": [],
@@ -15598,7 +15598,8 @@
           "trainers": [
             {
               "id": "mooroficirrus-pokemonrangerchlorisdoublesgives5ejectbuttons-0",
-              "name": "Pokemon Ranger Chloris (DOUBLES) (GIVES 5 EJECT BUTTONS)",
+              "name": "Pokemon Ranger Chloris (DOUBLES)",
+              "reward": "5 Eject Buttons",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -17751,8 +17752,7 @@
       "items": [
         {
           "id": "reliccastle-item-0",
-          "name": "TM26 Earthquake",
-          "was": "TM30"
+          "name": "TM26 Earthquake"
         }
       ],
       "notes": [],
@@ -18443,8 +18443,7 @@
       "items": [
         {
           "id": "route9-item-0",
-          "name": "TM89",
-          "was": "HP Up"
+          "name": "TM89"
         }
       ],
       "notes": [
@@ -18593,18 +18592,15 @@
       "items": [
         {
           "id": "route10-item-0",
-          "name": "TM72 Volt Switch",
-          "was": "Full Heal"
+          "name": "TM72 Volt Switch"
         },
         {
           "id": "route10-item-1",
-          "name": "TM92 Trick Room",
-          "was": "Hyper Potion"
+          "name": "TM92 Trick Room"
         },
         {
           "id": "route10-item-2",
-          "name": "TM61 Will-O-Wisp",
-          "was": "Full Restore"
+          "name": "TM61 Will-O-Wisp"
         }
       ],
       "notes": [
@@ -19251,7 +19247,8 @@
             },
             {
               "id": "opelucidgym-gymleaderdraydendoublesnowgivestm02dragonclaw-8",
-              "name": "Gym Leader Drayden (DOUBLES) (now gives TM02 Dragon Claw)",
+              "name": "Gym Leader Drayden (DOUBLES)",
+              "reward": "TM02 Dragon Claw",
               "optional": false,
               "b2b": "",
               "badge": "Leader",
@@ -19880,7 +19877,8 @@
             },
             {
               "id": "route10elitefoursplit-ladyindigogivesfocussash-oshawott-6",
-              "name": "Lady Indigo (GIVES FOCUS SASH)",
+              "name": "Lady Indigo",
+              "reward": "Focus Sash",
               "optional": false,
               "b2b": "",
               "badge": "",
@@ -21521,8 +21519,7 @@
       "items": [
         {
           "id": "victoryroad-item-0",
-          "name": "TM50 Overheat",
-          "was": "TM02"
+          "name": "TM50 Overheat"
         }
       ],
       "notes": [

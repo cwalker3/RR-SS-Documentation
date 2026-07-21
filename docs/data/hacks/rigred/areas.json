@@ -690,8 +690,7 @@
       "items": [
         {
           "id": "viridianforest-item-0",
-          "name": "Exp Share",
-          "was": "PokeBall"
+          "name": "Exp Share"
         }
       ],
       "notes": [],
@@ -3960,8 +3959,7 @@
       "items": [
         {
           "id": "route11-item-0",
-          "name": "Thick Club",
-          "was": "Awakening"
+          "name": "Thick Club"
         }
       ],
       "notes": [],
@@ -6491,7 +6489,24 @@
       "wild": [],
       "rosters": [],
       "special": [],
-      "items": [],
+      "items": [
+        {
+          "id": "celadondepartmentstore-noteitem-0",
+          "name": "TM40"
+        },
+        {
+          "id": "celadondepartmentstore-noteitem-1",
+          "name": "TM03"
+        },
+        {
+          "id": "celadondepartmentstore-noteitem-2",
+          "name": "TM20"
+        },
+        {
+          "id": "celadondepartmentstore-noteitem-3",
+          "name": "TM34"
+        }
+      ],
       "notes": [
         "Eevee is on 1F (counts as its own encounter). TM40, TM03, TM20 and TM34 can also be found here."
       ],
@@ -7867,8 +7882,7 @@
       "items": [
         {
           "id": "rockethideout-item-0",
-          "name": "Potion",
-          "was": "Calcium"
+          "name": "Potion"
         }
       ],
       "notes": [
@@ -9268,7 +9282,12 @@
         }
       ],
       "special": [],
-      "items": [],
+      "items": [
+        {
+          "id": "route16-noteitem-0",
+          "name": "HM02"
+        }
+      ],
       "notes": [
         "count the Snorlax as a separate encounter to the grass encounter",
         "HM02 Fly is now in a Poke Ball left of the grass patch",
@@ -10717,8 +10736,7 @@
       "items": [
         {
           "id": "route15-item-0",
-          "name": "TM18",
-          "was": "Elixir"
+          "name": "TM18"
         }
       ],
       "notes": [],
@@ -10927,8 +10945,7 @@
       "items": [
         {
           "id": "route14-item-0",
-          "name": "Potion",
-          "was": "Zinc"
+          "name": "Potion"
         }
       ],
       "notes": [],
@@ -11253,8 +11270,7 @@
       "items": [
         {
           "id": "route12-item-0",
-          "name": "Potion",
-          "was": "Iron"
+          "name": "Potion"
         }
       ],
       "notes": [],
@@ -11313,18 +11329,15 @@
       "items": [
         {
           "id": "safarizone-item-0",
-          "name": "Max Potion",
-          "was": "TM11"
+          "name": "Max Potion"
         },
         {
           "id": "safarizone-item-1",
-          "name": "Revive",
-          "was": "TM32"
+          "name": "Revive"
         },
         {
           "id": "safarizone-item-2",
-          "name": "Potion",
-          "was": "Protein"
+          "name": "Potion"
         }
       ],
       "notes": [],
@@ -14049,33 +14062,27 @@
       "items": [
         {
           "id": "silphco-item-0",
-          "name": "Potion",
-          "was": "Zinc"
+          "name": "Potion"
         },
         {
           "id": "silphco-item-1",
-          "name": "Potion",
-          "was": "Protein"
+          "name": "Potion"
         },
         {
           "id": "silphco-item-2",
-          "name": "Potion",
-          "was": "Iron"
+          "name": "Potion"
         },
         {
           "id": "silphco-item-3",
-          "name": "Potion",
-          "was": "HP UP"
+          "name": "Potion"
         },
         {
           "id": "silphco-item-4",
-          "name": "Potion",
-          "was": "Calcium"
+          "name": "Potion"
         },
         {
           "id": "silphco-item-5",
-          "name": "Potion",
-          "was": "Carbos"
+          "name": "Potion"
         }
       ],
       "notes": [],
@@ -14417,7 +14424,8 @@
             },
             {
               "id": "saffrongym-gymleadersabrinanowgivestm36insteadoftm04-4",
-              "name": "Gym Leader Sabrina NOW GIVES TM36 INSTEAD OF TM04",
+              "name": "Gym Leader Sabrina",
+              "reward": "TM36 Instead of TM04",
               "optional": false,
               "b2b": "",
               "badge": "Leader",
@@ -15747,33 +15755,27 @@
       "items": [
         {
           "id": "pokemonmansion-item-0",
-          "name": "Potion",
-          "was": "Zinc"
+          "name": "Potion"
         },
         {
           "id": "pokemonmansion-item-1",
-          "name": "Potion",
-          "was": "Protein"
+          "name": "Potion"
         },
         {
           "id": "pokemonmansion-item-2",
-          "name": "Potion",
-          "was": "Iron"
+          "name": "Potion"
         },
         {
           "id": "pokemonmansion-item-3",
-          "name": "Potion",
-          "was": "HP UP"
+          "name": "Potion"
         },
         {
           "id": "pokemonmansion-item-4",
-          "name": "Potion",
-          "was": "Calcium"
+          "name": "Potion"
         },
         {
           "id": "pokemonmansion-item-5",
-          "name": "Potion",
-          "was": "Carbos"
+          "name": "Potion"
         }
       ],
       "notes": [],
