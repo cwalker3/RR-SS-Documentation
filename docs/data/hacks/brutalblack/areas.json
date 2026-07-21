@@ -37,7 +37,7 @@
       {
         "name": "Clay Split",
         "cap": 51,
-        "bosses": "driftveilgympermasand-gymleaderclaynowgivestm19earthpower-5"
+        "bosses": "driftveilgym-gymleaderclaynowgivestm19earthpower-5"
       },
       {
         "name": "Skyla Split",
@@ -47,7 +47,7 @@
       {
         "name": "Brycen Split",
         "cap": 67,
-        "bosses": "icirrusgympermarain-gymleaderbrycen-6"
+        "bosses": "icirrusgym-gymleaderbrycen-6"
       },
       {
         "name": "Drayden Split",
@@ -5486,7 +5486,8 @@
       "gifts": []
     },
     {
-      "name": "Route 4 (PERMA SAND)",
+      "name": "Route 4",
+      "weather": "sand",
       "wild": [],
       "rosters": [
         {
@@ -5497,7 +5498,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "route4permasand-rivalbianca2nosandforthisfight-snivy-0",
+              "id": "route4-rivalbianca2nosandforthisfight-snivy-0",
               "name": "Rival Bianca 2 (No sand for this fight)",
               "optional": false,
               "b2b": "",
@@ -5574,7 +5575,7 @@
               ]
             },
             {
-              "id": "route4permasand-rivalbianca2nosandforthisfight-tepig-1",
+              "id": "route4-rivalbianca2nosandforthisfight-tepig-1",
               "name": "Rival Bianca 2 (No sand for this fight)",
               "optional": false,
               "b2b": "",
@@ -5651,7 +5652,7 @@
               ]
             },
             {
-              "id": "route4permasand-rivalbianca2nosandforthisfight-oshawott-2",
+              "id": "route4-rivalbianca2nosandforthisfight-oshawott-2",
               "name": "Rival Bianca 2 (No sand for this fight)",
               "optional": false,
               "b2b": "",
@@ -5728,7 +5729,7 @@
               ]
             },
             {
-              "id": "route4permasand-rivalcheren3-snivy-3",
+              "id": "route4-rivalcheren3-snivy-3",
               "name": "Rival Cheren 3",
               "optional": false,
               "b2b": "",
@@ -5815,7 +5816,7 @@
               ]
             },
             {
-              "id": "route4permasand-rivalcheren3-tepig-4",
+              "id": "route4-rivalcheren3-tepig-4",
               "name": "Rival Cheren 3",
               "optional": false,
               "b2b": "",
@@ -5902,7 +5903,7 @@
               ]
             },
             {
-              "id": "route4permasand-rivalcheren3-oshawott-5",
+              "id": "route4-rivalcheren3-oshawott-5",
               "name": "Rival Cheren 3",
               "optional": false,
               "b2b": "",
@@ -5989,7 +5990,7 @@
               ]
             },
             {
-              "id": "route4permasand-parasolladyaprilyoucangotodesertresortafterthisfight-oshawott-6",
+              "id": "route4-parasolladyaprilyoucangotodesertresortafterthisfight-oshawott-6",
               "name": "Parasol Lady April (YOU CAN GO TO DESERT RESORT AFTER THIS FIGHT)",
               "optional": false,
               "b2b": "",
@@ -6053,7 +6054,7 @@
               ]
             },
             {
-              "id": "route4permasand-backpackerkeanemandatorytogetaccesstodesertresort-7",
+              "id": "route4-backpackerkeanemandatorytogetaccesstodesertresort-7",
               "name": "Backpacker Keane (MANDATORY TO GET ACCESS TO DESERT RESORT)",
               "optional": true,
               "b2b": "",
@@ -6117,7 +6118,7 @@
               ]
             },
             {
-              "id": "route4permasand-backpackeranna-8",
+              "id": "route4-backpackeranna-8",
               "name": "Backpacker Anna",
               "optional": false,
               "b2b": "",
@@ -6181,7 +6182,7 @@
               ]
             },
             {
-              "id": "route4permasand-workerscott-9",
+              "id": "route4-workerscott-9",
               "name": "Worker Scott",
               "optional": false,
               "b2b": "",
@@ -6245,7 +6246,7 @@
               ]
             },
             {
-              "id": "route4permasand-backpackerjerome-10",
+              "id": "route4-backpackerjerome-10",
               "name": "Backpacker Jerome",
               "optional": false,
               "b2b": "",
@@ -6330,7 +6331,8 @@
       "gifts": []
     },
     {
-      "name": "Desert Resort (PERMA SAND)",
+      "name": "Desert Resort",
+      "weather": "sand",
       "wild": [
         {
           "method": "Entrance",
@@ -6439,7 +6441,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "desertresortpermasand-doctorjerry-0",
+              "id": "desertresort-doctorjerry-0",
               "name": "Doctor Jerry",
               "optional": true,
               "b2b": "",
@@ -6462,7 +6464,7 @@
               ]
             },
             {
-              "id": "desertresortpermasand-veteranpurkatguardsinsideofdesertresort-1",
+              "id": "desertresort-veteranpurkatguardsinsideofdesertresort-1",
               "name": "Veteran Purkat (GUARDS INSIDE OF DESERT RESORT)",
               "optional": false,
               "b2b": "",
@@ -6552,7 +6554,7 @@
               ]
             },
             {
-              "id": "desertresortpermasand-backpackerkelseygivesfocusband-2",
+              "id": "desertresort-backpackerkelseygivesfocusband-2",
               "name": "Backpacker Kelsey (GIVES FOCUS BAND)",
               "optional": true,
               "b2b": "",
@@ -6577,7 +6579,7 @@
               ]
             },
             {
-              "id": "desertresortpermasand-backpackerlizgivesquickclaw-3",
+              "id": "desertresort-backpackerlizgivesquickclaw-3",
               "name": "Backpacker Liz (GIVES QUICK CLAW)",
               "optional": true,
               "b2b": "",
@@ -6602,7 +6604,7 @@
               ]
             },
             {
-              "id": "desertresortpermasand-backpackernategivespowerherb-4",
+              "id": "desertresort-backpackernategivespowerherb-4",
               "name": "Backpacker Nate (GIVES POWER HERB)",
               "optional": true,
               "b2b": "",
@@ -6666,7 +6668,7 @@
               ]
             },
             {
-              "id": "desertresortpermasand-backpackerelainegiveswhiteherb-5",
+              "id": "desertresort-backpackerelainegiveswhiteherb-5",
               "name": "Backpacker Elaine (GIVES WHITE HERB)",
               "optional": true,
               "b2b": "",
@@ -6725,7 +6727,7 @@
               ]
             },
             {
-              "id": "desertresortpermasand-psychiclowgivesmetronome-6",
+              "id": "desertresort-psychiclowgivesmetronome-6",
               "name": "Psychic Low (GIVES METRONOME)",
               "optional": true,
               "b2b": "",
@@ -6777,7 +6779,7 @@
               ]
             },
             {
-              "id": "desertresortpermasand-pilotboomgives3rowapjabocaandcustapberries-7",
+              "id": "desertresort-pilotboomgives3rowapjabocaandcustapberries-7",
               "name": "Pilot Boom (GIVES 3 ROWAP, JABOCA AND CUSTAP BERRIES)",
               "optional": false,
               "b2b": "",
@@ -9405,7 +9407,8 @@
       "gifts": []
     },
     {
-      "name": "Cold Storage (PERMA HAIL)",
+      "name": "Cold Storage",
+      "weather": "hail",
       "wild": [
         {
           "method": "Grass",
@@ -9530,7 +9533,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "coldstoragepermahail-workervictor-0",
+              "id": "coldstorage-workervictor-0",
               "name": "Worker Victor",
               "optional": false,
               "b2b": "",
@@ -9605,7 +9608,7 @@
               ]
             },
             {
-              "id": "coldstoragepermahail-workerglenndoubles-1",
+              "id": "coldstorage-workerglenndoubles-1",
               "name": "Worker Glenn (DOUBLES)",
               "optional": false,
               "b2b": "",
@@ -9669,7 +9672,7 @@
               ]
             },
             {
-              "id": "coldstoragepermahail-workerfilipe-2",
+              "id": "coldstorage-workerfilipe-2",
               "name": "Worker Filipe",
               "optional": false,
               "b2b": "",
@@ -9746,7 +9749,7 @@
               ]
             },
             {
-              "id": "coldstoragepermahail-workerryandoubles-3",
+              "id": "coldstorage-workerryandoubles-3",
               "name": "Worker Ryan (DOUBLES)",
               "optional": false,
               "b2b": "",
@@ -9823,7 +9826,7 @@
               ]
             },
             {
-              "id": "coldstoragepermahail-teamplasmagrunt10farmostrightgrunt-4",
+              "id": "coldstorage-teamplasmagrunt10farmostrightgrunt-4",
               "name": "Team Plasma Grunt 10 (far most right grunt)",
               "optional": false,
               "b2b": "",
@@ -9899,7 +9902,7 @@
               ]
             },
             {
-              "id": "coldstoragepermahail-teamplasmagrunt11leftofgrunt10-5",
+              "id": "coldstorage-teamplasmagrunt11leftofgrunt10-5",
               "name": "Team Plasma Grunt 11 (left of Grunt 10)",
               "optional": false,
               "b2b": "",
@@ -9976,7 +9979,7 @@
               ]
             },
             {
-              "id": "coldstoragepermahail-teamplasmagrunt12rightofzinzolin-6",
+              "id": "coldstorage-teamplasmagrunt12rightofzinzolin-6",
               "name": "Team Plasma Grunt 12 (right of Zinzolin)",
               "optional": false,
               "b2b": "",
@@ -10051,7 +10054,7 @@
               ]
             },
             {
-              "id": "coldstoragepermahail-sevensagezinzolin-7",
+              "id": "coldstorage-sevensagezinzolin-7",
               "name": "Seven Sage Zinzolin",
               "optional": false,
               "b2b": "",
@@ -10146,7 +10149,7 @@
       "special": [],
       "items": [
         {
-          "id": "coldstoragepermahail-item-0",
+          "id": "coldstorage-item-0",
           "name": "TM63 Embargo",
           "was": "Protein"
         }
@@ -10158,7 +10161,8 @@
       "gifts": []
     },
     {
-      "name": "Driftveil Gym (PERMA SAND)",
+      "name": "Driftveil Gym",
+      "weather": "sand",
       "wild": [],
       "rosters": [
         {
@@ -10169,7 +10173,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "driftveilgympermasand-workerfelix-0",
+              "id": "driftveilgym-workerfelix-0",
               "name": "Worker Felix",
               "optional": false,
               "b2b": "",
@@ -10246,7 +10250,7 @@
               ]
             },
             {
-              "id": "driftveilgympermasand-clerkisaacdoubles-1",
+              "id": "driftveilgym-clerkisaacdoubles-1",
               "name": "Clerk Isaac (DOUBLES)",
               "optional": false,
               "b2b": "",
@@ -10323,7 +10327,7 @@
               ]
             },
             {
-              "id": "driftveilgympermasand-workerdon-2",
+              "id": "driftveilgym-workerdon-2",
               "name": "Worker Don",
               "optional": false,
               "b2b": "",
@@ -10400,7 +10404,7 @@
               ]
             },
             {
-              "id": "driftveilgympermasand-workersterling-3",
+              "id": "driftveilgym-workersterling-3",
               "name": "Worker Sterling",
               "optional": false,
               "b2b": "",
@@ -10475,7 +10479,7 @@
               ]
             },
             {
-              "id": "driftveilgympermasand-clerkkatie-4",
+              "id": "driftveilgym-clerkkatie-4",
               "name": "Clerk Katie",
               "optional": false,
               "b2b": "",
@@ -10563,7 +10567,7 @@
               ]
             },
             {
-              "id": "driftveilgympermasand-gymleaderclaynowgivestm19earthpower-5",
+              "id": "driftveilgym-gymleaderclaynowgivestm19earthpower-5",
               "name": "Gym Leader Clay (Now gives TM19 Earth Power)",
               "optional": false,
               "b2b": "",
@@ -14010,7 +14014,8 @@
       "gifts": []
     },
     {
-      "name": "Route 17 (PERMA RAIN)",
+      "name": "Route 17",
+      "weather": "rain",
       "wild": [
         {
           "method": "Fishing",
@@ -14086,7 +14091,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "route17permarain-fishermanlydongivesdousedrive-0",
+              "id": "route17-fishermanlydongivesdousedrive-0",
               "name": "Fisherman Lydon (GIVES DOUSE DRIVE)",
               "optional": false,
               "b2b": "",
@@ -14163,7 +14168,7 @@
               ]
             },
             {
-              "id": "route17permarain-swimmerjoycegivesshockdrive-1",
+              "id": "route17-swimmerjoycegivesshockdrive-1",
               "name": "Swimmer Joyce (GIVES SHOCK DRIVE)",
               "optional": false,
               "b2b": "",
@@ -14240,7 +14245,7 @@
               ]
             },
             {
-              "id": "route17permarain-swimmerwrightdoublesgivesburndrive-2",
+              "id": "route17-swimmerwrightdoublesgivesburndrive-2",
               "name": "Swimmer Wright (DOUBLES, GIVES BURN DRIVE)",
               "optional": false,
               "b2b": "",
@@ -15816,7 +15821,8 @@
       "gifts": []
     },
     {
-      "name": "Icirrus Gym (PERMA RAIN)",
+      "name": "Icirrus Gym",
+      "weather": "rain",
       "wild": [],
       "rosters": [
         {
@@ -15827,7 +15833,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "icirrusgympermarain-blackbeltgrant-0",
+              "id": "icirrusgym-blackbeltgrant-0",
               "name": "Black Belt Grant",
               "optional": false,
               "b2b": "",
@@ -15904,7 +15910,7 @@
               ]
             },
             {
-              "id": "icirrusgympermarain-battlegirlmiriam-1",
+              "id": "icirrusgym-battlegirlmiriam-1",
               "name": "Battle Girl Miriam",
               "optional": false,
               "b2b": "",
@@ -15981,7 +15987,7 @@
               ]
             },
             {
-              "id": "icirrusgympermarain-blackbeltkendrew-2",
+              "id": "icirrusgym-blackbeltkendrew-2",
               "name": "Black Belt Kendrew",
               "optional": false,
               "b2b": "",
@@ -16058,7 +16064,7 @@
               ]
             },
             {
-              "id": "icirrusgympermarain-battlegirlmikikodoubles-3",
+              "id": "icirrusgym-battlegirlmikikodoubles-3",
               "name": "Battle Girl Mikiko (DOUBLES)",
               "optional": false,
               "b2b": "",
@@ -16133,7 +16139,7 @@
               ]
             },
             {
-              "id": "icirrusgympermarain-battlegirlchandra-4",
+              "id": "icirrusgym-battlegirlchandra-4",
               "name": "Battle Girl Chandra",
               "optional": false,
               "b2b": "",
@@ -16223,7 +16229,7 @@
               ]
             },
             {
-              "id": "icirrusgympermarain-blackbeltthomasdoubles-5",
+              "id": "icirrusgym-blackbeltthomasdoubles-5",
               "name": "Black Belt Thomas (DOUBLES)",
               "optional": false,
               "b2b": "",
@@ -16313,7 +16319,7 @@
               ]
             },
             {
-              "id": "icirrusgympermarain-gymleaderbrycen-6",
+              "id": "icirrusgym-gymleaderbrycen-6",
               "name": "Gym Leader Brycen",
               "optional": false,
               "b2b": "",
@@ -17097,7 +17103,8 @@
       "gifts": []
     },
     {
-      "name": "Relic Castle (PERMA SAND)",
+      "name": "Relic Castle",
+      "weather": "sand",
       "wild": [],
       "rosters": [
         {
@@ -17108,7 +17115,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "reliccastlepermasand-teamplasmagrunt27-0",
+              "id": "reliccastle-teamplasmagrunt27-0",
               "name": "Team Plasma Grunt 27",
               "optional": false,
               "b2b": "",
@@ -17198,7 +17205,7 @@
               ]
             },
             {
-              "id": "reliccastlepermasand-teamplasmagrunt28-1",
+              "id": "reliccastle-teamplasmagrunt28-1",
               "name": "Team Plasma Grunt 28",
               "optional": false,
               "b2b": "",
@@ -17288,7 +17295,7 @@
               ]
             },
             {
-              "id": "reliccastlepermasand-teamplasmagrunt29-2",
+              "id": "reliccastle-teamplasmagrunt29-2",
               "name": "Team Plasma Grunt 29",
               "optional": false,
               "b2b": "",
@@ -17378,7 +17385,7 @@
               ]
             },
             {
-              "id": "reliccastlepermasand-teamplasmagrunt30-3",
+              "id": "reliccastle-teamplasmagrunt30-3",
               "name": "Team Plasma Grunt 30",
               "optional": false,
               "b2b": "",
@@ -17468,7 +17475,7 @@
               ]
             },
             {
-              "id": "reliccastlepermasand-teamplasmagrunt31-4",
+              "id": "reliccastle-teamplasmagrunt31-4",
               "name": "Team Plasma Grunt 31",
               "optional": false,
               "b2b": "",
@@ -17558,7 +17565,7 @@
               ]
             },
             {
-              "id": "reliccastlepermasand-teamplasmagrunt32-5",
+              "id": "reliccastle-teamplasmagrunt32-5",
               "name": "Team Plasma Grunt 32",
               "optional": false,
               "b2b": "",
@@ -17648,7 +17655,7 @@
               ]
             },
             {
-              "id": "reliccastlepermasand-sevensageryoku-6",
+              "id": "reliccastle-sevensageryoku-6",
               "name": "Seven Sage Ryoku",
               "optional": false,
               "b2b": "",
@@ -17743,7 +17750,7 @@
       "special": [],
       "items": [
         {
-          "id": "reliccastlepermasand-item-0",
+          "id": "reliccastle-item-0",
           "name": "TM26 Earthquake",
           "was": "TM30"
         }
@@ -17752,7 +17759,8 @@
       "gifts": []
     },
     {
-      "name": "Route 8 (PERMA RAIN)",
+      "name": "Route 8",
+      "weather": "rain",
       "wild": [],
       "rosters": [
         {
@@ -17763,7 +17771,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "route8permarain-rivalbianca4doubles-snivy-0",
+              "id": "route8-rivalbianca4doubles-snivy-0",
               "name": "Rival Bianca 4 (DOUBLES)",
               "optional": false,
               "b2b": "",
@@ -17853,7 +17861,7 @@
               ]
             },
             {
-              "id": "route8permarain-rivalbianca4doubles-tepig-1",
+              "id": "route8-rivalbianca4doubles-tepig-1",
               "name": "Rival Bianca 4 (DOUBLES)",
               "optional": false,
               "b2b": "",
@@ -17943,7 +17951,7 @@
               ]
             },
             {
-              "id": "route8permarain-rivalbianca4doubles-oshawott-2",
+              "id": "route8-rivalbianca4doubles-oshawott-2",
               "name": "Rival Bianca 4 (DOUBLES)",
               "optional": false,
               "b2b": "",

@@ -545,8 +545,16 @@ const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const giftMons=[];gifts.forEach(g=>g.replace(/\s*\(\d+%\)\s*$/,'').split('/').forEach(s=>{s=s.trim();if(s)giftMons.push(s);}));
   const mons=new Set();wild.forEach(w=>w.species.forEach(s=>mons.add(s.name.toLowerCase())));
   rosters.forEach(r=>r.trainers.forEach(t=>t.team.forEach(m=>mons.add((m.species||'').toLowerCase()))));
-  return {name:a.name,wild,rosters,special,items,notes,gifts,giftMons,sep:!!a.sep,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
+  return {name:a.name,weather:a.weather||'',wild,rosters,special,items,notes,gifts,giftMons,sep:!!a.sep,_s:(a.name+' '+[...mons].join(' ')+' '+items.map(it=>it.name).join(' ')+' '+notes.join(' ')+' '+gifts.join(' ')).toLowerCase()};
 });
+// permanent weather in an area (was "(PERMA X)" in the name); shown as an icon + a top banner
+const WEATHER={
+  sun:{icon:'☀️',label:'Permanent harsh sunlight',fx:'Fire moves ×1.5, Water ×0.5 · SolarBeam charges in one turn · Synthesis/Morning Sun heal more.'},
+  rain:{icon:'🌧️',label:'Permanent rain',fx:'Water moves ×1.5, Fire ×0.5 · Thunder & Hurricane never miss · SolarBeam weakened.'},
+  sand:{icon:'🏜️',label:'Permanent sandstorm',fx:'Non Rock/Ground/Steel lose 1⁄16 HP each turn · Rock types get +50% Sp. Def.'},
+  hail:{icon:'❄️',label:'Permanent hail',fx:'Non-Ice Pokémon lose 1⁄16 HP each turn · Blizzard never misses.'}
+};
+function weatherOf(a){return (a&&a.weather&&WEATHER[a.weather])||null;}
 const wildOpen={};
 // gym badges — earned automatically when a gym's leader is beaten.
 function gymKey(n){return n.replace(/\s*\(.*\)\s*$/,'').toLowerCase().trim();}
@@ -718,7 +726,8 @@ function renderAreas(c){
       :st.caught?`<span class="areacheck" title="Pokémon caught here">✓</span>`
       :st.missed?`<span class="areamiss" title="Encounter missed here">✕</span>`
       :st.resolvedElsewhere?`<span class="arealinked" title="Encounter used elsewhere at this met location">↔</span>`:'';
-    b.innerHTML=`<span class="lname">${boss?`<span class="bosstag" title="Contains a split boss — beating it raises the level cap">★</span>`:''}${esc(a.name)}</span><span class="lmeta">${a.wild.length?a.wild.length+' wild':''}${a.wild.length&&tc?' · ':''}${tc?tc+' trn':''}</span>${marker}`;
+    const wx=weatherOf(a);
+    b.innerHTML=`<span class="lname">${boss?`<span class="bosstag" title="Contains a split boss — beating it raises the level cap">★</span>`:''}${esc(a.name)}${wx?` <span class="wxicon" title="${esc(wx.label)}">${wx.icon}</span>`:''}</span><span class="lmeta">${a.wild.length?a.wild.length+' wild':''}${a.wild.length&&tc?' · ':''}${tc?tc+' trn':''}</span>${marker}`;
     b.onclick=()=>{state.areaSel=idx;reRenderKeepScroll();};
     frag.appendChild(b);
   });
@@ -759,6 +768,11 @@ function wildRow(w){
 }
 function areaDetail(a){
   const wrap=el('div');
+  // permanent-weather banner at the top of the area
+  const wx=weatherOf(a);
+  if(wx){const wb=el('div','wxbanner wx-'+a.weather);
+    wb.innerHTML=`<span class="wxbig">${wx.icon}</span><div><b>${esc(wx.label)}</b><div class="wxfx">${esc(wx.fx)}</div></div>`;
+    wrap.appendChild(wb);}
   // a plain (non-starter) gift is its own encounter, so it shows as a "Gift" method row in the
   // encounters table; the multi-option starter choice keeps its dedicated picker panel below.
   const starters=arr(RAW.areas&&RAW.areas.meta&&RAW.areas.meta.starters);

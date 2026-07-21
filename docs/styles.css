@@ -340,6 +340,15 @@ h3 .movelink:hover{color:var(--accent)}
 .panel.optroster{border-color:color-mix(in srgb,var(--accent-2) 30%,var(--line))}
 .trainer.optrow{border-left:3px solid color-mix(in srgb,var(--accent-2) 55%,transparent)}
 .bosstag{color:var(--star);font-size:11px;margin-right:5px;vertical-align:1px}
+.wxicon{font-size:13px;margin-left:4px;vertical-align:1px}
+.wxbanner{display:flex;align-items:center;gap:12px;padding:11px 14px;margin-bottom:16px;border-radius:12px;border:1px solid var(--line);background:var(--surface-2)}
+.wxbanner .wxbig{font-size:26px;line-height:1;flex:none}
+.wxbanner b{font-size:14px}
+.wxbanner .wxfx{font-size:12.5px;color:var(--muted);margin-top:2px;line-height:1.4}
+.wxbanner.wx-sun{border-color:color-mix(in srgb,#ff9d55 45%,var(--line));background:color-mix(in srgb,#ff9d55 10%,transparent)}
+.wxbanner.wx-rain{border-color:color-mix(in srgb,#4d90d5 45%,var(--line));background:color-mix(in srgb,#4d90d5 10%,transparent)}
+.wxbanner.wx-sand{border-color:color-mix(in srgb,#c5b78c 55%,var(--line));background:color-mix(in srgb,#c5b78c 12%,transparent)}
+.wxbanner.wx-hail{border-color:color-mix(in srgb,#73cec0 45%,var(--line));background:color-mix(in srgb,#73cec0 10%,transparent)}
 .litem.hasboss{border-left:3px solid color-mix(in srgb,var(--star) 70%,transparent)}
 .litem.active.hasboss{border-left-color:var(--star)}
 tr.rivalrow{background:color-mix(in srgb,var(--accent) 6%,transparent)}

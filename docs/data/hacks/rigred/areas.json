@@ -13,7 +13,7 @@
       {
         "name": "Brock Split",
         "cap": 16,
-        "bosses": "pewtergympermasand-gymleaderbrock-1"
+        "bosses": "pewtergym-gymleaderbrock-1"
       },
       {
         "name": "Misty Split",
@@ -33,7 +33,7 @@
       {
         "name": "Erika Split",
         "cap": 50,
-        "bosses": "celadongympermarain-gymleadererika-5"
+        "bosses": "celadongym-gymleadererika-5"
       },
       {
         "name": "Giovanni 1 Split",
@@ -53,12 +53,12 @@
       {
         "name": "Blaine Split",
         "cap": 84,
-        "bosses": "cinnabargympermasun-gymleaderblaine-6"
+        "bosses": "cinnabargym-gymleaderblaine-6"
       },
       {
         "name": "Giovanni 3 Split",
         "cap": 90,
-        "bosses": "viridiangympermasand-gymleadergiovanni-8"
+        "bosses": "viridiangym-gymleadergiovanni-8"
       },
       {
         "name": "E4 Split",
@@ -763,7 +763,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "pewtercity-professorsadatogettheoldamberpermasun-0",
+              "id": "pewtercity-professorsadatogettheoldamber-0",
               "name": "Professor Sada (To get the Old Amber) (PERMA SUN)",
               "optional": true,
               "b2b": "",
@@ -861,7 +861,8 @@
       "gifts": []
     },
     {
-      "name": "Pewter Gym (PERMA SAND)",
+      "name": "Pewter Gym",
+      "weather": "sand",
       "wild": [],
       "rosters": [
         {
@@ -872,7 +873,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "pewtergympermasand-camperliam-0",
+              "id": "pewtergym-camperliam-0",
               "name": "Camper Liam",
               "optional": false,
               "b2b": "",
@@ -936,7 +937,7 @@
               ]
             },
             {
-              "id": "pewtergympermasand-gymleaderbrock-1",
+              "id": "pewtergym-gymleaderbrock-1",
               "name": "Gym Leader Brock",
               "optional": false,
               "b2b": "",
@@ -6532,7 +6533,8 @@
       "gifts": []
     },
     {
-      "name": "Celadon Gym (PERMA RAIN)",
+      "name": "Celadon Gym",
+      "weather": "rain",
       "wild": [],
       "rosters": [
         {
@@ -6543,7 +6545,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "celadongympermarain-lasskay-0",
+              "id": "celadongym-lasskay-0",
               "name": "Lass Kay",
               "optional": false,
               "b2b": "",
@@ -6620,7 +6622,7 @@
               ]
             },
             {
-              "id": "celadongympermarain-beautybridget-1",
+              "id": "celadongym-beautybridget-1",
               "name": "Beauty Bridget",
               "optional": false,
               "b2b": "",
@@ -6697,7 +6699,7 @@
               ]
             },
             {
-              "id": "celadongympermarain-cooltrainermary-2",
+              "id": "celadongym-cooltrainermary-2",
               "name": "Cooltrainer Mary",
               "optional": false,
               "b2b": "",
@@ -6774,7 +6776,7 @@
               ]
             },
             {
-              "id": "celadongympermarain-beautylori-3",
+              "id": "celadongym-beautylori-3",
               "name": "Beauty Lori",
               "optional": false,
               "b2b": "",
@@ -6851,7 +6853,7 @@
               ]
             },
             {
-              "id": "celadongympermarain-lasslisa-4",
+              "id": "celadongym-lasslisa-4",
               "name": "Lass Lisa",
               "optional": false,
               "b2b": "",
@@ -6928,7 +6930,7 @@
               ]
             },
             {
-              "id": "celadongympermarain-gymleadererika-5",
+              "id": "celadongym-gymleadererika-5",
               "name": "Gym Leader Erika",
               "optional": false,
               "b2b": "",
@@ -10178,7 +10180,7 @@
               ]
             },
             {
-              "id": "route15-bikerernestpermasun-5",
+              "id": "route15-bikerernest-5",
               "name": "Biker Ernest (PERMA SUN)",
               "optional": false,
               "b2b": "",
@@ -11008,7 +11010,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "route13-birdkeeperbeckpermasun-0",
+              "id": "route13-birdkeeperbeck-0",
               "name": "Bird Keeper Beck (PERMA SUN)",
               "optional": false,
               "b2b": "",
@@ -11168,7 +11170,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "route12-fisherandrewpermarain-0",
+              "id": "route12-fisherandrew-0",
               "name": "Fisher Andrew (PERMA RAIN)",
               "optional": false,
               "b2b": "",
@@ -12023,7 +12025,8 @@
       "gifts": []
     },
     {
-      "name": "Route 19 (PERMA RAIN)",
+      "name": "Route 19",
+      "weather": "rain",
       "wild": [
         {
           "method": "Old Rod",
@@ -12057,7 +12060,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "route19permarain-swimmertony-0",
+              "id": "route19-swimmertony-0",
               "name": "Swimmer Tony",
               "optional": false,
               "b2b": "",
@@ -12134,7 +12137,7 @@
               ]
             },
             {
-              "id": "route19permarain-swimmerdouglas-1",
+              "id": "route19-swimmerdouglas-1",
               "name": "Swimmer Douglas",
               "optional": false,
               "b2b": "",
@@ -12211,7 +12214,7 @@
               ]
             },
             {
-              "id": "route19permarain-swimmerdavid-2",
+              "id": "route19-swimmerdavid-2",
               "name": "Swimmer David",
               "optional": false,
               "b2b": "",
@@ -12288,7 +12291,7 @@
               ]
             },
             {
-              "id": "route19permarain-swimmermatthew-3",
+              "id": "route19-swimmermatthew-3",
               "name": "Swimmer Matthew",
               "optional": false,
               "b2b": "",
@@ -12365,7 +12368,7 @@
               ]
             },
             {
-              "id": "route19permarain-swimmerlia-4",
+              "id": "route19-swimmerlia-4",
               "name": "Swimmer Lia",
               "optional": false,
               "b2b": "",
@@ -12858,7 +12861,8 @@
       "gifts": []
     },
     {
-      "name": "Silph Co (PERMA SAND)",
+      "name": "Silph Co",
+      "weather": "sand",
       "wild": [],
       "rosters": [
         {
@@ -12869,7 +12873,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "silphcopermasand-rocketgrunt18jumpsyouassoonasyougoto2f-0",
+              "id": "silphco-rocketgrunt18jumpsyouassoonasyougoto2f-0",
               "name": "Rocket Grunt 18 (jumps you as soon as you go to 2F)",
               "optional": false,
               "b2b": "",
@@ -12959,7 +12963,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-rocketgrunt17-1",
+              "id": "silphco-rocketgrunt17-1",
               "name": "Rocket Grunt 17",
               "optional": false,
               "b2b": "",
@@ -13049,7 +13053,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-scientistconnor-2",
+              "id": "silphco-scientistconnor-2",
               "name": "Scientist Connor",
               "optional": false,
               "b2b": "",
@@ -13139,7 +13143,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-scientistjose-3",
+              "id": "silphco-scientistjose-3",
               "name": "Scientist Jose",
               "optional": false,
               "b2b": "",
@@ -13229,7 +13233,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-scientistbeau-4",
+              "id": "silphco-scientistbeau-4",
               "name": "Scientist Beau",
               "optional": false,
               "b2b": "",
@@ -13319,7 +13323,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-teamrocketgrunt21-5",
+              "id": "silphco-teamrocketgrunt21-5",
               "name": "Team Rocket Grunt 21",
               "optional": false,
               "b2b": "",
@@ -13409,7 +13413,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-teamrocketgrunt22-6",
+              "id": "silphco-teamrocketgrunt22-6",
               "name": "Team Rocket Grunt 22",
               "optional": false,
               "b2b": "",
@@ -13499,7 +13503,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-teamrocketpetrel2therocketgrunton3f-7",
+              "id": "silphco-teamrocketpetrel2therocketgrunton3f-7",
               "name": "Team Rocket Petrel 2 (the Rocket Grunt on 3F)",
               "optional": false,
               "b2b": "",
@@ -13589,7 +13593,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-rivalblue5nopermasandforthisfight-bulbasaur-8",
+              "id": "silphco-rivalblue5noforthisfight-bulbasaur-8",
               "name": "Rival Blue 5 (NO PERMA SAND FOR THIS FIGHT)",
               "optional": false,
               "b2b": "",
@@ -13679,7 +13683,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-rivalblue5nopermasandforthisfight-squirtle-9",
+              "id": "silphco-rivalblue5noforthisfight-squirtle-9",
               "name": "Rival Blue 5 (NO PERMA SAND FOR THIS FIGHT)",
               "optional": false,
               "b2b": "",
@@ -13769,7 +13773,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-rivalblue5nopermasandforthisfight-charmander-10",
+              "id": "silphco-rivalblue5noforthisfight-charmander-10",
               "name": "Rival Blue 5 (NO PERMA SAND FOR THIS FIGHT)",
               "optional": false,
               "b2b": "",
@@ -13859,7 +13863,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-teamrocketarcher2thetrainerrightbeforegiovanni2permasand-11",
+              "id": "silphco-teamrocketarcher2thetrainerrightbeforegiovanni2-11",
               "name": "Team Rocket Archer 2 (the trainer right before Giovanni 2) (PERMA SAND)",
               "optional": false,
               "b2b": "",
@@ -13949,7 +13953,7 @@
               ]
             },
             {
-              "id": "silphcopermasand-teamrocketgiovanni2permasand-12",
+              "id": "silphco-teamrocketgiovanni2-12",
               "name": "Team Rocket Giovanni 2 (PERMA SAND)",
               "optional": false,
               "b2b": "",
@@ -14044,32 +14048,32 @@
       "special": [],
       "items": [
         {
-          "id": "silphcopermasand-item-0",
+          "id": "silphco-item-0",
           "name": "Potion",
           "was": "Zinc"
         },
         {
-          "id": "silphcopermasand-item-1",
+          "id": "silphco-item-1",
           "name": "Potion",
           "was": "Protein"
         },
         {
-          "id": "silphcopermasand-item-2",
+          "id": "silphco-item-2",
           "name": "Potion",
           "was": "Iron"
         },
         {
-          "id": "silphcopermasand-item-3",
+          "id": "silphco-item-3",
           "name": "Potion",
           "was": "HP UP"
         },
         {
-          "id": "silphcopermasand-item-4",
+          "id": "silphco-item-4",
           "name": "Potion",
           "was": "Calcium"
         },
         {
-          "id": "silphcopermasand-item-5",
+          "id": "silphco-item-5",
           "name": "Potion",
           "was": "Carbos"
         }
@@ -14510,7 +14514,8 @@
       "gifts": []
     },
     {
-      "name": "Route 21 (PERMA RAIN)",
+      "name": "Route 21",
+      "weather": "rain",
       "wild": [
         {
           "method": "Grass",
@@ -14600,7 +14605,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "route21permarain-swimmerian-0",
+              "id": "route21-swimmerian-0",
               "name": "Swimmer Ian",
               "optional": false,
               "b2b": "",
@@ -14690,7 +14695,7 @@
               ]
             },
             {
-              "id": "route21permarain-swimmerspencer-1",
+              "id": "route21-swimmerspencer-1",
               "name": "Swimmer Spencer",
               "optional": false,
               "b2b": "",
@@ -14780,7 +14785,7 @@
               ]
             },
             {
-              "id": "route21permarain-swimmerjack-2",
+              "id": "route21-swimmerjack-2",
               "name": "Swimmer Jack",
               "optional": false,
               "b2b": "",
@@ -14870,7 +14875,7 @@
               ]
             },
             {
-              "id": "route21permarain-swimmerroland-3",
+              "id": "route21-swimmerroland-3",
               "name": "Swimmer Roland",
               "optional": false,
               "b2b": "",
@@ -14921,7 +14926,7 @@
               ]
             },
             {
-              "id": "route21permarain-swimmerjerome-4",
+              "id": "route21-swimmerjerome-4",
               "name": "Swimmer Jerome",
               "optional": false,
               "b2b": "",
@@ -15863,7 +15868,7 @@
               ]
             },
             {
-              "id": "route20west-cooltrainerajpermasand-1",
+              "id": "route20west-cooltraineraj-1",
               "name": "Cooltrainer AJ (PERMA SAND)",
               "optional": true,
               "b2b": "",
@@ -15949,7 +15954,7 @@
           "optional": true,
           "trainers": [
             {
-              "id": "route20west-swimmerfizzopermasun-2",
+              "id": "route20west-swimmerfizzo-2",
               "name": "Swimmer Fizzo (PERMA SUN)",
               "optional": true,
               "b2b": "",
@@ -16013,7 +16018,7 @@
               ]
             },
             {
-              "id": "route20west-swimmerdogepermasun-3",
+              "id": "route20west-swimmerdoge-3",
               "name": "Swimmer Doge (PERMA SUN)",
               "optional": true,
               "b2b": "",
@@ -16086,7 +16091,7 @@
           "optional": true,
           "trainers": [
             {
-              "id": "route20west-birdkeeperintekampermasun-4",
+              "id": "route20west-birdkeeperintekam-4",
               "name": "Bird Keeper Intekam (PERMA SUN)",
               "optional": true,
               "b2b": "",
@@ -16184,7 +16189,8 @@
       "gifts": []
     },
     {
-      "name": "Cinnabar Gym (PERMA SUN)",
+      "name": "Cinnabar Gym",
+      "weather": "sun",
       "wild": [],
       "rosters": [
         {
@@ -16195,7 +16201,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "cinnabargympermasun-burglarquinn-0",
+              "id": "cinnabargym-burglarquinn-0",
               "name": "Burglar Quinn",
               "optional": false,
               "b2b": "",
@@ -16272,7 +16278,7 @@
               ]
             },
             {
-              "id": "cinnabargympermasun-supernerdavery-1",
+              "id": "cinnabargym-supernerdavery-1",
               "name": "Super Nerd Avery",
               "optional": false,
               "b2b": "",
@@ -16349,7 +16355,7 @@
               ]
             },
             {
-              "id": "cinnabargympermasun-burglarramon-2",
+              "id": "cinnabargym-burglarramon-2",
               "name": "Burglar Ramon",
               "optional": false,
               "b2b": "",
@@ -16423,7 +16429,7 @@
               ]
             },
             {
-              "id": "cinnabargympermasun-supernerdderek-3",
+              "id": "cinnabargym-supernerdderek-3",
               "name": "Super Nerd Derek",
               "optional": false,
               "b2b": "",
@@ -16500,7 +16506,7 @@
               ]
             },
             {
-              "id": "cinnabargympermasun-burglardusty-4",
+              "id": "cinnabargym-burglardusty-4",
               "name": "Burglar Dusty",
               "optional": false,
               "b2b": "",
@@ -16577,7 +16583,7 @@
               ]
             },
             {
-              "id": "cinnabargympermasun-supernerdzac-5",
+              "id": "cinnabargym-supernerdzac-5",
               "name": "Super Nerd Zac",
               "optional": false,
               "b2b": "",
@@ -16667,7 +16673,7 @@
               ]
             },
             {
-              "id": "cinnabargympermasun-gymleaderblaine-6",
+              "id": "cinnabargym-gymleaderblaine-6",
               "name": "Gym Leader Blaine",
               "optional": false,
               "b2b": "",
@@ -16767,7 +16773,8 @@
       "gifts": []
     },
     {
-      "name": "Viridian Gym (PERMA SAND)",
+      "name": "Viridian Gym",
+      "weather": "sand",
       "wild": [],
       "rosters": [
         {
@@ -16778,7 +16785,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "viridiangympermasand-blackbeltatsushi-0",
+              "id": "viridiangym-blackbeltatsushi-0",
               "name": "Black Belt Atsushi",
               "optional": false,
               "b2b": "",
@@ -16868,7 +16875,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-tamerjason-1",
+              "id": "viridiangym-tamerjason-1",
               "name": "Tamer Jason",
               "optional": false,
               "b2b": "",
@@ -16958,7 +16965,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-cooltraineryuji-2",
+              "id": "viridiangym-cooltraineryuji-2",
               "name": "Cooltrainer Yuji",
               "optional": false,
               "b2b": "",
@@ -17048,7 +17055,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-blackbeltkiyo-3",
+              "id": "viridiangym-blackbeltkiyo-3",
               "name": "Black Belt Kiyo",
               "optional": false,
               "b2b": "",
@@ -17136,7 +17143,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-tamercole-4",
+              "id": "viridiangym-tamercole-4",
               "name": "Tamer Cole",
               "optional": false,
               "b2b": "",
@@ -17223,7 +17230,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-cooltrainerwarren-5",
+              "id": "viridiangym-cooltrainerwarren-5",
               "name": "Cooltrainer Warren",
               "optional": false,
               "b2b": "",
@@ -17313,7 +17320,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-blackbelttakashi-6",
+              "id": "viridiangym-blackbelttakashi-6",
               "name": "Black Belt Takashi",
               "optional": false,
               "b2b": "",
@@ -17403,7 +17410,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-cooltrainersamuel-7",
+              "id": "viridiangym-cooltrainersamuel-7",
               "name": "Cooltrainer Samuel",
               "optional": false,
               "b2b": "",
@@ -17493,7 +17500,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-gymleadergiovanni-8",
+              "id": "viridiangym-gymleadergiovanni-8",
               "name": "Gym Leader Giovanni",
               "optional": false,
               "b2b": "",
@@ -17583,7 +17590,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-rivalblue6-bulbasaur-9",
+              "id": "viridiangym-rivalblue6-bulbasaur-9",
               "name": "Rival Blue 6",
               "optional": false,
               "b2b": "",
@@ -17671,7 +17678,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-rivalblue6-squirtle-10",
+              "id": "viridiangym-rivalblue6-squirtle-10",
               "name": "Rival Blue 6",
               "optional": false,
               "b2b": "",
@@ -17759,7 +17766,7 @@
               ]
             },
             {
-              "id": "viridiangympermasand-rivalblue6-charmander-11",
+              "id": "viridiangym-rivalblue6-charmander-11",
               "name": "Rival Blue 6",
               "optional": false,
               "b2b": "",
@@ -17918,7 +17925,7 @@
           "optional": false,
           "trainers": [
             {
-              "id": "victoryroad-cooltrainersmvpermasun-0",
+              "id": "victoryroad-cooltrainersmv-0",
               "name": "Cooltrainer smv (PERMA SUN)",
               "optional": false,
               "b2b": "",
@@ -18095,7 +18102,7 @@
               ]
             },
             {
-              "id": "victoryroad-cooltrainerindigopermarain-2",
+              "id": "victoryroad-cooltrainerindigo-2",
               "name": "Cooltrainer Indigo (PERMA RAIN)",
               "optional": false,
               "b2b": "",
