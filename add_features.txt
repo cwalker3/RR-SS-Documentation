@@ -1,0 +1,1 @@
+1. [DONE] I want you to do some refactoring. I want to data to be in JSON so I can easily edit it. And organize the files a bit better. Sort the data by generation for general stats/moves, and then by romhack for specific changes. Have different JSON files for pokemon data and area data.
