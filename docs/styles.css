@@ -331,7 +331,13 @@ h3 .movelink:hover{color:var(--accent)}
 .varpill{font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;background:var(--surface-3);color:var(--muted);white-space:nowrap}
 .optpill{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;padding:2px 7px;border-radius:6px;background:color-mix(in srgb,var(--accent-2) 16%,transparent);color:var(--accent-2);border:1px solid color-mix(in srgb,var(--accent-2) 35%,transparent);white-space:nowrap}
 .gauntpill{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;padding:2px 8px;border-radius:6px;background:color-mix(in srgb,var(--down) 16%,transparent);color:var(--down);border:1px solid color-mix(in srgb,var(--down) 38%,transparent);white-space:nowrap;margin-left:8px}
+.b2bpill{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;padding:2px 7px;border-radius:6px;background:color-mix(in srgb,var(--down) 14%,transparent);color:var(--down);border:1px solid color-mix(in srgb,var(--down) 34%,transparent);white-space:nowrap}
+.rewardpill{font-size:11px;font-weight:700;padding:2px 9px;border-radius:6px;background:color-mix(in srgb,var(--up) 15%,transparent);color:var(--up);border:1px solid color-mix(in srgb,var(--up) 34%,transparent);white-space:nowrap;margin-left:8px}
+.optpill.big{font-size:11px;padding:3px 10px;margin-left:8px}
+.gauntnote{margin:2px 16px 0;padding:8px 12px;font-size:12.5px;line-height:1.4;color:var(--muted);background:var(--surface-2);border-radius:8px;border:1px dashed var(--line-2)}
 .panel.gauntlet{border-color:color-mix(in srgb,var(--down) 32%,var(--line))}
+.panel.optroster{border-color:color-mix(in srgb,var(--accent-2) 30%,var(--line))}
+.trainer.optrow{border-left:3px solid color-mix(in srgb,var(--accent-2) 55%,transparent)}
 .bosstag{color:var(--star);font-size:11px;margin-right:5px;vertical-align:1px}
 .litem.hasboss{border-left:3px solid color-mix(in srgb,var(--star) 70%,transparent)}
 .litem.active.hasboss{border-left-color:var(--star)}

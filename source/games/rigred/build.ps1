@@ -430,9 +430,9 @@ $itemRows = New-Object System.Collections.ArrayList
 $area = $null; $trainer = $null; $baseTName = ''; $choice = ''; $noteBuf = $null; $curSplit = ''
 $splitList = New-Object System.Collections.ArrayList   # split names in story order
 $splitCaps = @{}                                       # split name -> level cap
-$optCtx = $false                                       # inside an optional "For N …" fight group
-$optNote = ''                                          # what that group rewards (e.g. "Liechi Berries")
-$grpCtx = ''                                           # a named fight group within the current area (e.g. "Gauntlet")
+$grpKey = ''                                           # current fight-group key ('' = the default roster)
+$groupMeta = @{}                                       # group key -> @{ title; kind; reward; note; optional }
+$grpN = 0                                              # counter for unique group keys
 $pendingNotes = New-Object System.Collections.ArrayList
 
 function New-BBArea($name){
@@ -462,13 +462,23 @@ function End-BBTrainer(){
   if ($script:trainer -and $script:trainer.team.Count -gt 0 -and $script:area) { [void]$script:area.trainers.Add($script:trainer) }
   $script:trainer = $null
 }
+# open a named gauntlet group (back-to-back fights); returns nothing, sets $grpKey
+function Start-Gauntlet($reward, $note, $optional){
+  $script:grpN++; $key = "g$($script:grpN)"
+  $script:groupMeta[$key] = [ordered]@{ title='Gauntlet'; kind='gauntlet'; reward=$reward; note=$note; optional=[bool]$optional }
+  $script:grpKey = $key
+}
 function New-BBTrainer($name){
   # optional fights are tagged "(OPTIONAL…)" in the sheet; item-guard bosses read "(To get …)".
   # flag them and strip the bare OPTIONAL marker (keeping any "GIVES X" detail as a plain aside).
   $opt = $false
   if ($name -match '(?i)\(OPTIONAL\b') { $opt = $true; $name = ($name -replace '(?i)\(OPTIONAL,\s*', '(' -replace '(?i)\s*\(OPTIONAL\)', '').Trim() }
   elseif ($name -match '(?i)\(To get ') { $opt = $true }
-  return [ordered]@{ id=''; name=$name; optional=$opt; group=$script:grpCtx; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; notes=(New-Object System.Collections.ArrayList); team=(New-Object System.Collections.ArrayList) } }
+  # a "(BACK TO BACK …)" aside means this fight is chained with an adjacent one — flag it and
+  # lift the text into a badge instead of the display name.
+  $b2b = ''
+  if ($name -match '(?i)\((BACK TO BACK[^)]*)\)') { $b2b = ($Matches[1].Trim() -replace '\s+', ' '); $name = ($name -replace '(?i)\s*\(BACK TO BACK[^)]*\)', '').Trim() }
+  return [ordered]@{ id=''; name=$name; optional=$opt; b2b=$b2b; group=$script:grpKey; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; notes=(New-Object System.Collections.ArrayList); team=(New-Object System.Collections.ArrayList) } }
 # a note that reads like it's about the upcoming battle attaches to that trainer, not the area
 function Is-FightNote($n){ return ($n -match '(?i)\bfight\b|\bbattle\b|do this|doing this|wait until|before you|can.?t switch|tag battle|rematch') }
 function Flush-Notes(){ foreach ($n in $script:pendingNotes) { if ($script:area) { [void]$script:area.notes.Add($n) } }; $script:pendingNotes.Clear() }
@@ -490,7 +500,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
   # any other line ends a pending note (buffered; assigned to the next trainer or area)
   if ($noteBuf -ne $null) { [void]$pendingNotes.Add($noteBuf); $noteBuf = $null }
   if ($t -match '\(Level Cap:\s*(\d+)') {                                  # gym split / phase
-    Flush-Notes; $optCtx = $false; $optNote = ''; $grpCtx = ''; $cap = [int]$Matches[1]; $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim()
+    Flush-Notes; $grpKey = ''; $cap = [int]$Matches[1]; $curSplit = ($t -replace '\s*\(Level Cap:.*$','').Trim()
     if (-not $splitCaps.ContainsKey($curSplit)) { $splitCaps[$curSplit] = $cap; [void]$splitList.Add($curSplit) }
     continue
   }
@@ -547,16 +557,26 @@ for ($i=0; $i -lt $ml.Count; $i++) {
     if (NextIsTeam $i) {                                  # trainer header
       $baseTName = $h
       $trainer = New-BBTrainer $h
-      if ($optCtx) { $trainer.optional = $true; if ($optNote) { [void]$trainer.notes.Add($optNote) } }   # berry-group fights
+      if ($grpKey -and $groupMeta[$grpKey].optional) { $trainer.optional = $true }   # optional gauntlets
       if ($choice) { $trainer.choice = $choice }
       Assign-Notes $trainer                              # pending fight notes attach to this trainer
     }
-    # "For 2 Salac's:" etc. — an optional berry-access fight group; keep its fights in the
-    # current area (Route 20 West), mark them optional, and note which berry they reward
-    elseif ($h -match '^For\s+(\d+)\s+([A-Za-z]+)') { $optCtx = $true; $optNote = "Optional - gives access to $($Matches[1]) $($Matches[2]) Berries"; [void]$pendingNotes.Add($h) }
-    # "Gauntlet …:" — a back-to-back fight gauntlet within the current area (e.g. on Route 15),
-    # not its own location; group its trainers under a "Gauntlet" roster
-    elseif ($h -match '^Gauntlet\b') { $grpCtx = 'Gauntlet'; [void]$pendingNotes.Add($h) }
+    # "For 2 Salac's:" / "For 2 Petaya's, BACK TO BACK:" — an optional berry gauntlet; keep its
+    # fights in the current area (Route 20 West) with the berry reward shown on the group
+    elseif ($h -match '^For\s+(\d+)\s+([A-Za-z]+)') {
+      $n = $Matches[1]; $berry = $Matches[2]                 # capture before the next -match clobbers $Matches
+      $rest = ($h -replace '^For\s+\d+\s+[A-Za-z]+[^,]*,?\s*', '').Trim(); if ($rest -match '(?i)^back to back$') { $rest = '' }
+      Start-Gauntlet "$n $berry Berries" $rest $true
+    }
+    # "Gauntlet (gives you access to Choice Band, …):" — an optional gauntlet on the current
+    # route; pull the reward ("Choice Band") and any advice onto the group, not the notes
+    elseif ($h -match '^Gauntlet\b') {
+      $reward = ''; $note = ''
+      if ($h -match '(?i)\(([^)]*)\)') { $inner = $Matches[1].Trim()
+        if ($inner -match '(?i)access to\s+([^,]+)') { $reward = $Matches[1].Trim() }
+        $note = ($inner -replace '(?i).*access to\s+[^,]+,?\s*', '').Trim() }
+      Start-Gauntlet $reward $note $true
+    }
     # a ':' line that reads like a sentence (lowercase function words) is a note that
     # introduces a fight, not a location — buffer it for the next trainer / area.
     # ignore words inside "(…)" so a real location with a parenthetical aside
@@ -568,7 +588,7 @@ for ($i=0; $i -lt $ml.Count; $i++) {
     elseif ($h -match '^\s*[-–—•]') { Flush-Notes }        # a bullet that ends in ':' (e.g. "-official calc:") — not a location
     # real locations only start after the first gym split; the intro (Notes, Credits,
     # Mart changes, official calc, …) all sits before it, so skip headers until then
-    elseif ($curSplit -and $h -ne 'Notes') { Flush-Notes; $optCtx = $false; $optNote = ''; $grpCtx = ''; $area = New-BBArea $h }
+    elseif ($curSplit -and $h -ne 'Notes') { Flush-Notes; $grpKey = ''; $area = New-BBArea $h }
     $choice = ''
     continue
   }
@@ -641,8 +661,8 @@ foreach ($a in $areas) {
   $notes = @($a.notes)
   $gifts = @(); if ($giftsByLoc.ContainsKey($a.name)) { $gifts = @($giftsByLoc[$a.name]) }
   if ($wild.Count -eq 0 -and $trs.Count -eq 0 -and $items.Count -eq 0 -and $notes.Count -eq 0 -and $gifts.Count -eq 0) { continue }
-  # split trainers into rosters by their fight group, preserving story order; a named group
-  # (e.g. "Gauntlet") becomes its own roster so the UI can mark and group it.
+  # split trainers into rosters by their fight group, preserving story order; a gauntlet group
+  # becomes its own roster carrying its reward / advice / optional flag for the UI.
   $rosters = @()
   if ($trs.Count) {
     $groupOrder = New-Object System.Collections.ArrayList
@@ -650,7 +670,15 @@ foreach ($a in $areas) {
     foreach ($g in $groupOrder) {
       $gt = @($trs | Where-Object { [string]$_.group -eq $g })
       foreach ($tr in $gt) { [void]$tr.Remove('group') }
-      $rosters += [ordered]@{ title=$(if ($g) { $g } else { 'Trainers' }); kind=$(if ($g -eq 'Gauntlet') { 'gauntlet' } else { '' }); trainers=$gt }
+      $m = if ($g -and $groupMeta.ContainsKey($g)) { $groupMeta[$g] } else { $null }
+      $rosters += [ordered]@{
+        title  = $(if ($m) { $m.title } else { 'Trainers' })
+        kind   = $(if ($m) { $m.kind } else { '' })
+        reward = $(if ($m) { $m.reward } else { '' })
+        note   = $(if ($m) { $m.note } else { '' })
+        optional = $(if ($m) { $m.optional } else { $false })
+        trainers = $gt
+      }
     }
   }
   [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=@($rosters); special=@(); items=$items; notes=$notes; gifts=$gifts })

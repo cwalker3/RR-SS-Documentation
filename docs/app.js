@@ -536,7 +536,7 @@ function chgRow(o){
 /* ================= AREAS ================= */
 const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
-  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,notes:arr(t.notes),team:arr(t.team)}))}));
+  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,reward:r.reward||'',note:r.note||'',optional:!!r.optional,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,b2b:t.b2b||'',notes:arr(t.notes),team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   // note: rosters below already keep the full team objects (species/level/item/ability/nature/moves)
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,was:it.was}));
@@ -843,9 +843,12 @@ function areaDetail(a){
     if(!trainers.length)return;
     const track=r.kind!=='rematch';
     const doneN=track?trainers.filter(t=>TRAINERS_DONE.has(t.id)).length:0;
-    const p=el('div','panel'+(r.kind==='gauntlet'?' gauntlet':''));
-    const gtag=r.kind==='gauntlet'?`<span class="gauntpill" title="A gauntlet: back-to-back fights with no healing in between">⚔ Gauntlet</span>`:'';
-    p.innerHTML=`<div class="phead"><h3>${esc(r.title)}</h3>${gtag}<span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span></div>`;
+    const p=el('div','panel'+(r.kind==='gauntlet'?' gauntlet':'')+(r.optional?' optroster':''));
+    const gtag=r.kind==='gauntlet'?`<span class="gauntpill" title="A gauntlet: back-to-back fights, no healing in between">⚔ Gauntlet</span>`:'';
+    const otag=r.optional?`<span class="optpill big" title="Optional — you can skip this whole group; it doesn't block the area">optional</span>`:'';
+    const rtag=r.reward?`<span class="rewardpill" title="What clearing this gauntlet gets you">🎁 ${esc(r.reward)}</span>`:'';
+    const gnote=r.note?`<div class="gauntnote">${esc(r.note)}</div>`:'';
+    p.innerHTML=`<div class="phead"><h3>${esc(r.title)}</h3>${gtag}${otag}${rtag}<span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span></div>${gnote}`;
     const body=el('div','pbody');
     body.innerHTML=trainers.map(t=>{
         let tag='';const rival=isRivalTrainer(t);
@@ -853,7 +856,8 @@ function areaDetail(a){
           tag=(rn&&rs&&g===rn&&st===rs)?` <span class="rivalpill" title="Your rival, based on your gender & starter">★ Your rival</span>`:` <span class="varpill">${esc(g)} · ${esc(st)}</span>`;}
         if(t.choice&&!PROFILE.starter)tag+=` <span class="varpill">if ${esc(t.choice)}</span>`;
         if(t.split)tag+=` <span class="varpill" title="You fight this on a later visit here, during the ${esc(t.split)}">${esc(t.split)}</span>`;
-        if(t.optional)tag+=` <span class="optpill" title="Optional — skippable; doesn't block this area from counting as done">optional</span>`;
+        if(t.b2b)tag+=` <span class="b2bpill" title="${esc(t.b2b)}">⚔ back-to-back</span>`;
+        if(t.optional&&r.kind!=='gauntlet')tag+=` <span class="optpill" title="Optional — skippable; doesn't block this area from counting as done">optional</span>`;
         const done=track&&TRAINERS_DONE.has(t.id);
         const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
         const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(esc).join('<br>')}</div>`:'';
@@ -869,7 +873,7 @@ function areaDetail(a){
           (hasNat?`<tr><th>Nature</th>${tcell(m=>m.nature?esc(m.nature):'<span class="faint">—</span>')}</tr>`:'')+
           `<tr><th>Moves</th>${tcell(m=>arr(m.moves).map(mv=>`<div class="tsmove movelink" data-move="${esc(mv)}" role="button" tabindex="0"${moveTypeBg(mv)}>${esc(mv)}${moveChgMark(mv)}</div>`).join('')||'<span class="faint">—</span>')}</tr>`+
           `</table></div>`;
-        return `<details class="trainer${done?' tdone':''}${rival?' rivalrow':''}"><summary><span class="tsumhead">${chk}<span class="tname">${esc(t.name)}${badge}${tag}</span></span>${tnote}<div class="tpreview">${teamInline(t.team)}</div></summary><div class="tdetail">${detail}</div></details>`;
+        return `<details class="trainer${done?' tdone':''}${rival?' rivalrow':''}${t.optional?' optrow':''}"><summary><span class="tsumhead">${chk}<span class="tname">${esc(t.name)}${badge}${tag}</span></span>${tnote}<div class="tpreview">${teamInline(t.team)}</div></summary><div class="tdetail">${detail}</div></details>`;
       }).join('');
     p.appendChild(body);wrap.appendChild(p);
   });
