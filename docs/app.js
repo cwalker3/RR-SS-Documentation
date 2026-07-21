@@ -348,6 +348,9 @@ PK.forEach(q=>{
   const key=normName(m[1]);
   (EVO_NEXT[key]=EVO_NEXT[key]||[]).push({name:q.name,dex:q.dex,level:lv?+lv[1]:null,method:(m[2]||'').trim()});
 });
+// reverse map: which species this one evolves FROM (its pre-evolution), from each species' `evo`
+const PRE_EVO={};
+PK.forEach(p=>{arr(p.evo).forEach(ev=>{const k=normName(ev.into);if(ev.into&&!PRE_EVO[k])PRE_EVO[k]={from:p.name,level:ev.level};});});
 // Per-move evolution-delay tag: 'excl' = the next evolution never learns it by level-up;
 // {early:N} = the evolution learns it N levels later. Only for moves learned after you
 // could already evolve, and only for meaningful early leads (systematic +1/+2 shifts hidden).
@@ -435,6 +438,14 @@ function pokemonDetail(p){
   }
   // single left column: abilities, other changes, moves, TMs, notes (stats stay full-width above)
   const left=el('div','detailcol');
+  // evolution: what this species evolves FROM (link back to the pre-evolution)
+  const pre=PRE_EVO[normName(p.name)];
+  if(pre){
+    const link=isMon(pre.from);
+    const meth=pre.level?`<span class="lv">${esc(pre.level)}</span>`:`<span class="lv">special</span>`;
+    const html=`<span class="tmon${link?' monlink':''}"${link?monAttr(pre.from):''}>${spriteByName(pre.from,20,'cspr')}${esc(pre.from)}${meth}</span>`;
+    left.appendChild(sub('Evolves from',`<div class="team">${html}</div>`));
+  }
   // evolution: what this species evolves into, and how (shown on the pre-evo)
   if(p.evo.length){
     const evoHtml=p.evo.map(ev=>{
