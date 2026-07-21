@@ -562,7 +562,7 @@ function chgRow(o){
 /* ================= AREAS ================= */
 const AREAS=arr(RAW.areas&&RAW.areas.areas).map(a=>{
   const wild=arr(a.wild).map(w=>({method:w.method,level:w.level,species:arr(w.species)}));
-  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,reward:r.reward||'',note:r.note||'',optional:!!r.optional,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,b2b:t.b2b||'',reward:t.reward||'',weather:t.weather||'',doubles:!!t.doubles,notes:arr(t.notes),team:arr(t.team)}))}));
+  const rosters=arr(a.rosters).map(r=>({title:r.title,kind:r.kind,reward:r.reward||'',note:r.note||'',optional:!!r.optional,trainers:arr(r.trainers).map(t=>({id:t.id,name:t.name,badge:t.badge,choice:t.choice||'',split:t.split||'',optional:!!t.optional,b2b:t.b2b||'',reward:t.reward||'',weather:t.weather||'',doubles:!!t.doubles,ally:!!t.ally,notes:arr(t.notes),team:arr(t.team)}))}));
   const special=arr(a.special).map(s=>({title:s.title,team:arr(s.team).map(m=>({...m,moves:arr(m.moves)}))}));
   // note: rosters below already keep the full team objects (species/level/item/ability/nature/moves)
   const items=arr(a.items).map(it=>({id:it.id,name:it.name,how:it.how||''}));
@@ -637,6 +637,7 @@ function groupMissedArea(a){return areaGroup(a).find(x=>AREA_MISSED.has(x.name))
 function areaRosterTrainers(a){
   const rn=rivalName(), rs=rivalStarter(), out=[];
   a.rosters.forEach(r=>{if(r.kind==='rematch'||r.kind==='partner')return;r.trainers.forEach(t=>{
+    if(t.ally)return;   // tag-battle allies fight with you; not tracked
     if(t.choice&&PROFILE.starter&&t.choice!==PROFILE.starter)return;
     if(isRivalTrainer(t)){if(rn&&rivalGenderOf(t.name)!==rn)return;if(rs&&rivalStarterOf(t.team)!==rs)return;}
     out.push(t);});});
@@ -744,7 +745,7 @@ function renderAreas(c){
   items.forEach(a=>{
     const idx=AREAS.indexOf(a);
     const b=el('button','litem');b.classList.toggle('active',idx===state.areaSel);
-    const tc=a.rosters.reduce((n,r)=>n+(r.kind==='rematch'||r.kind==='partner'?0:r.trainers.length),0);
+    const tc=a.rosters.reduce((n,r)=>n+(r.kind==='rematch'||r.kind==='partner'?0:r.trainers.filter(t=>!t.ally).length),0);
     const st=areaStatus(a);
     b.classList.toggle('done',st.complete);
     b.classList.toggle('optleft',st.complete&&st.optionalsLeft);
@@ -878,6 +879,36 @@ function areaDetail(a){
   }
   // rosters (rival Brendan/May battles filtered by the chosen gender + starter)
   const rn=rivalName(), rs=rivalStarter();
+  // build one trainer's collapsible row; `track` controls the beat-checkbox (allies aren't tracked)
+  function trainerRow(t,track,r){
+    let tag='';const rival=isRivalTrainer(t);
+    if(rival){const g=rivalGenderOf(t.name),st=rivalStarterOf(t.team);
+      tag=(rn&&rs&&g===rn&&st===rs)?` <span class="rivalpill" title="Your rival, based on your gender & starter">★ Your rival</span>`:` <span class="varpill">${esc(g)} · ${esc(st)}</span>`;}
+    if(t.choice&&!PROFILE.starter)tag+=` <span class="varpill">if ${esc(t.choice)}</span>`;
+    if(t.split)tag+=` <span class="varpill" title="You fight this on a later visit here, during the ${esc(t.split)}">${esc(t.split)}</span>`;
+    if(t.ally)tag+=` <span class="allypill" title="Fights on your side — not a trainer you beat">🤝 on your side</span>`;
+    if(t.doubles)tag+=` <span class="doublespill" title="Double battle — you send out two Pokémon">👥 Doubles</span>`;
+    if(t.b2b&&r.kind!=='gauntlet')tag+=` <span class="b2bpill" title="${esc(t.b2b)}">⚔ back-to-back</span>`;
+    if(t.optional&&r.kind!=='gauntlet')tag+=` <span class="optpill" title="Optional — skippable; doesn't block this area from counting as done">optional</span>`;
+    if(t.reward)tag+=` <span class="rewardpill" title="Beating this trainer gives you this">🎁 ${esc(tmAnnotate(t.reward))}</span>`;
+    const tw=weatherOf(t);if(tw)tag+=` <span class="wxpill wx-${t.weather}" title="Permanent ${esc(tw.label.replace(/^Permanent /,''))} during this fight">${tw.icon} ${esc(t.weather)}</span>`;
+    const done=track&&TRAINERS_DONE.has(t.id);
+    const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
+    const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(n=>esc(tmAnnotate(n))).join('<br>')}</div>`:'';
+    const badge=t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:'';
+    const team=arr(t.team);
+    const tcell=(fn)=>team.map(m=>`<td>${fn(m)}</td>`).join('');
+    const hasItem=team.some(m=>m.item), hasAb=team.some(m=>m.ability), hasNat=team.some(m=>m.nature);
+    const detail=`<div class="tblwrap"><table class="data teamsheet">`+
+      `<tr><th>Pokémon</th>${tcell(m=>`<div class="tsmon${isMon(m.species)?' monlink':''}"${monAttr(m.species)}>${spriteByName(m.species,60,'tsspr')}<div class="tsname">${esc(m.species)}</div></div>`)}</tr>`+
+      `<tr><th>Level</th>${tcell(m=>`<span class="mono">${esc(m.level)}</span>`)}</tr>`+
+      (hasItem?`<tr><th>Held Item</th>${tcell(m=>m.item?`<span class="tsitem">${itemSpriteImg(m.item)}${esc(m.item)}</span>`:'<span class="faint">—</span>')}</tr>`:'')+
+      (hasAb?`<tr><th>Ability</th>${tcell(m=>m.ability?esc(m.ability):'<span class="faint">—</span>')}</tr>`:'')+
+      (hasNat?`<tr><th>Nature</th>${tcell(m=>m.nature?esc(m.nature):'<span class="faint">—</span>')}</tr>`:'')+
+      `<tr><th>Moves</th>${tcell(m=>arr(m.moves).map(mv=>`<div class="tsmove movelink" data-move="${esc(mv)}" role="button" tabindex="0"${moveTypeBg(mv)}>${esc(mv)}${moveChgMark(mv)}</div>`).join('')||'<span class="faint">—</span>')}</tr>`+
+      `</table></div>`;
+    return `<details class="trainer${done?' tdone':''}${rival?' rivalrow':''}${t.optional?' optrow':''}${t.ally?' allyrow':''}"><summary><span class="tsumhead">${chk}<span class="tname">${esc(t.name)}${badge}${tag}</span></span>${tnote}<div class="tpreview">${teamInline(t.team)}</div></summary><div class="tdetail">${detail}</div></details>`;
+  }
   a.rosters.forEach(r=>{
     if(r.kind==='rematch')return;
     const trainers=r.trainers.filter(t=>{
@@ -888,7 +919,23 @@ function areaDetail(a){
       return true;
     });
     if(!trainers.length)return;
-    const track=r.kind!=='rematch'&&r.kind!=='partner';   // partner allies are shown but not tracked
+    // tag battle: you + an ally take on two opponents at once — one consolidated panel
+    if(r.kind==='tag'){
+      const opps=trainers.filter(t=>!t.ally), allies=trainers.filter(t=>t.ally);
+      const doneN=opps.filter(t=>TRAINERS_DONE.has(t.id)).length;
+      const allyNames=[...new Set(allies.map(t=>t.name.replace(/^Partner\s+/i,'')))];
+      const p=el('div','panel tagroster');
+      const gnote=r.note?`<div class="gauntnote">${esc(r.note)}</div>`:'';
+      const sub=`<span class="sub">${doneN?`<span class="subcaught">✓ ${doneN}/${opps.length} beaten</span>`:`${opps.length} opponent${opps.length===1?'':'s'}`}</span>`;
+      const matchup=`<div class="tagmatch"><span class="tagteam mine"><span class="tagtag you">You</span>${allyNames.map(n=>` <span class="tagplus">+</span> <span class="tagtag ally">${esc(n)}</span>`).join('')}</span><span class="tagvs">vs</span><span class="tagteam foe">${opps.map((t,i)=>`${i?'<span class="tagplus">+</span> ':''}<span class="tagtag opp">${esc(t.name)}</span>`).join(' ')}</span></div>`;
+      p.innerHTML=`<div class="phead"><h3><span class="gicon" title="A tag battle: you and an ally fight two opponents at the same time">🤝</span> ${esc(r.title)}</h3>${sub}</div>${matchup}${gnote}`;
+      const body=el('div','pbody');
+      body.innerHTML=opps.map(t=>trainerRow(t,true,r)).join('')
+        +(allies.length?`<div class="allydiv"><span>🤝 On your side — fights with you, not a trainer you beat</span></div>`+allies.map(t=>trainerRow(t,false,r)).join(''):'');
+      p.appendChild(body);wrap.appendChild(p);
+      return;
+    }
+    const track=r.kind!=='partner';   // partner allies are shown but not tracked
     const doneN=track?trainers.filter(t=>TRAINERS_DONE.has(t.id)).length:0;
     const partner=r.kind==='partner';
     const p=el('div','panel'+(r.kind==='gauntlet'?' gauntlet':'')+(r.optional?' optroster':'')+(partner?' partnerroster':''));
@@ -899,34 +946,7 @@ function areaDetail(a){
     const sub=partner?`<span class="sub">fights on your side</span>`:`<span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span>`;
     p.innerHTML=`<div class="phead"><h3>${gicon}${esc(r.title)}</h3>${otag}${rtag}${sub}</div>${gnote}`;
     const body=el('div','pbody');
-    body.innerHTML=trainers.map(t=>{
-        let tag='';const rival=isRivalTrainer(t);
-        if(rival){const g=rivalGenderOf(t.name),st=rivalStarterOf(t.team);
-          tag=(rn&&rs&&g===rn&&st===rs)?` <span class="rivalpill" title="Your rival, based on your gender & starter">★ Your rival</span>`:` <span class="varpill">${esc(g)} · ${esc(st)}</span>`;}
-        if(t.choice&&!PROFILE.starter)tag+=` <span class="varpill">if ${esc(t.choice)}</span>`;
-        if(t.split)tag+=` <span class="varpill" title="You fight this on a later visit here, during the ${esc(t.split)}">${esc(t.split)}</span>`;
-        if(t.doubles)tag+=` <span class="doublespill" title="Double battle — you send out two Pokémon">👥 Doubles</span>`;
-        if(t.b2b&&r.kind!=='gauntlet')tag+=` <span class="b2bpill" title="${esc(t.b2b)}">⚔ back-to-back</span>`;
-        if(t.optional&&r.kind!=='gauntlet')tag+=` <span class="optpill" title="Optional — skippable; doesn't block this area from counting as done">optional</span>`;
-        if(t.reward)tag+=` <span class="rewardpill" title="Beating this trainer gives you this">🎁 ${esc(tmAnnotate(t.reward))}</span>`;
-        const tw=weatherOf(t);if(tw)tag+=` <span class="wxpill wx-${t.weather}" title="Permanent ${esc(tw.label.replace(/^Permanent /,''))} during this fight">${tw.icon} ${esc(t.weather)}</span>`;
-        const done=track&&TRAINERS_DONE.has(t.id);
-        const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';
-        const tnote=arr(t.notes).length?`<div class="tnote">${t.notes.map(n=>esc(tmAnnotate(n))).join('<br>')}</div>`:'';
-        const badge=t.badge?` <span class="badgepill" title="${t.badge==='C'?'Champion rematch':'Available after '+t.badge+' badge(s)'}">${esc(t.badge)}</span>`:'';
-        const team=arr(t.team);
-        const tcell=(fn)=>team.map(m=>`<td>${fn(m)}</td>`).join('');
-        const hasItem=team.some(m=>m.item), hasAb=team.some(m=>m.ability), hasNat=team.some(m=>m.nature);
-        const detail=`<div class="tblwrap"><table class="data teamsheet">`+
-          `<tr><th>Pokémon</th>${tcell(m=>`<div class="tsmon${isMon(m.species)?' monlink':''}"${monAttr(m.species)}>${spriteByName(m.species,60,'tsspr')}<div class="tsname">${esc(m.species)}</div></div>`)}</tr>`+
-          `<tr><th>Level</th>${tcell(m=>`<span class="mono">${esc(m.level)}</span>`)}</tr>`+
-          (hasItem?`<tr><th>Held Item</th>${tcell(m=>m.item?`<span class="tsitem">${itemSpriteImg(m.item)}${esc(m.item)}</span>`:'<span class="faint">—</span>')}</tr>`:'')+
-          (hasAb?`<tr><th>Ability</th>${tcell(m=>m.ability?esc(m.ability):'<span class="faint">—</span>')}</tr>`:'')+
-          (hasNat?`<tr><th>Nature</th>${tcell(m=>m.nature?esc(m.nature):'<span class="faint">—</span>')}</tr>`:'')+
-          `<tr><th>Moves</th>${tcell(m=>arr(m.moves).map(mv=>`<div class="tsmove movelink" data-move="${esc(mv)}" role="button" tabindex="0"${moveTypeBg(mv)}>${esc(mv)}${moveChgMark(mv)}</div>`).join('')||'<span class="faint">—</span>')}</tr>`+
-          `</table></div>`;
-        return `<details class="trainer${done?' tdone':''}${rival?' rivalrow':''}${t.optional?' optrow':''}"><summary><span class="tsumhead">${chk}<span class="tname">${esc(t.name)}${badge}${tag}</span></span>${tnote}<div class="tpreview">${teamInline(t.team)}</div></summary><div class="tdetail">${detail}</div></details>`;
-      }).join('');
+    body.innerHTML=trainers.map(t=>trainerRow(t,track,r)).join('');
     p.appendChild(body);wrap.appendChild(p);
   });
   // special battles

@@ -2436,11 +2436,11 @@
       ],
       "rosters": [
         {
-          "title": "Back-to-back",
-          "kind": "gauntlet",
+          "title": "Trainers",
+          "kind": "",
           "reward": "",
           "optional": false,
-          "note": "Grunt 3 first, then immediately a tag battle — you and Partner Cheren vs Team Plasma Grunt 4 & Seven Sage Bronius. No healing in between.",
+          "note": "Leads straight into the tag battle below — no healing in between.",
           "trainers": [
             {
               "id": "wellspringcave-teamplasmagrunt3-0",
@@ -2505,7 +2505,16 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Tag Battle",
+          "kind": "tag",
+          "reward": "",
+          "optional": false,
+          "note": "Your ally Cheren's team depends on your starter.",
+          "trainers": [
             {
               "id": "wellspringcave-grunt-1",
               "name": "Team Plasma Grunt 4",
@@ -2514,9 +2523,7 @@
               "badge": "",
               "choice": "",
               "split": "",
-              "notes": [
-                "Tag battle — fought together with Seven Sage Bronius."
-              ],
+              "notes": [],
               "team": [
                 {
                   "species": "Dustox",
@@ -2554,9 +2561,7 @@
               "badge": "",
               "choice": "",
               "split": "",
-              "notes": [
-                "Tag battle — fought together with Team Plasma Grunt 4."
-              ],
+              "notes": [],
               "team": [
                 {
                   "species": "Luxio",
@@ -2598,16 +2603,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "Partner Cheren",
-          "kind": "partner",
-          "reward": "",
-          "optional": false,
-          "note": "Your ally in the tag battle — Cheren's team depends on your starter.",
-          "trainers": [
+            },
             {
               "id": "wellspringcave-partnercheren-snivy-3",
               "name": "Partner Cheren",
@@ -2670,7 +2666,8 @@
                     "Fire Fang"
                   ]
                 }
-              ]
+              ],
+              "ally": true
             },
             {
               "id": "wellspringcave-partnercheren-tepig-4",
@@ -2734,7 +2731,8 @@
                     "Aqua Jet"
                   ]
                 }
-              ]
+              ],
+              "ally": true
             },
             {
               "id": "wellspringcave-partnercheren-oshawott-5",
@@ -2798,7 +2796,8 @@
                     "Dragon Breath"
                   ]
                 }
-              ]
+              ],
+              "ally": true
             }
           ]
         }
@@ -8365,11 +8364,11 @@
       "wild": [],
       "rosters": [
         {
-          "title": "Back-to-back",
-          "kind": "gauntlet",
+          "title": "Rival Cheren",
+          "kind": "",
           "reward": "",
           "optional": false,
-          "note": "Rival Cheren 4 first, then immediately a tag battle - you and Partner Cheren vs Preschooler Billy & Sarah. You can't switch teams between the two fights.",
+          "note": "Leads straight into the tag battle below — you can't heal or switch teams in between.",
           "trainers": [
             {
               "id": "route5claysplit-rivalcheren4-snivy-0",
@@ -8640,7 +8639,16 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Tag Battle",
+          "kind": "tag",
+          "reward": "",
+          "optional": false,
+          "note": "Your ally Cheren's team depends on your starter. You can't switch teams between Cheren 4 and this fight.",
+          "trainers": [
             {
               "id": "route5claysplit-billy-3",
               "name": "Preschooler Billy",
@@ -8649,10 +8657,7 @@
               "badge": "",
               "choice": "",
               "split": "",
-              "notes": [
-                "Preschooler Billy and Preschooler Sarah (TAG BATTLE CAN’T SWITCH TEAMS BETWEEN THIS AND CHEREN 4)",
-                "Tag battle - fought together with Preschooler Sarah."
-              ],
+              "notes": [],
               "team": [
                 {
                   "species": "Mr. Mime",
@@ -8703,9 +8708,7 @@
               "badge": "",
               "choice": "",
               "split": "",
-              "notes": [
-                "Tag battle - fought together with Preschooler Billy."
-              ],
+              "notes": [],
               "team": [
                 {
                   "species": "Hitmonchan",
@@ -8747,16 +8750,7 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "Partner Cheren",
-          "kind": "partner",
-          "reward": "",
-          "optional": false,
-          "note": "Your ally in the Billy & Sarah tag battle - Cheren's team depends on your starter.",
-          "trainers": [
+            },
             {
               "id": "route5claysplit-partnercheren-snivy-5",
               "name": "Partner Cheren",
@@ -8806,7 +8800,8 @@
                     "Wild Charge"
                   ]
                 }
-              ]
+              ],
+              "ally": true
             },
             {
               "id": "route5claysplit-partnercheren-tepig-6",
@@ -8857,7 +8852,8 @@
                     "Icicle Crash"
                   ]
                 }
-              ]
+              ],
+              "ally": true
             },
             {
               "id": "route5claysplit-partnercheren-oshawott-7",
@@ -8908,7 +8904,8 @@
                     "Glare"
                   ]
                 }
-              ]
+              ],
+              "ally": true
             }
           ]
         }
