@@ -844,11 +844,11 @@ function areaDetail(a){
     const track=r.kind!=='rematch';
     const doneN=track?trainers.filter(t=>TRAINERS_DONE.has(t.id)).length:0;
     const p=el('div','panel'+(r.kind==='gauntlet'?' gauntlet':'')+(r.optional?' optroster':''));
-    const gtag=r.kind==='gauntlet'?`<span class="gauntpill" title="A gauntlet: back-to-back fights, no healing in between">⚔ Gauntlet</span>`:'';
+    const gicon=r.kind==='gauntlet'?`<span class="gicon" title="A gauntlet: back-to-back fights with no healing in between">⚔</span> `:'';
     const otag=r.optional?`<span class="optpill big" title="Optional — you can skip this whole group; it doesn't block the area">optional</span>`:'';
     const rtag=r.reward?`<span class="rewardpill" title="What clearing this gauntlet gets you">🎁 ${esc(r.reward)}</span>`:'';
     const gnote=r.note?`<div class="gauntnote">${esc(r.note)}</div>`:'';
-    p.innerHTML=`<div class="phead"><h3>${esc(r.title)}</h3>${gtag}${otag}${rtag}<span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span></div>${gnote}`;
+    p.innerHTML=`<div class="phead"><h3>${gicon}${esc(r.title)}</h3>${otag}${rtag}<span class="sub">${track&&doneN?`<span class="subcaught">✓ ${doneN}/${trainers.length} beaten</span>`:`${trainers.length} trainer${trainers.length===1?'':'s'}`}</span></div>${gnote}`;
     const body=el('div','pbody');
     body.innerHTML=trainers.map(t=>{
         let tag='';const rival=isRivalTrainer(t);
@@ -856,7 +856,7 @@ function areaDetail(a){
           tag=(rn&&rs&&g===rn&&st===rs)?` <span class="rivalpill" title="Your rival, based on your gender & starter">★ Your rival</span>`:` <span class="varpill">${esc(g)} · ${esc(st)}</span>`;}
         if(t.choice&&!PROFILE.starter)tag+=` <span class="varpill">if ${esc(t.choice)}</span>`;
         if(t.split)tag+=` <span class="varpill" title="You fight this on a later visit here, during the ${esc(t.split)}">${esc(t.split)}</span>`;
-        if(t.b2b)tag+=` <span class="b2bpill" title="${esc(t.b2b)}">⚔ back-to-back</span>`;
+        if(t.b2b&&r.kind!=='gauntlet')tag+=` <span class="b2bpill" title="${esc(t.b2b)}">⚔ back-to-back</span>`;
         if(t.optional&&r.kind!=='gauntlet')tag+=` <span class="optpill" title="Optional — skippable; doesn't block this area from counting as done">optional</span>`;
         const done=track&&TRAINERS_DONE.has(t.id);
         const chk=track?`<button class="tcheck catch" data-trainer="${esc(t.id)}" aria-pressed="${done}" title="${done?'Beaten — click to unmark':'Mark as beaten'}"></button>`:'';

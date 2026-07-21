@@ -361,13 +361,19 @@ function End-BBTrainer(){
   if ($script:trainer -and $script:trainer.team.Count -gt 0 -and $script:area) { [void]$script:area.trainers.Add($script:trainer) }
   $script:trainer = $null
 }
+$groupMeta = @{}   # group key -> @{ title; kind; reward; note; optional }
+$grpN = 0
 function New-BBTrainer($name){
   # optional fights are tagged "(OPTIONAL…)" in the sheet; item-guard bosses read "(To get …)".
   # flag them and strip the bare OPTIONAL marker (keeping any "GIVES X" detail as a plain aside).
   $opt = $false
   if ($name -match '(?i)\(OPTIONAL\b') { $opt = $true; $name = ($name -replace '(?i)\(OPTIONAL,\s*', '(' -replace '(?i)\s*\(OPTIONAL\)', '').Trim() }
   elseif ($name -match '(?i)\(To get ') { $opt = $true }
-  return [ordered]@{ id=''; name=$name; optional=$opt; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; notes=(New-Object System.Collections.ArrayList); team=(New-Object System.Collections.ArrayList) } }
+  # a "(BACK TO BACK …)" aside means this fight is chained with an adjacent one — flag it and
+  # lift the text into a badge instead of the display name.
+  $b2b = ''
+  if ($name -match '(?i)\((BACK TO BACK[^)]*)\)') { $b2b = ($Matches[1].Trim() -replace '\s+', ' '); $name = ($name -replace '(?i)\s*\(BACK TO BACK[^)]*\)', '').Trim() }
+  return [ordered]@{ id=''; name=$name; optional=$opt; b2b=$b2b; group=''; badge=$(if($name -match 'Gym Leader'){'Leader'}else{''}); choice=''; splitAt=$script:curSplit; split=''; notes=(New-Object System.Collections.ArrayList); team=(New-Object System.Collections.ArrayList) } }
 # a note that reads like it's about the upcoming battle attaches to that trainer, not the area
 function Is-FightNote($n){ return ($n -match '(?i)\bfight\b|\bbattle\b|do this|doing this|wait until|before you|can.?t switch|tag battle|rematch') }
 function Flush-Notes(){ foreach ($n in $script:pendingNotes) { if ($script:area) { [void]$script:area.notes.Add($n) } }; $script:pendingNotes.Clear() }
@@ -524,8 +530,38 @@ foreach ($a in $areas) {
   $notes = @($a.notes)
   $gifts = @(); if ($giftsByLoc.ContainsKey($a.name)) { $gifts = @($giftsByLoc[$a.name]) }
   if ($wild.Count -eq 0 -and $trs.Count -eq 0 -and $items.Count -eq 0 -and $notes.Count -eq 0 -and $gifts.Count -eq 0) { continue }
-  $rosters = @(); if ($trs.Count) { $rosters = @([ordered]@{ title='Trainers'; kind=''; trainers=$trs }) }
-  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=$rosters; special=@(); items=$items; notes=$notes; gifts=$gifts })
+  # chain "(BACK TO BACK … NEXT N …)" fights into a gauntlet group. Only the explicit "next N"
+  # form is grouped here — Brutal Black's "WITH <names>" asides don't reliably match the
+  # adjacent trainer entries, so those keep just their badge.
+  for ($x = 0; $x -lt $trs.Count; $x++) {
+    $tr = $trs[$x]
+    if ($tr.b2b -and -not $tr.group -and $tr.b2b -match '(?i)next\s+(\d+)') {
+      $k = [int]$Matches[1] + 1
+      $grpN++; $key = "b$grpN"
+      $groupMeta[$key] = [ordered]@{ title='Back-to-back'; kind='gauntlet'; reward=''; note=''; optional=$false }
+      for ($y = $x; $y -lt [Math]::Min($x + $k, $trs.Count); $y++) { if (-not $trs[$y].group) { $trs[$y].group = $key } }
+    }
+  }
+  # split trainers into rosters by group (back-to-back chains get their own gauntlet roster)
+  $rosters = @()
+  if ($trs.Count) {
+    $groupOrder = New-Object System.Collections.ArrayList
+    foreach ($tr in $trs) { $g = [string]$tr.group; if (-not $groupOrder.Contains($g)) { [void]$groupOrder.Add($g) } }
+    foreach ($g in $groupOrder) {
+      $gt = @($trs | Where-Object { [string]$_.group -eq $g })
+      $m = if ($g -and $groupMeta.ContainsKey($g)) { $groupMeta[$g] } else { $null }
+      $rosters += [ordered]@{
+        title  = $(if ($m) { $m.title } else { 'Trainers' })
+        kind   = $(if ($m) { $m.kind } else { '' })
+        reward = $(if ($m) { $m.reward } else { '' })
+        note   = $(if ($m) { $m.note } else { '' })
+        optional = $(if ($m) { $m.optional } else { $false })
+        trainers = $gt
+      }
+    }
+    foreach ($tr in $trs) { [void]$tr.Remove('group') }   # strip the internal field only after grouping
+  }
+  [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=@($rosters); special=@(); items=$items; notes=$notes; gifts=$gifts })
 }
 
 # Route 3's note says north and south count as separate encounters, and water / dark grass

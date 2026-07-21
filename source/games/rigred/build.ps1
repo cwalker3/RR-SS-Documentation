@@ -443,7 +443,8 @@ function New-BBArea($name){
   foreach ($m in ([regex]::Matches($name, '\([^)]{15,}\)'))) {
     if ($m.Value -cmatch '[a-z]') {
       $inner = ($m.Value -replace '^\(','' -replace '\)$','').Trim()
-      $noteText = (@($noteText, $inner) | Where-Object { $_ }) -join '; '
+      # skip "…has fights that give access to…" — those fights are now their own gauntlet groups
+      if ($inner -notmatch '(?i)fights? that give') { $noteText = (@($noteText, $inner) | Where-Object { $_ }) -join '; ' }
       $name = $name.Replace($m.Value, '')
     }
   }
@@ -661,6 +662,22 @@ foreach ($a in $areas) {
   $notes = @($a.notes)
   $gifts = @(); if ($giftsByLoc.ContainsKey($a.name)) { $gifts = @($giftsByLoc[$a.name]) }
   if ($wild.Count -eq 0 -and $trs.Count -eq 0 -and $items.Count -eq 0 -and $notes.Count -eq 0 -and $gifts.Count -eq 0) { continue }
+  # chain each "(BACK TO BACK WITH …)" fight together with its adjacent partner(s) into a
+  # gauntlet group ("WITH X" -> the next fight; "next N" -> the next N). Bare "(BACK TO BACK)"
+  # with no partner named is self-contained and keeps just its badge.
+  for ($x = 0; $x -lt $trs.Count; $x++) {
+    $tr = $trs[$x]
+    if ($tr.b2b -and -not $tr.group) {
+      $k = 1
+      if ($tr.b2b -match '(?i)next\s+(\d+)') { $k = [int]$Matches[1] + 1 }
+      elseif ($tr.b2b -match '(?i)\bwith\b\s+(.+)$') { $k = (@($Matches[1] -split '(?i)\s+and\s+|,') | Where-Object { $_.Trim() }).Count + 1 }
+      if ($k -ge 2) {
+        $grpN++; $key = "b$grpN"
+        $groupMeta[$key] = [ordered]@{ title='Back-to-back'; kind='gauntlet'; reward=''; note=''; optional=$false }
+        for ($y = $x; $y -lt [Math]::Min($x + $k, $trs.Count); $y++) { if (-not $trs[$y].group) { $trs[$y].group = $key } }
+      }
+    }
+  }
   # split trainers into rosters by their fight group, preserving story order; a gauntlet group
   # becomes its own roster carrying its reward / advice / optional flag for the UI.
   $rosters = @()
@@ -669,7 +686,6 @@ foreach ($a in $areas) {
     foreach ($tr in $trs) { $g = [string]$tr.group; if (-not $groupOrder.Contains($g)) { [void]$groupOrder.Add($g) } }
     foreach ($g in $groupOrder) {
       $gt = @($trs | Where-Object { [string]$_.group -eq $g })
-      foreach ($tr in $gt) { [void]$tr.Remove('group') }
       $m = if ($g -and $groupMeta.ContainsKey($g)) { $groupMeta[$g] } else { $null }
       $rosters += [ordered]@{
         title  = $(if ($m) { $m.title } else { 'Trainers' })
@@ -680,6 +696,7 @@ foreach ($a in $areas) {
         trainers = $gt
       }
     }
+    foreach ($tr in $trs) { [void]$tr.Remove('group') }   # strip the internal field only after grouping
   }
   [void]$areaData.Add([ordered]@{ name=$a.name; wild=$wild; rosters=@($rosters); special=@(); items=$items; notes=$notes; gifts=$gifts })
 }
