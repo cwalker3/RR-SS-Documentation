@@ -3038,6 +3038,13 @@
       ],
       "rosters": [
         {
+          "title": "Trainers",
+          "kind": "",
+          "reward": "",
+          "note": "",
+          "optional": false,
+          "trainers": [
+                    {
           "id": "route3-schoolkidal-6",
           "name": "School Kid Al",
           "optional": false,
@@ -3085,7 +3092,10 @@
               ]
             }
           ]
+        }
+          ]
         },
+
         {
           "id": "route3-schoolkidmarsha-7",
           "name": "School Kid Marsha",
@@ -10724,13 +10734,15 @@
           "trainers": [
             {
               "id": "driftveilcityskylasplit-rivalbianca3cansometimesberaining-snivy-0",
-              "name": "Rival Bianca 3 (Can sometimes be raining)",
+              "name": "Rival Bianca 3",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "Snivy",
               "split": "",
-              "notes": [],
+              "notes": [
+                "Can sometimes be raining"
+              ],
               "team": [
                 {
                   "species": "Swellow",
@@ -10814,13 +10826,15 @@
             },
             {
               "id": "driftveilcityskylasplit-rivalbianca3cansometimesberaining-tepig-1",
-              "name": "Rival Bianca 3 (Can sometimes be raining)",
+              "name": "Rival Bianca 3)",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "Tepig",
               "split": "",
-              "notes": [],
+              "notes": [
+                "Can sometimes be raining"
+              ],
               "team": [
                 {
                   "species": "Swellow",
@@ -10904,13 +10918,15 @@
             },
             {
               "id": "driftveilcityskylasplit-rivalbianca3cansometimesberaining-oshawott-2",
-              "name": "Rival Bianca 3 (Can sometimes be raining)",
+              "name": "Rival Bianca 3",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "Oshawott",
               "split": "",
-              "notes": [],
+              "notes": [
+                "Can sometimes be raining"
+              ],
               "team": [
                 {
                   "species": "Swellow",

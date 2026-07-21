@@ -1,2 +1,5 @@
 Brutal Black changes
-- 
+- I want tag battles to be displayed better.
+- if a TM number is listed, I want whatever that tm is to be listed after it
+- I want double battle to be marked better, with a pill that indicates doubles
+- if you see this: (YOU CAN’T LEAVE BETWEEN THIS FIGHT AND THE NEXT ONE), mark it as gauntlet.
