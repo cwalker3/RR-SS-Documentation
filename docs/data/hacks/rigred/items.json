@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "subtitle": "",
+    "blurb": [
+      "Item changes in Rigorous Red: item balls that were swapped, by location."
+    ]
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "TM slot changes"
+    },
+    {
+      "type": "table",
+      "columns": [
+        "TM",
+        "Old move",
+        "New move"
+      ],
+      "rows": []
+    },
+    {
+      "type": "heading",
+      "text": "Item ball swaps"
+    },
+    {
+      "type": "table",
+      "columns": [
+        "Location",
+        "Was",
+        "Now"
+      ],
+      "rows": [
+        [
+          "Viridian Forest",
+          "PokeBall",
+          "Exp Share"
+        ],
+        [
+          "Route 11",
+          "Awakening",
+          "Thick Club"
+        ],
+        [
+          "Rocket Hideout",
+          "Calcium",
+          "Potion"
+        ],
+        [
+          "Route 15",
+          "Elixir",
+          "TM18"
+        ],
+        [
+          "Route 14",
+          "Zinc",
+          "Potion"
+        ],
+        [
+          "Route 12",
+          "Iron",
+          "Potion"
+        ],
+        [
+          "Safari Zone",
+          "TM11",
+          "Max Potion"
+        ],
+        [
+          "Safari Zone",
+          "TM32",
+          "Revive"
+        ],
+        [
+          "Safari Zone",
+          "Protein",
+          "Potion"
+        ],
+        [
+          "Silph Co (PERMA SAND)",
+          "Zinc",
+          "Potion"
+        ],
+        [
+          "Silph Co (PERMA SAND)",
+          "Protein",
+          "Potion"
+        ],
+        [
+          "Silph Co (PERMA SAND)",
+          "Iron",
+          "Potion"
+        ],
+        [
+          "Silph Co (PERMA SAND)",
+          "HP UP",
+          "Potion"
+        ],
+        [
+          "Silph Co (PERMA SAND)",
+          "Calcium",
+          "Potion"
+        ],
+        [
+          "Silph Co (PERMA SAND)",
+          "Carbos",
+          "Potion"
+        ],
+        [
+          "Pokemon Mansion",
+          "Zinc",
+          "Potion"
+        ],
+        [
+          "Pokemon Mansion",
+          "Protein",
+          "Potion"
+        ],
+        [
+          "Pokemon Mansion",
+          "Iron",
+          "Potion"
+        ],
+        [
+          "Pokemon Mansion",
+          "HP UP",
+          "Potion"
+        ],
+        [
+          "Pokemon Mansion",
+          "Calcium",
+          "Potion"
+        ],
+        [
+          "Pokemon Mansion",
+          "Carbos",
+          "Potion"
+        ]
+      ]
+    }
+  ]
+}

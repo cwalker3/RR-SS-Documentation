@@ -1,0 +1,589 @@
+{
+  "stages": [
+    {
+      "title": "Before Roxanne",
+      "rows": [
+        {
+          "name": "Wurmple",
+          "item": "Bright Powder/Pecha berry"
+        },
+        {
+          "name": "Lotad, Sewaddle, Pancham",
+          "item": "Mental Herb"
+        },
+        {
+          "name": "Seedot",
+          "item": "Power Herb"
+        },
+        {
+          "name": "Surskit, Combee",
+          "item": "Honey"
+        },
+        {
+          "name": "Slowpoke",
+          "item": "Lagging Tail"
+        },
+        {
+          "name": "Wingull",
+          "item": "Pretty Wing"
+        },
+        {
+          "name": "Venipede, Budew",
+          "item": "Poison Barb"
+        },
+        {
+          "name": "Scraggy",
+          "item": "Shed Shell"
+        },
+        {
+          "name": "Shroomish, Paras",
+          "item": "Tiny/Big Mushroom (50%/5%)"
+        },
+        {
+          "name": "Pumpkaboo",
+          "item": "Miracle Seed"
+        },
+        {
+          "name": "Kricketot",
+          "item": "Metronome"
+        },
+        {
+          "name": "Doduo",
+          "item": "Sharp Beak"
+        },
+        {
+          "name": "Machop",
+          "item": "Focus Band"
+        },
+        {
+          "name": "Nincada",
+          "item": "Soft Sand"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "title": "Before Brawly",
+      "rows": [
+        {
+          "name": "Goldeen",
+          "item": "Mystic Water (only available if you're not delaying Petalburg)"
+        },
+        {
+          "name": "Luvdisc",
+          "item": "Heart Scale (100%)"
+        },
+        {
+          "name": "Staryu",
+          "item": "Star Piece/Stardust"
+        },
+        {
+          "name": "Corsola",
+          "item": "Prism Scale (50%)/Luminous Moss (5%)"
+        },
+        {
+          "name": "Shellder, Clamperl",
+          "item": "Pearl/Big Pearl (50%/5%)"
+        },
+        {
+          "name": "Abra",
+          "item": "Twisted Spoon"
+        },
+        {
+          "name": "Geodude",
+          "item": "Everstone"
+        },
+        {
+          "name": "Cubone",
+          "item": "Thick Club"
+        },
+        {
+          "name": "Makuhita",
+          "item": "Black Belt"
+        },
+        {
+          "name": "Aron",
+          "item": "Hard Stone"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "title": "Before Wattson",
+      "rows": [
+        {
+          "name": "Chinchou",
+          "item": "Deep Sea Scale"
+        },
+        {
+          "name": "Horsea, Dratini",
+          "item": "Dragon Scale"
+        },
+        {
+          "name": "Oddish",
+          "item": "Absorb Bulb"
+        },
+        {
+          "name": "Magnemite, Steelix",
+          "item": "Metal Coat"
+        },
+        {
+          "name": "Gulpin",
+          "item": "Oran/Sitrus berries (Sitrus is 5%, Oran is 50%)"
+        },
+        {
+          "name": "Trubbish",
+          "item": "Black Sludge (5%)"
+        },
+        {
+          "name": "Farfetch'd",
+          "item": "Stick"
+        },
+        {
+          "name": "Happiny",
+          "item": "Lucky Egg/Oval Stone"
+        },
+        {
+          "name": "Chansey",
+          "item": "Lucky Egg/Lucky Punch"
+        },
+        {
+          "name": "Plusle, Minun",
+          "item": "Cell Battery"
+        },
+        {
+          "name": "Sableye",
+          "item": "Wide Lens"
+        },
+        {
+          "name": "Mawile",
+          "item": "Iron Ball"
+        },
+        {
+          "name": "Roggenrola, Boldore",
+          "item": "Hard Stone/Everstone"
+        },
+        {
+          "name": "Hariyama",
+          "item": "King's Rock"
+        },
+        {
+          "name": "Lairon",
+          "item": "Hard Stone"
+        }
+      ],
+      "notes": [
+        "Rock Smash items: Big Pearl, Ether, Hard Stone, Heart Scale, Max Ether, Max Revive, Normal Gem, Pearl, Revive, Soft Sand, Star Piece"
+      ]
+    },
+    {
+      "title": "Before Team Magma/Aqua @ Meteor Falls",
+      "rows": [
+        {
+          "name": "Meowth, Zangoose",
+          "item": "Quick Claw"
+        },
+        {
+          "name": "Miltank",
+          "item": "Moomoo Milk"
+        },
+        {
+          "name": "Diglett",
+          "item": "Soft Sand"
+        },
+        {
+          "name": "Koffing",
+          "item": "Smoke Ball"
+        },
+        {
+          "name": "Torkoal, Vulpix",
+          "item": "Charcoal"
+        },
+        {
+          "name": "Shuppet, Duskull",
+          "item": "Spell Tag"
+        },
+        {
+          "name": "Elekid",
+          "item": "Electirizer"
+        },
+        {
+          "name": "Magby",
+          "item": "Magmarizer"
+        },
+        {
+          "name": "Sandshrew",
+          "item": "Grip Claw"
+        },
+        {
+          "name": "Munchlax",
+          "item": "Leftovers (100%!)"
+        },
+        {
+          "name": "Golett",
+          "item": "Light Clay"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "title": "Before Flannery",
+      "rows": [
+        {
+          "name": "Cleffa, Clefairy",
+          "item": "Moon Stone"
+        },
+        {
+          "name": "Solrock",
+          "item": "Sun Stone/Stardust"
+        },
+        {
+          "name": "Lunatone",
+          "item": "Moon Stone/Stardust"
+        },
+        {
+          "name": "Bagon, Druddigon",
+          "item": "Dragon Fang"
+        },
+        {
+          "name": "Ferroseed",
+          "item": "Sticky Barb"
+        },
+        {
+          "name": "Gligar",
+          "item": "Razor Fang (50%)"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "title": "Before Norman",
+      "rows": [
+        {
+          "name": "Sandslash",
+          "item": "Dome Fossil/Grip Claw"
+        },
+        {
+          "name": "Trapinch",
+          "item": "Jaw Fossil/Soft Sand"
+        },
+        {
+          "name": "Cacnea",
+          "item": "Root Fossil/Sticky Barb"
+        },
+        {
+          "name": "Baltoy",
+          "item": "Helix Fossil/Light Clay"
+        },
+        {
+          "name": "Gible",
+          "item": "Skull Fossil"
+        },
+        {
+          "name": "Hippopotas",
+          "item": "Armor Fossil"
+        },
+        {
+          "name": "Sandile",
+          "item": "Claw Fossil"
+        },
+        {
+          "name": "Darumaka",
+          "item": "Cover Fossil"
+        },
+        {
+          "name": "Maractus",
+          "item": "Plume Fossil/Miracle Seed"
+        },
+        {
+          "name": "Sigilyph",
+          "item": "Old Amber"
+        },
+        {
+          "name": "Helioptile",
+          "item": "Sail Fossil"
+        }
+      ],
+      "notes": [
+        "Note that the fossil held rates are 50%!"
+      ]
+    },
+    {
+      "title": "Before Weather Institute",
+      "rows": [
+        {
+          "name": "Goldeen",
+          "item": "Mystic Water (5%, now available if you were delaying Petalburg for Marill)"
+        },
+        {
+          "name": "Lapras",
+          "item": "Mystic Water (only available if you're not delaying Sea Mauville, but is 100% guaranteed)"
+        },
+        {
+          "name": "Cryogonal",
+          "item": "Never-Melt Ice (only available if you're not delaying Sea Mauville)"
+        },
+        {
+          "name": "Ditto",
+          "item": "Quick Powder/Metal Powder"
+        },
+        {
+          "name": "Pikachu",
+          "item": "Light Ball"
+        },
+        {
+          "name": "Garbodor",
+          "item": "Nugget/Black Sludge (Black Sludge is 50% chance)"
+        },
+        {
+          "name": "Linoone",
+          "item": "Max Revive/Potion"
+        },
+        {
+          "name": "Carvanha, Sharpedo",
+          "item": "Deep Sea Tooth"
+        }
+      ],
+      "notes": [
+        "All type resist berries can be obtained from the Berry Master's garden on Route 123 and are farmable from this point onwards"
+      ]
+    },
+    {
+      "title": "Before Winona",
+      "rows": [
+        {
+          "name": "Absol",
+          "item": "Life Orb"
+        },
+        {
+          "name": "Volcarona",
+          "item": "Silver Powder (100%)"
+        }
+      ],
+      "notes": [
+        "Gift Castform from Weather Institute always holds a Mystic Water"
+      ]
+    },
+    {
+      "title": "Before Magma/Aqua Hideout",
+      "rows": [
+        {
+          "name": "Chingling",
+          "item": "Cleanse Tag"
+        },
+        {
+          "name": "Shuckle",
+          "item": "Berry Juice"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "title": "Before Tate and Liza",
+      "rows": [
+        {
+          "name": "Snorunt",
+          "item": "Snowball"
+        },
+        {
+          "name": "Snover, Cryogonal",
+          "item": "Never-Melt Ice"
+        },
+        {
+          "name": "Sneasel",
+          "item": "Razor Claw (50%)"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "title": "Before Maxie/Archie @ Seafloor Cavern",
+      "rows": [
+        {
+          "name": "Lileep, Cradily",
+          "item": "Big Root"
+        },
+        {
+          "name": "Aerodactyl",
+          "item": "Flying Gem (100%, only gem available in-game besides Normal Gem)"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "title": "Before Wallace",
+      "rows": [],
+      "notes": [
+        "nothing new"
+      ]
+    },
+    {
+      "title": "Before E4",
+      "rows": [
+        {
+          "name": "Shelgon, Salamence",
+          "item": "Salamencite (50%)"
+        },
+        {
+          "name": "Mew, Celebi, Shaymin",
+          "item": "Lum Berry (100%)"
+        },
+        {
+          "name": "Ho-Oh",
+          "item": "Sacred Ash (100%)"
+        },
+        {
+          "name": "Latios, Latias",
+          "item": "Soul Dew (100%)"
+        },
+        {
+          "name": "Hoopa",
+          "item": "Prison Bottle (100%, but Prison Bottle is a key item in ORAS so not sure how that works)"
+        },
+        {
+          "name": "Diancie",
+          "item": "Diancite (100%)"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "mega": {
+    "rows": [
+      {
+        "detail": "Steven gives you the Mega Stone for your starter shortly before Winona. The remaining two can be bought off an NPC that appears on Route 114 outside Fallarbor Town after beating Primal Groudon/Kyogre",
+        "name": "Sceptilite/Blazikenite/Swampertite"
+      },
+      {
+        "detail": "Route 119 in front of the house at beginning of route",
+        "name": "Venusaurite"
+      },
+      {
+        "detail": "X is in Fiery Path, requires Strength to access. Y is in Scorched Slab in Heatran room",
+        "name": "Charizardite"
+      },
+      {
+        "detail": "SW corner of Slateport Market. Available as early as post Brawly, but very easy to miss so listing it here!",
+        "name": "Alakazite"
+      },
+      {
+        "detail": "Pacifidlog Town, behind town sign. Requires Surf",
+        "name": "Kangaskhanite"
+      },
+      {
+        "detail": "Meteor Falls, requires Surf + Waterfall",
+        "name": "Aerodactylite"
+      },
+      {
+        "detail": "X is in Littleroot Town, Y is in front of Pokemon League",
+        "name": "Mewtwonite"
+      },
+      {
+        "detail": "Petalburg Woods, south of Moss Rock",
+        "name": "Scizorite"
+      },
+      {
+        "detail": "Lavaridge Town next to sand baths, don't forget to pick up the Togepi egg/Kecleon encounter in the springs while you're here!",
+        "name": "Houndoominite"
+      },
+      {
+        "detail": "Jagged Pass, northeast of southern entrance",
+        "name": "Tyranitarite"
+      },
+      {
+        "detail": "Gift from Wanda for smashing rocks in Rusturf Tunnel",
+        "name": "Gardevoirite"
+      },
+      {
+        "detail": "Lisia fan club, need Altaria in party - available as soon as arriving in Lilycove, but also easy to miss!",
+        "name": "Altarianite"
+      },
+      {
+        "detail": "held by wild Shelgon/Salamence (found in Meteor Falls, need Surf + Waterfall)",
+        "name": "Salamencite"
+      },
+      {
+        "detail": "held by wild Diancie (100% chance), found in Mirage Caves",
+        "name": "Diancite"
+      },
+      {
+        "detail": "post Delta Episode unfortunately, though wild Latios/Latias in Mirage Island spots can hold Soul Dew!",
+        "name": "Latiasite (RR)/Latiosite (SS)"
+      },
+      {
+        "detail": "northeast area of Berry Master's garden Thanks for reading and using this guide, good luck on your runs!",
+        "name": "Abomasite"
+      }
+    ],
+    "subtitle": "The following Mega Stones become available after Groudon/Kyogre storyline is completed, and can't be bought in shops. All other Mega Stones should be available through shops or found on the ground as you progress in the story"
+  },
+  "contest": {
+    "title": "Contest Prizes",
+    "rows": [
+      {
+        "name": "Normal Rank",
+        "item": "Fresh Water, Sweet Heart, Cheri/Chesto/Pecha/Rawst/Aspear/Leppa/Oran/Persim berries"
+      },
+      {
+        "name": "Super Rank",
+        "item": "Honey, Soda Pop, Stardust, Sitrus/Razz/Bluk/Nanab/Wepear/Pinap/All confusion pinch berries (Figy, etc)"
+      },
+      {
+        "name": "Hyper Rank",
+        "item": "Heart Scale, Star Piece, Lemonade, Cornn/Magost/Rabuta/Nomel/Spelon/Pamtre/Watmel/Durin/Belue/All EV reducing berries"
+      },
+      {
+        "name": "Master Rank",
+        "item": "Destiny Knot, Comet Shard, Moomoo Milk, All type resist berries (Yache, etc)"
+      },
+      {
+        "name": "Any Rank",
+        "item": "Rage Candy Bar, Shalour Sable, Lumiose Galette, Old Gateau"
+      }
+    ],
+    "subtitle": "Farmable items from Contests (after completing a Contest, there will usually be 2-3 NPCs close to the entrance that can give any of the following items depending on the chosen Contest rank)",
+    "notes": []
+  },
+  "generalNotes": [
+    "In PKHex, click the box to make Shaymin/Hoopa fateful encounters and you can also get the Gracidea/Prison Bottle key items to transform them!",
+    "Genesect drives are obtained from a Street Thug NPC on second floor of Mauville City if you show him a Genesect",
+    "Arceus Plates are found scattered underwater. I recommend looking up a guide if you really want them, or at least to get the Pixie Plate to boost Fairy moves",
+    "Reveal Mirror for the genies and Keldeo/Meloetta move tutor are both found on first floor of Mauville City"
+  ],
+  "earlyNote": "Note that most of these items only have a 5% chance to be held unless stated otherwise.",
+  "earlyLearn": [
+    {
+      "detail": "Covet @ Lv. 15",
+      "name": "Zigzagoon/Linoone"
+    },
+    {
+      "detail": "Can have Magician as an ability if you're brave enough to go for the Horde encounter",
+      "name": "Fennekin"
+    },
+    {
+      "detail": "Covet @ Lv. 12",
+      "name": "Lillipup"
+    },
+    {
+      "detail": "Thief @ Lv. 1",
+      "name": "Purrloin"
+    },
+    {
+      "detail": "Trick @ Lv. 5",
+      "name": "Solosis"
+    },
+    {
+      "detail": "Covet @ Lv. 18",
+      "name": "Slakoth"
+    },
+    {
+      "detail": "Trick @ Lv. 1",
+      "name": "Pumpkaboo"
+    },
+    {
+      "detail": "Covet @ Lv. 13",
+      "name": "Tepig"
+    }
+  ],
+  "intro": "Thief becomes obtainable as a TM upon reaching Slateport, the following doc lists the earliest instance of all available items. No repeats are listed. However, certain Pokemon can learn Thief/Covet prior to obtaining the TM. Here's a list of these pokemon with the level they learn their respective move"
+}

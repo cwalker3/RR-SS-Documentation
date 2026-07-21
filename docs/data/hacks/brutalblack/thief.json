@@ -1,0 +1,351 @@
+{
+  "intro": "Important items you can steal with Thief / Covet from wild Pokemon, by location. Grouped by gym split in story order.",
+  "stages": [
+    {
+      "title": "Chili/Cress/Cilan Split - Route 1 (only available when you get TM46)",
+      "rows": [
+        {
+          "name": "Rattata",
+          "item": "Oran Berries"
+        },
+        {
+          "name": "Marill",
+          "item": "Pecha Berries"
+        },
+        {
+          "name": "Buizel",
+          "item": "Rawst Berries"
+        },
+        {
+          "name": "Lillipup",
+          "item": "Cheri Berries"
+        },
+        {
+          "name": "Slakoth",
+          "item": "Aspear Berries"
+        },
+        {
+          "name": "Skitty",
+          "item": "Chesto Berries"
+        },
+        {
+          "name": "Sentret",
+          "item": "Silk Scarf"
+        },
+        {
+          "name": "Zigzagoon",
+          "item": "Persim Berries"
+        },
+        {
+          "name": "Bidoof",
+          "item": "Toxic and Flame Orbs"
+        },
+        {
+          "name": "Patrat",
+          "item": "Lagging Tail"
+        }
+      ]
+    },
+    {
+      "title": "Chili/Cress/Cilan Split - Route 2 (only available when you get TM46)",
+      "rows": [
+        {
+          "name": "Pidgey",
+          "item": "Sharp Beak"
+        }
+      ]
+    },
+    {
+      "title": "Chili/Cress/Cilan Split - Dreamyard",
+      "rows": [
+        {
+          "name": "Abra",
+          "item": "Twisted Spoon"
+        }
+      ]
+    },
+    {
+      "title": "Lenora Split - Post Gym 1 (shaking grass unlocked)",
+      "rows": [
+        {
+          "name": "Totodile",
+          "item": "Mystic Water"
+        },
+        {
+          "name": "Cyndaquil",
+          "item": "Charcoal"
+        },
+        {
+          "name": "Chikorita",
+          "item": "Miracle Seed"
+        }
+      ]
+    },
+    {
+      "title": "Lenora Split - Route 3 North",
+      "rows": [
+        {
+          "name": "Beedrill",
+          "item": "Poison Barb"
+        },
+        {
+          "name": "Butterfree",
+          "item": "Silver Powder"
+        },
+        {
+          "name": "Ledyba",
+          "item": "Black Belt"
+        },
+        {
+          "name": "Spinarak",
+          "item": "Black Glasses"
+        }
+      ]
+    },
+    {
+      "title": "Lenora Split - Wellspring Cave",
+      "rows": [
+        {
+          "name": "Geodude",
+          "item": "Hard Stone and Everstones"
+        },
+        {
+          "name": "Roggenrola",
+          "item": "King’s Rock"
+        },
+        {
+          "name": "Drilbur",
+          "item": "Soft Sand"
+        },
+        {
+          "name": "Aron",
+          "item": "Iron Plate"
+        }
+      ]
+    },
+    {
+      "title": "Lenora Split - Route 3 South",
+      "rows": [
+        {
+          "name": "Feebas",
+          "item": "Never-Melt Ice"
+        },
+        {
+          "name": "Swalot",
+          "item": "Black Sludges"
+        },
+        {
+          "name": "Chinchou",
+          "item": "Magnet"
+        },
+        {
+          "name": "Gastly",
+          "item": "Spell Tag"
+        },
+        {
+          "name": "Ekans",
+          "item": "Dragon Fang"
+        }
+      ]
+    },
+    {
+      "title": "Lenora Split - Not Pinwheel Forest",
+      "rows": [
+        {
+          "name": "Riolu",
+          "item": "Rare Bone"
+        },
+        {
+          "name": "Machop",
+          "item": "Muscle Bands"
+        },
+        {
+          "name": "Mienfoo",
+          "item": "Wise Glasses"
+        },
+        {
+          "name": "Druddigon",
+          "item": "Berry Juice"
+        }
+      ]
+    },
+    {
+      "title": "Burgh Split - Pinwheel Forest",
+      "rows": [
+        {
+          "name": "Shelmet",
+          "item": "Spelon Berry"
+        },
+        {
+          "name": "Durant",
+          "item": "Pamtre Berry"
+        },
+        {
+          "name": "Volbeat",
+          "item": "Bluk Berry"
+        },
+        {
+          "name": "Whirlipede",
+          "item": "Qualot Berry"
+        },
+        {
+          "name": "Yanma",
+          "item": "Grepa Berry"
+        },
+        {
+          "name": "Illumise",
+          "item": "Tamato Berry"
+        },
+        {
+          "name": "Pineco",
+          "item": "Cornn Berry"
+        },
+        {
+          "name": "Swadloon",
+          "item": "Pinap Berry"
+        },
+        {
+          "name": "Psyduck",
+          "item": "Nanab Berry"
+        },
+        {
+          "name": "Lanturn",
+          "item": "Wepear Berry"
+        }
+      ]
+    },
+    {
+      "title": "Burgh Split - Castelia City",
+      "rows": [
+        {
+          "name": "Minun",
+          "item": "Pomeg Berry"
+        },
+        {
+          "name": "Plusle",
+          "item": "Kelpsy Berry"
+        },
+        {
+          "name": "Stunfisk",
+          "item": "Hondew Berry"
+        },
+        {
+          "name": "Mareep",
+          "item": "Nomel Berry"
+        }
+      ]
+    },
+    {
+      "title": "Burgh Split - Route 4",
+      "rows": [
+        {
+          "name": "Cubone",
+          "item": "Thick Clubs"
+        },
+        {
+          "name": "Phanpy",
+          "item": "Magost Berry"
+        },
+        {
+          "name": "Swinub",
+          "item": "Rabuta Berry"
+        }
+      ]
+    },
+    {
+      "title": "Elesa Split - Desert Resort (Outside)",
+      "rows": [
+        {
+          "name": "Darumaka",
+          "item": "Fire Stones"
+        },
+        {
+          "name": "Sigilyph",
+          "item": "Dawn Stones"
+        }
+      ]
+    },
+    {
+      "title": "Elesa Split - Desert Resort (Inside)",
+      "rows": [
+        {
+          "name": "Forretress",
+          "item": "Sitrus Berries"
+        },
+        {
+          "name": "Magneton",
+          "item": "Thunder Stones"
+        },
+        {
+          "name": "Porygon",
+          "item": "Shiny Stones"
+        },
+        {
+          "name": "Pawniard",
+          "item": "Dusk Stones"
+        }
+      ]
+    },
+    {
+      "title": "Elesa Split - Relic Castle",
+      "rows": [
+        {
+          "name": "Lileep",
+          "item": "Big Root"
+        }
+      ]
+    },
+    {
+      "title": "Elesa Split - Lostlorn Forest",
+      "rows": [
+        {
+          "name": "Lombre",
+          "item": "Water Stones"
+        },
+        {
+          "name": "Nuzleaf",
+          "item": "Leaf Stones"
+        },
+        {
+          "name": "Cottonee",
+          "item": "Moon Stones"
+        },
+        {
+          "name": "Petilil",
+          "item": "Sun Stones"
+        }
+      ]
+    },
+    {
+      "title": "Clay Split",
+      "rows": [
+        {
+          "name": "Abomasnow",
+          "item": "Lum Berries"
+        }
+      ]
+    },
+    {
+      "title": "Skyla Split - Chargestone Cave",
+      "rows": [
+        {
+          "name": "Magnezone",
+          "item": "Metal Coats"
+        },
+        {
+          "name": "Ferrothorn",
+          "item": "Iron Balls and Sticky Barbs"
+        }
+      ]
+    },
+    {
+      "title": "Skyla Split - Mistralton City",
+      "rows": [
+        {
+          "name": "Leavanny",
+          "item": "Mental Herbs"
+        }
+      ]
+    }
+  ]
+}

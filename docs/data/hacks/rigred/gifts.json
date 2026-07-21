@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "subtitle": "",
+    "blurb": [
+      "Gift and starter Pokemon by location, from the mastersheet."
+    ]
+  },
+  "blocks": [
+    {
+      "type": "table",
+      "columns": [
+        "Location",
+        "Gift"
+      ],
+      "rows": [
+        [
+          "Route 4",
+          "Magikarp"
+        ],
+        [
+          "Saffron City",
+          "Hitmonchan/Hitmonlee/Hitmontop (100%)"
+        ],
+        [
+          "Silph Co (PERMA SAND)",
+          "Lapras (100%)"
+        ],
+        [
+          "Pallet Town",
+          "Bulbasaur/Charmander/Squirtle (100%)"
+        ]
+      ]
+    }
+  ]
+}

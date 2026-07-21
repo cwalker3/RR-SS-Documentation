@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "subtitle": "",
+    "blurb": [
+      "Item changes in Brutal Black: which move each TM now teaches, and the item balls that were swapped for TMs (by location)."
+    ]
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "TM slot changes"
+    },
+    {
+      "type": "table",
+      "columns": [
+        "TM",
+        "Old move",
+        "New move"
+      ],
+      "rows": [
+        [
+          "TM16",
+          "Light Screen",
+          "Shock Wave"
+        ],
+        [
+          "TM17",
+          "Protect",
+          "Gravity"
+        ],
+        [
+          "TM19",
+          "Telekinesis",
+          "Earth Power"
+        ],
+        [
+          "TM21",
+          "Frustration",
+          "Dark Pulse"
+        ],
+        [
+          "TM33",
+          "Reflect",
+          "Water Pulse"
+        ],
+        [
+          "TM77",
+          "Psych Up",
+          "Magical Leaf"
+        ],
+        [
+          "TM83",
+          "Work Up",
+          "SelfDestruct"
+        ],
+        [
+          "TM90",
+          "Substitute",
+          "Natural Gift"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Item ball swaps"
+    },
+    {
+      "type": "table",
+      "columns": [
+        "Location",
+        "Was",
+        "Now"
+      ],
+      "rows": [
+        [
+          "Route 2",
+          "Potion",
+          "TM46 Thief"
+        ],
+        [
+          "Dreamyard",
+          "X Defend",
+          "TM23 Smack Down"
+        ],
+        [
+          "Dreamyard",
+          "Poke Ball",
+          "TM76 Struggle Bug"
+        ],
+        [
+          "Dreamyard",
+          "Parlyz Heal",
+          "TM59 Incinerate"
+        ],
+        [
+          "Dreamyard",
+          "Repel",
+          "TM88 Pluck"
+        ],
+        [
+          "Route 3",
+          "Super Potion",
+          "TM39 Rock Tomb"
+        ],
+        [
+          "Route 3",
+          "Repel",
+          "TM78 Bulldoze"
+        ],
+        [
+          "Route 3",
+          "Antidote",
+          "TM09 Venoshock"
+        ],
+        [
+          "Route 3",
+          "Awakening",
+          "TM64 Explosion"
+        ],
+        [
+          "Route 3",
+          "Great Ball",
+          "TM90 Natural Gift"
+        ],
+        [
+          "Wellspring Cave",
+          "TM46",
+          "TM95 Snarl"
+        ],
+        [
+          "Not Pinwheel Forest",
+          "Super Potion",
+          "TM47 Low Sweep"
+        ],
+        [
+          "Pinwheel Forest",
+          "Super Potion",
+          "TM82"
+        ],
+        [
+          "Pinwheel Forest",
+          "Antidote",
+          "TM85"
+        ],
+        [
+          "Route 4",
+          "X Accuracy",
+          "TM43 Flame Charge"
+        ],
+        [
+          "Route 4",
+          "Super Potion",
+          "TM31 Brick Break"
+        ],
+        [
+          "Route 4",
+          "Ether",
+          "TM77 Magical Leaf"
+        ],
+        [
+          "Route 4",
+          "Great Ball",
+          "TM40 Aerial Ace"
+        ],
+        [
+          "Route 5",
+          "Hyper Potion",
+          "TM12 Taunt"
+        ],
+        [
+          "Route 16",
+          "Rare Candy",
+          "TM03"
+        ],
+        [
+          "Route 6",
+          "Hyper Potion",
+          "TM53 Energy Ball"
+        ],
+        [
+          "Route 6",
+          "Elixir",
+          "TM36 Sludge Bomb"
+        ],
+        [
+          "Cold Storage (PERMA HAIL)",
+          "Protein",
+          "TM63 Embargo"
+        ],
+        [
+          "Chargestone Cave",
+          "Revive",
+          "HM05 Waterfall"
+        ],
+        [
+          "Chargestone Cave",
+          "Iron",
+          "TM91 Flash Cannon"
+        ],
+        [
+          "Chargestone Cave",
+          "Magnet",
+          "TM29 Psychic"
+        ],
+        [
+          "Chargestone Cave",
+          "Timer Ball",
+          "TM30 Shadow Ball"
+        ],
+        [
+          "Route 7",
+          "TM81",
+          "TM60 Quash"
+        ],
+        [
+          "Twist Mountain",
+          "PP Up",
+          "TM87 Swagger"
+        ],
+        [
+          "Twist Mountain",
+          "TM91",
+          "TM71 Stone Edge"
+        ],
+        [
+          "Route 8",
+          "Poison Barb",
+          "TM34 Sludge Wave"
+        ],
+        [
+          "Relic Castle (PERMA SAND)",
+          "TM30",
+          "TM26 Earthquake"
+        ],
+        [
+          "Route 9",
+          "HP Up",
+          "TM89"
+        ],
+        [
+          "Route 10",
+          "Full Heal",
+          "TM72 Volt Switch"
+        ],
+        [
+          "Route 10",
+          "Hyper Potion",
+          "TM92 Trick Room"
+        ],
+        [
+          "Route 10",
+          "Full Restore",
+          "TM61 Will-O-Wisp"
+        ],
+        [
+          "Victory Road",
+          "TM02",
+          "TM50 Overheat"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "rigred",
+  "name": "Rigorous Red",
+  "short": "Rigorous Red",
+  "gen": 3,
+  "nameDex": {
+    "nidoranm": "032",
+    "nidoranf": "029",
+    "marshstomp": "259",
+    "tyrogue": "236",
+    "hooh": "250",
+    "carvahna": "318",
+    "deoxys": "386",
+    "jirachi": "385",
+    "latias": "380",
+    "mew": "151",
+    "regirock": "377",
+    "groudon": "383",
+    "celebi": "251",
+    "shuckle": "213",
+    "registeel": "379",
+    "mewtwo": "150",
+    "latios": "381",
+    "kyogre": "382",
+    "lugia": "249",
+    "rayquaza": "384"
+  }
+}

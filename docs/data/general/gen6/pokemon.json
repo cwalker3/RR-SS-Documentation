@@ -1,0 +1,11225 @@
+{
+  "001": {
+    "name": "Bulbasaur",
+    "stats": {
+      "hp": 45,
+      "atk": 49,
+      "def": 49,
+      "spa": 65,
+      "spd": 65,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "002": {
+    "name": "Ivysaur",
+    "stats": {
+      "hp": 60,
+      "atk": 62,
+      "def": 63,
+      "spa": 80,
+      "spd": 80,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "003": {
+    "name": "Venusaur",
+    "stats": {
+      "hp": 80,
+      "atk": 82,
+      "def": 83,
+      "spa": 100,
+      "spd": 100,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "004": {
+    "name": "Charmander",
+    "stats": {
+      "hp": 39,
+      "atk": 52,
+      "def": 43,
+      "spa": 60,
+      "spd": 50,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "005": {
+    "name": "Charmeleon",
+    "stats": {
+      "hp": 58,
+      "atk": 64,
+      "def": 58,
+      "spa": 80,
+      "spd": 65,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "006": {
+    "name": "Charizard",
+    "stats": {
+      "hp": 78,
+      "atk": 84,
+      "def": 78,
+      "spa": 109,
+      "spd": 85,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "007": {
+    "name": "Squirtle",
+    "stats": {
+      "hp": 44,
+      "atk": 48,
+      "def": 65,
+      "spa": 50,
+      "spd": 64,
+      "spe": 43
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "008": {
+    "name": "Wartortle",
+    "stats": {
+      "hp": 59,
+      "atk": 63,
+      "def": 80,
+      "spa": 65,
+      "spd": 80,
+      "spe": 58
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "009": {
+    "name": "Blastoise",
+    "stats": {
+      "hp": 79,
+      "atk": 83,
+      "def": 100,
+      "spa": 85,
+      "spd": 105,
+      "spe": 78
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "010": {
+    "name": "Caterpie",
+    "stats": {
+      "hp": 45,
+      "atk": 30,
+      "def": 35,
+      "spa": 20,
+      "spd": 20,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Shield Dust"
+    ]
+  },
+  "011": {
+    "name": "Metapod",
+    "stats": {
+      "hp": 50,
+      "atk": 20,
+      "def": 55,
+      "spa": 25,
+      "spd": 25,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "012": {
+    "name": "Butterfree",
+    "stats": {
+      "hp": 60,
+      "atk": 45,
+      "def": 50,
+      "spa": 90,
+      "spd": 80,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Compound Eyes"
+    ]
+  },
+  "013": {
+    "name": "Weedle",
+    "stats": {
+      "hp": 40,
+      "atk": 35,
+      "def": 30,
+      "spa": 20,
+      "spd": 20,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Shield Dust"
+    ]
+  },
+  "014": {
+    "name": "Kakuna",
+    "stats": {
+      "hp": 45,
+      "atk": 25,
+      "def": 50,
+      "spa": 25,
+      "spd": 25,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "015": {
+    "name": "Beedrill",
+    "stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 40,
+      "spa": 45,
+      "spd": 80,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Swarm"
+    ]
+  },
+  "016": {
+    "name": "Pidgey",
+    "stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 40,
+      "spa": 35,
+      "spd": 35,
+      "spe": 56
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Tangled Feet"
+    ]
+  },
+  "017": {
+    "name": "Pidgeotto",
+    "stats": {
+      "hp": 63,
+      "atk": 60,
+      "def": 55,
+      "spa": 50,
+      "spd": 50,
+      "spe": 71
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Tangled Feet"
+    ]
+  },
+  "018": {
+    "name": "Pidgeot",
+    "stats": {
+      "hp": 83,
+      "atk": 80,
+      "def": 75,
+      "spa": 70,
+      "spd": 70,
+      "spe": 101
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Tangled Feet"
+    ]
+  },
+  "019": {
+    "name": "Rattata",
+    "stats": {
+      "hp": 30,
+      "atk": 56,
+      "def": 35,
+      "spa": 25,
+      "spd": 35,
+      "spe": 72
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Guts"
+    ]
+  },
+  "020": {
+    "name": "Raticate",
+    "stats": {
+      "hp": 55,
+      "atk": 81,
+      "def": 60,
+      "spa": 50,
+      "spd": 70,
+      "spe": 97
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Guts"
+    ]
+  },
+  "021": {
+    "name": "Spearow",
+    "stats": {
+      "hp": 40,
+      "atk": 60,
+      "def": 30,
+      "spa": 31,
+      "spd": 31,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "022": {
+    "name": "Fearow",
+    "stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 65,
+      "spa": 61,
+      "spd": 61,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "023": {
+    "name": "Ekans",
+    "stats": {
+      "hp": 35,
+      "atk": 60,
+      "def": 44,
+      "spa": 40,
+      "spd": 54,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Shed Skin"
+    ]
+  },
+  "024": {
+    "name": "Arbok",
+    "stats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 69,
+      "spa": 65,
+      "spd": 79,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Shed Skin"
+    ]
+  },
+  "025": {
+    "name": "Pikachu",
+    "stats": {
+      "hp": 35,
+      "atk": 55,
+      "def": 40,
+      "spa": 50,
+      "spd": 50,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Static"
+    ]
+  },
+  "026": {
+    "name": "Raichu",
+    "stats": {
+      "hp": 60,
+      "atk": 90,
+      "def": 55,
+      "spa": 90,
+      "spd": 80,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Static"
+    ]
+  },
+  "027": {
+    "name": "Sandshrew",
+    "stats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 85,
+      "spa": 20,
+      "spd": 30,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "028": {
+    "name": "Sandslash",
+    "stats": {
+      "hp": 75,
+      "atk": 100,
+      "def": 110,
+      "spa": 45,
+      "spd": 55,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "029": {
+    "name": "Nidoran♀",
+    "stats": {
+      "hp": 55,
+      "atk": 47,
+      "def": 52,
+      "spa": 40,
+      "spd": 40,
+      "spe": 41
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Rivalry"
+    ]
+  },
+  "030": {
+    "name": "Nidorina",
+    "stats": {
+      "hp": 70,
+      "atk": 62,
+      "def": 67,
+      "spa": 55,
+      "spd": 55,
+      "spe": 56
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Rivalry"
+    ]
+  },
+  "031": {
+    "name": "Nidoqueen",
+    "stats": {
+      "hp": 90,
+      "atk": 92,
+      "def": 87,
+      "spa": 75,
+      "spd": 85,
+      "spe": 76
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Rivalry"
+    ]
+  },
+  "032": {
+    "name": "Nidoran♂",
+    "stats": {
+      "hp": 46,
+      "atk": 57,
+      "def": 40,
+      "spa": 40,
+      "spd": 40,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Rivalry"
+    ]
+  },
+  "033": {
+    "name": "Nidorino",
+    "stats": {
+      "hp": 61,
+      "atk": 72,
+      "def": 57,
+      "spa": 55,
+      "spd": 55,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Rivalry"
+    ]
+  },
+  "034": {
+    "name": "Nidoking",
+    "stats": {
+      "hp": 81,
+      "atk": 102,
+      "def": 77,
+      "spa": 85,
+      "spd": 75,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Rivalry"
+    ]
+  },
+  "035": {
+    "name": "Clefairy",
+    "stats": {
+      "hp": 70,
+      "atk": 45,
+      "def": 48,
+      "spa": 60,
+      "spd": 65,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Magic Guard"
+    ]
+  },
+  "036": {
+    "name": "Clefable",
+    "stats": {
+      "hp": 95,
+      "atk": 70,
+      "def": 73,
+      "spa": 95,
+      "spd": 90,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Magic Guard"
+    ]
+  },
+  "037": {
+    "name": "Vulpix",
+    "stats": {
+      "hp": 38,
+      "atk": 41,
+      "def": 40,
+      "spa": 50,
+      "spd": 65,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Flash Fire"
+    ]
+  },
+  "038": {
+    "name": "Ninetales",
+    "stats": {
+      "hp": 73,
+      "atk": 76,
+      "def": 75,
+      "spa": 81,
+      "spd": 100,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Flash Fire"
+    ]
+  },
+  "039": {
+    "name": "Jigglypuff",
+    "stats": {
+      "hp": 115,
+      "atk": 45,
+      "def": 20,
+      "spa": 45,
+      "spd": 25,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Competitive"
+    ]
+  },
+  "040": {
+    "name": "Wigglytuff",
+    "stats": {
+      "hp": 140,
+      "atk": 70,
+      "def": 45,
+      "spa": 85,
+      "spd": 50,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Competitive"
+    ]
+  },
+  "041": {
+    "name": "Zubat",
+    "stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 35,
+      "spa": 30,
+      "spd": 40,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "042": {
+    "name": "Golbat",
+    "stats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 70,
+      "spa": 65,
+      "spd": 75,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "043": {
+    "name": "Oddish",
+    "stats": {
+      "hp": 45,
+      "atk": 50,
+      "def": 55,
+      "spa": 75,
+      "spd": 65,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "044": {
+    "name": "Gloom",
+    "stats": {
+      "hp": 60,
+      "atk": 65,
+      "def": 70,
+      "spa": 85,
+      "spd": 75,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "045": {
+    "name": "Vileplume",
+    "stats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 85,
+      "spa": 110,
+      "spd": 90,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "046": {
+    "name": "Paras",
+    "stats": {
+      "hp": 35,
+      "atk": 70,
+      "def": 55,
+      "spa": 45,
+      "spd": 55,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Effect Spore",
+      "Dry Skin"
+    ]
+  },
+  "047": {
+    "name": "Parasect",
+    "stats": {
+      "hp": 60,
+      "atk": 95,
+      "def": 80,
+      "spa": 60,
+      "spd": 80,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Effect Spore",
+      "Dry Skin"
+    ]
+  },
+  "048": {
+    "name": "Venonat",
+    "stats": {
+      "hp": 60,
+      "atk": 55,
+      "def": 50,
+      "spa": 40,
+      "spd": 55,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Compound Eyes",
+      "Tinted Lens"
+    ]
+  },
+  "049": {
+    "name": "Venomoth",
+    "stats": {
+      "hp": 70,
+      "atk": 65,
+      "def": 60,
+      "spa": 90,
+      "spd": 75,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Shield Dust",
+      "Tinted Lens"
+    ]
+  },
+  "050": {
+    "name": "Diglett",
+    "stats": {
+      "hp": 10,
+      "atk": 55,
+      "def": 25,
+      "spa": 35,
+      "spd": 45,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Sand Veil",
+      "Arena Trap"
+    ]
+  },
+  "051": {
+    "name": "Dugtrio",
+    "stats": {
+      "hp": 35,
+      "atk": 80,
+      "def": 50,
+      "spa": 50,
+      "spd": 70,
+      "spe": 120
+    },
+    "types": [],
+    "abilities": [
+      "Sand Veil",
+      "Arena Trap"
+    ]
+  },
+  "052": {
+    "name": "Meowth",
+    "stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 35,
+      "spa": 40,
+      "spd": 40,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Pickup",
+      "Technician"
+    ]
+  },
+  "053": {
+    "name": "Persian",
+    "stats": {
+      "hp": 65,
+      "atk": 70,
+      "def": 60,
+      "spa": 65,
+      "spd": 65,
+      "spe": 115
+    },
+    "types": [],
+    "abilities": [
+      "Limber",
+      "Technician"
+    ]
+  },
+  "054": {
+    "name": "Psyduck",
+    "stats": {
+      "hp": 50,
+      "atk": 52,
+      "def": 48,
+      "spa": 65,
+      "spd": 50,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Damp",
+      "Cloud Nine"
+    ]
+  },
+  "055": {
+    "name": "Golduck",
+    "stats": {
+      "hp": 80,
+      "atk": 82,
+      "def": 78,
+      "spa": 95,
+      "spd": 80,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Damp",
+      "Cloud Nine"
+    ]
+  },
+  "056": {
+    "name": "Mankey",
+    "stats": {
+      "hp": 40,
+      "atk": 80,
+      "def": 35,
+      "spa": 35,
+      "spd": 45,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Vital Spirit",
+      "Anger Point"
+    ]
+  },
+  "057": {
+    "name": "Primeape",
+    "stats": {
+      "hp": 65,
+      "atk": 105,
+      "def": 60,
+      "spa": 60,
+      "spd": 70,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Vital Spirit",
+      "Anger Point"
+    ]
+  },
+  "058": {
+    "name": "Growlithe",
+    "stats": {
+      "hp": 55,
+      "atk": 70,
+      "def": 45,
+      "spa": 70,
+      "spd": 50,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Flash Fire"
+    ]
+  },
+  "059": {
+    "name": "Arcanine",
+    "stats": {
+      "hp": 90,
+      "atk": 110,
+      "def": 80,
+      "spa": 100,
+      "spd": 80,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Flash Fire"
+    ]
+  },
+  "060": {
+    "name": "Poliwag",
+    "stats": {
+      "hp": 40,
+      "atk": 50,
+      "def": 40,
+      "spa": 40,
+      "spd": 40,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ]
+  },
+  "061": {
+    "name": "Poliwhirl",
+    "stats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 65,
+      "spa": 50,
+      "spd": 50,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ]
+  },
+  "062": {
+    "name": "Poliwrath",
+    "stats": {
+      "hp": 90,
+      "atk": 95,
+      "def": 95,
+      "spa": 70,
+      "spd": 90,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ]
+  },
+  "063": {
+    "name": "Abra",
+    "stats": {
+      "hp": 25,
+      "atk": 20,
+      "def": 15,
+      "spa": 105,
+      "spd": 55,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize",
+      "Inner Focus"
+    ]
+  },
+  "064": {
+    "name": "Kadabra",
+    "stats": {
+      "hp": 40,
+      "atk": 35,
+      "def": 30,
+      "spa": 120,
+      "spd": 70,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize",
+      "Inner Focus"
+    ]
+  },
+  "065": {
+    "name": "Alakazam",
+    "stats": {
+      "hp": 55,
+      "atk": 50,
+      "def": 45,
+      "spa": 135,
+      "spd": 95,
+      "spe": 120
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize",
+      "Inner Focus"
+    ]
+  },
+  "066": {
+    "name": "Machop",
+    "stats": {
+      "hp": 70,
+      "atk": 80,
+      "def": 50,
+      "spa": 35,
+      "spd": 35,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Guts",
+      "No Guard"
+    ]
+  },
+  "067": {
+    "name": "Machoke",
+    "stats": {
+      "hp": 80,
+      "atk": 100,
+      "def": 70,
+      "spa": 50,
+      "spd": 60,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Guts",
+      "No Guard"
+    ]
+  },
+  "068": {
+    "name": "Machamp",
+    "stats": {
+      "hp": 90,
+      "atk": 130,
+      "def": 80,
+      "spa": 65,
+      "spd": 85,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Guts",
+      "No Guard"
+    ]
+  },
+  "069": {
+    "name": "Bellsprout",
+    "stats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 35,
+      "spa": 70,
+      "spd": 30,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "070": {
+    "name": "Weepinbell",
+    "stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 50,
+      "spa": 85,
+      "spd": 45,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "071": {
+    "name": "Victreebel",
+    "stats": {
+      "hp": 80,
+      "atk": 105,
+      "def": 65,
+      "spa": 100,
+      "spd": 70,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "072": {
+    "name": "Tentacool",
+    "stats": {
+      "hp": 40,
+      "atk": 40,
+      "def": 35,
+      "spa": 50,
+      "spd": 100,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body",
+      "Liquid Ooze"
+    ]
+  },
+  "073": {
+    "name": "Tentacruel",
+    "stats": {
+      "hp": 80,
+      "atk": 70,
+      "def": 65,
+      "spa": 80,
+      "spd": 120,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body",
+      "Liquid Ooze"
+    ]
+  },
+  "074": {
+    "name": "Geodude",
+    "stats": {
+      "hp": 40,
+      "atk": 80,
+      "def": 100,
+      "spa": 30,
+      "spd": 30,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "075": {
+    "name": "Graveler",
+    "stats": {
+      "hp": 55,
+      "atk": 95,
+      "def": 115,
+      "spa": 45,
+      "spd": 45,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "076": {
+    "name": "Golem",
+    "stats": {
+      "hp": 80,
+      "atk": 120,
+      "def": 130,
+      "spa": 55,
+      "spd": 65,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "077": {
+    "name": "Ponyta",
+    "stats": {
+      "hp": 50,
+      "atk": 85,
+      "def": 55,
+      "spa": 65,
+      "spd": 65,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Flash Fire"
+    ]
+  },
+  "078": {
+    "name": "Rapidash",
+    "stats": {
+      "hp": 65,
+      "atk": 100,
+      "def": 70,
+      "spa": 80,
+      "spd": 80,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Flash Fire"
+    ]
+  },
+  "079": {
+    "name": "Slowpoke",
+    "stats": {
+      "hp": 90,
+      "atk": 65,
+      "def": 65,
+      "spa": 40,
+      "spd": 40,
+      "spe": 15
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Own Tempo"
+    ]
+  },
+  "080": {
+    "name": "Slowbro",
+    "stats": {
+      "hp": 95,
+      "atk": 75,
+      "def": 110,
+      "spa": 100,
+      "spd": 80,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Own Tempo"
+    ]
+  },
+  "081": {
+    "name": "Magnemite",
+    "stats": {
+      "hp": 25,
+      "atk": 35,
+      "def": 70,
+      "spa": 95,
+      "spd": 55,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy"
+    ]
+  },
+  "082": {
+    "name": "Magneton",
+    "stats": {
+      "hp": 50,
+      "atk": 60,
+      "def": 95,
+      "spa": 120,
+      "spd": 70,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy"
+    ]
+  },
+  "083": {
+    "name": "Farfetch'd",
+    "stats": {
+      "hp": 52,
+      "atk": 65,
+      "def": 55,
+      "spa": 58,
+      "spd": 62,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Inner Focus"
+    ]
+  },
+  "084": {
+    "name": "Doduo",
+    "stats": {
+      "hp": 35,
+      "atk": 85,
+      "def": 45,
+      "spa": 35,
+      "spd": 35,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Early Bird"
+    ]
+  },
+  "085": {
+    "name": "Dodrio",
+    "stats": {
+      "hp": 60,
+      "atk": 110,
+      "def": 70,
+      "spa": 60,
+      "spd": 60,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Early Bird"
+    ]
+  },
+  "086": {
+    "name": "Seel",
+    "stats": {
+      "hp": 65,
+      "atk": 45,
+      "def": 55,
+      "spa": 45,
+      "spd": 70,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Hydration"
+    ]
+  },
+  "087": {
+    "name": "Dewgong",
+    "stats": {
+      "hp": 90,
+      "atk": 70,
+      "def": 80,
+      "spa": 70,
+      "spd": 95,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Hydration"
+    ]
+  },
+  "088": {
+    "name": "Grimer",
+    "stats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 50,
+      "spa": 40,
+      "spd": 50,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Stench",
+      "Sticky Hold"
+    ]
+  },
+  "089": {
+    "name": "Muk",
+    "stats": {
+      "hp": 105,
+      "atk": 105,
+      "def": 75,
+      "spa": 65,
+      "spd": 100,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Stench",
+      "Sticky Hold"
+    ]
+  },
+  "090": {
+    "name": "Shellder",
+    "stats": {
+      "hp": 30,
+      "atk": 65,
+      "def": 100,
+      "spa": 45,
+      "spd": 25,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Shell Armor",
+      "Skill Link"
+    ]
+  },
+  "091": {
+    "name": "Cloyster",
+    "stats": {
+      "hp": 50,
+      "atk": 95,
+      "def": 180,
+      "spa": 85,
+      "spd": 45,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Shell Armor",
+      "Skill Link"
+    ]
+  },
+  "092": {
+    "name": "Gastly",
+    "stats": {
+      "hp": 30,
+      "atk": 35,
+      "def": 30,
+      "spa": 100,
+      "spd": 35,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "093": {
+    "name": "Haunter",
+    "stats": {
+      "hp": 45,
+      "atk": 50,
+      "def": 45,
+      "spa": 115,
+      "spd": 55,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "094": {
+    "name": "Gengar",
+    "stats": {
+      "hp": 60,
+      "atk": 65,
+      "def": 60,
+      "spa": 130,
+      "spd": 75,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Cursed Body"
+    ]
+  },
+  "095": {
+    "name": "Onix",
+    "stats": {
+      "hp": 35,
+      "atk": 45,
+      "def": 160,
+      "spa": 30,
+      "spd": 45,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "096": {
+    "name": "Drowzee",
+    "stats": {
+      "hp": 60,
+      "atk": 48,
+      "def": 45,
+      "spa": 43,
+      "spd": 90,
+      "spe": 42
+    },
+    "types": [],
+    "abilities": [
+      "Insomnia",
+      "Forewarn"
+    ]
+  },
+  "097": {
+    "name": "Hypno",
+    "stats": {
+      "hp": 85,
+      "atk": 73,
+      "def": 70,
+      "spa": 73,
+      "spd": 115,
+      "spe": 67
+    },
+    "types": [],
+    "abilities": [
+      "Insomnia",
+      "Forewarn"
+    ]
+  },
+  "098": {
+    "name": "Krabby",
+    "stats": {
+      "hp": 30,
+      "atk": 105,
+      "def": 90,
+      "spa": 25,
+      "spd": 25,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor"
+    ]
+  },
+  "099": {
+    "name": "Kingler",
+    "stats": {
+      "hp": 55,
+      "atk": 130,
+      "def": 115,
+      "spa": 50,
+      "spd": 50,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor"
+    ]
+  },
+  "100": {
+    "name": "Voltorb",
+    "stats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 50,
+      "spa": 55,
+      "spd": 55,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Soundproof",
+      "Static"
+    ]
+  },
+  "101": {
+    "name": "Electrode",
+    "stats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 70,
+      "spa": 80,
+      "spd": 80,
+      "spe": 140
+    },
+    "types": [],
+    "abilities": [
+      "Soundproof",
+      "Static"
+    ]
+  },
+  "102": {
+    "name": "Exeggcute",
+    "stats": {
+      "hp": 60,
+      "atk": 40,
+      "def": 80,
+      "spa": 60,
+      "spd": 45,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "103": {
+    "name": "Exeggutor",
+    "stats": {
+      "hp": 95,
+      "atk": 95,
+      "def": 85,
+      "spa": 125,
+      "spd": 65,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "104": {
+    "name": "Cubone",
+    "stats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 95,
+      "spa": 40,
+      "spd": 50,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head",
+      "Lightning Rod"
+    ]
+  },
+  "105": {
+    "name": "Marowak",
+    "stats": {
+      "hp": 60,
+      "atk": 80,
+      "def": 110,
+      "spa": 50,
+      "spd": 80,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head",
+      "Lightning Rod"
+    ]
+  },
+  "106": {
+    "name": "Hitmonlee",
+    "stats": {
+      "hp": 50,
+      "atk": 120,
+      "def": 53,
+      "spa": 35,
+      "spd": 110,
+      "spe": 87
+    },
+    "types": [],
+    "abilities": [
+      "Limber",
+      "Reckless"
+    ]
+  },
+  "107": {
+    "name": "Hitmonchan",
+    "stats": {
+      "hp": 50,
+      "atk": 105,
+      "def": 79,
+      "spa": 35,
+      "spd": 110,
+      "spe": 76
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Iron Fist"
+    ]
+  },
+  "108": {
+    "name": "Lickitung",
+    "stats": {
+      "hp": 90,
+      "atk": 55,
+      "def": 75,
+      "spa": 60,
+      "spd": 75,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Own Tempo",
+      "Oblivious"
+    ]
+  },
+  "109": {
+    "name": "Koffing",
+    "stats": {
+      "hp": 40,
+      "atk": 65,
+      "def": 95,
+      "spa": 60,
+      "spd": 45,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Levitate",
+      "Neutralizing Gas"
+    ]
+  },
+  "110": {
+    "name": "Weezing",
+    "stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 120,
+      "spa": 85,
+      "spd": 70,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Levitate",
+      "Neutralizing Gas"
+    ]
+  },
+  "111": {
+    "name": "Rhyhorn",
+    "stats": {
+      "hp": 80,
+      "atk": 85,
+      "def": 95,
+      "spa": 30,
+      "spd": 30,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Lightning Rod",
+      "Rock Head"
+    ]
+  },
+  "112": {
+    "name": "Rhydon",
+    "stats": {
+      "hp": 105,
+      "atk": 130,
+      "def": 120,
+      "spa": 45,
+      "spd": 45,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Lightning Rod",
+      "Rock Head"
+    ]
+  },
+  "113": {
+    "name": "Chansey",
+    "stats": {
+      "hp": 250,
+      "atk": 5,
+      "def": 5,
+      "spa": 35,
+      "spd": 105,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure",
+      "Serene Grace"
+    ]
+  },
+  "114": {
+    "name": "Tangela",
+    "stats": {
+      "hp": 65,
+      "atk": 55,
+      "def": 115,
+      "spa": 100,
+      "spd": 40,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Leaf Guard"
+    ]
+  },
+  "115": {
+    "name": "Kangaskhan",
+    "stats": {
+      "hp": 105,
+      "atk": 95,
+      "def": 80,
+      "spa": 40,
+      "spd": 80,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Early Bird",
+      "Scrappy"
+    ]
+  },
+  "116": {
+    "name": "Horsea",
+    "stats": {
+      "hp": 30,
+      "atk": 40,
+      "def": 70,
+      "spa": 70,
+      "spd": 25,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Sniper"
+    ]
+  },
+  "117": {
+    "name": "Seadra",
+    "stats": {
+      "hp": 55,
+      "atk": 65,
+      "def": 95,
+      "spa": 95,
+      "spd": 45,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Sniper"
+    ]
+  },
+  "118": {
+    "name": "Goldeen",
+    "stats": {
+      "hp": 45,
+      "atk": 67,
+      "def": 60,
+      "spa": 35,
+      "spd": 50,
+      "spe": 63
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Water Veil"
+    ]
+  },
+  "119": {
+    "name": "Seaking",
+    "stats": {
+      "hp": 80,
+      "atk": 92,
+      "def": 65,
+      "spa": 65,
+      "spd": 80,
+      "spe": 68
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Water Veil"
+    ]
+  },
+  "120": {
+    "name": "Staryu",
+    "stats": {
+      "hp": 30,
+      "atk": 45,
+      "def": 55,
+      "spa": 70,
+      "spd": 55,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Illuminate",
+      "Natural Cure"
+    ]
+  },
+  "121": {
+    "name": "Starmie",
+    "stats": {
+      "hp": 60,
+      "atk": 75,
+      "def": 85,
+      "spa": 100,
+      "spd": 85,
+      "spe": 115
+    },
+    "types": [],
+    "abilities": [
+      "Illuminate",
+      "Natural Cure"
+    ]
+  },
+  "122": {
+    "name": "Mr. Mime",
+    "stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 65,
+      "spa": 100,
+      "spd": 120,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Soundproof",
+      "Filter"
+    ]
+  },
+  "123": {
+    "name": "Scyther",
+    "stats": {
+      "hp": 70,
+      "atk": 110,
+      "def": 80,
+      "spa": 55,
+      "spd": 80,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Technician"
+    ]
+  },
+  "124": {
+    "name": "Jynx",
+    "stats": {
+      "hp": 65,
+      "atk": 50,
+      "def": 35,
+      "spa": 115,
+      "spd": 95,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Forewarn"
+    ]
+  },
+  "125": {
+    "name": "Electabuzz",
+    "stats": {
+      "hp": 65,
+      "atk": 83,
+      "def": 57,
+      "spa": 95,
+      "spd": 85,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Static"
+    ]
+  },
+  "126": {
+    "name": "Magmar",
+    "stats": {
+      "hp": 65,
+      "atk": 95,
+      "def": 57,
+      "spa": 100,
+      "spd": 85,
+      "spe": 93
+    },
+    "types": [],
+    "abilities": [
+      "Flame Body"
+    ]
+  },
+  "127": {
+    "name": "Pinsir",
+    "stats": {
+      "hp": 65,
+      "atk": 125,
+      "def": 100,
+      "spa": 55,
+      "spd": 70,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Hyper Cutter",
+      "Mold Breaker"
+    ]
+  },
+  "128": {
+    "name": "Tauros",
+    "stats": {
+      "hp": 75,
+      "atk": 100,
+      "def": 95,
+      "spa": 40,
+      "spd": 70,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Anger Point"
+    ]
+  },
+  "129": {
+    "name": "Magikarp",
+    "stats": {
+      "hp": 20,
+      "atk": 10,
+      "def": 55,
+      "spa": 15,
+      "spd": 20,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "130": {
+    "name": "Gyarados",
+    "stats": {
+      "hp": 95,
+      "atk": 125,
+      "def": 79,
+      "spa": 60,
+      "spd": 100,
+      "spe": 81
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "131": {
+    "name": "Lapras",
+    "stats": {
+      "hp": 130,
+      "atk": 85,
+      "def": 80,
+      "spa": 85,
+      "spd": 95,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb",
+      "Shell Armor"
+    ]
+  },
+  "132": {
+    "name": "Ditto",
+    "stats": {
+      "hp": 48,
+      "atk": 48,
+      "def": 48,
+      "spa": 48,
+      "spd": 48,
+      "spe": 48
+    },
+    "types": [],
+    "abilities": [
+      "Limber"
+    ]
+  },
+  "133": {
+    "name": "Eevee",
+    "stats": {
+      "hp": 55,
+      "atk": 55,
+      "def": 50,
+      "spa": 45,
+      "spd": 65,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Adaptability"
+    ]
+  },
+  "134": {
+    "name": "Vaporeon",
+    "stats": {
+      "hp": 130,
+      "atk": 65,
+      "def": 60,
+      "spa": 110,
+      "spd": 95,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb"
+    ]
+  },
+  "135": {
+    "name": "Jolteon",
+    "stats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 60,
+      "spa": 110,
+      "spd": 95,
+      "spe": 130
+    },
+    "types": [],
+    "abilities": [
+      "Volt Absorb"
+    ]
+  },
+  "136": {
+    "name": "Flareon",
+    "stats": {
+      "hp": 65,
+      "atk": 130,
+      "def": 60,
+      "spa": 95,
+      "spd": 110,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Flash Fire"
+    ]
+  },
+  "137": {
+    "name": "Porygon",
+    "stats": {
+      "hp": 65,
+      "atk": 60,
+      "def": 70,
+      "spa": 85,
+      "spd": 75,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Trace",
+      "Download"
+    ]
+  },
+  "138": {
+    "name": "Omanyte",
+    "stats": {
+      "hp": 35,
+      "atk": 40,
+      "def": 100,
+      "spa": 90,
+      "spd": 55,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Shell Armor"
+    ]
+  },
+  "139": {
+    "name": "Omastar",
+    "stats": {
+      "hp": 70,
+      "atk": 60,
+      "def": 125,
+      "spa": 115,
+      "spd": 70,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Shell Armor"
+    ]
+  },
+  "140": {
+    "name": "Kabuto",
+    "stats": {
+      "hp": 30,
+      "atk": 80,
+      "def": 90,
+      "spa": 55,
+      "spd": 45,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Battle Armor"
+    ]
+  },
+  "141": {
+    "name": "Kabutops",
+    "stats": {
+      "hp": 60,
+      "atk": 115,
+      "def": 105,
+      "spa": 65,
+      "spd": 70,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Battle Armor"
+    ]
+  },
+  "142": {
+    "name": "Aerodactyl",
+    "stats": {
+      "hp": 80,
+      "atk": 105,
+      "def": 65,
+      "spa": 60,
+      "spd": 75,
+      "spe": 130
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head",
+      "Pressure"
+    ]
+  },
+  "143": {
+    "name": "Snorlax",
+    "stats": {
+      "hp": 160,
+      "atk": 110,
+      "def": 65,
+      "spa": 65,
+      "spd": 110,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Immunity",
+      "Thick Fat"
+    ]
+  },
+  "144": {
+    "name": "Articuno",
+    "stats": {
+      "hp": 90,
+      "atk": 85,
+      "def": 100,
+      "spa": 95,
+      "spd": 125,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "145": {
+    "name": "Zapdos",
+    "stats": {
+      "hp": 90,
+      "atk": 90,
+      "def": 85,
+      "spa": 125,
+      "spd": 90,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "146": {
+    "name": "Moltres",
+    "stats": {
+      "hp": 90,
+      "atk": 100,
+      "def": 90,
+      "spa": 125,
+      "spd": 85,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "147": {
+    "name": "Dratini",
+    "stats": {
+      "hp": 41,
+      "atk": 64,
+      "def": 45,
+      "spa": 50,
+      "spd": 50,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "148": {
+    "name": "Dragonair",
+    "stats": {
+      "hp": 61,
+      "atk": 84,
+      "def": 65,
+      "spa": 70,
+      "spd": 70,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "149": {
+    "name": "Dragonite",
+    "stats": {
+      "hp": 91,
+      "atk": 134,
+      "def": 95,
+      "spa": 100,
+      "spd": 100,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "150": {
+    "name": "Mewtwo",
+    "stats": {
+      "hp": 106,
+      "atk": 110,
+      "def": 90,
+      "spa": 154,
+      "spd": 90,
+      "spe": 130
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "151": {
+    "name": "Mew",
+    "stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize"
+    ]
+  },
+  "152": {
+    "name": "Chikorita",
+    "stats": {
+      "hp": 45,
+      "atk": 49,
+      "def": 65,
+      "spa": 49,
+      "spd": 65,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "153": {
+    "name": "Bayleef",
+    "stats": {
+      "hp": 60,
+      "atk": 62,
+      "def": 80,
+      "spa": 63,
+      "spd": 80,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "154": {
+    "name": "Meganium",
+    "stats": {
+      "hp": 80,
+      "atk": 82,
+      "def": 100,
+      "spa": 83,
+      "spd": 100,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "155": {
+    "name": "Cyndaquil",
+    "stats": {
+      "hp": 39,
+      "atk": 52,
+      "def": 43,
+      "spa": 60,
+      "spd": 50,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "156": {
+    "name": "Quilava",
+    "stats": {
+      "hp": 58,
+      "atk": 64,
+      "def": 58,
+      "spa": 80,
+      "spd": 65,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "157": {
+    "name": "Typhlosion",
+    "stats": {
+      "hp": 78,
+      "atk": 84,
+      "def": 78,
+      "spa": 109,
+      "spd": 85,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "158": {
+    "name": "Totodile",
+    "stats": {
+      "hp": 50,
+      "atk": 65,
+      "def": 64,
+      "spa": 44,
+      "spd": 48,
+      "spe": 43
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "159": {
+    "name": "Croocnaw",
+    "stats": {
+      "hp": 65,
+      "atk": 80,
+      "def": 80,
+      "spa": 59,
+      "spd": 63,
+      "spe": 58
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "160": {
+    "name": "Feraligatr",
+    "stats": {
+      "hp": 85,
+      "atk": 105,
+      "def": 100,
+      "spa": 79,
+      "spd": 83,
+      "spe": 78
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "161": {
+    "name": "Sentret",
+    "stats": {
+      "hp": 35,
+      "atk": 46,
+      "def": 34,
+      "spa": 35,
+      "spd": 45,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Keen Eye"
+    ]
+  },
+  "162": {
+    "name": "Furret",
+    "stats": {
+      "hp": 85,
+      "atk": 76,
+      "def": 64,
+      "spa": 45,
+      "spd": 55,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Keen Eye"
+    ]
+  },
+  "163": {
+    "name": "Hoothoot",
+    "stats": {
+      "hp": 60,
+      "atk": 30,
+      "def": 30,
+      "spa": 36,
+      "spd": 56,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Insomnia",
+      "Keen Eye"
+    ]
+  },
+  "164": {
+    "name": "Noctowl",
+    "stats": {
+      "hp": 100,
+      "atk": 50,
+      "def": 50,
+      "spa": 76,
+      "spd": 96,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Insomnia",
+      "Keen Eye"
+    ]
+  },
+  "165": {
+    "name": "Ledyba",
+    "stats": {
+      "hp": 40,
+      "atk": 20,
+      "def": 30,
+      "spa": 40,
+      "spd": 80,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Early Bird"
+    ]
+  },
+  "166": {
+    "name": "Ledian",
+    "stats": {
+      "hp": 55,
+      "atk": 35,
+      "def": 50,
+      "spa": 55,
+      "spd": 110,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Early Bird"
+    ]
+  },
+  "167": {
+    "name": "Spinarak",
+    "stats": {
+      "hp": 40,
+      "atk": 60,
+      "def": 40,
+      "spa": 40,
+      "spd": 40,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Insomnia"
+    ]
+  },
+  "168": {
+    "name": "Ariados",
+    "stats": {
+      "hp": 70,
+      "atk": 90,
+      "def": 70,
+      "spa": 60,
+      "spd": 60,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Insomnia"
+    ]
+  },
+  "169": {
+    "name": "Crobat",
+    "stats": {
+      "hp": 85,
+      "atk": 90,
+      "def": 80,
+      "spa": 70,
+      "spd": 80,
+      "spe": 130
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus"
+    ]
+  },
+  "170": {
+    "name": "Chinchou",
+    "stats": {
+      "hp": 75,
+      "atk": 38,
+      "def": 38,
+      "spa": 56,
+      "spd": 56,
+      "spe": 67
+    },
+    "types": [],
+    "abilities": [
+      "Volt Absorb",
+      "Illuminate"
+    ]
+  },
+  "171": {
+    "name": "Lanturn",
+    "stats": {
+      "hp": 125,
+      "atk": 58,
+      "def": 58,
+      "spa": 76,
+      "spd": 76,
+      "spe": 67
+    },
+    "types": [],
+    "abilities": [
+      "Volt Absorb",
+      "Illuminate"
+    ]
+  },
+  "172": {
+    "name": "Pichu",
+    "stats": {
+      "hp": 20,
+      "atk": 40,
+      "def": 15,
+      "spa": 35,
+      "spd": 35,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Static"
+    ]
+  },
+  "173": {
+    "name": "Cleffa",
+    "stats": {
+      "hp": 50,
+      "atk": 25,
+      "def": 28,
+      "spa": 45,
+      "spd": 55,
+      "spe": 15
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Magic Guard"
+    ]
+  },
+  "174": {
+    "name": "Igglybuff",
+    "stats": {
+      "hp": 90,
+      "atk": 30,
+      "def": 15,
+      "spa": 40,
+      "spd": 20,
+      "spe": 15
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Competitive"
+    ]
+  },
+  "175": {
+    "name": "Togepi",
+    "stats": {
+      "hp": 35,
+      "atk": 20,
+      "def": 65,
+      "spa": 40,
+      "spd": 65,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Hustle",
+      "Serene Grace"
+    ]
+  },
+  "176": {
+    "name": "Togetic",
+    "stats": {
+      "hp": 55,
+      "atk": 40,
+      "def": 85,
+      "spa": 80,
+      "spd": 105,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Hustle",
+      "Serene Grace"
+    ]
+  },
+  "177": {
+    "name": "Natu",
+    "stats": {
+      "hp": 40,
+      "atk": 50,
+      "def": 45,
+      "spa": 70,
+      "spd": 45,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize",
+      "Early Bird"
+    ]
+  },
+  "178": {
+    "name": "Xatu",
+    "stats": {
+      "hp": 65,
+      "atk": 75,
+      "def": 70,
+      "spa": 95,
+      "spd": 70,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize",
+      "Early Bird"
+    ]
+  },
+  "179": {
+    "name": "Mareep",
+    "stats": {
+      "hp": 55,
+      "atk": 40,
+      "def": 40,
+      "spa": 65,
+      "spd": 45,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Static"
+    ]
+  },
+  "180": {
+    "name": "Flaaffy",
+    "stats": {
+      "hp": 70,
+      "atk": 55,
+      "def": 55,
+      "spa": 80,
+      "spd": 60,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Static"
+    ]
+  },
+  "181": {
+    "name": "Ampharos",
+    "stats": {
+      "hp": 90,
+      "atk": 75,
+      "def": 85,
+      "spa": 115,
+      "spd": 90,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Static"
+    ]
+  },
+  "182": {
+    "name": "Bellossom",
+    "stats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 95,
+      "spa": 90,
+      "spd": 100,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "183": {
+    "name": "Marill",
+    "stats": {
+      "hp": 70,
+      "atk": 20,
+      "def": 50,
+      "spa": 20,
+      "spd": 50,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Huge Power"
+    ]
+  },
+  "184": {
+    "name": "Azumarill",
+    "stats": {
+      "hp": 100,
+      "atk": 50,
+      "def": 80,
+      "spa": 60,
+      "spd": 80,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Huge Power"
+    ]
+  },
+  "185": {
+    "name": "Sudowoodo",
+    "stats": {
+      "hp": 70,
+      "atk": 100,
+      "def": 115,
+      "spa": 30,
+      "spd": 65,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Rock Head"
+    ]
+  },
+  "186": {
+    "name": "Politoed",
+    "stats": {
+      "hp": 90,
+      "atk": 75,
+      "def": 75,
+      "spa": 90,
+      "spd": 100,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ]
+  },
+  "187": {
+    "name": "Hoppip",
+    "stats": {
+      "hp": 35,
+      "atk": 35,
+      "def": 40,
+      "spa": 35,
+      "spd": 55,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Leaf Guard"
+    ]
+  },
+  "188": {
+    "name": "Skiploom",
+    "stats": {
+      "hp": 55,
+      "atk": 45,
+      "def": 50,
+      "spa": 45,
+      "spd": 65,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Leaf Guard"
+    ]
+  },
+  "189": {
+    "name": "Jumpluff",
+    "stats": {
+      "hp": 75,
+      "atk": 55,
+      "def": 70,
+      "spa": 55,
+      "spd": 95,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Leaf Guard"
+    ]
+  },
+  "190": {
+    "name": "Aipom",
+    "stats": {
+      "hp": 55,
+      "atk": 70,
+      "def": 55,
+      "spa": 40,
+      "spd": 55,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Pickup"
+    ]
+  },
+  "191": {
+    "name": "Sunkern",
+    "stats": {
+      "hp": 30,
+      "atk": 30,
+      "def": 30,
+      "spa": 30,
+      "spd": 30,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Solar Power"
+    ]
+  },
+  "192": {
+    "name": "Sunflora",
+    "stats": {
+      "hp": 75,
+      "atk": 75,
+      "def": 55,
+      "spa": 105,
+      "spd": 85,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Solar Power"
+    ]
+  },
+  "193": {
+    "name": "Yanma",
+    "stats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 45,
+      "spa": 75,
+      "spd": 45,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Speed Boost",
+      "Compound Eyes"
+    ]
+  },
+  "194": {
+    "name": "Wooper",
+    "stats": {
+      "hp": 55,
+      "atk": 45,
+      "def": 45,
+      "spa": 25,
+      "spd": 25,
+      "spe": 15
+    },
+    "types": [],
+    "abilities": [
+      "Damp",
+      "Water Absorb"
+    ]
+  },
+  "195": {
+    "name": "Quagsire",
+    "stats": {
+      "hp": 95,
+      "atk": 85,
+      "def": 85,
+      "spa": 65,
+      "spd": 65,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Damp",
+      "Water Absorb"
+    ]
+  },
+  "196": {
+    "name": "Espeon",
+    "stats": {
+      "hp": 65,
+      "atk": 65,
+      "def": 60,
+      "spa": 130,
+      "spd": 95,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize"
+    ]
+  },
+  "197": {
+    "name": "Umbreon",
+    "stats": {
+      "hp": 95,
+      "atk": 65,
+      "def": 110,
+      "spa": 60,
+      "spd": 130,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize"
+    ]
+  },
+  "198": {
+    "name": "Murkrow",
+    "stats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 42,
+      "spa": 85,
+      "spd": 42,
+      "spe": 91
+    },
+    "types": [],
+    "abilities": [
+      "Insomnia",
+      "Super Luck"
+    ]
+  },
+  "199": {
+    "name": "Slowking",
+    "stats": {
+      "hp": 95,
+      "atk": 75,
+      "def": 80,
+      "spa": 100,
+      "spd": 110,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Own Tempo"
+    ]
+  },
+  "200": {
+    "name": "Misdreavus",
+    "stats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 60,
+      "spa": 85,
+      "spd": 85,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "201": {
+    "name": "Unown",
+    "stats": {
+      "hp": 48,
+      "atk": 72,
+      "def": 48,
+      "spa": 72,
+      "spd": 48,
+      "spe": 48
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "202": {
+    "name": "Wobbuffet",
+    "stats": {
+      "hp": 190,
+      "atk": 33,
+      "def": 58,
+      "spa": 33,
+      "spd": 58,
+      "spe": 33
+    },
+    "types": [],
+    "abilities": [
+      "Shadow Tag"
+    ]
+  },
+  "203": {
+    "name": "Girafarig",
+    "stats": {
+      "hp": 70,
+      "atk": 80,
+      "def": 65,
+      "spa": 90,
+      "spd": 65,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus",
+      "Early Bird"
+    ]
+  },
+  "204": {
+    "name": "Pineco",
+    "stats": {
+      "hp": 50,
+      "atk": 65,
+      "def": 90,
+      "spa": 35,
+      "spd": 35,
+      "spe": 15
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy"
+    ]
+  },
+  "205": {
+    "name": "Forretress",
+    "stats": {
+      "hp": 75,
+      "atk": 90,
+      "def": 140,
+      "spa": 60,
+      "spd": 60,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy"
+    ]
+  },
+  "206": {
+    "name": "Dunsparce",
+    "stats": {
+      "hp": 100,
+      "atk": 70,
+      "def": 70,
+      "spa": 65,
+      "spd": 65,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Serene Grace",
+      "Run Away"
+    ]
+  },
+  "207": {
+    "name": "Gligar",
+    "stats": {
+      "hp": 65,
+      "atk": 75,
+      "def": 105,
+      "spa": 35,
+      "spd": 65,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Hyper Cutter",
+      "Sand Veil"
+    ]
+  },
+  "208": {
+    "name": "Steelix",
+    "stats": {
+      "hp": 75,
+      "atk": 85,
+      "def": 200,
+      "spa": 55,
+      "spd": 65,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head",
+      "Sturdy"
+    ]
+  },
+  "209": {
+    "name": "Snubbull",
+    "stats": {
+      "hp": 60,
+      "atk": 80,
+      "def": 50,
+      "spa": 40,
+      "spd": 40,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Run Away"
+    ]
+  },
+  "210": {
+    "name": "Granbull",
+    "stats": {
+      "hp": 90,
+      "atk": 120,
+      "def": 75,
+      "spa": 60,
+      "spd": 60,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Quick Feet"
+    ]
+  },
+  "211": {
+    "name": "Qwilfish",
+    "stats": {
+      "hp": 65,
+      "atk": 95,
+      "def": 75,
+      "spa": 55,
+      "spd": 55,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Swift Swim"
+    ]
+  },
+  "212": {
+    "name": "Scizor",
+    "stats": {
+      "hp": 70,
+      "atk": 130,
+      "def": 100,
+      "spa": 55,
+      "spd": 80,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Technician"
+    ]
+  },
+  "213": {
+    "name": "Shuckle",
+    "stats": {
+      "hp": 20,
+      "atk": 10,
+      "def": 230,
+      "spa": 10,
+      "spd": 230,
+      "spe": 5
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Gluttony"
+    ]
+  },
+  "214": {
+    "name": "Heracross",
+    "stats": {
+      "hp": 80,
+      "atk": 125,
+      "def": 75,
+      "spa": 40,
+      "spd": 95,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Guts"
+    ]
+  },
+  "215": {
+    "name": "Sneasel",
+    "stats": {
+      "hp": 55,
+      "atk": 95,
+      "def": 55,
+      "spa": 35,
+      "spd": 75,
+      "spe": 115
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus",
+      "Keen Eye"
+    ]
+  },
+  "216": {
+    "name": "Teddiursa",
+    "stats": {
+      "hp": 60,
+      "atk": 80,
+      "def": 50,
+      "spa": 50,
+      "spd": 50,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Pickup",
+      "Quick Feet"
+    ]
+  },
+  "217": {
+    "name": "Ursaring",
+    "stats": {
+      "hp": 90,
+      "atk": 130,
+      "def": 75,
+      "spa": 75,
+      "spd": 75,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Guts",
+      "Quick Feet"
+    ]
+  },
+  "218": {
+    "name": "Slugma",
+    "stats": {
+      "hp": 40,
+      "atk": 40,
+      "def": 40,
+      "spa": 70,
+      "spd": 40,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Magma Armor",
+      "Flame Body"
+    ]
+  },
+  "219": {
+    "name": "Magcargo",
+    "stats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 120,
+      "spa": 80,
+      "spd": 80,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Magma Armor",
+      "Flame Body"
+    ]
+  },
+  "220": {
+    "name": "Swinub",
+    "stats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 40,
+      "spa": 30,
+      "spd": 30,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Snow Cloak"
+    ]
+  },
+  "221": {
+    "name": "Piloswine",
+    "stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 80,
+      "spa": 60,
+      "spd": 60,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Snow Cloak"
+    ]
+  },
+  "222": {
+    "name": "Corsola",
+    "stats": {
+      "hp": 55,
+      "atk": 55,
+      "def": 85,
+      "spa": 65,
+      "spd": 85,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Hustle",
+      "Natural Cure"
+    ]
+  },
+  "223": {
+    "name": "Remoraid",
+    "stats": {
+      "hp": 35,
+      "atk": 65,
+      "def": 35,
+      "spa": 65,
+      "spd": 35,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Hustle",
+      "Sniper"
+    ]
+  },
+  "224": {
+    "name": "Octillery",
+    "stats": {
+      "hp": 75,
+      "atk": 105,
+      "def": 75,
+      "spa": 105,
+      "spd": 75,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Suction Cups",
+      "Sniper"
+    ]
+  },
+  "225": {
+    "name": "Delibird",
+    "stats": {
+      "hp": 45,
+      "atk": 55,
+      "def": 45,
+      "spa": 65,
+      "spd": 45,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Vital Spirit",
+      "Hustle"
+    ]
+  },
+  "226": {
+    "name": "Mantine",
+    "stats": {
+      "hp": 65,
+      "atk": 40,
+      "def": 70,
+      "spa": 80,
+      "spd": 140,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Water Absorb"
+    ]
+  },
+  "227": {
+    "name": "Skarmory",
+    "stats": {
+      "hp": 65,
+      "atk": 80,
+      "def": 140,
+      "spa": 40,
+      "spd": 70,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Sturdy"
+    ]
+  },
+  "228": {
+    "name": "Houndour",
+    "stats": {
+      "hp": 45,
+      "atk": 60,
+      "def": 30,
+      "spa": 80,
+      "spd": 50,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Early Bird",
+      "Flash Fire"
+    ]
+  },
+  "229": {
+    "name": "Houndoom",
+    "stats": {
+      "hp": 75,
+      "atk": 90,
+      "def": 50,
+      "spa": 110,
+      "spd": 80,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Early Bird",
+      "Flash Fire"
+    ]
+  },
+  "230": {
+    "name": "Kingdra",
+    "stats": {
+      "hp": 75,
+      "atk": 95,
+      "def": 95,
+      "spa": 95,
+      "spd": 95,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Sniper"
+    ]
+  },
+  "231": {
+    "name": "Phanpy",
+    "stats": {
+      "hp": 90,
+      "atk": 60,
+      "def": 60,
+      "spa": 40,
+      "spd": 40,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Pickup"
+    ]
+  },
+  "232": {
+    "name": "Donphan",
+    "stats": {
+      "hp": 90,
+      "atk": 120,
+      "def": 120,
+      "spa": 60,
+      "spd": 60,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy"
+    ]
+  },
+  "233": {
+    "name": "Porygon2",
+    "stats": {
+      "hp": 85,
+      "atk": 80,
+      "def": 90,
+      "spa": 105,
+      "spd": 95,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Trace",
+      "Download"
+    ]
+  },
+  "234": {
+    "name": "Stantler",
+    "stats": {
+      "hp": 73,
+      "atk": 95,
+      "def": 62,
+      "spa": 85,
+      "spd": 65,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Frisk"
+    ]
+  },
+  "235": {
+    "name": "Smeargle",
+    "stats": {
+      "hp": 55,
+      "atk": 20,
+      "def": 35,
+      "spa": 20,
+      "spd": 45,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Own Tempo",
+      "Technician"
+    ]
+  },
+  "236": {
+    "name": "Tyrogue",
+    "stats": {
+      "hp": 35,
+      "atk": 35,
+      "def": 35,
+      "spa": 35,
+      "spd": 35,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Guts",
+      "Steadfast"
+    ]
+  },
+  "237": {
+    "name": "Hitmontop",
+    "stats": {
+      "hp": 50,
+      "atk": 95,
+      "def": 95,
+      "spa": 35,
+      "spd": 110,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Technician"
+    ]
+  },
+  "238": {
+    "name": "Smoochum",
+    "stats": {
+      "hp": 45,
+      "atk": 30,
+      "def": 15,
+      "spa": 85,
+      "spd": 65,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Forewarn"
+    ]
+  },
+  "239": {
+    "name": "Elekid",
+    "stats": {
+      "hp": 45,
+      "atk": 63,
+      "def": 37,
+      "spa": 65,
+      "spd": 55,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Static"
+    ]
+  },
+  "240": {
+    "name": "Magby",
+    "stats": {
+      "hp": 45,
+      "atk": 75,
+      "def": 37,
+      "spa": 70,
+      "spd": 55,
+      "spe": 83
+    },
+    "types": [],
+    "abilities": [
+      "Flame Body"
+    ]
+  },
+  "241": {
+    "name": "Miltank",
+    "stats": {
+      "hp": 95,
+      "atk": 80,
+      "def": 105,
+      "spa": 40,
+      "spd": 70,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Scrappy"
+    ]
+  },
+  "242": {
+    "name": "Blissey",
+    "stats": {
+      "hp": 255,
+      "atk": 10,
+      "def": 10,
+      "spa": 75,
+      "spd": 135,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure",
+      "Serene Grace"
+    ]
+  },
+  "243": {
+    "name": "Raikou",
+    "stats": {
+      "hp": 90,
+      "atk": 85,
+      "def": 75,
+      "spa": 115,
+      "spd": 100,
+      "spe": 115
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "244": {
+    "name": "Entei",
+    "stats": {
+      "hp": 115,
+      "atk": 115,
+      "def": 85,
+      "spa": 90,
+      "spd": 75,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "245": {
+    "name": "Suicune",
+    "stats": {
+      "hp": 100,
+      "atk": 75,
+      "def": 115,
+      "spa": 90,
+      "spd": 115,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "246": {
+    "name": "Larvitar",
+    "stats": {
+      "hp": 50,
+      "atk": 64,
+      "def": 50,
+      "spa": 45,
+      "spd": 50,
+      "spe": 41
+    },
+    "types": [],
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "247": {
+    "name": "Pupitar",
+    "stats": {
+      "hp": 70,
+      "atk": 84,
+      "def": 70,
+      "spa": 65,
+      "spd": 70,
+      "spe": 51
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "248": {
+    "name": "Tyranitar",
+    "stats": {
+      "hp": 100,
+      "atk": 134,
+      "def": 110,
+      "spa": 95,
+      "spd": 100,
+      "spe": 61
+    },
+    "types": [],
+    "abilities": [
+      "Sand Stream"
+    ]
+  },
+  "249": {
+    "name": "Lugia",
+    "stats": {
+      "hp": 106,
+      "atk": 90,
+      "def": 130,
+      "spa": 90,
+      "spd": 154,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "250": {
+    "name": "Ho-Oh",
+    "stats": {
+      "hp": 106,
+      "atk": 130,
+      "def": 90,
+      "spa": 110,
+      "spd": 154,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "251": {
+    "name": "Celebi",
+    "stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure"
+    ]
+  },
+  "252": {
+    "name": "Treecko",
+    "stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 35,
+      "spa": 65,
+      "spd": 55,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "253": {
+    "name": "Grovyle",
+    "stats": {
+      "hp": 50,
+      "atk": 65,
+      "def": 45,
+      "spa": 85,
+      "spd": 65,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "254": {
+    "name": "Sceptile",
+    "stats": {
+      "hp": 70,
+      "atk": 85,
+      "def": 65,
+      "spa": 105,
+      "spd": 85,
+      "spe": 120
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "255": {
+    "name": "Torchic",
+    "stats": {
+      "hp": 45,
+      "atk": 60,
+      "def": 40,
+      "spa": 70,
+      "spd": 50,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "256": {
+    "name": "Combusken",
+    "stats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 60,
+      "spa": 85,
+      "spd": 60,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "257": {
+    "name": "Blaziken",
+    "stats": {
+      "hp": 80,
+      "atk": 120,
+      "def": 70,
+      "spa": 110,
+      "spd": 70,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "258": {
+    "name": "Mudkip",
+    "stats": {
+      "hp": 50,
+      "atk": 70,
+      "def": 50,
+      "spa": 50,
+      "spd": 50,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "259": {
+    "name": "Marshtomp",
+    "stats": {
+      "hp": 70,
+      "atk": 85,
+      "def": 70,
+      "spa": 60,
+      "spd": 70,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "260": {
+    "name": "Swampert",
+    "stats": {
+      "hp": 100,
+      "atk": 110,
+      "def": 90,
+      "spa": 85,
+      "spd": 90,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "261": {
+    "name": "Poochyena",
+    "stats": {
+      "hp": 35,
+      "atk": 55,
+      "def": 35,
+      "spa": 30,
+      "spd": 30,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Quick Feet"
+    ]
+  },
+  "262": {
+    "name": "Mightyena",
+    "stats": {
+      "hp": 70,
+      "atk": 90,
+      "def": 70,
+      "spa": 60,
+      "spd": 60,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Quick Feet"
+    ]
+  },
+  "263": {
+    "name": "Zigzagoon",
+    "stats": {
+      "hp": 38,
+      "atk": 30,
+      "def": 41,
+      "spa": 30,
+      "spd": 41,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Pickup",
+      "Gluttony"
+    ]
+  },
+  "264": {
+    "name": "Linoone",
+    "stats": {
+      "hp": 78,
+      "atk": 70,
+      "def": 61,
+      "spa": 50,
+      "spd": 61,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Pickup",
+      "Gluttony"
+    ]
+  },
+  "265": {
+    "name": "Wurmple",
+    "stats": {
+      "hp": 45,
+      "atk": 45,
+      "def": 35,
+      "spa": 20,
+      "spd": 30,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Shield Dust"
+    ]
+  },
+  "266": {
+    "name": "Silcoon",
+    "stats": {
+      "hp": 50,
+      "atk": 35,
+      "def": 55,
+      "spa": 25,
+      "spd": 25,
+      "spe": 15
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "267": {
+    "name": "Beautifly",
+    "stats": {
+      "hp": 60,
+      "atk": 70,
+      "def": 50,
+      "spa": 100,
+      "spd": 50,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Swarm"
+    ]
+  },
+  "268": {
+    "name": "Cascoon",
+    "stats": {
+      "hp": 50,
+      "atk": 35,
+      "def": 55,
+      "spa": 25,
+      "spd": 25,
+      "spe": 15
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "269": {
+    "name": "Dustox",
+    "stats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 70,
+      "spa": 50,
+      "spd": 90,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Shield Dust"
+    ]
+  },
+  "270": {
+    "name": "Lotad",
+    "stats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 30,
+      "spa": 40,
+      "spd": 50,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Rain Dish"
+    ]
+  },
+  "271": {
+    "name": "Lombre",
+    "stats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 50,
+      "spa": 60,
+      "spd": 70,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Rain Dish"
+    ]
+  },
+  "272": {
+    "name": "Ludicolo",
+    "stats": {
+      "hp": 80,
+      "atk": 70,
+      "def": 70,
+      "spa": 90,
+      "spd": 100,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Rain Dish"
+    ]
+  },
+  "273": {
+    "name": "Seedot",
+    "stats": {
+      "hp": 40,
+      "atk": 40,
+      "def": 50,
+      "spa": 30,
+      "spd": 30,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Early Bird"
+    ]
+  },
+  "274": {
+    "name": "Nuzleaf",
+    "stats": {
+      "hp": 70,
+      "atk": 70,
+      "def": 40,
+      "spa": 60,
+      "spd": 40,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Early Bird"
+    ]
+  },
+  "275": {
+    "name": "Shiftry",
+    "stats": {
+      "hp": 90,
+      "atk": 100,
+      "def": 60,
+      "spa": 90,
+      "spd": 60,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Wind Rider"
+    ]
+  },
+  "276": {
+    "name": "Taillow",
+    "stats": {
+      "hp": 40,
+      "atk": 55,
+      "def": 30,
+      "spa": 30,
+      "spd": 30,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "277": {
+    "name": "Swellow",
+    "stats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 60,
+      "spa": 50,
+      "spd": 50,
+      "spe": 125
+    },
+    "types": [],
+    "abilities": [
+      "Guts"
+    ]
+  },
+  "278": {
+    "name": "Wingull",
+    "stats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 30,
+      "spa": 55,
+      "spd": 30,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Hydration"
+    ]
+  },
+  "279": {
+    "name": "Pelipper",
+    "stats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 100,
+      "spa": 85,
+      "spd": 70,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Drizzle"
+    ]
+  },
+  "280": {
+    "name": "Ralts",
+    "stats": {
+      "hp": 28,
+      "atk": 25,
+      "def": 25,
+      "spa": 45,
+      "spd": 35,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize",
+      "Trace"
+    ]
+  },
+  "281": {
+    "name": "Kirlia",
+    "stats": {
+      "hp": 38,
+      "atk": 35,
+      "def": 35,
+      "spa": 65,
+      "spd": 55,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize",
+      "Trace"
+    ]
+  },
+  "282": {
+    "name": "Gardevoir",
+    "stats": {
+      "hp": 68,
+      "atk": 65,
+      "def": 65,
+      "spa": 125,
+      "spd": 115,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Synchronize",
+      "Trace"
+    ]
+  },
+  "283": {
+    "name": "Surskit",
+    "stats": {
+      "hp": 40,
+      "atk": 50,
+      "def": 32,
+      "spa": 60,
+      "spd": 52,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "284": {
+    "name": "Masquerain",
+    "stats": {
+      "hp": 70,
+      "atk": 60,
+      "def": 62,
+      "spa": 80,
+      "spd": 82,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "285": {
+    "name": "Shroomish",
+    "stats": {
+      "hp": 60,
+      "atk": 40,
+      "def": 60,
+      "spa": 40,
+      "spd": 60,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Effect Spore",
+      "Poison Heal"
+    ]
+  },
+  "286": {
+    "name": "Breloom",
+    "stats": {
+      "hp": 60,
+      "atk": 130,
+      "def": 80,
+      "spa": 60,
+      "spd": 60,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Effect Spore",
+      "Poison Heal"
+    ]
+  },
+  "287": {
+    "name": "Slakoth",
+    "stats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 60,
+      "spa": 35,
+      "spd": 35,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Truant"
+    ]
+  },
+  "288": {
+    "name": "Vigoroth",
+    "stats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 80,
+      "spa": 55,
+      "spd": 55,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Vital Spirit"
+    ]
+  },
+  "289": {
+    "name": "Slaking",
+    "stats": {
+      "hp": 150,
+      "atk": 160,
+      "def": 100,
+      "spa": 95,
+      "spd": 65,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Truant"
+    ]
+  },
+  "290": {
+    "name": "Nincada",
+    "stats": {
+      "hp": 31,
+      "atk": 45,
+      "def": 90,
+      "spa": 30,
+      "spd": 30,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Compound Eyes"
+    ]
+  },
+  "291": {
+    "name": "Ninjask",
+    "stats": {
+      "hp": 61,
+      "atk": 90,
+      "def": 45,
+      "spa": 50,
+      "spd": 50,
+      "spe": 160
+    },
+    "types": [],
+    "abilities": [
+      "Speed Boost"
+    ]
+  },
+  "292": {
+    "name": "Shedinja",
+    "stats": {
+      "hp": 1,
+      "atk": 90,
+      "def": 45,
+      "spa": 30,
+      "spd": 30,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Wonder Guard"
+    ]
+  },
+  "293": {
+    "name": "Whismur",
+    "stats": {
+      "hp": 64,
+      "atk": 51,
+      "def": 23,
+      "spa": 51,
+      "spd": 23,
+      "spe": 28
+    },
+    "types": [],
+    "abilities": [
+      "Soundproof"
+    ]
+  },
+  "294": {
+    "name": "Loudred",
+    "stats": {
+      "hp": 84,
+      "atk": 71,
+      "def": 43,
+      "spa": 71,
+      "spd": 43,
+      "spe": 48
+    },
+    "types": [],
+    "abilities": [
+      "Soundproof"
+    ]
+  },
+  "295": {
+    "name": "Exploud",
+    "stats": {
+      "hp": 104,
+      "atk": 91,
+      "def": 63,
+      "spa": 91,
+      "spd": 73,
+      "spe": 68
+    },
+    "types": [],
+    "abilities": [
+      "Soundproof"
+    ]
+  },
+  "296": {
+    "name": "Makuhita",
+    "stats": {
+      "hp": 72,
+      "atk": 60,
+      "def": 30,
+      "spa": 20,
+      "spd": 30,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Guts"
+    ]
+  },
+  "297": {
+    "name": "Hariyama",
+    "stats": {
+      "hp": 144,
+      "atk": 120,
+      "def": 60,
+      "spa": 40,
+      "spd": 60,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Guts"
+    ]
+  },
+  "298": {
+    "name": "Azurill",
+    "stats": {
+      "hp": 50,
+      "atk": 20,
+      "def": 40,
+      "spa": 20,
+      "spd": 40,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Huge Power"
+    ]
+  },
+  "299": {
+    "name": "Nosepass",
+    "stats": {
+      "hp": 30,
+      "atk": 45,
+      "def": 135,
+      "spa": 45,
+      "spd": 90,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Magnet Pull"
+    ]
+  },
+  "300": {
+    "name": "Skitty",
+    "stats": {
+      "hp": 50,
+      "atk": 45,
+      "def": 45,
+      "spa": 35,
+      "spd": 35,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Normalize"
+    ]
+  },
+  "301": {
+    "name": "Delcatty",
+    "stats": {
+      "hp": 70,
+      "atk": 65,
+      "def": 65,
+      "spa": 55,
+      "spd": 55,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Normalize"
+    ]
+  },
+  "302": {
+    "name": "Sableye",
+    "stats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 75,
+      "spa": 65,
+      "spd": 65,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Stall"
+    ]
+  },
+  "303": {
+    "name": "Mawile",
+    "stats": {
+      "hp": 50,
+      "atk": 85,
+      "def": 85,
+      "spa": 55,
+      "spd": 55,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Hyper Cutter",
+      "Intimidate"
+    ]
+  },
+  "304": {
+    "name": "Aron",
+    "stats": {
+      "hp": 50,
+      "atk": 70,
+      "def": 100,
+      "spa": 40,
+      "spd": 40,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Rock Head"
+    ]
+  },
+  "305": {
+    "name": "Lairon",
+    "stats": {
+      "hp": 60,
+      "atk": 90,
+      "def": 140,
+      "spa": 50,
+      "spd": 50,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Rock Head"
+    ]
+  },
+  "306": {
+    "name": "Aggron",
+    "stats": {
+      "hp": 70,
+      "atk": 110,
+      "def": 180,
+      "spa": 60,
+      "spd": 60,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Rock Head"
+    ]
+  },
+  "307": {
+    "name": "Meditite",
+    "stats": {
+      "hp": 30,
+      "atk": 40,
+      "def": 55,
+      "spa": 40,
+      "spd": 55,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Pure Power"
+    ]
+  },
+  "308": {
+    "name": "Medicham",
+    "stats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 75,
+      "spa": 60,
+      "spd": 75,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Pure Power"
+    ]
+  },
+  "309": {
+    "name": "Electrike",
+    "stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 40,
+      "spa": 65,
+      "spd": 40,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Static",
+      "Lightning Rod"
+    ]
+  },
+  "310": {
+    "name": "Manectric",
+    "stats": {
+      "hp": 70,
+      "atk": 75,
+      "def": 60,
+      "spa": 105,
+      "spd": 60,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Static",
+      "Lightning Rod"
+    ]
+  },
+  "311": {
+    "name": "Plusle",
+    "stats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 40,
+      "spa": 85,
+      "spd": 75,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Plus"
+    ]
+  },
+  "312": {
+    "name": "Minun",
+    "stats": {
+      "hp": 60,
+      "atk": 40,
+      "def": 50,
+      "spa": 75,
+      "spd": 85,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Minus"
+    ]
+  },
+  "313": {
+    "name": "Volbeat",
+    "stats": {
+      "hp": 65,
+      "atk": 73,
+      "def": 55,
+      "spa": 47,
+      "spd": 75,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Illuminate",
+      "Swarm"
+    ]
+  },
+  "314": {
+    "name": "Illumise",
+    "stats": {
+      "hp": 65,
+      "atk": 47,
+      "def": 55,
+      "spa": 73,
+      "spd": 75,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Tinted Lens"
+    ]
+  },
+  "315": {
+    "name": "Roselia",
+    "stats": {
+      "hp": 50,
+      "atk": 60,
+      "def": 45,
+      "spa": 100,
+      "spd": 80,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure",
+      "Poison Point"
+    ]
+  },
+  "316": {
+    "name": "Gulpin",
+    "stats": {
+      "hp": 70,
+      "atk": 43,
+      "def": 53,
+      "spa": 43,
+      "spd": 53,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Liquid Ooze",
+      "Sticky Hold"
+    ]
+  },
+  "317": {
+    "name": "Swalot",
+    "stats": {
+      "hp": 100,
+      "atk": 73,
+      "def": 83,
+      "spa": 73,
+      "spd": 83,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Liquid Ooze",
+      "Sticky Hold"
+    ]
+  },
+  "318": {
+    "name": "Carvanha",
+    "stats": {
+      "hp": 45,
+      "atk": 90,
+      "def": 20,
+      "spa": 65,
+      "spd": 20,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Rough Skin"
+    ]
+  },
+  "319": {
+    "name": "Sharpedo",
+    "stats": {
+      "hp": 70,
+      "atk": 120,
+      "def": 40,
+      "spa": 95,
+      "spd": 40,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Rough Skin"
+    ]
+  },
+  "320": {
+    "name": "Wailmer",
+    "stats": {
+      "hp": 130,
+      "atk": 70,
+      "def": 35,
+      "spa": 70,
+      "spd": 35,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Water Veil",
+      "Oblivious"
+    ]
+  },
+  "321": {
+    "name": "Wailord",
+    "stats": {
+      "hp": 170,
+      "atk": 90,
+      "def": 45,
+      "spa": 90,
+      "spd": 45,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Water Veil",
+      "Oblivious"
+    ]
+  },
+  "322": {
+    "name": "Numel",
+    "stats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 40,
+      "spa": 65,
+      "spd": 45,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Simple"
+    ]
+  },
+  "323": {
+    "name": "Camerupt",
+    "stats": {
+      "hp": 70,
+      "atk": 100,
+      "def": 70,
+      "spa": 105,
+      "spd": 75,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Magma Armor",
+      "Solid Rock"
+    ]
+  },
+  "324": {
+    "name": "Torkoal",
+    "stats": {
+      "hp": 70,
+      "atk": 85,
+      "def": 140,
+      "spa": 85,
+      "spd": 70,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "White Smoke",
+      "Drought"
+    ]
+  },
+  "325": {
+    "name": "Spoink",
+    "stats": {
+      "hp": 60,
+      "atk": 25,
+      "def": 35,
+      "spa": 70,
+      "spd": 80,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Own Tempo"
+    ]
+  },
+  "326": {
+    "name": "Grumpig",
+    "stats": {
+      "hp": 80,
+      "atk": 45,
+      "def": 65,
+      "spa": 90,
+      "spd": 110,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Own Tempo"
+    ]
+  },
+  "327": {
+    "name": "Spinda",
+    "stats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 60,
+      "spa": 60,
+      "spd": 60,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Own Tempo",
+      "Tangled Feet"
+    ]
+  },
+  "328": {
+    "name": "Trapinch",
+    "stats": {
+      "hp": 45,
+      "atk": 100,
+      "def": 45,
+      "spa": 45,
+      "spd": 45,
+      "spe": 10
+    },
+    "types": [],
+    "abilities": [
+      "Hyper Cutter",
+      "Arena Trap"
+    ]
+  },
+  "329": {
+    "name": "Vibrava",
+    "stats": {
+      "hp": 50,
+      "atk": 70,
+      "def": 50,
+      "spa": 50,
+      "spd": 50,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "330": {
+    "name": "Flygon",
+    "stats": {
+      "hp": 80,
+      "atk": 100,
+      "def": 80,
+      "spa": 80,
+      "spd": 80,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "331": {
+    "name": "Cacnea",
+    "stats": {
+      "hp": 50,
+      "atk": 85,
+      "def": 40,
+      "spa": 85,
+      "spd": 40,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "332": {
+    "name": "Cacturne",
+    "stats": {
+      "hp": 70,
+      "atk": 115,
+      "def": 60,
+      "spa": 115,
+      "spd": 60,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "333": {
+    "name": "Swablu",
+    "stats": {
+      "hp": 45,
+      "atk": 40,
+      "def": 60,
+      "spa": 40,
+      "spd": 75,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure"
+    ]
+  },
+  "334": {
+    "name": "Altaria",
+    "stats": {
+      "hp": 75,
+      "atk": 70,
+      "def": 90,
+      "spa": 70,
+      "spd": 105,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure"
+    ]
+  },
+  "335": {
+    "name": "Zangoose",
+    "stats": {
+      "hp": 73,
+      "atk": 115,
+      "def": 60,
+      "spa": 60,
+      "spd": 60,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Immunity"
+    ]
+  },
+  "336": {
+    "name": "Seviper",
+    "stats": {
+      "hp": 73,
+      "atk": 100,
+      "def": 60,
+      "spa": 100,
+      "spd": 60,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "337": {
+    "name": "Lunatone",
+    "stats": {
+      "hp": 70,
+      "atk": 55,
+      "def": 65,
+      "spa": 95,
+      "spd": 85,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "338": {
+    "name": "Solrock",
+    "stats": {
+      "hp": 70,
+      "atk": 95,
+      "def": 85,
+      "spa": 55,
+      "spd": 65,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "339": {
+    "name": "Barboach",
+    "stats": {
+      "hp": 50,
+      "atk": 48,
+      "def": 43,
+      "spa": 46,
+      "spd": 41,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Anticipation"
+    ]
+  },
+  "340": {
+    "name": "Whiscash",
+    "stats": {
+      "hp": 110,
+      "atk": 78,
+      "def": 73,
+      "spa": 76,
+      "spd": 71,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Anticipation"
+    ]
+  },
+  "341": {
+    "name": "Corphish",
+    "stats": {
+      "hp": 43,
+      "atk": 80,
+      "def": 65,
+      "spa": 50,
+      "spd": 35,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor"
+    ]
+  },
+  "342": {
+    "name": "Crawdaunt",
+    "stats": {
+      "hp": 63,
+      "atk": 120,
+      "def": 85,
+      "spa": 90,
+      "spd": 55,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Hyper Cutter",
+      "Shell Armor"
+    ]
+  },
+  "343": {
+    "name": "Baltoy",
+    "stats": {
+      "hp": 40,
+      "atk": 40,
+      "def": 55,
+      "spa": 40,
+      "spd": 70,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "344": {
+    "name": "Claydol",
+    "stats": {
+      "hp": 60,
+      "atk": 70,
+      "def": 105,
+      "spa": 70,
+      "spd": 120,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "345": {
+    "name": "Lileep",
+    "stats": {
+      "hp": 66,
+      "atk": 41,
+      "def": 77,
+      "spa": 61,
+      "spd": 87,
+      "spe": 23
+    },
+    "types": [],
+    "abilities": [
+      "Suction Cups"
+    ]
+  },
+  "346": {
+    "name": "Cradily",
+    "stats": {
+      "hp": 86,
+      "atk": 81,
+      "def": 97,
+      "spa": 81,
+      "spd": 107,
+      "spe": 43
+    },
+    "types": [],
+    "abilities": [
+      "Suction Cups"
+    ]
+  },
+  "347": {
+    "name": "Anorith",
+    "stats": {
+      "hp": 45,
+      "atk": 95,
+      "def": 50,
+      "spa": 40,
+      "spd": 50,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Battle Armor"
+    ]
+  },
+  "348": {
+    "name": "Armaldo",
+    "stats": {
+      "hp": 75,
+      "atk": 125,
+      "def": 100,
+      "spa": 70,
+      "spd": 80,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Battle Armor"
+    ]
+  },
+  "349": {
+    "name": "Feebas",
+    "stats": {
+      "hp": 20,
+      "atk": 15,
+      "def": 20,
+      "spa": 10,
+      "spd": 55,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Oblivious"
+    ]
+  },
+  "350": {
+    "name": "Milotic",
+    "stats": {
+      "hp": 95,
+      "atk": 60,
+      "def": 79,
+      "spa": 100,
+      "spd": 125,
+      "spe": 81
+    },
+    "types": [],
+    "abilities": [
+      "Marvel Scale",
+      "Competitive"
+    ]
+  },
+  "351": {
+    "name": "Castform",
+    "stats": {
+      "hp": 70,
+      "atk": 70,
+      "def": 70,
+      "spa": 70,
+      "spd": 70,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Forecast"
+    ]
+  },
+  "352": {
+    "name": "Kecleon",
+    "stats": {
+      "hp": 60,
+      "atk": 90,
+      "def": 70,
+      "spa": 60,
+      "spd": 120,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Color Change"
+    ]
+  },
+  "353": {
+    "name": "Shuppet",
+    "stats": {
+      "hp": 44,
+      "atk": 75,
+      "def": 35,
+      "spa": 63,
+      "spd": 33,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Insomnia",
+      "Frisk"
+    ]
+  },
+  "354": {
+    "name": "Banette",
+    "stats": {
+      "hp": 64,
+      "atk": 115,
+      "def": 65,
+      "spa": 83,
+      "spd": 63,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Insomnia",
+      "Frisk"
+    ]
+  },
+  "355": {
+    "name": "Duskull",
+    "stats": {
+      "hp": 20,
+      "atk": 40,
+      "def": 90,
+      "spa": 30,
+      "spd": 90,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "356": {
+    "name": "Dusclops",
+    "stats": {
+      "hp": 40,
+      "atk": 70,
+      "def": 130,
+      "spa": 60,
+      "spd": 130,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "357": {
+    "name": "Tropius",
+    "stats": {
+      "hp": 99,
+      "atk": 68,
+      "def": 83,
+      "spa": 72,
+      "spd": 87,
+      "spe": 51
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Solar Power"
+    ]
+  },
+  "358": {
+    "name": "Chimecho",
+    "stats": {
+      "hp": 65,
+      "atk": 50,
+      "def": 70,
+      "spa": 95,
+      "spd": 80,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "359": {
+    "name": "Absol",
+    "stats": {
+      "hp": 65,
+      "atk": 130,
+      "def": 60,
+      "spa": 75,
+      "spd": 60,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Pressure",
+      "Super Luck"
+    ]
+  },
+  "360": {
+    "name": "Wynaut",
+    "stats": {
+      "hp": 95,
+      "atk": 23,
+      "def": 48,
+      "spa": 23,
+      "spd": 48,
+      "spe": 23
+    },
+    "types": [],
+    "abilities": [
+      "Shadow Tag"
+    ]
+  },
+  "361": {
+    "name": "Snorunt",
+    "stats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 50,
+      "spa": 50,
+      "spd": 50,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus",
+      "Ice Body"
+    ]
+  },
+  "362": {
+    "name": "Glalie",
+    "stats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 80,
+      "spa": 80,
+      "spd": 80,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus",
+      "Ice Body"
+    ]
+  },
+  "363": {
+    "name": "Spheal",
+    "stats": {
+      "hp": 70,
+      "atk": 40,
+      "def": 50,
+      "spa": 55,
+      "spd": 50,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Ice Body"
+    ]
+  },
+  "364": {
+    "name": "Sealeo",
+    "stats": {
+      "hp": 90,
+      "atk": 60,
+      "def": 70,
+      "spa": 75,
+      "spd": 70,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Ice Body"
+    ]
+  },
+  "365": {
+    "name": "Walrein",
+    "stats": {
+      "hp": 110,
+      "atk": 80,
+      "def": 90,
+      "spa": 95,
+      "spd": 90,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Ice Body"
+    ]
+  },
+  "366": {
+    "name": "Clamperl",
+    "stats": {
+      "hp": 35,
+      "atk": 64,
+      "def": 85,
+      "spa": 74,
+      "spd": 55,
+      "spe": 32
+    },
+    "types": [],
+    "abilities": [
+      "Shell Armor"
+    ]
+  },
+  "367": {
+    "name": "Huntail",
+    "stats": {
+      "hp": 55,
+      "atk": 104,
+      "def": 105,
+      "spa": 94,
+      "spd": 75,
+      "spe": 52
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "368": {
+    "name": "Gorebyss",
+    "stats": {
+      "hp": 55,
+      "atk": 84,
+      "def": 105,
+      "spa": 114,
+      "spd": 75,
+      "spe": 52
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "369": {
+    "name": "Relicanth",
+    "stats": {
+      "hp": 100,
+      "atk": 90,
+      "def": 130,
+      "spa": 45,
+      "spd": 65,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Rock Head"
+    ]
+  },
+  "370": {
+    "name": "Luvdisc",
+    "stats": {
+      "hp": 43,
+      "atk": 30,
+      "def": 55,
+      "spa": 40,
+      "spd": 65,
+      "spe": 97
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "371": {
+    "name": "Bagon",
+    "stats": {
+      "hp": 45,
+      "atk": 75,
+      "def": 60,
+      "spa": 40,
+      "spd": 30,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head"
+    ]
+  },
+  "372": {
+    "name": "Shelgon",
+    "stats": {
+      "hp": 65,
+      "atk": 95,
+      "def": 100,
+      "spa": 60,
+      "spd": 50,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Rock Head"
+    ]
+  },
+  "373": {
+    "name": "Salamence",
+    "stats": {
+      "hp": 95,
+      "atk": 135,
+      "def": 80,
+      "spa": 110,
+      "spd": 80,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "374": {
+    "name": "Beldum",
+    "stats": {
+      "hp": 40,
+      "atk": 55,
+      "def": 80,
+      "spa": 35,
+      "spd": 60,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "375": {
+    "name": "Metang",
+    "stats": {
+      "hp": 60,
+      "atk": 75,
+      "def": 100,
+      "spa": 55,
+      "spd": 80,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "376": {
+    "name": "Metagross",
+    "stats": {
+      "hp": 80,
+      "atk": 135,
+      "def": 130,
+      "spa": 95,
+      "spd": 90,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "377": {
+    "name": "Regirock",
+    "stats": {
+      "hp": 80,
+      "atk": 100,
+      "def": 200,
+      "spa": 50,
+      "spd": 100,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "378": {
+    "name": "Regice",
+    "stats": {
+      "hp": 80,
+      "atk": 50,
+      "def": 100,
+      "spa": 100,
+      "spd": 200,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "379": {
+    "name": "Registeel",
+    "stats": {
+      "hp": 80,
+      "atk": 75,
+      "def": 150,
+      "spa": 75,
+      "spd": 150,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "380": {
+    "name": "Latias",
+    "stats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 90,
+      "spa": 110,
+      "spd": 130,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "381": {
+    "name": "Latios",
+    "stats": {
+      "hp": 80,
+      "atk": 90,
+      "def": 80,
+      "spa": 130,
+      "spd": 110,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "382": {
+    "name": "Kyogre",
+    "stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 90,
+      "spa": 150,
+      "spd": 140,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Drizzle"
+    ]
+  },
+  "383": {
+    "name": "Groudon",
+    "stats": {
+      "hp": 100,
+      "atk": 150,
+      "def": 140,
+      "spa": 100,
+      "spd": 90,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Drought"
+    ]
+  },
+  "384": {
+    "name": "Rayquaza",
+    "stats": {
+      "hp": 105,
+      "atk": 150,
+      "def": 90,
+      "spa": 150,
+      "spd": 90,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Air Lock"
+    ]
+  },
+  "385": {
+    "name": "Jirachi",
+    "stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Serene Grace"
+    ]
+  },
+  "386": {
+    "name": "Deoxys",
+    "stats": {
+      "hp": 50,
+      "atk": 150,
+      "def": 50,
+      "spa": 150,
+      "spd": 50,
+      "spe": 150
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "387": {
+    "name": "Turtwig",
+    "stats": {
+      "hp": 55,
+      "atk": 68,
+      "def": 64,
+      "spa": 45,
+      "spd": 55,
+      "spe": 31
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "388": {
+    "name": "Grotle",
+    "stats": {
+      "hp": 75,
+      "atk": 89,
+      "def": 85,
+      "spa": 55,
+      "spd": 65,
+      "spe": 36
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "389": {
+    "name": "Torterra",
+    "stats": {
+      "hp": 95,
+      "atk": 109,
+      "def": 105,
+      "spa": 75,
+      "spd": 85,
+      "spe": 56
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "390": {
+    "name": "Chimchar",
+    "stats": {
+      "hp": 44,
+      "atk": 58,
+      "def": 44,
+      "spa": 58,
+      "spd": 44,
+      "spe": 61
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "391": {
+    "name": "Monferno",
+    "stats": {
+      "hp": 64,
+      "atk": 78,
+      "def": 52,
+      "spa": 78,
+      "spd": 52,
+      "spe": 81
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "392": {
+    "name": "Infernape",
+    "stats": {
+      "hp": 76,
+      "atk": 104,
+      "def": 71,
+      "spa": 104,
+      "spd": 71,
+      "spe": 108
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "393": {
+    "name": "Piplup",
+    "stats": {
+      "hp": 53,
+      "atk": 51,
+      "def": 53,
+      "spa": 61,
+      "spd": 56,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "394": {
+    "name": "Prinplup",
+    "stats": {
+      "hp": 64,
+      "atk": 66,
+      "def": 68,
+      "spa": 81,
+      "spd": 76,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "395": {
+    "name": "Empoleon",
+    "stats": {
+      "hp": 84,
+      "atk": 86,
+      "def": 88,
+      "spa": 111,
+      "spd": 101,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "396": {
+    "name": "Starly",
+    "stats": {
+      "hp": 40,
+      "atk": 55,
+      "def": 30,
+      "spa": 30,
+      "spd": 30,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye"
+    ]
+  },
+  "397": {
+    "name": "Staravia",
+    "stats": {
+      "hp": 55,
+      "atk": 75,
+      "def": 50,
+      "spa": 40,
+      "spd": 40,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "398": {
+    "name": "Staraptor",
+    "stats": {
+      "hp": 85,
+      "atk": 120,
+      "def": 70,
+      "spa": 50,
+      "spd": 60,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate"
+    ]
+  },
+  "399": {
+    "name": "Bidoof",
+    "stats": {
+      "hp": 59,
+      "atk": 45,
+      "def": 40,
+      "spa": 35,
+      "spd": 40,
+      "spe": 31
+    },
+    "types": [],
+    "abilities": [
+      "Simple",
+      "Unaware"
+    ]
+  },
+  "400": {
+    "name": "Bibarel",
+    "stats": {
+      "hp": 79,
+      "atk": 85,
+      "def": 60,
+      "spa": 55,
+      "spd": 60,
+      "spe": 71
+    },
+    "types": [],
+    "abilities": [
+      "Simple",
+      "Unaware"
+    ]
+  },
+  "401": {
+    "name": "Kricketot",
+    "stats": {
+      "hp": 37,
+      "atk": 25,
+      "def": 41,
+      "spa": 25,
+      "spd": 41,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "402": {
+    "name": "Kricketune",
+    "stats": {
+      "hp": 77,
+      "atk": 85,
+      "def": 51,
+      "spa": 55,
+      "spd": 51,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Swarm"
+    ]
+  },
+  "403": {
+    "name": "Shinx",
+    "stats": {
+      "hp": 45,
+      "atk": 65,
+      "def": 34,
+      "spa": 40,
+      "spd": 34,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Rivalry",
+      "Intimidate"
+    ]
+  },
+  "404": {
+    "name": "Luxio",
+    "stats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 49,
+      "spa": 60,
+      "spd": 49,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Rivalry",
+      "Intimidate"
+    ]
+  },
+  "405": {
+    "name": "Luxray",
+    "stats": {
+      "hp": 80,
+      "atk": 120,
+      "def": 79,
+      "spa": 95,
+      "spd": 79,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Rivalry",
+      "Intimidate"
+    ]
+  },
+  "406": {
+    "name": "Budew",
+    "stats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 35,
+      "spa": 50,
+      "spd": 70,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure",
+      "Poison Point"
+    ]
+  },
+  "407": {
+    "name": "Roserade",
+    "stats": {
+      "hp": 60,
+      "atk": 70,
+      "def": 65,
+      "spa": 125,
+      "spd": 105,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure",
+      "Poison Point"
+    ]
+  },
+  "408": {
+    "name": "Cranidos",
+    "stats": {
+      "hp": 67,
+      "atk": 125,
+      "def": 40,
+      "spa": 30,
+      "spd": 30,
+      "spe": 58
+    },
+    "types": [],
+    "abilities": [
+      "Mold Breaker"
+    ]
+  },
+  "409": {
+    "name": "Ramaprdos",
+    "stats": {
+      "hp": 97,
+      "atk": 165,
+      "def": 60,
+      "spa": 65,
+      "spd": 50,
+      "spe": 58
+    },
+    "types": [],
+    "abilities": [
+      "Mold Breaker"
+    ]
+  },
+  "410": {
+    "name": "Shieldon",
+    "stats": {
+      "hp": 30,
+      "atk": 42,
+      "def": 118,
+      "spa": 42,
+      "spd": 88,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy"
+    ]
+  },
+  "411": {
+    "name": "Bastiodon",
+    "stats": {
+      "hp": 60,
+      "atk": 52,
+      "def": 168,
+      "spa": 47,
+      "spd": 138,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy"
+    ]
+  },
+  "412": {
+    "name": "Burmy",
+    "stats": {
+      "hp": 40,
+      "atk": 29,
+      "def": 45,
+      "spa": 29,
+      "spd": 45,
+      "spe": 36
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "413": {
+    "name": "Wormadam",
+    "stats": {
+      "hp": 60,
+      "atk": 59,
+      "def": 85,
+      "spa": 79,
+      "spd": 105,
+      "spe": 36
+    },
+    "types": [],
+    "abilities": [
+      "Anticipation"
+    ]
+  },
+  "414": {
+    "name": "Mothim",
+    "stats": {
+      "hp": 70,
+      "atk": 94,
+      "def": 50,
+      "spa": 94,
+      "spd": 50,
+      "spe": 66
+    },
+    "types": [],
+    "abilities": [
+      "Swarm"
+    ]
+  },
+  "415": {
+    "name": "Combee",
+    "stats": {
+      "hp": 30,
+      "atk": 30,
+      "def": 42,
+      "spa": 30,
+      "spd": 42,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Honey Gather"
+    ]
+  },
+  "416": {
+    "name": "Vespiquen",
+    "stats": {
+      "hp": 70,
+      "atk": 80,
+      "def": 102,
+      "spa": 80,
+      "spd": 102,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "417": {
+    "name": "Pachirisu",
+    "stats": {
+      "hp": 60,
+      "atk": 45,
+      "def": 70,
+      "spa": 45,
+      "spd": 90,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Pickup"
+    ]
+  },
+  "418": {
+    "name": "Buizel",
+    "stats": {
+      "hp": 55,
+      "atk": 65,
+      "def": 35,
+      "spa": 60,
+      "spd": 30,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "419": {
+    "name": "Floatzel",
+    "stats": {
+      "hp": 85,
+      "atk": 105,
+      "def": 55,
+      "spa": 85,
+      "spd": 50,
+      "spe": 115
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim"
+    ]
+  },
+  "420": {
+    "name": "Cherubi",
+    "stats": {
+      "hp": 45,
+      "atk": 35,
+      "def": 45,
+      "spa": 62,
+      "spd": 53,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll"
+    ]
+  },
+  "421": {
+    "name": "Cherrim",
+    "stats": {
+      "hp": 70,
+      "atk": 60,
+      "def": 70,
+      "spa": 87,
+      "spd": 78,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Flower Gift"
+    ]
+  },
+  "422": {
+    "name": "Shellos",
+    "stats": {
+      "hp": 76,
+      "atk": 48,
+      "def": 48,
+      "spa": 57,
+      "spd": 62,
+      "spe": 34
+    },
+    "types": [],
+    "abilities": [
+      "Sticky Hold",
+      "Storm Drain"
+    ]
+  },
+  "423": {
+    "name": "Gastrodon",
+    "stats": {
+      "hp": 111,
+      "atk": 83,
+      "def": 68,
+      "spa": 92,
+      "spd": 82,
+      "spe": 39
+    },
+    "types": [],
+    "abilities": [
+      "Sticky Hold",
+      "Storm Drain"
+    ]
+  },
+  "424": {
+    "name": "Ambipom",
+    "stats": {
+      "hp": 75,
+      "atk": 100,
+      "def": 66,
+      "spa": 60,
+      "spd": 66,
+      "spe": 115
+    },
+    "types": [],
+    "abilities": [
+      "Technician",
+      "Pickup"
+    ]
+  },
+  "425": {
+    "name": "Drifloon",
+    "stats": {
+      "hp": 90,
+      "atk": 50,
+      "def": 34,
+      "spa": 60,
+      "spd": 44,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Aftermath",
+      "Unburden"
+    ]
+  },
+  "426": {
+    "name": "Drifblim",
+    "stats": {
+      "hp": 150,
+      "atk": 80,
+      "def": 44,
+      "spa": 90,
+      "spd": 54,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Aftermath",
+      "Unburden"
+    ]
+  },
+  "427": {
+    "name": "Buneary",
+    "stats": {
+      "hp": 55,
+      "atk": 66,
+      "def": 44,
+      "spa": 44,
+      "spd": 56,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Klutz"
+    ]
+  },
+  "428": {
+    "name": "Lopunny",
+    "stats": {
+      "hp": 65,
+      "atk": 76,
+      "def": 84,
+      "spa": 54,
+      "spd": 96,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Klutz"
+    ]
+  },
+  "429": {
+    "name": "Mismagius",
+    "stats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 60,
+      "spa": 105,
+      "spd": 105,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "430": {
+    "name": "Honchkrow",
+    "stats": {
+      "hp": 100,
+      "atk": 125,
+      "def": 52,
+      "spa": 105,
+      "spd": 52,
+      "spe": 71
+    },
+    "types": [],
+    "abilities": [
+      "Insomnia",
+      "Super Luck"
+    ]
+  },
+  "431": {
+    "name": "Glameow",
+    "stats": {
+      "hp": 49,
+      "atk": 55,
+      "def": 42,
+      "spa": 42,
+      "spd": 37,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Limber",
+      "Own Tempo"
+    ]
+  },
+  "432": {
+    "name": "Purugly",
+    "stats": {
+      "hp": 71,
+      "atk": 82,
+      "def": 64,
+      "spa": 64,
+      "spd": 59,
+      "spe": 112
+    },
+    "types": [],
+    "abilities": [
+      "Thick Fat",
+      "Own Tempo"
+    ]
+  },
+  "433": {
+    "name": "Chingling",
+    "stats": {
+      "hp": 45,
+      "atk": 30,
+      "def": 50,
+      "spa": 65,
+      "spd": 50,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "434": {
+    "name": "Stunky",
+    "stats": {
+      "hp": 63,
+      "atk": 63,
+      "def": 47,
+      "spa": 41,
+      "spd": 41,
+      "spe": 74
+    },
+    "types": [],
+    "abilities": [
+      "Stench",
+      "Aftermath"
+    ]
+  },
+  "435": {
+    "name": "Skuntank",
+    "stats": {
+      "hp": 103,
+      "atk": 93,
+      "def": 67,
+      "spa": 71,
+      "spd": 61,
+      "spe": 84
+    },
+    "types": [],
+    "abilities": [
+      "Stench",
+      "Aftermath"
+    ]
+  },
+  "436": {
+    "name": "Bronzor",
+    "stats": {
+      "hp": 57,
+      "atk": 24,
+      "def": 86,
+      "spa": 24,
+      "spd": 86,
+      "spe": 23
+    },
+    "types": [],
+    "abilities": [
+      "Levitate",
+      "Heatproof"
+    ]
+  },
+  "437": {
+    "name": "Bronzong",
+    "stats": {
+      "hp": 67,
+      "atk": 89,
+      "def": 116,
+      "spa": 79,
+      "spd": 116,
+      "spe": 33
+    },
+    "types": [],
+    "abilities": [
+      "Levitate",
+      "Heatproof"
+    ]
+  },
+  "438": {
+    "name": "Bonsly",
+    "stats": {
+      "hp": 50,
+      "atk": 80,
+      "def": 95,
+      "spa": 10,
+      "spd": 45,
+      "spe": 10
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Rock Head"
+    ]
+  },
+  "439": {
+    "name": "Mime Jr.",
+    "stats": {
+      "hp": 20,
+      "atk": 25,
+      "def": 45,
+      "spa": 70,
+      "spd": 90,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Soundproof",
+      "Filter"
+    ]
+  },
+  "440": {
+    "name": "Happiny",
+    "stats": {
+      "hp": 100,
+      "atk": 5,
+      "def": 5,
+      "spa": 15,
+      "spd": 65,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure",
+      "Serene Grace"
+    ]
+  },
+  "441": {
+    "name": "Chatot",
+    "stats": {
+      "hp": 76,
+      "atk": 65,
+      "def": 45,
+      "spa": 92,
+      "spd": 42,
+      "spe": 91
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Tangled Feet"
+    ]
+  },
+  "442": {
+    "name": "Spiritomb",
+    "stats": {
+      "hp": 50,
+      "atk": 92,
+      "def": 108,
+      "spa": 92,
+      "spd": 108,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "443": {
+    "name": "Gible",
+    "stats": {
+      "hp": 58,
+      "atk": 70,
+      "def": 45,
+      "spa": 40,
+      "spd": 45,
+      "spe": 42
+    },
+    "types": [],
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "444": {
+    "name": "Gabite",
+    "stats": {
+      "hp": 68,
+      "atk": 90,
+      "def": 65,
+      "spa": 50,
+      "spd": 55,
+      "spe": 82
+    },
+    "types": [],
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "445": {
+    "name": "Garchomp",
+    "stats": {
+      "hp": 108,
+      "atk": 130,
+      "def": 95,
+      "spa": 80,
+      "spd": 85,
+      "spe": 102
+    },
+    "types": [],
+    "abilities": [
+      "Sand Veil"
+    ]
+  },
+  "446": {
+    "name": "Munchlax",
+    "stats": {
+      "hp": 135,
+      "atk": 85,
+      "def": 40,
+      "spa": 40,
+      "spd": 85,
+      "spe": 5
+    },
+    "types": [],
+    "abilities": [
+      "Pickup",
+      "Thick Fat"
+    ]
+  },
+  "447": {
+    "name": "Riolu",
+    "stats": {
+      "hp": 40,
+      "atk": 70,
+      "def": 40,
+      "spa": 35,
+      "spd": 40,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Steadfast",
+      "Inner Focus"
+    ]
+  },
+  "448": {
+    "name": "Lucario",
+    "stats": {
+      "hp": 70,
+      "atk": 110,
+      "def": 70,
+      "spa": 115,
+      "spd": 70,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Steadfast",
+      "Inner Focus"
+    ]
+  },
+  "449": {
+    "name": "Hippopotas",
+    "stats": {
+      "hp": 68,
+      "atk": 72,
+      "def": 78,
+      "spa": 38,
+      "spd": 42,
+      "spe": 32
+    },
+    "types": [],
+    "abilities": [
+      "Sand Stream"
+    ]
+  },
+  "450": {
+    "name": "Hippowdon",
+    "stats": {
+      "hp": 108,
+      "atk": 112,
+      "def": 118,
+      "spa": 68,
+      "spd": 72,
+      "spe": 47
+    },
+    "types": [],
+    "abilities": [
+      "Sand Stream"
+    ]
+  },
+  "451": {
+    "name": "Skorupi",
+    "stats": {
+      "hp": 40,
+      "atk": 50,
+      "def": 90,
+      "spa": 30,
+      "spd": 55,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Battle Armor",
+      "Sniper"
+    ]
+  },
+  "452": {
+    "name": "Drapion",
+    "stats": {
+      "hp": 70,
+      "atk": 90,
+      "def": 110,
+      "spa": 60,
+      "spd": 75,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Battle Armor",
+      "Sniper"
+    ]
+  },
+  "453": {
+    "name": "Croagunk",
+    "stats": {
+      "hp": 48,
+      "atk": 61,
+      "def": 40,
+      "spa": 61,
+      "spd": 40,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Anticipation",
+      "Dry Skin"
+    ]
+  },
+  "454": {
+    "name": "Toxicroak",
+    "stats": {
+      "hp": 83,
+      "atk": 106,
+      "def": 65,
+      "spa": 86,
+      "spd": 65,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Anticipation",
+      "Dry Skin"
+    ]
+  },
+  "455": {
+    "name": "Carnivine",
+    "stats": {
+      "hp": 74,
+      "atk": 100,
+      "def": 72,
+      "spa": 90,
+      "spd": 72,
+      "spe": 46
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "456": {
+    "name": "Finneon",
+    "stats": {
+      "hp": 49,
+      "atk": 49,
+      "def": 56,
+      "spa": 49,
+      "spd": 61,
+      "spe": 66
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Storm Drain"
+    ]
+  },
+  "457": {
+    "name": "Lumineon",
+    "stats": {
+      "hp": 69,
+      "atk": 69,
+      "def": 76,
+      "spa": 69,
+      "spd": 86,
+      "spe": 91
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Storm Drain"
+    ]
+  },
+  "458": {
+    "name": "Mantyke",
+    "stats": {
+      "hp": 45,
+      "atk": 20,
+      "def": 50,
+      "spa": 60,
+      "spd": 120,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Water Absorb"
+    ]
+  },
+  "459": {
+    "name": "Snover",
+    "stats": {
+      "hp": 60,
+      "atk": 62,
+      "def": 50,
+      "spa": 62,
+      "spd": 60,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Snow Warning"
+    ]
+  },
+  "460": {
+    "name": "Abomasnow",
+    "stats": {
+      "hp": 90,
+      "atk": 92,
+      "def": 75,
+      "spa": 92,
+      "spd": 85,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Snow Warning"
+    ]
+  },
+  "461": {
+    "name": "Weavile",
+    "stats": {
+      "hp": 70,
+      "atk": 120,
+      "def": 65,
+      "spa": 45,
+      "spd": 85,
+      "spe": 125
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "462": {
+    "name": "Magnezone",
+    "stats": {
+      "hp": 70,
+      "atk": 70,
+      "def": 115,
+      "spa": 130,
+      "spd": 90,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy"
+    ]
+  },
+  "463": {
+    "name": "Lickilicky",
+    "stats": {
+      "hp": 110,
+      "atk": 85,
+      "def": 95,
+      "spa": 80,
+      "spd": 95,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Own Tempo",
+      "Oblivious"
+    ]
+  },
+  "464": {
+    "name": "Rhyperior",
+    "stats": {
+      "hp": 115,
+      "atk": 140,
+      "def": 130,
+      "spa": 55,
+      "spd": 55,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Lightning Rod",
+      "Solid Rock"
+    ]
+  },
+  "465": {
+    "name": "Tangrowth",
+    "stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 125,
+      "spa": 110,
+      "spd": 50,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Leaf Guard"
+    ]
+  },
+  "466": {
+    "name": "Electivire",
+    "stats": {
+      "hp": 75,
+      "atk": 123,
+      "def": 67,
+      "spa": 95,
+      "spd": 85,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Motor Drive"
+    ]
+  },
+  "467": {
+    "name": "Magmortar",
+    "stats": {
+      "hp": 75,
+      "atk": 95,
+      "def": 67,
+      "spa": 125,
+      "spd": 95,
+      "spe": 83
+    },
+    "types": [],
+    "abilities": [
+      "Flame Body"
+    ]
+  },
+  "468": {
+    "name": "Togekiss",
+    "stats": {
+      "hp": 85,
+      "atk": 50,
+      "def": 95,
+      "spa": 120,
+      "spd": 115,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Hustle",
+      "Serene Grace"
+    ]
+  },
+  "469": {
+    "name": "Yanmega",
+    "stats": {
+      "hp": 86,
+      "atk": 76,
+      "def": 86,
+      "spa": 116,
+      "spd": 56,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Speed Boost",
+      "Tinted Lens"
+    ]
+  },
+  "470": {
+    "name": "Leafeon",
+    "stats": {
+      "hp": 65,
+      "atk": 110,
+      "def": 130,
+      "spa": 60,
+      "spd": 65,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Leaf Guard"
+    ]
+  },
+  "471": {
+    "name": "Glaceon",
+    "stats": {
+      "hp": 65,
+      "atk": 60,
+      "def": 110,
+      "spa": 130,
+      "spd": 95,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Snow Cloak"
+    ]
+  },
+  "472": {
+    "name": "Gliscor",
+    "stats": {
+      "hp": 75,
+      "atk": 95,
+      "def": 125,
+      "spa": 45,
+      "spd": 75,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Hyper Cutter",
+      "Sand Veil"
+    ]
+  },
+  "473": {
+    "name": "Mamoswine",
+    "stats": {
+      "hp": 110,
+      "atk": 130,
+      "def": 80,
+      "spa": 70,
+      "spd": 60,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Oblivious",
+      "Snow Cloak"
+    ]
+  },
+  "474": {
+    "name": "Porygon-Z",
+    "stats": {
+      "hp": 85,
+      "atk": 80,
+      "def": 70,
+      "spa": 135,
+      "spd": 75,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Adaptability",
+      "Download"
+    ]
+  },
+  "475": {
+    "name": "Gallade",
+    "stats": {
+      "hp": 68,
+      "atk": 125,
+      "def": 65,
+      "spa": 65,
+      "spd": 115,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Steadfast",
+      "Sharpness"
+    ]
+  },
+  "476": {
+    "name": "Probopass",
+    "stats": {
+      "hp": 60,
+      "atk": 55,
+      "def": 145,
+      "spa": 75,
+      "spd": 150,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Magnet Pull"
+    ]
+  },
+  "477": {
+    "name": "Dusknoir",
+    "stats": {
+      "hp": 45,
+      "atk": 100,
+      "def": 135,
+      "spa": 65,
+      "spd": 135,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "478": {
+    "name": "Froslass",
+    "stats": {
+      "hp": 70,
+      "atk": 80,
+      "def": 70,
+      "spa": 80,
+      "spd": 70,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Snow Cloak"
+    ]
+  },
+  "479": {
+    "name": "Rotom",
+    "stats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 77,
+      "spa": 95,
+      "spd": 77,
+      "spe": 91
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "480": {
+    "name": "Uxie",
+    "stats": {
+      "hp": 75,
+      "atk": 75,
+      "def": 130,
+      "spa": 75,
+      "spd": 130,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "481": {
+    "name": "Mesprit",
+    "stats": {
+      "hp": 80,
+      "atk": 105,
+      "def": 105,
+      "spa": 105,
+      "spd": 105,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "482": {
+    "name": "Azelf",
+    "stats": {
+      "hp": 75,
+      "atk": 125,
+      "def": 70,
+      "spa": 125,
+      "spd": 70,
+      "spe": 115
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "483": {
+    "name": "Dialga",
+    "stats": {
+      "hp": 100,
+      "atk": 120,
+      "def": 120,
+      "spa": 150,
+      "spd": 100,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "484": {
+    "name": "Palkia",
+    "stats": {
+      "hp": 90,
+      "atk": 120,
+      "def": 100,
+      "spa": 150,
+      "spd": 120,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "485": {
+    "name": "Heatran",
+    "stats": {
+      "hp": 91,
+      "atk": 90,
+      "def": 106,
+      "spa": 130,
+      "spd": 106,
+      "spe": 77
+    },
+    "types": [],
+    "abilities": [
+      "Flash Fire"
+    ]
+  },
+  "486": {
+    "name": "Regigigas",
+    "stats": {
+      "hp": 110,
+      "atk": 160,
+      "def": 110,
+      "spa": 80,
+      "spd": 110,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Slow Start"
+    ]
+  },
+  "487": {
+    "name": "Giratina",
+    "stats": {
+      "hp": 150,
+      "atk": 100,
+      "def": 120,
+      "spa": 100,
+      "spd": 120,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "488": {
+    "name": "Cresselia",
+    "stats": {
+      "hp": 120,
+      "atk": 70,
+      "def": 110,
+      "spa": 75,
+      "spd": 120,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "489": {
+    "name": "Phione",
+    "stats": {
+      "hp": 80,
+      "atk": 80,
+      "def": 80,
+      "spa": 80,
+      "spd": 80,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Hydration"
+    ]
+  },
+  "490": {
+    "name": "Manaphy",
+    "stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Hydration"
+    ]
+  },
+  "491": {
+    "name": "Darkrai",
+    "stats": {
+      "hp": 70,
+      "atk": 90,
+      "def": 90,
+      "spa": 135,
+      "spd": 90,
+      "spe": 125
+    },
+    "types": [],
+    "abilities": [
+      "Bad Dreams"
+    ]
+  },
+  "492": {
+    "name": "Shaymin",
+    "stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure"
+    ]
+  },
+  "493": {
+    "name": "Arceus",
+    "stats": {
+      "hp": 120,
+      "atk": 120,
+      "def": 120,
+      "spa": 120,
+      "spd": 120,
+      "spe": 120
+    },
+    "types": [],
+    "abilities": [
+      "Multitype"
+    ]
+  },
+  "494": {
+    "name": "Victini",
+    "stats": {
+      "hp": 100,
+      "atk": 100,
+      "def": 100,
+      "spa": 100,
+      "spd": 100,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Victory Star"
+    ]
+  },
+  "495": {
+    "name": "Snivy",
+    "stats": {
+      "hp": 45,
+      "atk": 45,
+      "def": 55,
+      "spa": 45,
+      "spd": 55,
+      "spe": 63
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "496": {
+    "name": "Servine",
+    "stats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 75,
+      "spa": 60,
+      "spd": 75,
+      "spe": 83
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "497": {
+    "name": "Serperior",
+    "stats": {
+      "hp": 75,
+      "atk": 75,
+      "def": 95,
+      "spa": 75,
+      "spd": 95,
+      "spe": 113
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "498": {
+    "name": "Tepig",
+    "stats": {
+      "hp": 65,
+      "atk": 63,
+      "def": 45,
+      "spa": 45,
+      "spd": 45,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "499": {
+    "name": "Pignite",
+    "stats": {
+      "hp": 90,
+      "atk": 93,
+      "def": 55,
+      "spa": 70,
+      "spd": 55,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "500": {
+    "name": "Emboar",
+    "stats": {
+      "hp": 110,
+      "atk": 123,
+      "def": 65,
+      "spa": 100,
+      "spd": 65,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "501": {
+    "name": "Oshawott",
+    "stats": {
+      "hp": 55,
+      "atk": 55,
+      "def": 45,
+      "spa": 63,
+      "spd": 45,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "502": {
+    "name": "Dewott",
+    "stats": {
+      "hp": 75,
+      "atk": 75,
+      "def": 60,
+      "spa": 83,
+      "spd": 60,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "503": {
+    "name": "Samurott",
+    "stats": {
+      "hp": 95,
+      "atk": 100,
+      "def": 85,
+      "spa": 108,
+      "spd": 70,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "504": {
+    "name": "Patrat",
+    "stats": {
+      "hp": 45,
+      "atk": 55,
+      "def": 39,
+      "spa": 35,
+      "spd": 39,
+      "spe": 42
+    },
+    "types": [],
+    "abilities": [
+      "Run Away",
+      "Keen Eye"
+    ]
+  },
+  "505": {
+    "name": "Watchog",
+    "stats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 69,
+      "spa": 60,
+      "spd": 69,
+      "spe": 77
+    },
+    "types": [],
+    "abilities": [
+      "Illuminate",
+      "Keen Eye"
+    ]
+  },
+  "506": {
+    "name": "Lillipup",
+    "stats": {
+      "hp": 45,
+      "atk": 60,
+      "def": 45,
+      "spa": 25,
+      "spd": 45,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Vital Spirit",
+      "Pickup"
+    ]
+  },
+  "507": {
+    "name": "Herdier",
+    "stats": {
+      "hp": 65,
+      "atk": 80,
+      "def": 65,
+      "spa": 35,
+      "spd": 65,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Sand Rush"
+    ]
+  },
+  "508": {
+    "name": "Stoutland",
+    "stats": {
+      "hp": 85,
+      "atk": 110,
+      "def": 90,
+      "spa": 45,
+      "spd": 90,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Sand Rush"
+    ]
+  },
+  "509": {
+    "name": "Purrloin",
+    "stats": {
+      "hp": 41,
+      "atk": 50,
+      "def": 37,
+      "spa": 50,
+      "spd": 37,
+      "spe": 66
+    },
+    "types": [],
+    "abilities": [
+      "Limber",
+      "Unburden"
+    ]
+  },
+  "510": {
+    "name": "Liepard",
+    "stats": {
+      "hp": 64,
+      "atk": 88,
+      "def": 50,
+      "spa": 88,
+      "spd": 50,
+      "spe": 106
+    },
+    "types": [],
+    "abilities": [
+      "Limber",
+      "Unburden"
+    ]
+  },
+  "511": {
+    "name": "Pansage",
+    "stats": {
+      "hp": 50,
+      "atk": 53,
+      "def": 48,
+      "spa": 53,
+      "spd": 48,
+      "spe": 64
+    },
+    "types": [],
+    "abilities": [
+      "Gluttony"
+    ]
+  },
+  "512": {
+    "name": "Simisage",
+    "stats": {
+      "hp": 75,
+      "atk": 98,
+      "def": 63,
+      "spa": 98,
+      "spd": 63,
+      "spe": 101
+    },
+    "types": [],
+    "abilities": [
+      "Gluttony"
+    ]
+  },
+  "513": {
+    "name": "Pansear",
+    "stats": {
+      "hp": 50,
+      "atk": 53,
+      "def": 48,
+      "spa": 53,
+      "spd": 48,
+      "spe": 64
+    },
+    "types": [],
+    "abilities": [
+      "Gluttony"
+    ]
+  },
+  "514": {
+    "name": "Simisear",
+    "stats": {
+      "hp": 75,
+      "atk": 98,
+      "def": 63,
+      "spa": 98,
+      "spd": 63,
+      "spe": 101
+    },
+    "types": [],
+    "abilities": [
+      "Gluttony"
+    ]
+  },
+  "515": {
+    "name": "Panpour",
+    "stats": {
+      "hp": 50,
+      "atk": 53,
+      "def": 48,
+      "spa": 53,
+      "spd": 48,
+      "spe": 64
+    },
+    "types": [],
+    "abilities": [
+      "Gluttony"
+    ]
+  },
+  "516": {
+    "name": "Simipour",
+    "stats": {
+      "hp": 75,
+      "atk": 98,
+      "def": 63,
+      "spa": 98,
+      "spd": 63,
+      "spe": 101
+    },
+    "types": [],
+    "abilities": [
+      "Gluttony"
+    ]
+  },
+  "517": {
+    "name": "Munna",
+    "stats": {
+      "hp": 76,
+      "atk": 25,
+      "def": 45,
+      "spa": 67,
+      "spd": 55,
+      "spe": 24
+    },
+    "types": [],
+    "abilities": [
+      "Forewarn",
+      "Synchronize"
+    ]
+  },
+  "518": {
+    "name": "Musharna",
+    "stats": {
+      "hp": 116,
+      "atk": 55,
+      "def": 85,
+      "spa": 107,
+      "spd": 95,
+      "spe": 29
+    },
+    "types": [],
+    "abilities": [
+      "Forewarn",
+      "Synchronize"
+    ]
+  },
+  "519": {
+    "name": "Pidove",
+    "stats": {
+      "hp": 50,
+      "atk": 55,
+      "def": 50,
+      "spa": 36,
+      "spd": 30,
+      "spe": 43
+    },
+    "types": [],
+    "abilities": [
+      "Big Pecks",
+      "Super Luck"
+    ]
+  },
+  "520": {
+    "name": "Tranquill",
+    "stats": {
+      "hp": 62,
+      "atk": 77,
+      "def": 62,
+      "spa": 50,
+      "spd": 42,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Big Pecks",
+      "Super Luck"
+    ]
+  },
+  "521": {
+    "name": "Unfezant",
+    "stats": {
+      "hp": 80,
+      "atk": 115,
+      "def": 80,
+      "spa": 65,
+      "spd": 55,
+      "spe": 93
+    },
+    "types": [],
+    "abilities": [
+      "Big Pecks",
+      "Super Luck"
+    ]
+  },
+  "522": {
+    "name": "Blitzle",
+    "stats": {
+      "hp": 45,
+      "atk": 60,
+      "def": 32,
+      "spa": 50,
+      "spd": 32,
+      "spe": 76
+    },
+    "types": [],
+    "abilities": [
+      "Lightning Rod",
+      "Motor Drive"
+    ]
+  },
+  "523": {
+    "name": "Zebstrika",
+    "stats": {
+      "hp": 75,
+      "atk": 100,
+      "def": 63,
+      "spa": 80,
+      "spd": 63,
+      "spe": 116
+    },
+    "types": [],
+    "abilities": [
+      "Lightning Rod",
+      "Motor Drive"
+    ]
+  },
+  "524": {
+    "name": "Roggenrola",
+    "stats": {
+      "hp": 55,
+      "atk": 75,
+      "def": 85,
+      "spa": 25,
+      "spd": 25,
+      "spe": 15
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Weak Armor"
+    ]
+  },
+  "525": {
+    "name": "Boldore",
+    "stats": {
+      "hp": 70,
+      "atk": 105,
+      "def": 105,
+      "spa": 50,
+      "spd": 40,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Weak Armor"
+    ]
+  },
+  "526": {
+    "name": "Gigalith",
+    "stats": {
+      "hp": 85,
+      "atk": 135,
+      "def": 130,
+      "spa": 60,
+      "spd": 80,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Sand Stream"
+    ]
+  },
+  "527": {
+    "name": "Woobat",
+    "stats": {
+      "hp": 55,
+      "atk": 45,
+      "def": 43,
+      "spa": 55,
+      "spd": 43,
+      "spe": 72
+    },
+    "types": [],
+    "abilities": [
+      "Unaware",
+      "Klutz"
+    ]
+  },
+  "528": {
+    "name": "Swoobat",
+    "stats": {
+      "hp": 67,
+      "atk": 57,
+      "def": 55,
+      "spa": 77,
+      "spd": 55,
+      "spe": 114
+    },
+    "types": [],
+    "abilities": [
+      "Unaware",
+      "Klutz"
+    ]
+  },
+  "529": {
+    "name": "Drilbur",
+    "stats": {
+      "hp": 60,
+      "atk": 85,
+      "def": 40,
+      "spa": 30,
+      "spd": 45,
+      "spe": 68
+    },
+    "types": [],
+    "abilities": [
+      "Sand Rush",
+      "Sand Force"
+    ]
+  },
+  "530": {
+    "name": "Excadrill",
+    "stats": {
+      "hp": 110,
+      "atk": 135,
+      "def": 60,
+      "spa": 50,
+      "spd": 65,
+      "spe": 88
+    },
+    "types": [],
+    "abilities": [
+      "Sand Rush",
+      "Sand Force"
+    ]
+  },
+  "531": {
+    "name": "Audino",
+    "stats": {
+      "hp": 103,
+      "atk": 60,
+      "def": 86,
+      "spa": 60,
+      "spd": 86,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Healer",
+      "Regenerator"
+    ]
+  },
+  "532": {
+    "name": "Timburr",
+    "stats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 55,
+      "spa": 25,
+      "spd": 35,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Guts",
+      "Sheer Force"
+    ]
+  },
+  "533": {
+    "name": "Gurdurr",
+    "stats": {
+      "hp": 85,
+      "atk": 105,
+      "def": 85,
+      "spa": 40,
+      "spd": 50,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Guts",
+      "Sheer Force"
+    ]
+  },
+  "534": {
+    "name": "Conkeldurr",
+    "stats": {
+      "hp": 105,
+      "atk": 140,
+      "def": 95,
+      "spa": 55,
+      "spd": 65,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Guts",
+      "Sheer Force"
+    ]
+  },
+  "535": {
+    "name": "Tympole",
+    "stats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 40,
+      "spa": 50,
+      "spd": 40,
+      "spe": 64
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Hydration"
+    ]
+  },
+  "536": {
+    "name": "Palpitoad",
+    "stats": {
+      "hp": 75,
+      "atk": 65,
+      "def": 55,
+      "spa": 65,
+      "spd": 55,
+      "spe": 69
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Hydration"
+    ]
+  },
+  "537": {
+    "name": "Seismitoad",
+    "stats": {
+      "hp": 105,
+      "atk": 95,
+      "def": 75,
+      "spa": 85,
+      "spd": 75,
+      "spe": 74
+    },
+    "types": [],
+    "abilities": [
+      "Swift Swim",
+      "Poison Touch"
+    ]
+  },
+  "538": {
+    "name": "Throh",
+    "stats": {
+      "hp": 120,
+      "atk": 100,
+      "def": 85,
+      "spa": 30,
+      "spd": 85,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Guts",
+      "Inner Focus"
+    ]
+  },
+  "539": {
+    "name": "Sawk",
+    "stats": {
+      "hp": 75,
+      "atk": 125,
+      "def": 75,
+      "spa": 30,
+      "spd": 75,
+      "spe": 85
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Inner Focus"
+    ]
+  },
+  "540": {
+    "name": "Sewaddle",
+    "stats": {
+      "hp": 45,
+      "atk": 53,
+      "def": 70,
+      "spa": 40,
+      "spd": 60,
+      "spe": 42
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Chlorophyll"
+    ]
+  },
+  "541": {
+    "name": "Swadloon",
+    "stats": {
+      "hp": 55,
+      "atk": 63,
+      "def": 90,
+      "spa": 50,
+      "spd": 80,
+      "spe": 42
+    },
+    "types": [],
+    "abilities": [
+      "Leaf Guard",
+      "Chlorophyll"
+    ]
+  },
+  "542": {
+    "name": "Leavanny",
+    "stats": {
+      "hp": 75,
+      "atk": 103,
+      "def": 80,
+      "spa": 70,
+      "spd": 80,
+      "spe": 92
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Chlorophyll"
+    ]
+  },
+  "543": {
+    "name": "Venipede",
+    "stats": {
+      "hp": 30,
+      "atk": 45,
+      "def": 59,
+      "spa": 30,
+      "spd": 39,
+      "spe": 57
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Swarm"
+    ]
+  },
+  "544": {
+    "name": "Whirlipede",
+    "stats": {
+      "hp": 40,
+      "atk": 55,
+      "def": 99,
+      "spa": 40,
+      "spd": 79,
+      "spe": 47
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Swarm"
+    ]
+  },
+  "545": {
+    "name": "Scolipede",
+    "stats": {
+      "hp": 60,
+      "atk": 100,
+      "def": 89,
+      "spa": 55,
+      "spd": 69,
+      "spe": 112
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Swarm"
+    ]
+  },
+  "546": {
+    "name": "Cottonee",
+    "stats": {
+      "hp": 40,
+      "atk": 27,
+      "def": 60,
+      "spa": 37,
+      "spd": 50,
+      "spe": 66
+    },
+    "types": [],
+    "abilities": [
+      "Prankster",
+      "Infiltrator"
+    ]
+  },
+  "547": {
+    "name": "Whimsicott",
+    "stats": {
+      "hp": 60,
+      "atk": 67,
+      "def": 85,
+      "spa": 77,
+      "spd": 75,
+      "spe": 116
+    },
+    "types": [],
+    "abilities": [
+      "Prankster",
+      "Infiltrator"
+    ]
+  },
+  "548": {
+    "name": "Petilil",
+    "stats": {
+      "hp": 45,
+      "atk": 35,
+      "def": 50,
+      "spa": 70,
+      "spd": 50,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Own Tempo"
+    ]
+  },
+  "549": {
+    "name": "Lilligant",
+    "stats": {
+      "hp": 70,
+      "atk": 60,
+      "def": 75,
+      "spa": 110,
+      "spd": 75,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Own Tempo"
+    ]
+  },
+  "550": {
+    "name": "Basculin",
+    "stats": {
+      "hp": 70,
+      "atk": 92,
+      "def": 65,
+      "spa": 80,
+      "spd": 55,
+      "spe": 98
+    },
+    "types": [],
+    "abilities": [
+      "Reckless",
+      "Adaptability"
+    ]
+  },
+  "551": {
+    "name": "Sandile",
+    "stats": {
+      "hp": 50,
+      "atk": 72,
+      "def": 35,
+      "spa": 35,
+      "spd": 35,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Moxie"
+    ]
+  },
+  "552": {
+    "name": "Krokorok",
+    "stats": {
+      "hp": 60,
+      "atk": 82,
+      "def": 45,
+      "spa": 45,
+      "spd": 45,
+      "spe": 74
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Moxie"
+    ]
+  },
+  "553": {
+    "name": "Krookodile",
+    "stats": {
+      "hp": 95,
+      "atk": 117,
+      "def": 80,
+      "spa": 65,
+      "spd": 70,
+      "spe": 92
+    },
+    "types": [],
+    "abilities": [
+      "Intimidate",
+      "Moxie"
+    ]
+  },
+  "554": {
+    "name": "Darumaka",
+    "stats": {
+      "hp": 70,
+      "atk": 90,
+      "def": 45,
+      "spa": 15,
+      "spd": 45,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Hustle"
+    ]
+  },
+  "555": {
+    "name": "Darmanitan",
+    "stats": {
+      "hp": 105,
+      "atk": 140,
+      "def": 55,
+      "spa": 30,
+      "spd": 55,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Sheer Force"
+    ]
+  },
+  "556": {
+    "name": "Maractus",
+    "stats": {
+      "hp": 75,
+      "atk": 86,
+      "def": 67,
+      "spa": 106,
+      "spd": 67,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb",
+      "Chlorophyll"
+    ]
+  },
+  "557": {
+    "name": "Dwebble",
+    "stats": {
+      "hp": 50,
+      "atk": 65,
+      "def": 85,
+      "spa": 35,
+      "spd": 35,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Shell Armor"
+    ]
+  },
+  "558": {
+    "name": "Crustle",
+    "stats": {
+      "hp": 70,
+      "atk": 95,
+      "def": 125,
+      "spa": 65,
+      "spd": 75,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Sturdy",
+      "Shell Armor"
+    ]
+  },
+  "559": {
+    "name": "Scraggy",
+    "stats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 70,
+      "spa": 35,
+      "spd": 70,
+      "spe": 48
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin",
+      "Moxie"
+    ]
+  },
+  "560": {
+    "name": "Scrafty",
+    "stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 115,
+      "spa": 45,
+      "spd": 115,
+      "spe": 58
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin",
+      "Moxie"
+    ]
+  },
+  "561": {
+    "name": "Sigilyph",
+    "stats": {
+      "hp": 72,
+      "atk": 58,
+      "def": 80,
+      "spa": 103,
+      "spd": 80,
+      "spe": 97
+    },
+    "types": [],
+    "abilities": [
+      "Wonder Skin",
+      "Magic Guard"
+    ]
+  },
+  "562": {
+    "name": "Yamask",
+    "stats": {
+      "hp": 38,
+      "atk": 30,
+      "def": 85,
+      "spa": 55,
+      "spd": 65,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Mummy"
+    ]
+  },
+  "563": {
+    "name": "Cofagrigus",
+    "stats": {
+      "hp": 58,
+      "atk": 50,
+      "def": 145,
+      "spa": 95,
+      "spd": 105,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Mummy"
+    ]
+  },
+  "564": {
+    "name": "Tirtouga",
+    "stats": {
+      "hp": 54,
+      "atk": 78,
+      "def": 103,
+      "spa": 53,
+      "spd": 45,
+      "spe": 22
+    },
+    "types": [],
+    "abilities": [
+      "Solid Rock",
+      "Sturdy"
+    ]
+  },
+  "565": {
+    "name": "Carracosta",
+    "stats": {
+      "hp": 74,
+      "atk": 108,
+      "def": 133,
+      "spa": 83,
+      "spd": 65,
+      "spe": 32
+    },
+    "types": [],
+    "abilities": [
+      "Solid Rock",
+      "Sturdy"
+    ]
+  },
+  "566": {
+    "name": "Archen",
+    "stats": {
+      "hp": 55,
+      "atk": 112,
+      "def": 45,
+      "spa": 74,
+      "spd": 45,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Defeatist"
+    ]
+  },
+  "567": {
+    "name": "Archeops",
+    "stats": {
+      "hp": 75,
+      "atk": 140,
+      "def": 65,
+      "spa": 112,
+      "spd": 65,
+      "spe": 110
+    },
+    "types": [],
+    "abilities": [
+      "Defeatist"
+    ]
+  },
+  "568": {
+    "name": "Trubbish",
+    "stats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 62,
+      "spa": 40,
+      "spd": 62,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Stench",
+      "Sticky Hold"
+    ]
+  },
+  "569": {
+    "name": "Garbodor",
+    "stats": {
+      "hp": 80,
+      "atk": 95,
+      "def": 82,
+      "spa": 60,
+      "spd": 82,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Stench",
+      "Weak Armor"
+    ]
+  },
+  "570": {
+    "name": "Zorua",
+    "stats": {
+      "hp": 40,
+      "atk": 65,
+      "def": 40,
+      "spa": 80,
+      "spd": 40,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Illusion"
+    ]
+  },
+  "571": {
+    "name": "Zoroark",
+    "stats": {
+      "hp": 60,
+      "atk": 105,
+      "def": 60,
+      "spa": 120,
+      "spd": 60,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Illusion"
+    ]
+  },
+  "572": {
+    "name": "Minccino",
+    "stats": {
+      "hp": 55,
+      "atk": 50,
+      "def": 40,
+      "spa": 40,
+      "spd": 40,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Technician"
+    ]
+  },
+  "573": {
+    "name": "Cinccino",
+    "stats": {
+      "hp": 75,
+      "atk": 95,
+      "def": 60,
+      "spa": 65,
+      "spd": 60,
+      "spe": 115
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm",
+      "Technician"
+    ]
+  },
+  "574": {
+    "name": "Gothita",
+    "stats": {
+      "hp": 45,
+      "atk": 30,
+      "def": 50,
+      "spa": 55,
+      "spd": 65,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Frisk",
+      "Competitive"
+    ]
+  },
+  "575": {
+    "name": "Gothorita",
+    "stats": {
+      "hp": 60,
+      "atk": 45,
+      "def": 70,
+      "spa": 75,
+      "spd": 85,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Frisk",
+      "Competitive"
+    ]
+  },
+  "576": {
+    "name": "Gothitelle",
+    "stats": {
+      "hp": 70,
+      "atk": 55,
+      "def": 95,
+      "spa": 95,
+      "spd": 110,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Frisk",
+      "Competitive"
+    ]
+  },
+  "577": {
+    "name": "Solosis",
+    "stats": {
+      "hp": 45,
+      "atk": 30,
+      "def": 40,
+      "spa": 105,
+      "spd": 50,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Overcoat",
+      "Magic Guard"
+    ]
+  },
+  "578": {
+    "name": "Duosion",
+    "stats": {
+      "hp": 65,
+      "atk": 40,
+      "def": 50,
+      "spa": 125,
+      "spd": 60,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Overcoat",
+      "Magic Guard"
+    ]
+  },
+  "579": {
+    "name": "Reuniclus",
+    "stats": {
+      "hp": 110,
+      "atk": 65,
+      "def": 75,
+      "spa": 125,
+      "spd": 85,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Overcoat",
+      "Magic Guard"
+    ]
+  },
+  "580": {
+    "name": "Ducklett",
+    "stats": {
+      "hp": 62,
+      "atk": 44,
+      "def": 50,
+      "spa": 44,
+      "spd": 50,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Big Pecks"
+    ]
+  },
+  "581": {
+    "name": "Swanna",
+    "stats": {
+      "hp": 75,
+      "atk": 87,
+      "def": 63,
+      "spa": 87,
+      "spd": 63,
+      "spe": 98
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Big Pecks"
+    ]
+  },
+  "582": {
+    "name": "Vanillite",
+    "stats": {
+      "hp": 36,
+      "atk": 50,
+      "def": 50,
+      "spa": 65,
+      "spd": 60,
+      "spe": 44
+    },
+    "types": [],
+    "abilities": [
+      "Ice Body",
+      "Snow Cloak"
+    ]
+  },
+  "583": {
+    "name": "Vanillish",
+    "stats": {
+      "hp": 51,
+      "atk": 65,
+      "def": 65,
+      "spa": 80,
+      "spd": 75,
+      "spe": 59
+    },
+    "types": [],
+    "abilities": [
+      "Ice Body",
+      "Snow Cloak"
+    ]
+  },
+  "584": {
+    "name": "Vanilluxe",
+    "stats": {
+      "hp": 71,
+      "atk": 95,
+      "def": 85,
+      "spa": 110,
+      "spd": 95,
+      "spe": 79
+    },
+    "types": [],
+    "abilities": [
+      "Ice Body",
+      "Snow Warning"
+    ]
+  },
+  "585": {
+    "name": "Deerling",
+    "stats": {
+      "hp": 60,
+      "atk": 60,
+      "def": 50,
+      "spa": 40,
+      "spd": 50,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Sap Sipper"
+    ]
+  },
+  "586": {
+    "name": "Sawsbuck",
+    "stats": {
+      "hp": 80,
+      "atk": 100,
+      "def": 70,
+      "spa": 60,
+      "spd": 70,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Chlorophyll",
+      "Sap Sipper"
+    ]
+  },
+  "587": {
+    "name": "Emolga",
+    "stats": {
+      "hp": 55,
+      "atk": 75,
+      "def": 60,
+      "spa": 75,
+      "spd": 60,
+      "spe": 103
+    },
+    "types": [],
+    "abilities": [
+      "Static"
+    ]
+  },
+  "588": {
+    "name": "Karrablast",
+    "stats": {
+      "hp": 50,
+      "atk": 75,
+      "def": 45,
+      "spa": 40,
+      "spd": 45,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Shed Skin"
+    ]
+  },
+  "589": {
+    "name": "Escavalier",
+    "stats": {
+      "hp": 70,
+      "atk": 135,
+      "def": 105,
+      "spa": 60,
+      "spd": 105,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Shell Armor"
+    ]
+  },
+  "590": {
+    "name": "Foongus",
+    "stats": {
+      "hp": 69,
+      "atk": 55,
+      "def": 45,
+      "spa": 55,
+      "spd": 55,
+      "spe": 15
+    },
+    "types": [],
+    "abilities": [
+      "Effect Spore"
+    ]
+  },
+  "591": {
+    "name": "Amoonguss",
+    "stats": {
+      "hp": 114,
+      "atk": 85,
+      "def": 70,
+      "spa": 85,
+      "spd": 80,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Effect Spore"
+    ]
+  },
+  "592": {
+    "name": "Frillish",
+    "stats": {
+      "hp": 55,
+      "atk": 40,
+      "def": 50,
+      "spa": 65,
+      "spd": 85,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb",
+      "Cursed Body"
+    ]
+  },
+  "593": {
+    "name": "Jellicent",
+    "stats": {
+      "hp": 100,
+      "atk": 60,
+      "def": 70,
+      "spa": 85,
+      "spd": 105,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb",
+      "Cursed Body"
+    ]
+  },
+  "594": {
+    "name": "Alomomola",
+    "stats": {
+      "hp": 165,
+      "atk": 75,
+      "def": 80,
+      "spa": 40,
+      "spd": 45,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Healer",
+      "Hydration"
+    ]
+  },
+  "595": {
+    "name": "Joltik",
+    "stats": {
+      "hp": 50,
+      "atk": 47,
+      "def": 50,
+      "spa": 57,
+      "spd": 50,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Compound Eyes",
+      "Unnerve"
+    ]
+  },
+  "596": {
+    "name": "Galvantula",
+    "stats": {
+      "hp": 70,
+      "atk": 77,
+      "def": 60,
+      "spa": 97,
+      "spd": 60,
+      "spe": 108
+    },
+    "types": [],
+    "abilities": [
+      "Compound Eyes",
+      "Unnerve"
+    ]
+  },
+  "597": {
+    "name": "Ferroseed",
+    "stats": {
+      "hp": 44,
+      "atk": 50,
+      "def": 91,
+      "spa": 24,
+      "spd": 86,
+      "spe": 10
+    },
+    "types": [],
+    "abilities": [
+      "Iron Barbs"
+    ]
+  },
+  "598": {
+    "name": "Ferrothorn",
+    "stats": {
+      "hp": 74,
+      "atk": 94,
+      "def": 131,
+      "spa": 54,
+      "spd": 116,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Iron Barbs"
+    ]
+  },
+  "599": {
+    "name": "Klink",
+    "stats": {
+      "hp": 40,
+      "atk": 55,
+      "def": 70,
+      "spa": 45,
+      "spd": 60,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Plus",
+      "Minus"
+    ]
+  },
+  "600": {
+    "name": "Klang",
+    "stats": {
+      "hp": 60,
+      "atk": 80,
+      "def": 95,
+      "spa": 70,
+      "spd": 85,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Plus",
+      "Minus"
+    ]
+  },
+  "601": {
+    "name": "Klinklang",
+    "stats": {
+      "hp": 60,
+      "atk": 100,
+      "def": 115,
+      "spa": 70,
+      "spd": 85,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Plus",
+      "Minus"
+    ]
+  },
+  "602": {
+    "name": "Tynamo",
+    "stats": {
+      "hp": 35,
+      "atk": 55,
+      "def": 40,
+      "spa": 45,
+      "spd": 40,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "603": {
+    "name": "Eelektrik",
+    "stats": {
+      "hp": 65,
+      "atk": 85,
+      "def": 70,
+      "spa": 75,
+      "spd": 70,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "604": {
+    "name": "Eelektross",
+    "stats": {
+      "hp": 85,
+      "atk": 115,
+      "def": 80,
+      "spa": 105,
+      "spd": 80,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "605": {
+    "name": "Elgyem",
+    "stats": {
+      "hp": 55,
+      "atk": 55,
+      "def": 55,
+      "spa": 85,
+      "spd": 55,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Telepathy",
+      "Synchronize"
+    ]
+  },
+  "606": {
+    "name": "Beheeyem",
+    "stats": {
+      "hp": 75,
+      "atk": 75,
+      "def": 75,
+      "spa": 125,
+      "spd": 95,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Telepathy",
+      "Synchronize"
+    ]
+  },
+  "607": {
+    "name": "Litwick",
+    "stats": {
+      "hp": 50,
+      "atk": 30,
+      "def": 55,
+      "spa": 65,
+      "spd": 55,
+      "spe": 20
+    },
+    "types": [],
+    "abilities": [
+      "Flash Fire",
+      "Flame Body"
+    ]
+  },
+  "608": {
+    "name": "Lampent",
+    "stats": {
+      "hp": 60,
+      "atk": 40,
+      "def": 60,
+      "spa": 95,
+      "spd": 60,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Flash Fire",
+      "Flame Body"
+    ]
+  },
+  "609": {
+    "name": "Chandelure",
+    "stats": {
+      "hp": 60,
+      "atk": 55,
+      "def": 90,
+      "spa": 145,
+      "spd": 90,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Flash Fire",
+      "Flame Body"
+    ]
+  },
+  "610": {
+    "name": "Axew",
+    "stats": {
+      "hp": 46,
+      "atk": 87,
+      "def": 60,
+      "spa": 30,
+      "spd": 40,
+      "spe": 57
+    },
+    "types": [],
+    "abilities": [
+      "Rivalry",
+      "Mold Breaker"
+    ]
+  },
+  "611": {
+    "name": "Fraxure",
+    "stats": {
+      "hp": 66,
+      "atk": 117,
+      "def": 70,
+      "spa": 40,
+      "spd": 50,
+      "spe": 67
+    },
+    "types": [],
+    "abilities": [
+      "Rivalry",
+      "Mold Breaker"
+    ]
+  },
+  "612": {
+    "name": "Haxorus",
+    "stats": {
+      "hp": 76,
+      "atk": 147,
+      "def": 90,
+      "spa": 60,
+      "spd": 70,
+      "spe": 97
+    },
+    "types": [],
+    "abilities": [
+      "Rivalry",
+      "Mold Breaker"
+    ]
+  },
+  "613": {
+    "name": "Cubchoo",
+    "stats": {
+      "hp": 55,
+      "atk": 70,
+      "def": 40,
+      "spa": 60,
+      "spd": 40,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Snow Cloak",
+      "Slush Rush"
+    ]
+  },
+  "614": {
+    "name": "Beartic",
+    "stats": {
+      "hp": 95,
+      "atk": 110,
+      "def": 80,
+      "spa": 70,
+      "spd": 80,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Snow Cloak",
+      "Slush Rush"
+    ]
+  },
+  "615": {
+    "name": "Cryogonal",
+    "stats": {
+      "hp": 70,
+      "atk": 50,
+      "def": 30,
+      "spa": 95,
+      "spd": 135,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "616": {
+    "name": "Shelmet",
+    "stats": {
+      "hp": 50,
+      "atk": 40,
+      "def": 85,
+      "spa": 40,
+      "spd": 65,
+      "spe": 25
+    },
+    "types": [],
+    "abilities": [
+      "Hydration",
+      "Shell Armor"
+    ]
+  },
+  "617": {
+    "name": "Accelgor",
+    "stats": {
+      "hp": 80,
+      "atk": 70,
+      "def": 40,
+      "spa": 100,
+      "spd": 60,
+      "spe": 145
+    },
+    "types": [],
+    "abilities": [
+      "Hydration",
+      "Sticky Hold"
+    ]
+  },
+  "618": {
+    "name": "Stunfisk",
+    "stats": {
+      "hp": 109,
+      "atk": 66,
+      "def": 84,
+      "spa": 81,
+      "spd": 99,
+      "spe": 32
+    },
+    "types": [],
+    "abilities": [
+      "Static",
+      "Limber"
+    ]
+  },
+  "619": {
+    "name": "Mienfoo",
+    "stats": {
+      "hp": 45,
+      "atk": 85,
+      "def": 50,
+      "spa": 55,
+      "spd": 50,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus",
+      "Regenerator"
+    ]
+  },
+  "620": {
+    "name": "Mienshao",
+    "stats": {
+      "hp": 65,
+      "atk": 125,
+      "def": 60,
+      "spa": 95,
+      "spd": 60,
+      "spe": 105
+    },
+    "types": [],
+    "abilities": [
+      "Inner Focus",
+      "Regenerator"
+    ]
+  },
+  "621": {
+    "name": "Druddigon",
+    "stats": {
+      "hp": 77,
+      "atk": 120,
+      "def": 90,
+      "spa": 60,
+      "spd": 90,
+      "spe": 48
+    },
+    "types": [],
+    "abilities": [
+      "Rough Skin",
+      "Sheer Force"
+    ]
+  },
+  "622": {
+    "name": "Golett",
+    "stats": {
+      "hp": 59,
+      "atk": 74,
+      "def": 50,
+      "spa": 35,
+      "spd": 50,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Iron Fist",
+      "Klutz"
+    ]
+  },
+  "623": {
+    "name": "Golurk",
+    "stats": {
+      "hp": 89,
+      "atk": 124,
+      "def": 80,
+      "spa": 55,
+      "spd": 80,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Iron Fist",
+      "Klutz"
+    ]
+  },
+  "624": {
+    "name": "Pawniard",
+    "stats": {
+      "hp": 45,
+      "atk": 85,
+      "def": 70,
+      "spa": 40,
+      "spd": 40,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Defiant",
+      "Inner Focus"
+    ]
+  },
+  "625": {
+    "name": "Bisharp",
+    "stats": {
+      "hp": 65,
+      "atk": 125,
+      "def": 100,
+      "spa": 60,
+      "spd": 70,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Defiant",
+      "Inner Focus"
+    ]
+  },
+  "626": {
+    "name": "Bouffalant",
+    "stats": {
+      "hp": 95,
+      "atk": 110,
+      "def": 95,
+      "spa": 40,
+      "spd": 95,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Reckless",
+      "Sap Sipper"
+    ]
+  },
+  "627": {
+    "name": "Rufflet",
+    "stats": {
+      "hp": 70,
+      "atk": 83,
+      "def": 50,
+      "spa": 37,
+      "spd": 50,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Sheer Force"
+    ]
+  },
+  "628": {
+    "name": "Braviary",
+    "stats": {
+      "hp": 100,
+      "atk": 123,
+      "def": 75,
+      "spa": 57,
+      "spd": 75,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Sheer Force"
+    ]
+  },
+  "629": {
+    "name": "Vullaby",
+    "stats": {
+      "hp": 70,
+      "atk": 55,
+      "def": 75,
+      "spa": 45,
+      "spd": 65,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Big Pecks",
+      "Overcoat"
+    ]
+  },
+  "630": {
+    "name": "Mandibuzz",
+    "stats": {
+      "hp": 110,
+      "atk": 65,
+      "def": 105,
+      "spa": 55,
+      "spd": 95,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Big Pecks",
+      "Overcoat"
+    ]
+  },
+  "631": {
+    "name": "Heatmor",
+    "stats": {
+      "hp": 85,
+      "atk": 97,
+      "def": 66,
+      "spa": 105,
+      "spd": 66,
+      "spe": 65
+    },
+    "types": [],
+    "abilities": [
+      "Gluttony",
+      "Flash Fire"
+    ]
+  },
+  "632": {
+    "name": "Durant",
+    "stats": {
+      "hp": 58,
+      "atk": 109,
+      "def": 112,
+      "spa": 48,
+      "spd": 48,
+      "spe": 109
+    },
+    "types": [],
+    "abilities": [
+      "Swarm",
+      "Hustle"
+    ]
+  },
+  "633": {
+    "name": "Deino",
+    "stats": {
+      "hp": 52,
+      "atk": 65,
+      "def": 50,
+      "spa": 45,
+      "spd": 50,
+      "spe": 38
+    },
+    "types": [],
+    "abilities": [
+      "Hustle"
+    ]
+  },
+  "634": {
+    "name": "Zweilous",
+    "stats": {
+      "hp": 72,
+      "atk": 85,
+      "def": 70,
+      "spa": 65,
+      "spd": 70,
+      "spe": 58
+    },
+    "types": [],
+    "abilities": [
+      "Hustle"
+    ]
+  },
+  "635": {
+    "name": "Hydreigon",
+    "stats": {
+      "hp": 92,
+      "atk": 105,
+      "def": 90,
+      "spa": 125,
+      "spd": 90,
+      "spe": 98
+    },
+    "types": [],
+    "abilities": [
+      "Levitate"
+    ]
+  },
+  "636": {
+    "name": "Larvesta",
+    "stats": {
+      "hp": 55,
+      "atk": 85,
+      "def": 55,
+      "spa": 50,
+      "spd": 55,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Flame Body"
+    ]
+  },
+  "637": {
+    "name": "Volcarona",
+    "stats": {
+      "hp": 85,
+      "atk": 60,
+      "def": 65,
+      "spa": 135,
+      "spd": 105,
+      "spe": 100
+    },
+    "types": [],
+    "abilities": [
+      "Flame Body"
+    ]
+  },
+  "638": {
+    "name": "Cobalion",
+    "stats": {
+      "hp": 91,
+      "atk": 90,
+      "def": 129,
+      "spa": 90,
+      "spd": 72,
+      "spe": 108
+    },
+    "types": [],
+    "abilities": [
+      "Justified"
+    ]
+  },
+  "639": {
+    "name": "Terrakion",
+    "stats": {
+      "hp": 91,
+      "atk": 129,
+      "def": 90,
+      "spa": 72,
+      "spd": 90,
+      "spe": 108
+    },
+    "types": [],
+    "abilities": [
+      "Justified"
+    ]
+  },
+  "640": {
+    "name": "Virizion",
+    "stats": {
+      "hp": 91,
+      "atk": 90,
+      "def": 72,
+      "spa": 90,
+      "spd": 129,
+      "spe": 108
+    },
+    "types": [],
+    "abilities": [
+      "Justified"
+    ]
+  },
+  "641": {
+    "name": "Tornadus",
+    "stats": {
+      "hp": 79,
+      "atk": 115,
+      "def": 70,
+      "spa": 125,
+      "spd": 80,
+      "spe": 111
+    },
+    "types": [],
+    "abilities": [
+      "Prankster"
+    ]
+  },
+  "642": {
+    "name": "Thundurus",
+    "stats": {
+      "hp": 79,
+      "atk": 115,
+      "def": 70,
+      "spa": 125,
+      "spd": 80,
+      "spe": 111
+    },
+    "types": [],
+    "abilities": [
+      "Prankster"
+    ]
+  },
+  "643": {
+    "name": "Reshiram",
+    "stats": {
+      "hp": 100,
+      "atk": 120,
+      "def": 100,
+      "spa": 150,
+      "spd": 120,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Turboblaze"
+    ]
+  },
+  "644": {
+    "name": "Zekrom",
+    "stats": {
+      "hp": 100,
+      "atk": 150,
+      "def": 120,
+      "spa": 120,
+      "spd": 100,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Teravolt"
+    ]
+  },
+  "645": {
+    "name": "Landorus",
+    "stats": {
+      "hp": 89,
+      "atk": 125,
+      "def": 90,
+      "spa": 115,
+      "spd": 80,
+      "spe": 101
+    },
+    "types": [],
+    "abilities": [
+      "Sand Force"
+    ]
+  },
+  "646": {
+    "name": "Kyurem",
+    "stats": {
+      "hp": 125,
+      "atk": 130,
+      "def": 90,
+      "spa": 130,
+      "spd": 90,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Pressure"
+    ]
+  },
+  "647": {
+    "name": "Keldeo",
+    "stats": {
+      "hp": 91,
+      "atk": 72,
+      "def": 90,
+      "spa": 129,
+      "spd": 90,
+      "spe": 108
+    },
+    "types": [],
+    "abilities": [
+      "Justified"
+    ]
+  },
+  "648": {
+    "name": "Meloetta",
+    "stats": {
+      "hp": 100,
+      "atk": 77,
+      "def": 77,
+      "spa": 128,
+      "spd": 128,
+      "spe": 90
+    },
+    "types": [],
+    "abilities": [
+      "Serene Grace"
+    ]
+  },
+  "649": {
+    "name": "Genesect",
+    "stats": {
+      "hp": 71,
+      "atk": 120,
+      "def": 95,
+      "spa": 120,
+      "spd": 95,
+      "spe": 99
+    },
+    "types": [],
+    "abilities": [
+      "Download"
+    ]
+  },
+  "650": {
+    "name": "Chespin",
+    "stats": {
+      "hp": 56,
+      "atk": 61,
+      "def": 65,
+      "spa": 48,
+      "spd": 45,
+      "spe": 38
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "651": {
+    "name": "Quilladin",
+    "stats": {
+      "hp": 61,
+      "atk": 78,
+      "def": 95,
+      "spa": 56,
+      "spd": 58,
+      "spe": 57
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "652": {
+    "name": "Chesnaught",
+    "stats": {
+      "hp": 88,
+      "atk": 107,
+      "def": 122,
+      "spa": 74,
+      "spd": 75,
+      "spe": 64
+    },
+    "types": [],
+    "abilities": [
+      "Overgrow"
+    ]
+  },
+  "653": {
+    "name": "Fennekin",
+    "stats": {
+      "hp": 40,
+      "atk": 45,
+      "def": 40,
+      "spa": 62,
+      "spd": 60,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "654": {
+    "name": "Braixen",
+    "stats": {
+      "hp": 59,
+      "atk": 59,
+      "def": 58,
+      "spa": 90,
+      "spd": 70,
+      "spe": 73
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "655": {
+    "name": "Delphox",
+    "stats": {
+      "hp": 75,
+      "atk": 69,
+      "def": 72,
+      "spa": 114,
+      "spd": 100,
+      "spe": 104
+    },
+    "types": [],
+    "abilities": [
+      "Blaze"
+    ]
+  },
+  "656": {
+    "name": "Froakie",
+    "stats": {
+      "hp": 41,
+      "atk": 56,
+      "def": 40,
+      "spa": 62,
+      "spd": 44,
+      "spe": 71
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "657": {
+    "name": "Frogadier",
+    "stats": {
+      "hp": 54,
+      "atk": 63,
+      "def": 52,
+      "spa": 83,
+      "spd": 56,
+      "spe": 97
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "658": {
+    "name": "Greninja",
+    "stats": {
+      "hp": 72,
+      "atk": 95,
+      "def": 67,
+      "spa": 103,
+      "spd": 71,
+      "spe": 122
+    },
+    "types": [],
+    "abilities": [
+      "Torrent"
+    ]
+  },
+  "659": {
+    "name": "Bunnelby",
+    "stats": {
+      "hp": 38,
+      "atk": 36,
+      "def": 38,
+      "spa": 32,
+      "spd": 36,
+      "spe": 57
+    },
+    "types": [],
+    "abilities": [
+      "Pickup",
+      "Cheek Pouch"
+    ]
+  },
+  "660": {
+    "name": "Diggersby",
+    "stats": {
+      "hp": 85,
+      "atk": 56,
+      "def": 77,
+      "spa": 50,
+      "spd": 77,
+      "spe": 78
+    },
+    "types": [],
+    "abilities": [
+      "Pickup",
+      "Cheek Pouch"
+    ]
+  },
+  "661": {
+    "name": "Fletchling",
+    "stats": {
+      "hp": 45,
+      "atk": 50,
+      "def": 43,
+      "spa": 40,
+      "spd": 38,
+      "spe": 62
+    },
+    "types": [],
+    "abilities": [
+      "Big Pecks"
+    ]
+  },
+  "662": {
+    "name": "Fletchinder",
+    "stats": {
+      "hp": 62,
+      "atk": 73,
+      "def": 55,
+      "spa": 56,
+      "spd": 52,
+      "spe": 84
+    },
+    "types": [],
+    "abilities": [
+      "Flame Body"
+    ]
+  },
+  "663": {
+    "name": "Talonflame",
+    "stats": {
+      "hp": 78,
+      "atk": 81,
+      "def": 71,
+      "spa": 74,
+      "spd": 69,
+      "spe": 126
+    },
+    "types": [],
+    "abilities": [
+      "Flame Body"
+    ]
+  },
+  "664": {
+    "name": "Scatterbug",
+    "stats": {
+      "hp": 38,
+      "atk": 35,
+      "def": 40,
+      "spa": 27,
+      "spd": 25,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "Shield Dust",
+      "Compound Eyes"
+    ]
+  },
+  "665": {
+    "name": "Spewpa",
+    "stats": {
+      "hp": 45,
+      "atk": 22,
+      "def": 60,
+      "spa": 27,
+      "spd": 30,
+      "spe": 29
+    },
+    "types": [],
+    "abilities": [
+      "Shed Skin"
+    ]
+  },
+  "666": {
+    "name": "Vivillon",
+    "stats": {
+      "hp": 80,
+      "atk": 52,
+      "def": 50,
+      "spa": 90,
+      "spd": 50,
+      "spe": 89
+    },
+    "types": [],
+    "abilities": [
+      "Shield Dust",
+      "Compound Eyes"
+    ]
+  },
+  "667": {
+    "name": "Litleo",
+    "stats": {
+      "hp": 62,
+      "atk": 50,
+      "def": 58,
+      "spa": 73,
+      "spd": 54,
+      "spe": 72
+    },
+    "types": [],
+    "abilities": [
+      "Rivalry",
+      "Unnerve"
+    ]
+  },
+  "668": {
+    "name": "Pyroar",
+    "stats": {
+      "hp": 86,
+      "atk": 68,
+      "def": 72,
+      "spa": 109,
+      "spd": 66,
+      "spe": 106
+    },
+    "types": [],
+    "abilities": [
+      "Rivalry",
+      "Unnerve"
+    ]
+  },
+  "669": {
+    "name": "Flabébé",
+    "stats": {
+      "hp": 44,
+      "atk": 38,
+      "def": 39,
+      "spa": 61,
+      "spd": 79,
+      "spe": 42
+    },
+    "types": [],
+    "abilities": [
+      "Flower Veil"
+    ]
+  },
+  "670": {
+    "name": "Floette",
+    "stats": {
+      "hp": 54,
+      "atk": 45,
+      "def": 47,
+      "spa": 75,
+      "spd": 98,
+      "spe": 52
+    },
+    "types": [],
+    "abilities": [
+      "Flower Veil"
+    ]
+  },
+  "671": {
+    "name": "Florges",
+    "stats": {
+      "hp": 78,
+      "atk": 65,
+      "def": 68,
+      "spa": 112,
+      "spd": 154,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Flower Veil"
+    ]
+  },
+  "672": {
+    "name": "Skiddo",
+    "stats": {
+      "hp": 66,
+      "atk": 65,
+      "def": 48,
+      "spa": 62,
+      "spd": 57,
+      "spe": 52
+    },
+    "types": [],
+    "abilities": [
+      "Sap Sipper"
+    ]
+  },
+  "673": {
+    "name": "Gogoat",
+    "stats": {
+      "hp": 123,
+      "atk": 100,
+      "def": 62,
+      "spa": 97,
+      "spd": 81,
+      "spe": 68
+    },
+    "types": [],
+    "abilities": [
+      "Sap Sipper"
+    ]
+  },
+  "674": {
+    "name": "Pancham",
+    "stats": {
+      "hp": 67,
+      "atk": 82,
+      "def": 62,
+      "spa": 46,
+      "spd": 48,
+      "spe": 43
+    },
+    "types": [],
+    "abilities": [
+      "Iron Fist",
+      "Mold Breaker"
+    ]
+  },
+  "675": {
+    "name": "Pangoro",
+    "stats": {
+      "hp": 95,
+      "atk": 124,
+      "def": 78,
+      "spa": 69,
+      "spd": 71,
+      "spe": 58
+    },
+    "types": [],
+    "abilities": [
+      "Iron Fist",
+      "Mold Breaker"
+    ]
+  },
+  "676": {
+    "name": "Furfrou",
+    "stats": {
+      "hp": 75,
+      "atk": 80,
+      "def": 60,
+      "spa": 65,
+      "spd": 90,
+      "spe": 102
+    },
+    "types": [],
+    "abilities": [
+      "Fur Coat"
+    ]
+  },
+  "677": {
+    "name": "Espurr",
+    "stats": {
+      "hp": 62,
+      "atk": 48,
+      "def": 54,
+      "spa": 63,
+      "spd": 60,
+      "spe": 68
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Infiltrator"
+    ]
+  },
+  "678": {
+    "name": "Meowstic",
+    "stats": {
+      "hp": 74,
+      "atk": 48,
+      "def": 76,
+      "spa": 83,
+      "spd": 81,
+      "spe": 104
+    },
+    "types": [],
+    "abilities": [
+      "Keen Eye",
+      "Infiltrator"
+    ]
+  },
+  "679": {
+    "name": "Honedge",
+    "stats": {
+      "hp": 45,
+      "atk": 80,
+      "def": 100,
+      "spa": 35,
+      "spd": 37,
+      "spe": 28
+    },
+    "types": [],
+    "abilities": [
+      "No Guard"
+    ]
+  },
+  "680": {
+    "name": "Doublade",
+    "stats": {
+      "hp": 59,
+      "atk": 110,
+      "def": 150,
+      "spa": 45,
+      "spd": 49,
+      "spe": 35
+    },
+    "types": [],
+    "abilities": [
+      "No Guard"
+    ]
+  },
+  "681": {
+    "name": "Aegislash",
+    "stats": {
+      "hp": 60,
+      "atk": 50,
+      "def": 150,
+      "spa": 50,
+      "spd": 150,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Stance Change"
+    ]
+  },
+  "682": {
+    "name": "Spritzee",
+    "stats": {
+      "hp": 78,
+      "atk": 52,
+      "def": 60,
+      "spa": 63,
+      "spd": 65,
+      "spe": 23
+    },
+    "types": [],
+    "abilities": [
+      "Healer"
+    ]
+  },
+  "683": {
+    "name": "Aromatisse",
+    "stats": {
+      "hp": 101,
+      "atk": 72,
+      "def": 72,
+      "spa": 99,
+      "spd": 89,
+      "spe": 29
+    },
+    "types": [],
+    "abilities": [
+      "Healer"
+    ]
+  },
+  "684": {
+    "name": "Swirlix",
+    "stats": {
+      "hp": 62,
+      "atk": 48,
+      "def": 66,
+      "spa": 59,
+      "spd": 57,
+      "spe": 49
+    },
+    "types": [],
+    "abilities": [
+      "Sweet Veil"
+    ]
+  },
+  "685": {
+    "name": "Slurpuff",
+    "stats": {
+      "hp": 82,
+      "atk": 80,
+      "def": 86,
+      "spa": 85,
+      "spd": 75,
+      "spe": 72
+    },
+    "types": [],
+    "abilities": [
+      "Sweet Veil"
+    ]
+  },
+  "686": {
+    "name": "Inkay",
+    "stats": {
+      "hp": 53,
+      "atk": 54,
+      "def": 53,
+      "spa": 37,
+      "spd": 46,
+      "spe": 45
+    },
+    "types": [],
+    "abilities": [
+      "Contrary",
+      "Suction Cups"
+    ]
+  },
+  "687": {
+    "name": "Malamar",
+    "stats": {
+      "hp": 86,
+      "atk": 92,
+      "def": 88,
+      "spa": 68,
+      "spd": 75,
+      "spe": 73
+    },
+    "types": [],
+    "abilities": [
+      "Contrary",
+      "Suction Cups"
+    ]
+  },
+  "688": {
+    "name": "Binacle",
+    "stats": {
+      "hp": 42,
+      "atk": 52,
+      "def": 67,
+      "spa": 39,
+      "spd": 56,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Tough Claws",
+      "Sniper"
+    ]
+  },
+  "689": {
+    "name": "Barbaracle",
+    "stats": {
+      "hp": 72,
+      "atk": 105,
+      "def": 115,
+      "spa": 54,
+      "spd": 86,
+      "spe": 68
+    },
+    "types": [],
+    "abilities": [
+      "Tough Claws",
+      "Sniper"
+    ]
+  },
+  "690": {
+    "name": "Skrelp",
+    "stats": {
+      "hp": 50,
+      "atk": 60,
+      "def": 60,
+      "spa": 60,
+      "spd": 60,
+      "spe": 30
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Poison Touch"
+    ]
+  },
+  "691": {
+    "name": "Dragalge",
+    "stats": {
+      "hp": 65,
+      "atk": 75,
+      "def": 90,
+      "spa": 97,
+      "spd": 123,
+      "spe": 44
+    },
+    "types": [],
+    "abilities": [
+      "Poison Point",
+      "Poison Touch"
+    ]
+  },
+  "692": {
+    "name": "Clauncher",
+    "stats": {
+      "hp": 50,
+      "atk": 53,
+      "def": 62,
+      "spa": 58,
+      "spd": 63,
+      "spe": 44
+    },
+    "types": [],
+    "abilities": [
+      "Mega Launcher"
+    ]
+  },
+  "693": {
+    "name": "Clawitzer",
+    "stats": {
+      "hp": 71,
+      "atk": 73,
+      "def": 88,
+      "spa": 120,
+      "spd": 89,
+      "spe": 59
+    },
+    "types": [],
+    "abilities": [
+      "Mega Launcher"
+    ]
+  },
+  "694": {
+    "name": "Helioptile",
+    "stats": {
+      "hp": 44,
+      "atk": 38,
+      "def": 33,
+      "spa": 61,
+      "spd": 43,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Dry Skin",
+      "Sand Veil"
+    ]
+  },
+  "695": {
+    "name": "Heliolisk",
+    "stats": {
+      "hp": 62,
+      "atk": 55,
+      "def": 52,
+      "spa": 109,
+      "spd": 94,
+      "spe": 109
+    },
+    "types": [],
+    "abilities": [
+      "Dry Skin",
+      "Sand Veil"
+    ]
+  },
+  "696": {
+    "name": "Tyrunt",
+    "stats": {
+      "hp": 58,
+      "atk": 89,
+      "def": 77,
+      "spa": 45,
+      "spd": 45,
+      "spe": 48
+    },
+    "types": [],
+    "abilities": [
+      "Strong Jaw"
+    ]
+  },
+  "697": {
+    "name": "Tyrantrum",
+    "stats": {
+      "hp": 82,
+      "atk": 121,
+      "def": 119,
+      "spa": 69,
+      "spd": 59,
+      "spe": 71
+    },
+    "types": [],
+    "abilities": [
+      "Strong Jaw"
+    ]
+  },
+  "698": {
+    "name": "Amaura",
+    "stats": {
+      "hp": 77,
+      "atk": 59,
+      "def": 50,
+      "spa": 67,
+      "spd": 63,
+      "spe": 46
+    },
+    "types": [],
+    "abilities": [
+      "Refrigerate"
+    ]
+  },
+  "699": {
+    "name": "Aurorus",
+    "stats": {
+      "hp": 123,
+      "atk": 77,
+      "def": 72,
+      "spa": 99,
+      "spd": 92,
+      "spe": 58
+    },
+    "types": [],
+    "abilities": [
+      "Refrigerate"
+    ]
+  },
+  "700": {
+    "name": "Sylveon",
+    "stats": {
+      "hp": 95,
+      "atk": 65,
+      "def": 65,
+      "spa": 110,
+      "spd": 130,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Cute Charm"
+    ]
+  },
+  "701": {
+    "name": "Hawlucha",
+    "stats": {
+      "hp": 78,
+      "atk": 92,
+      "def": 75,
+      "spa": 74,
+      "spd": 63,
+      "spe": 118
+    },
+    "types": [],
+    "abilities": [
+      "Limber",
+      "Unburden"
+    ]
+  },
+  "702": {
+    "name": "Dedenne",
+    "stats": {
+      "hp": 67,
+      "atk": 58,
+      "def": 57,
+      "spa": 81,
+      "spd": 67,
+      "spe": 101
+    },
+    "types": [],
+    "abilities": [
+      "Cheek Pouch",
+      "Pickup"
+    ]
+  },
+  "703": {
+    "name": "Carbink",
+    "stats": {
+      "hp": 50,
+      "atk": 50,
+      "def": 150,
+      "spa": 50,
+      "spd": 150,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "704": {
+    "name": "Goomy",
+    "stats": {
+      "hp": 45,
+      "atk": 50,
+      "def": 35,
+      "spa": 55,
+      "spd": 75,
+      "spe": 40
+    },
+    "types": [],
+    "abilities": [
+      "Sap Sipper",
+      "Hydration"
+    ]
+  },
+  "705": {
+    "name": "Sliggoo",
+    "stats": {
+      "hp": 68,
+      "atk": 75,
+      "def": 53,
+      "spa": 83,
+      "spd": 113,
+      "spe": 60
+    },
+    "types": [],
+    "abilities": [
+      "Sap Sipper",
+      "Hydration"
+    ]
+  },
+  "706": {
+    "name": "Goodra",
+    "stats": {
+      "hp": 90,
+      "atk": 100,
+      "def": 70,
+      "spa": 110,
+      "spd": 150,
+      "spe": 80
+    },
+    "types": [],
+    "abilities": [
+      "Sap Sipper",
+      "Hydration"
+    ]
+  },
+  "707": {
+    "name": "Klefki",
+    "stats": {
+      "hp": 57,
+      "atk": 80,
+      "def": 91,
+      "spa": 80,
+      "spd": 87,
+      "spe": 75
+    },
+    "types": [],
+    "abilities": [
+      "Prankster"
+    ]
+  },
+  "708": {
+    "name": "Phantump",
+    "stats": {
+      "hp": 43,
+      "atk": 70,
+      "def": 48,
+      "spa": 50,
+      "spd": 60,
+      "spe": 38
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure",
+      "Frisk"
+    ]
+  },
+  "709": {
+    "name": "Trevenant",
+    "stats": {
+      "hp": 85,
+      "atk": 110,
+      "def": 76,
+      "spa": 65,
+      "spd": 82,
+      "spe": 56
+    },
+    "types": [],
+    "abilities": [
+      "Natural Cure",
+      "Frisk"
+    ]
+  },
+  "710": {
+    "name": "Pumpkaboo",
+    "stats": {
+      "hp": 49,
+      "atk": 66,
+      "def": 70,
+      "spa": 44,
+      "spd": 55,
+      "spe": 51
+    },
+    "types": [],
+    "abilities": [
+      "Pickup",
+      "Frisk"
+    ]
+  },
+  "711": {
+    "name": "Gourgeist",
+    "stats": {
+      "hp": 65,
+      "atk": 90,
+      "def": 122,
+      "spa": 58,
+      "spd": 75,
+      "spe": 84
+    },
+    "types": [],
+    "abilities": [
+      "Pickup",
+      "Frisk"
+    ]
+  },
+  "712": {
+    "name": "Bergmite",
+    "stats": {
+      "hp": 55,
+      "atk": 69,
+      "def": 85,
+      "spa": 32,
+      "spd": 35,
+      "spe": 28
+    },
+    "types": [],
+    "abilities": [
+      "Own Tempo",
+      "Ice Body"
+    ]
+  },
+  "713": {
+    "name": "Avalugg",
+    "stats": {
+      "hp": 95,
+      "atk": 117,
+      "def": 184,
+      "spa": 44,
+      "spd": 46,
+      "spe": 28
+    },
+    "types": [],
+    "abilities": [
+      "Own Tempo",
+      "Ice Body"
+    ]
+  },
+  "714": {
+    "name": "Noibat",
+    "stats": {
+      "hp": 40,
+      "atk": 30,
+      "def": 35,
+      "spa": 45,
+      "spd": 40,
+      "spe": 55
+    },
+    "types": [],
+    "abilities": [
+      "Frisk",
+      "Infiltrator"
+    ]
+  },
+  "715": {
+    "name": "Noivern",
+    "stats": {
+      "hp": 85,
+      "atk": 70,
+      "def": 80,
+      "spa": 97,
+      "spd": 80,
+      "spe": 123
+    },
+    "types": [],
+    "abilities": [
+      "Frisk",
+      "Infiltrator"
+    ]
+  },
+  "716": {
+    "name": "Xerneas",
+    "stats": {
+      "hp": 126,
+      "atk": 131,
+      "def": 95,
+      "spa": 131,
+      "spd": 98,
+      "spe": 99
+    },
+    "types": [],
+    "abilities": [
+      "Fairy Aura"
+    ]
+  },
+  "717": {
+    "name": "Yveltal",
+    "stats": {
+      "hp": 126,
+      "atk": 131,
+      "def": 95,
+      "spa": 131,
+      "spd": 98,
+      "spe": 99
+    },
+    "types": [],
+    "abilities": [
+      "Dark Aura"
+    ]
+  },
+  "718": {
+    "name": "Zygarde",
+    "stats": {
+      "hp": 108,
+      "atk": 100,
+      "def": 121,
+      "spa": 81,
+      "spd": 95,
+      "spe": 95
+    },
+    "types": [],
+    "abilities": [
+      "Aura Break"
+    ]
+  },
+  "719": {
+    "name": "Diancie",
+    "stats": {
+      "hp": 50,
+      "atk": 100,
+      "def": 150,
+      "spa": 100,
+      "spd": 150,
+      "spe": 50
+    },
+    "types": [],
+    "abilities": [
+      "Clear Body"
+    ]
+  },
+  "720": {
+    "name": "Hoopa",
+    "stats": {
+      "hp": 80,
+      "atk": 110,
+      "def": 60,
+      "spa": 150,
+      "spd": 130,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Magician"
+    ]
+  },
+  "721": {
+    "name": "Volcanion",
+    "stats": {
+      "hp": 80,
+      "atk": 110,
+      "def": 120,
+      "spa": 130,
+      "spd": 90,
+      "spe": 70
+    },
+    "types": [],
+    "abilities": [
+      "Water Absorb"
+    ]
+  }
+}

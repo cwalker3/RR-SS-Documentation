@@ -1,0 +1,905 @@
+{
+  "meta": {
+    "subtitle": "",
+    "blurb": [
+      "Evolution lines from the change sheets. Level is shown where the sheet notes one; stone/trade/other methods are left blank."
+    ]
+  },
+  "blocks": [
+    {
+      "type": "table",
+      "columns": [
+        "Pokemon",
+        "Evolves into",
+        "Method"
+      ],
+      "rows": [
+        [
+          "Bulbasaur",
+          "Ivysaur",
+          "Level 16"
+        ],
+        [
+          "Ivysaur",
+          "Venusaur",
+          "Level 36"
+        ],
+        [
+          "Charmander",
+          "Charmeleon",
+          "Level 16"
+        ],
+        [
+          "Charmeleon",
+          "Charizard",
+          "Level 36"
+        ],
+        [
+          "Squirtle",
+          "Wartortle",
+          "Level 16"
+        ],
+        [
+          "Wartortle",
+          "Blastoise",
+          "Level 36"
+        ],
+        [
+          "Caterpie",
+          "Metapod",
+          "Level 7"
+        ],
+        [
+          "Metapod",
+          "Butterfree",
+          "Level 16"
+        ],
+        [
+          "Weedle",
+          "Kakuna",
+          "Level 7"
+        ],
+        [
+          "Kakuna",
+          "Beedrill",
+          "Level 16"
+        ],
+        [
+          "Pidgey",
+          "Pidgeotto",
+          "Level 16"
+        ],
+        [
+          "Pidgeotto",
+          "Pidgeot",
+          "Level 36"
+        ],
+        [
+          "Rattata",
+          "Raticate",
+          "Level 20"
+        ],
+        [
+          "Spearow",
+          "Fearow",
+          "Level 20"
+        ],
+        [
+          "Ekans",
+          "Arbok",
+          "Level 22"
+        ],
+        [
+          "Pikachu",
+          "Raichu",
+          "Thunder Stone"
+        ],
+        [
+          "Sandshrew",
+          "Sandslash",
+          "Level 22"
+        ],
+        [
+          "Nidorina",
+          "Nidoqueen",
+          "Level 40"
+        ],
+        [
+          "Nidorino",
+          "Nidoking",
+          "Level 40"
+        ],
+        [
+          "Clefairy",
+          "Clefable",
+          "Moon Stone"
+        ],
+        [
+          "Vulpix",
+          "Ninetales",
+          "Fire Stone"
+        ],
+        [
+          "Jigglypuff",
+          "Wigglytuff",
+          "Moon Stone"
+        ],
+        [
+          "Zubat",
+          "Golbat",
+          "Level 22"
+        ],
+        [
+          "Golbat",
+          "Crobat",
+          "Level 40"
+        ],
+        [
+          "Oddish",
+          "Gloom",
+          "Level 21"
+        ],
+        [
+          "Gloom",
+          "Bellossom",
+          "Fire Stone"
+        ],
+        [
+          "Gloom",
+          "Vileplume",
+          "Level 36"
+        ],
+        [
+          "Paras",
+          "Parasect",
+          "Level 36"
+        ],
+        [
+          "Venonat",
+          "Venomoth",
+          "Level 25"
+        ],
+        [
+          "Diglett",
+          "Dugtrio",
+          "Level 26"
+        ],
+        [
+          "Meowth",
+          "Persian",
+          "Level 28"
+        ],
+        [
+          "Psyduck",
+          "Golduck",
+          "Level 22"
+        ],
+        [
+          "Mankey",
+          "Primeape",
+          "Level 36"
+        ],
+        [
+          "Growlithe",
+          "Arcanine",
+          "Fire Stone"
+        ],
+        [
+          "Poliwag",
+          "Poliwhirl",
+          "Level 25"
+        ],
+        [
+          "Poliwhirl",
+          "Poliwrath",
+          "Level 36"
+        ],
+        [
+          "Poliwhirl",
+          "Politoed",
+          "Water Stone"
+        ],
+        [
+          "Abra",
+          "Kadabra",
+          "Level 16"
+        ],
+        [
+          "Kadabra",
+          "Alakazam",
+          "Level 36"
+        ],
+        [
+          "Machop",
+          "Machoke",
+          "Level 25"
+        ],
+        [
+          "Machoke",
+          "Machamp",
+          "Level 36"
+        ],
+        [
+          "Bellsprout",
+          "Weepinbell",
+          "Level 21"
+        ],
+        [
+          "Weepinbell",
+          "Victreebel",
+          "Level 36"
+        ],
+        [
+          "Tentacool",
+          "Tentacruel",
+          "Level 28"
+        ],
+        [
+          "Geodude",
+          "Graveler",
+          "Level 25"
+        ],
+        [
+          "Graveler",
+          "Golem",
+          "Level 36"
+        ],
+        [
+          "Ponyta",
+          "Rapidash",
+          "Level 30"
+        ],
+        [
+          "Slowpoke",
+          "Slowbro",
+          "Level 37"
+        ],
+        [
+          "Slowpoke",
+          "Slowking",
+          "Water Stone"
+        ],
+        [
+          "Magnemite",
+          "Magneton",
+          "Level 55"
+        ],
+        [
+          "Doduo",
+          "Dodrio",
+          "Level 31"
+        ],
+        [
+          "Seel",
+          "Dewgong",
+          "Level 34"
+        ],
+        [
+          "Grimer",
+          "Muk",
+          "Level 38"
+        ],
+        [
+          "Shellder",
+          "Cloyster",
+          "Water Stone"
+        ],
+        [
+          "Gastly",
+          "Haunter",
+          "Level 25"
+        ],
+        [
+          "Haunter",
+          "Gengar",
+          "Level 36"
+        ],
+        [
+          "Onix",
+          "Steelix",
+          "Level 34"
+        ],
+        [
+          "Drowzee",
+          "Hypno",
+          "Level 35"
+        ],
+        [
+          "Krabby",
+          "Kingler",
+          "Level 35"
+        ],
+        [
+          "Voltorb",
+          "Electrode",
+          "Level 55"
+        ],
+        [
+          "Exeggcute",
+          "Exeggutor",
+          "Leaf Stone"
+        ],
+        [
+          "Cubone",
+          "Marowak",
+          "Level 28"
+        ],
+        [
+          "Koffing",
+          "Weezing",
+          "Level 35"
+        ],
+        [
+          "Rhyhorn",
+          "Rhydon",
+          "Level 42"
+        ],
+        [
+          "Chansey",
+          "Blissey",
+          "with High Friendship"
+        ],
+        [
+          "Horsea",
+          "Seadra",
+          "Level 22"
+        ],
+        [
+          "Seadra",
+          "Kingdra",
+          "Level 44"
+        ],
+        [
+          "Goldeen",
+          "Seaking",
+          "Level 28"
+        ],
+        [
+          "Staryu",
+          "Starmie",
+          "Water Stone"
+        ],
+        [
+          "Scyther",
+          "Scizor",
+          "Level 40"
+        ],
+        [
+          "Magikarp",
+          "Gyarados",
+          ""
+        ],
+        [
+          "Eevee",
+          "Vaporeon",
+          "Water Stone"
+        ],
+        [
+          "Eevee",
+          "Espeon",
+          "Sun Stone"
+        ],
+        [
+          "Eevee",
+          "Umbreon",
+          "Moon Stone"
+        ],
+        [
+          "Eevee",
+          "Flareon",
+          "Fire Stone"
+        ],
+        [
+          "Eevee",
+          "Jolteon",
+          "Electric Stone"
+        ],
+        [
+          "Porygon",
+          "Porygon2",
+          "Level 36"
+        ],
+        [
+          "Omanyte",
+          "Omastar",
+          "Level 40"
+        ],
+        [
+          "Kabuto",
+          "Kabutops",
+          "Level 40"
+        ],
+        [
+          "Dratini",
+          "Dragonair",
+          "Level 30"
+        ],
+        [
+          "Dragonair",
+          "Dragonite",
+          "Level 66"
+        ],
+        [
+          "Chikorita",
+          "Bayleef",
+          "Level 16"
+        ],
+        [
+          "Bayleef",
+          "Meganium",
+          "Level 32"
+        ],
+        [
+          "Cyndaquil",
+          "Quilava",
+          "Level 14"
+        ],
+        [
+          "Quilava",
+          "Typhlosion",
+          "Level 36"
+        ],
+        [
+          "Totodile",
+          "Croconaw",
+          "Level 18"
+        ],
+        [
+          "Croconaw",
+          "Feraligatr",
+          "Level 30"
+        ],
+        [
+          "Sentret",
+          "Furret",
+          "Level 20"
+        ],
+        [
+          "Hoothoot",
+          "Noctowl",
+          "Level 20"
+        ],
+        [
+          "Ledyba",
+          "Ledian",
+          "Level 22"
+        ],
+        [
+          "Spinarak",
+          "Ariados",
+          "Level 22"
+        ],
+        [
+          "Chinchou",
+          "Lanturn",
+          "Level 27"
+        ],
+        [
+          "Togepi",
+          "Togetic",
+          "Level 48"
+        ],
+        [
+          "Natu",
+          "Xatu",
+          "Level 25"
+        ],
+        [
+          "Mareep",
+          "Flaaffy",
+          "Level 15"
+        ],
+        [
+          "Flaaffy",
+          "Ampharos",
+          "Level 30"
+        ],
+        [
+          "Marill",
+          "Azumarill",
+          "Level 18"
+        ],
+        [
+          "Hoppip",
+          "Skiploom",
+          "Level 18"
+        ],
+        [
+          "Skiploom",
+          "Jumpluff",
+          "Level 27"
+        ],
+        [
+          "Sunkern",
+          "Sunflora",
+          "Level 28"
+        ],
+        [
+          "Wooper",
+          "Quagsire",
+          "Level 28"
+        ],
+        [
+          "Pineco",
+          "Forretress",
+          "Level 30"
+        ],
+        [
+          "Snubbull",
+          "Granbull",
+          "Level 23"
+        ],
+        [
+          "Teddiursa",
+          "Ursaring",
+          "Level 30"
+        ],
+        [
+          "Slugma",
+          "Magcargo",
+          "Level 35"
+        ],
+        [
+          "Swinub",
+          "Piloswine",
+          "Level 33"
+        ],
+        [
+          "Remoraid",
+          "Octillery",
+          "Level 25"
+        ],
+        [
+          "Houndour",
+          "Houndoom",
+          "Level 50"
+        ],
+        [
+          "Phanpy",
+          "Donphan",
+          "Level 25"
+        ],
+        [
+          "Tyrogue",
+          "Hitmontop",
+          ""
+        ],
+        [
+          "Tyrogue",
+          "Hitmonchan",
+          ""
+        ],
+        [
+          "Smoochum",
+          "Jynx",
+          "Level 65"
+        ],
+        [
+          "Elekid",
+          "Electabuzz",
+          "Level 50"
+        ],
+        [
+          "Magby",
+          "Magmar",
+          "Level 50"
+        ],
+        [
+          "Larvitar",
+          "Pupitar",
+          "Level 30"
+        ],
+        [
+          "Pupitar",
+          "Tyranitar",
+          "Level 55"
+        ],
+        [
+          "Treecko",
+          "Grovyle",
+          "Level 16"
+        ],
+        [
+          "Grovyle",
+          "Sceptile",
+          "Level 36"
+        ],
+        [
+          "Torchic",
+          "Combusken",
+          "Level 16"
+        ],
+        [
+          "Combusken",
+          "Blaziken",
+          "Level 36"
+        ],
+        [
+          "Mudkip",
+          "Marshtomp",
+          "Level 16"
+        ],
+        [
+          "Marshtomp",
+          "Swampert",
+          "Level 36"
+        ],
+        [
+          "Poochyena",
+          "Mightyena",
+          "Level 18"
+        ],
+        [
+          "Zigzagoon",
+          "Linoone",
+          "Level 20"
+        ],
+        [
+          "Wurmple",
+          "Silcoon",
+          "Level 7"
+        ],
+        [
+          "Silcoon",
+          "Beautifly",
+          "Level 16"
+        ],
+        [
+          "Cascoon",
+          "Dustox",
+          "Level 16"
+        ],
+        [
+          "Lotad",
+          "Lombre",
+          "Level 15"
+        ],
+        [
+          "Lombre",
+          "Ludicolo",
+          "Level 36"
+        ],
+        [
+          "Seedot",
+          "Nuzleaf",
+          "Level 15"
+        ],
+        [
+          "Nuzleaf",
+          "Shiftry",
+          "Level 36"
+        ],
+        [
+          "Taillow",
+          "Swellow",
+          "Level 22"
+        ],
+        [
+          "Wingull",
+          "Pelipper",
+          "Level 25"
+        ],
+        [
+          "Ralts",
+          "Kirlia",
+          "Level 20"
+        ],
+        [
+          "Kirlia",
+          "Gardevoir",
+          "Level 30"
+        ],
+        [
+          "Surskit",
+          "Masquerain",
+          "Level 22"
+        ],
+        [
+          "Shroomish",
+          "Breloom",
+          "Level 23"
+        ],
+        [
+          "Slakoth",
+          "Vigoroth",
+          "Level 18"
+        ],
+        [
+          "Vigoroth",
+          "Slaking",
+          "Level 36"
+        ],
+        [
+          "Nincada",
+          "Ninjask",
+          "Level 20"
+        ],
+        [
+          "Whismur",
+          "Loudred",
+          "Level 30"
+        ],
+        [
+          "Loudred",
+          "Exploud",
+          "Level 55"
+        ],
+        [
+          "Makuhita",
+          "Hariyama",
+          "Level 24"
+        ],
+        [
+          "Skitty",
+          "Delcatty",
+          "Level 20"
+        ],
+        [
+          "Aron",
+          "Lairon",
+          "Level 32"
+        ],
+        [
+          "Lairon",
+          "Aggron",
+          "Level 42"
+        ],
+        [
+          "Meditite",
+          "Medicham",
+          "Level 35"
+        ],
+        [
+          "Electrike",
+          "Manectric",
+          "Level 36"
+        ],
+        [
+          "Gulpin",
+          "Swalot",
+          "Level 20"
+        ],
+        [
+          "Carvanha",
+          "Sharpedo",
+          "Level 48"
+        ],
+        [
+          "Wailmer",
+          "Wailord",
+          "Level 30"
+        ],
+        [
+          "Numel",
+          "Camerupt",
+          "Level 33"
+        ],
+        [
+          "Spoink",
+          "Grumpig",
+          "Level 25"
+        ],
+        [
+          "Trapinch",
+          "Vibrava",
+          "Level 35"
+        ],
+        [
+          "Vibrava",
+          "Flygon",
+          "Level 55"
+        ],
+        [
+          "Cacnea",
+          "Cacturne",
+          "Level 32"
+        ],
+        [
+          "Swablu",
+          "Altaria",
+          "Level 35"
+        ],
+        [
+          "Barboach",
+          "Whiscash",
+          "Level 30"
+        ],
+        [
+          "Corphish",
+          "Crawdaunt",
+          "Level 30"
+        ],
+        [
+          "Baltoy",
+          "Claydol",
+          "Level 36"
+        ],
+        [
+          "Lileep",
+          "Cradily",
+          "Level 40"
+        ],
+        [
+          "Anorith",
+          "Armaldo",
+          "Level 40"
+        ],
+        [
+          "Feebas",
+          "Milotic",
+          "Level 66"
+        ],
+        [
+          "Shuppet",
+          "Banette",
+          "Level 37"
+        ],
+        [
+          "Duskull",
+          "Dusclops",
+          "Level 55"
+        ],
+        [
+          "Wynaut",
+          "Wobbuffet",
+          "Level 15"
+        ],
+        [
+          "Snorunt",
+          "Glalie",
+          "Level 30"
+        ],
+        [
+          "Spheal",
+          "Sealeo",
+          "Level 22"
+        ],
+        [
+          "Sealeo",
+          "Walrein",
+          "Level 42"
+        ],
+        [
+          "Clamperl",
+          "Gorebyss",
+          "at Water Stone"
+        ],
+        [
+          "Clamperl",
+          "Huntail",
+          "Level 20"
+        ],
+        [
+          "Bagon",
+          "Shelgon",
+          "Level 30"
+        ],
+        [
+          "Shelgon",
+          "Salamence",
+          "Level 55"
+        ],
+        [
+          "Beldum",
+          "Metang",
+          "Level 20"
+        ],
+        [
+          "Metang",
+          "Metagross",
+          "Level 66"
+        ],
+        [
+          "Nidoran♀",
+          "Nidorina",
+          "Level 16"
+        ],
+        [
+          "Nidoran♂",
+          "Nidorino",
+          "Level 16"
+        ]
+      ]
+    }
+  ]
+}

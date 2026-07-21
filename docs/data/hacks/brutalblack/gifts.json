@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "subtitle": "",
+    "blurb": [
+      "Gift and starter Pokemon by location, from the mastersheet."
+    ]
+  },
+  "blocks": [
+    {
+      "type": "table",
+      "columns": [
+        "Location",
+        "Gift"
+      ],
+      "rows": [
+        [
+          "Nuvema Town",
+          "Snivy/Tepig/Oshawott (100%)"
+        ],
+        [
+          "Dreamyard",
+          "Pansage/Pansear/Panpour (100%)"
+        ]
+      ]
+    }
+  ]
+}

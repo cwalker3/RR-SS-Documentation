@@ -1,0 +1,22 @@
+{
+  "games": [
+    {
+      "id": "rrss",
+      "name": "Rising Ruby / Sinking Sapphire",
+      "short": "RR/SS",
+      "gen": 6
+    },
+    {
+      "id": "rigred",
+      "name": "Rigorous Red",
+      "short": "Rigorous Red",
+      "gen": 3
+    },
+    {
+      "id": "brutalblack",
+      "name": "Brutal Black",
+      "short": "Brutal Black",
+      "gen": 5
+    }
+  ]
+}

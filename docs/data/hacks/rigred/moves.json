@@ -1,0 +1,4287 @@
+{
+  "moveInfo": {
+    "pound": {
+      "n": "Pound",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 35,
+      "d": "The target is physically pounded with a long tail, a foreleg, or the like."
+    },
+    "karatechop": {
+      "n": "Karate Chop",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 50,
+      "acc": 100,
+      "pp": 25,
+      "d": "The target is attacked with a sharp chop. Critical hits land more easily."
+    },
+    "doubleslap": {
+      "n": "Double Slap",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 15,
+      "acc": 100,
+      "pp": 10,
+      "d": "The target is slapped repeatedly, back and forth, two to five times in a row.",
+      "chg": true
+    },
+    "cometpunch": {
+      "n": "Comet Punch",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 25,
+      "acc": 85,
+      "pp": 15,
+      "d": "The target is hit with a flurry of punches that strike two to five times in a row.",
+      "chg": true
+    },
+    "firepunch": {
+      "n": "Fire Punch",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 75,
+      "acc": 100,
+      "pp": 15,
+      "d": "The target is punched with a fiery fist. This may also leave the target with a burn."
+    },
+    "icepunch": {
+      "n": "Ice Punch",
+      "t": "Ice",
+      "c": "Special",
+      "pow": 75,
+      "acc": 100,
+      "pp": 15,
+      "d": "The target is punched with an icy fist. This may also leave the target frozen."
+    },
+    "thunderpunch": {
+      "n": "Thunder Punch",
+      "t": "Electric",
+      "c": "Special",
+      "pow": 75,
+      "acc": 100,
+      "pp": 15,
+      "d": "The target is punched with an electrified fist. This may also leave the target with paralysis."
+    },
+    "scratch": {
+      "n": "Scratch",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 35,
+      "d": "Hard, pointed, sharp claws rake the target to inflict damage."
+    },
+    "swordsdance": {
+      "n": "Swords Dance",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 30,
+      "d": "A frenetic dance to uplift the fighting spirit. This sharply raises the userâ€™s Attack stat."
+    },
+    "cut": {
+      "n": "Cut",
+      "t": "Bug",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 95,
+      "pp": 30,
+      "d": "The target is cut with a scythe or claw. This can also be used to cut down thin trees.",
+      "fx": "Acc: 100",
+      "chg": true
+    },
+    "gust": {
+      "n": "Gust",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 35,
+      "d": "A gust of wind is whipped up by wings and launched at the target to inflict damage."
+    },
+    "wingattack": {
+      "n": "Wing Attack",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 100,
+      "pp": 35,
+      "d": "The target is struck with large, imposing wings spread wide to inflict damage."
+    },
+    "fly": {
+      "n": "Fly",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user soars and then strikes its target on the next turn. This can also be used to fly to any familiar town.",
+      "chg": true
+    },
+    "vinewhip": {
+      "n": "Vine Whip",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 35,
+      "acc": 100,
+      "pp": 15,
+      "d": "The target is struck with slender, whiplike vines to inflict damage."
+    },
+    "stomp": {
+      "n": "Stomp",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 65,
+      "acc": 100,
+      "pp": 20,
+      "d": "The target is stomped with a big foot. This may also make the target flinch."
+    },
+    "doublekick": {
+      "n": "Double Kick",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 30,
+      "acc": 100,
+      "pp": 30,
+      "d": "The target is quickly kicked twice in succession using both feet."
+    },
+    "megakick": {
+      "n": "Mega Kick",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 120,
+      "acc": 100,
+      "pp": 5,
+      "d": "The target is attacked by a kick launched with muscle-packed power.",
+      "fx": "now fighting type",
+      "chg": true
+    },
+    "rollingkick": {
+      "n": "Rolling Kick",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user lashes out with a quick, spinning kick. This may also make the target flinch.",
+      "chg": true
+    },
+    "sandattack": {
+      "n": "Sand Attack",
+      "t": "Ground",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 15,
+      "d": "Sand is hurled in the targetâ€™s face, reducing the targetâ€™s accuracy."
+    },
+    "headbutt": {
+      "n": "Headbutt",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 70,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch."
+    },
+    "hornattack": {
+      "n": "Horn Attack",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 65,
+      "acc": 100,
+      "pp": 25,
+      "d": "The target is jabbed with a sharply pointed horn to inflict damage."
+    },
+    "horndrill": {
+      "n": "Horn Drill",
+      "t": "Bug",
+      "c": "Physical",
+      "pow": 120,
+      "acc": 30,
+      "pp": 5,
+      "d": "The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits.",
+      "fx": "Acc: 100, now 25% recoil",
+      "chg": true
+    },
+    "tackle": {
+      "n": "Tackle",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 50,
+      "acc": 100,
+      "pp": 35,
+      "d": "A physical attack in which the user charges and slams into the target with its whole body.",
+      "fx": "BP 35 > 40",
+      "chg": true
+    },
+    "bodyslam": {
+      "n": "Body Slam",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 85,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user drops onto the target with its full body weight. This may also leave the target with paralysis."
+    },
+    "wrap": {
+      "n": "Wrap",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 15,
+      "acc": 85,
+      "pp": 20,
+      "d": "A long body or vines are used to wrap and squeeze the target for four to five turns."
+    },
+    "takedown": {
+      "n": "Take Down",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 90,
+      "acc": 100,
+      "pp": 20,
+      "d": "A reckless, full-body charge attack for slamming into the target. This also damages the user a little.",
+      "chg": true
+    },
+    "thrash": {
+      "n": "Thrash",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 90,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user rampages and attacks for two to three turns. The user then becomes confused."
+    },
+    "doubleedge": {
+      "n": "Double-Edge",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 120,
+      "acc": 100,
+      "pp": 15,
+      "d": "A reckless, life-risking tackle. This also damages the user quite a lot.",
+      "fx": "33% recoil > 25% recoil",
+      "chg": true
+    },
+    "tailwhip": {
+      "n": "Tail Whip",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user wags its tail cutely, making opposing PokÃ©mon less wary and lowering their Defense stat."
+    },
+    "poisonsting": {
+      "n": "Poison Sting",
+      "t": "Poison",
+      "c": "Physical",
+      "pow": 15,
+      "acc": 100,
+      "pp": 35,
+      "d": "The user stabs the target with a poisonous stinger. This may also poison the target."
+    },
+    "twineedle": {
+      "n": "Twineedle",
+      "t": "Bug",
+      "c": "Physical",
+      "pow": 50,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user damages the target twice in succession by jabbing it with two spikes. This may also poison the target.",
+      "chg": true
+    },
+    "pinmissile": {
+      "n": "Pin Missile",
+      "t": "Bug",
+      "c": "Physical",
+      "pow": 25,
+      "acc": 100,
+      "pp": 20,
+      "d": "Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.",
+      "chg": true
+    },
+    "leer": {
+      "n": "Leer",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user gives opposing PokÃ©mon an intimidating leer that lowers the Defense stat."
+    },
+    "bite": {
+      "n": "Bite",
+      "t": "Dark",
+      "c": "Special",
+      "pow": 60,
+      "acc": 100,
+      "pp": 25,
+      "d": "The target is bitten with viciously sharp fangs. This may also make the target flinch."
+    },
+    "growl": {
+      "n": "Growl",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 40,
+      "d": "The user growls in an endearing way, making opposing PokÃ©mon less wary. This lowers their Attack stats."
+    },
+    "sonicboom": {
+      "n": "Sonic Boom",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": null,
+      "acc": 90,
+      "pp": 20,
+      "d": "The target is hit with a destructive shock wave that always inflicts 20 HP damage."
+    },
+    "disable": {
+      "n": "Disable",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "For four turns, this move prevents the target from using the move it last used.",
+      "chg": true
+    },
+    "acid": {
+      "n": "Acid",
+      "t": "Poison",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 30,
+      "d": "The opposing PokÃ©mon are attacked with a spray of harsh acid. This may also lower their Sp. Def stats."
+    },
+    "ember": {
+      "n": "Ember",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 40,
+      "acc": 100,
+      "pp": 25,
+      "d": "The target is attacked with small flames. This may also leave the target with a burn."
+    },
+    "flamethrower": {
+      "n": "Flamethrower",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 95,
+      "acc": 100,
+      "pp": 15,
+      "d": "The target is scorched with an intense blast of fire. This may also leave the target with a burn."
+    },
+    "watergun": {
+      "n": "Water Gun",
+      "t": "Water",
+      "c": "Special",
+      "pow": 40,
+      "acc": 100,
+      "pp": 25,
+      "d": "The target is blasted with a forceful shot of water."
+    },
+    "hydropump": {
+      "n": "Hydro Pump",
+      "t": "Water",
+      "c": "Special",
+      "pow": 120,
+      "acc": 80,
+      "pp": 5,
+      "d": "The target is blasted by a huge volume of water launched under great pressure."
+    },
+    "surf": {
+      "n": "Surf",
+      "t": "Water",
+      "c": "Special",
+      "pow": 95,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks everything around it by swamping its surroundings with a giant wave. This can also be used for crossing water."
+    },
+    "icebeam": {
+      "n": "Ice Beam",
+      "t": "Ice",
+      "c": "Special",
+      "pow": 95,
+      "acc": 100,
+      "pp": 10,
+      "d": "The target is struck with an icy-cold beam of energy. This may also leave the target frozen."
+    },
+    "blizzard": {
+      "n": "Blizzard",
+      "t": "Ice",
+      "c": "Special",
+      "pow": 120,
+      "acc": 85,
+      "pp": 5,
+      "d": "A howling blizzard is summoned to strike opposing PokÃ©mon. This may also leave the opposing PokÃ©mon frozen.",
+      "chg": true
+    },
+    "psybeam": {
+      "n": "Psybeam",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": 65,
+      "acc": 100,
+      "pp": 20,
+      "d": "The target is attacked with a peculiar ray. This may also leave the target confused."
+    },
+    "bubblebeam": {
+      "n": "Bubble Beam",
+      "t": "Water",
+      "c": "Special",
+      "pow": 65,
+      "acc": 100,
+      "pp": 20,
+      "d": "A spray of bubbles is forcefully ejected at the target. This may also lower its Speed stat."
+    },
+    "aurorabeam": {
+      "n": "Aurora Beam",
+      "t": "Ice",
+      "c": "Special",
+      "pow": 65,
+      "acc": 100,
+      "pp": 20,
+      "d": "The target is hit with a rainbow-colored beam. This may also lower the targetâ€™s Attack stat."
+    },
+    "hyperbeam": {
+      "n": "Hyper Beam",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 150,
+      "acc": 100,
+      "pp": 5,
+      "d": "The target is attacked with a powerful beam. The user canâ€™t move on the next turn.",
+      "fx": "Recharge > 33% Recoil",
+      "chg": true
+    },
+    "peck": {
+      "n": "Peck",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 35,
+      "acc": 100,
+      "pp": 35,
+      "d": "The target is jabbed with a sharply pointed beak or horn."
+    },
+    "drillpeck": {
+      "n": "Drill Peck",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 20,
+      "d": "A corkscrewing attack with a sharp beak acting as a drill.",
+      "chg": true
+    },
+    "submission": {
+      "n": "Submission",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 90,
+      "acc": 100,
+      "pp": 25,
+      "d": "The user grabs the target and recklessly dives for the ground. This also damages the user a little.",
+      "fx": "no longer recoil",
+      "chg": true
+    },
+    "lowkick": {
+      "n": "Low Kick",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "A powerful low kick that makes the target fall over. The heavier the target, the greater the moveâ€™s power."
+    },
+    "counter": {
+      "n": "Counter",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "A retaliation move that counters any physical attack, inflicting double the damage taken."
+    },
+    "seismictoss": {
+      "n": "Seismic Toss",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "The target is thrown using the power of gravity. It inflicts damage equal to the userâ€™s level."
+    },
+    "strength": {
+      "n": "Strength",
+      "t": "Rock",
+      "c": "Physical",
+      "pow": 90,
+      "acc": 100,
+      "pp": 15,
+      "d": "The target is slugged with a punch thrown at maximum power. This can also be used to move heavy boulders.",
+      "chg": true
+    },
+    "absorb": {
+      "n": "Absorb",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 40,
+      "acc": 100,
+      "pp": 15,
+      "d": "A nutrient-draining attack. The userâ€™s HP is restored by half the damage taken by the target."
+    },
+    "megadrain": {
+      "n": "Mega Drain",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 75,
+      "acc": 100,
+      "pp": 10,
+      "d": "A nutrient-draining attack. The userâ€™s HP is restored by half the damage taken by the target."
+    },
+    "leechseed": {
+      "n": "Leech Seed",
+      "t": "Grass",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 10,
+      "d": "A seed is planted on the target. It steals some HP from the target every turn.",
+      "chg": true
+    },
+    "growth": {
+      "n": "Growth",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 40,
+      "d": "The userâ€™s body grows all at once, raising the Attack and Sp. Atk stats."
+    },
+    "razorleaf": {
+      "n": "Razor Leaf",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 55,
+      "acc": 100,
+      "pp": 25,
+      "d": "Sharp-edged leaves are launched to slash at the opposing PokÃ©mon. Critical hits land more easily.",
+      "chg": true
+    },
+    "solarbeam": {
+      "n": "Solar Beam",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 200,
+      "acc": 100,
+      "pp": 10,
+      "d": "A two-turn attack. The user gathers light, then blasts a bundled beam on the next turn."
+    },
+    "poisonpowder": {
+      "n": "Poison Powder",
+      "t": "Poison",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 35,
+      "d": "The user scatters a cloud of poisonous dust on the target. This may also poison the target.",
+      "chg": true
+    },
+    "stunspore": {
+      "n": "Stun Spore",
+      "t": "Grass",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user scatters a cloud of numbing powder that paralyzes the target.",
+      "chg": true
+    },
+    "sleeppowder": {
+      "n": "Sleep Powder",
+      "t": "Grass",
+      "c": "Status",
+      "pow": null,
+      "acc": 80,
+      "pp": 15,
+      "d": "The user scatters a big cloud of sleep-inducing dust around the target.",
+      "chg": true
+    },
+    "petaldance": {
+      "n": "Petal Dance",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 130,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user attacks the target by scattering petals for two to three turns. The user then becomes confused.",
+      "fx": "Now lowers SpAtk by 2 stages instead of locking you in",
+      "chg": true
+    },
+    "stringshot": {
+      "n": "String Shot",
+      "t": "Bug",
+      "c": "Status",
+      "pow": null,
+      "acc": 95,
+      "pp": 40,
+      "d": "The opposing PokÃ©mon are bound with silk blown from the userâ€™s mouth that harshly lowers the Speed stat."
+    },
+    "dragonrage": {
+      "n": "Dragon Rage",
+      "t": "Dragon",
+      "c": "Special",
+      "pow": null,
+      "acc": 100,
+      "pp": 10,
+      "d": "This attack hits the target with a shock wave of pure rage. This attack always inflicts 40 HP damage."
+    },
+    "thundershock": {
+      "n": "Thunder Shock",
+      "t": "Electric",
+      "c": "Special",
+      "pow": 40,
+      "acc": 100,
+      "pp": 30,
+      "d": "A jolt of electricity crashes down on the target to inflict damage. This may also leave the target with paralysis."
+    },
+    "thunderbolt": {
+      "n": "Thunderbolt",
+      "t": "Electric",
+      "c": "Special",
+      "pow": 95,
+      "acc": 100,
+      "pp": 15,
+      "d": "A strong electric blast crashes down on the target. This may also leave the target with paralysis."
+    },
+    "thunderwave": {
+      "n": "Thunder Wave",
+      "t": "Electric",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user launches a weak jolt of electricity that paralyzes the target."
+    },
+    "thunder": {
+      "n": "Thunder",
+      "t": "Electric",
+      "c": "Special",
+      "pow": 120,
+      "acc": 85,
+      "pp": 10,
+      "d": "A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.",
+      "chg": true
+    },
+    "rockthrow": {
+      "n": "Rock Throw",
+      "t": "Rock",
+      "c": "Physical",
+      "pow": 50,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user picks up and throws a small rock at the target to attack.",
+      "chg": true
+    },
+    "earthquake": {
+      "n": "Earthquake",
+      "t": "Ground",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user sets off an earthquake that strikes every PokÃ©mon around it."
+    },
+    "fissure": {
+      "n": "Fissure",
+      "t": "Ground",
+      "c": "Physical",
+      "pow": 120,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user opens up a fissure in the ground and drops the target in. The target faints instantly if this attack hits.",
+      "fx": "Now 25% Recoil",
+      "chg": true
+    },
+    "dig": {
+      "n": "Dig",
+      "t": "Ground",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user burrows, then attacks on the next turn. It can also be used to exit dungeons."
+    },
+    "toxic": {
+      "n": "Toxic",
+      "t": "Poison",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 10,
+      "d": "A move that leaves the target badly poisoned. Its poison damage worsens every turn.",
+      "chg": true
+    },
+    "confusion": {
+      "n": "Confusion",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": 50,
+      "acc": 100,
+      "pp": 25,
+      "d": "The target is hit by a weak telekinetic force. This may also confuse the target."
+    },
+    "psychic": {
+      "n": "Psychic",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": 90,
+      "acc": 100,
+      "pp": 10,
+      "d": "The target is hit by a strong telekinetic force. This may also lower the targetâ€™s Sp. Def stat."
+    },
+    "hypnosis": {
+      "n": "Hypnosis",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": 70,
+      "pp": 20,
+      "d": "The user employs hypnotic suggestion to make the target fall into a deep sleep.",
+      "chg": true
+    },
+    "agility": {
+      "n": "Agility",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 30,
+      "d": "The user relaxes and lightens its body to move faster. This sharply raises the Speed stat."
+    },
+    "quickattack": {
+      "n": "Quick Attack",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user lunges at the target at a speed that makes it almost invisible. This move always goes first."
+    },
+    "teleport": {
+      "n": "Teleport",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "Use it to flee from any wild PokÃ©mon. It can also warp to the last PokÃ©mon Center visited."
+    },
+    "nightshade": {
+      "n": "Night Shade",
+      "t": "Ghost",
+      "c": "Physical",
+      "pow": null,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user makes the target see a frightening mirage. It inflicts damage equal to the userâ€™s level."
+    },
+    "screech": {
+      "n": "Screech",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": 85,
+      "pp": 5,
+      "d": "An earsplitting screech harshly lowers the targetâ€™s Defense stat.",
+      "chg": true
+    },
+    "recover": {
+      "n": "Recover",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "Restoring its own cells, the user restores its own HP by half of its max HP.",
+      "chg": true
+    },
+    "harden": {
+      "n": "Harden",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 30,
+      "d": "The user stiffens all the muscles in its body to raise its Defense stat."
+    },
+    "minimize": {
+      "n": "Minimize",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user compresses its body to make itself look smaller, which sharply raises its evasiveness."
+    },
+    "confuseray": {
+      "n": "Confuse Ray",
+      "t": "Ghost",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 10,
+      "d": "The target is exposed to a sinister ray that triggers confusion."
+    },
+    "withdraw": {
+      "n": "Withdraw",
+      "t": "Water",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 40,
+      "d": "The user withdraws its body into its hard shell, raising its Defense stat."
+    },
+    "defensecurl": {
+      "n": "Defense Curl",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 40,
+      "d": "The user curls up to conceal weak spots and raise its Defense stat."
+    },
+    "barrier": {
+      "n": "Barrier",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 30,
+      "d": "The user throws up a sturdy wall that sharply raises its Defense stat."
+    },
+    "lightscreen": {
+      "n": "Light Screen",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 30,
+      "d": "A wondrous wall of light is put up to reduce damage from special attacks for five turns."
+    },
+    "haze": {
+      "n": "Haze",
+      "t": "Ice",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 30,
+      "d": "The user creates a haze that eliminates every stat change among all the PokÃ©mon engaged in battle."
+    },
+    "reflect": {
+      "n": "Reflect",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "A wondrous wall of light is put up to reduce damage from physical attacks for five turns."
+    },
+    "focusenergy": {
+      "n": "Focus Energy",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 30,
+      "d": "The user takes a deep breath and focuses so that critical hits land more easily."
+    },
+    "metronome": {
+      "n": "Metronome",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 10,
+      "d": "The user waggles a finger and stimulates its brain into randomly using nearly any move."
+    },
+    "eggbomb": {
+      "n": "Egg Bomb",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "A large egg is hurled at the target with maximum force to inflict damage.",
+      "chg": true
+    },
+    "lick": {
+      "n": "Lick",
+      "t": "Ghost",
+      "c": "Physical",
+      "pow": 20,
+      "acc": 100,
+      "pp": 30,
+      "d": "The target is licked with a long tongue, causing damage. This may also leave the target with paralysis."
+    },
+    "smog": {
+      "n": "Smog",
+      "t": "Poison",
+      "c": "Physical",
+      "pow": 20,
+      "acc": 70,
+      "pp": 20,
+      "d": "The target is attacked with a discharge of filthy gases. This may also poison the target."
+    },
+    "sludge": {
+      "n": "Sludge",
+      "t": "Poison",
+      "c": "Physical",
+      "pow": 65,
+      "acc": 100,
+      "pp": 20,
+      "d": "Unsanitary sludge is hurled at the target. This may also poison the target."
+    },
+    "boneclub": {
+      "n": "Bone Club",
+      "t": "Ground",
+      "c": "Physical",
+      "pow": 65,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user clubs the target with a bone. This may also make the target flinch.",
+      "chg": true
+    },
+    "fireblast": {
+      "n": "Fire Blast",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 120,
+      "acc": 85,
+      "pp": 5,
+      "d": "The target is attacked with an intense blast of all-consuming fire. This may also leave the target with a burn."
+    },
+    "waterfall": {
+      "n": "Waterfall",
+      "t": "Water",
+      "c": "Special",
+      "pow": 80,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user charges at the target and may make it flinch. This can also be used to climb a waterfall."
+    },
+    "clamp": {
+      "n": "Clamp",
+      "t": "Water",
+      "c": "Special",
+      "pow": 35,
+      "acc": 75,
+      "pp": 10,
+      "d": "The target is clamped and squeezed by the userâ€™s very thick and sturdy shell for four to five turns."
+    },
+    "swift": {
+      "n": "Swift",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 80,
+      "acc": null,
+      "pp": 20,
+      "d": "Star-shaped rays are shot at the opposing PokÃ©mon. This attack never misses.",
+      "chg": true
+    },
+    "amnesia": {
+      "n": "Amnesia",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user temporarily empties its mind to forget its concerns. This sharply raises the userâ€™s Sp. Def stat."
+    },
+    "softboiled": {
+      "n": "Soft-Boiled",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user restores its own HP by up to half of its max HP. May also be used in the field to heal HP.",
+      "chg": true
+    },
+    "highjumpkick": {
+      "n": "High Jump Kick",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 90,
+      "pp": 20,
+      "d": "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead."
+    },
+    "glare": {
+      "n": "Glare",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user intimidates the target with the pattern on its belly to cause paralysis.",
+      "chg": true
+    },
+    "poisongas": {
+      "n": "Poison Gas",
+      "t": "Poison",
+      "c": "Status",
+      "pow": null,
+      "acc": 80,
+      "pp": 40,
+      "d": "A cloud of poison gas is sprayed in the face of opposing PokÃ©mon. This may also poison those hit."
+    },
+    "leechlife": {
+      "n": "Leech Life",
+      "t": "Bug",
+      "c": "Physical",
+      "pow": 75,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user drains the targetâ€™s blood. The userâ€™s HP is restored by half the damage taken by the target.",
+      "chg": true
+    },
+    "lovelykiss": {
+      "n": "Lovely Kiss",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": 75,
+      "pp": 10,
+      "d": "With a scary face, the user tries to force a kiss on the target. If it succeeds, the target falls asleep."
+    },
+    "skyattack": {
+      "n": "Sky Attack",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 120,
+      "acc": 100,
+      "pp": 5,
+      "d": "A second-turn attack move where critical hits land more easily. This may also make the target flinch.",
+      "fx": "now 25% recoil",
+      "chg": true
+    },
+    "bubble": {
+      "n": "Bubble",
+      "t": "Water",
+      "c": "Special",
+      "pow": 20,
+      "acc": 100,
+      "pp": 30,
+      "d": "A spray of countless bubbles is jetted at the opposing PokÃ©mon. This may also lower their Speed stats."
+    },
+    "spore": {
+      "n": "Spore",
+      "t": "Grass",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user scatters bursts of spores that induce sleep."
+    },
+    "psywave": {
+      "n": "Psywave",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": null,
+      "acc": 80,
+      "pp": 15,
+      "d": "The target is attacked with an odd psychic wave. The attack varies in intensity."
+    },
+    "splash": {
+      "n": "Splash",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 40,
+      "d": "The user just flops and splashes around to no effect at all..."
+    },
+    "acidarmor": {
+      "n": "Acid Armor",
+      "t": "Poison",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 40,
+      "d": "The user alters its cellular structure to liquefy itself, sharply raising its Defense stat."
+    },
+    "crabhammer": {
+      "n": "Crabhammer",
+      "t": "Water",
+      "c": "Special",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "The target is hammered with a large pincer. Critical hits land more easily.",
+      "chg": true
+    },
+    "explosion": {
+      "n": "Explosion",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 250,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user attacks everything around it by causing a tremendous explosion. The user faints upon using this move."
+    },
+    "bonemerang": {
+      "n": "Bonemerang",
+      "t": "Ground",
+      "c": "Physical",
+      "pow": 50,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user throws the bone it holds. The bone loops to hit the target twice, coming and going.",
+      "chg": true
+    },
+    "rest": {
+      "n": "Rest",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user goes to sleep for two turns. This fully restores the userâ€™s HP and heals any status conditions."
+    },
+    "rockslide": {
+      "n": "Rock Slide",
+      "t": "Rock",
+      "c": "Physical",
+      "pow": 75,
+      "acc": 100,
+      "pp": 10,
+      "d": "Large boulders are hurled at the opposing PokÃ©mon to inflict damage. This may also make the opposing PokÃ©mon flinch.",
+      "chg": true
+    },
+    "hyperfang": {
+      "n": "Hyper Fang",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 80,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user bites hard on the target with its sharp front fangs. This may also make the target flinch.",
+      "chg": true
+    },
+    "triattack": {
+      "n": "Tri Attack",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user strikes with a simultaneous three-beam attack. May also burn, freeze, or leave the target with paralysis.",
+      "chg": true
+    },
+    "superfang": {
+      "n": "Super Fang",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": null,
+      "acc": 90,
+      "pp": 10,
+      "d": "The user chomps hard on the target with its sharp front fangs. This cuts the targetâ€™s HP in half."
+    },
+    "slash": {
+      "n": "Slash",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 70,
+      "acc": 100,
+      "pp": 20,
+      "d": "The target is attacked with a slash of claws or blades. Critical hits land more easily."
+    },
+    "substitute": {
+      "n": "Substitute",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 10,
+      "d": "The user makes a copy of itself using some of its HP. The copy serves as the userâ€™s decoy."
+    },
+    "triplekick": {
+      "n": "Triple Kick",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 10,
+      "acc": 90,
+      "pp": 10,
+      "d": "A consecutive three-kick attack that becomes more powerful with each successive hit."
+    },
+    "flamewheel": {
+      "n": "Flame Wheel",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 60,
+      "acc": 100,
+      "pp": 25,
+      "d": "The user cloaks itself in fire and charges at the target. This may also leave the target with a burn."
+    },
+    "curse": {
+      "n": "Curse",
+      "t": "???",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 10,
+      "d": "A move that works differently for the Ghost type than for all other types."
+    },
+    "flail": {
+      "n": "Flail",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": null,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user flails about aimlessly to attack. The less HP the user has, the greater the moveâ€™s power."
+    },
+    "aeroblast": {
+      "n": "Aeroblast",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 5,
+      "d": "A vortex of air is shot at the target to inflict damage. Critical hits land more easily.",
+      "chg": true
+    },
+    "cottonspore": {
+      "n": "Cotton Spore",
+      "t": "Grass",
+      "c": "Status",
+      "pow": null,
+      "acc": 85,
+      "pp": 40,
+      "d": "The user releases cotton-like spores that cling to the opposing PokÃ©mon, which harshly lowers their Speed stats."
+    },
+    "reversal": {
+      "n": "Reversal",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": null,
+      "acc": 100,
+      "pp": 15,
+      "d": "An all-out attack that becomes more powerful the less HP the user has."
+    },
+    "powdersnow": {
+      "n": "Powder Snow",
+      "t": "Ice",
+      "c": "Special",
+      "pow": 40,
+      "acc": 100,
+      "pp": 25,
+      "d": "The user attacks with a chilling gust of powdery snow. This may also freeze the opposing PokÃ©mon."
+    },
+    "protect": {
+      "n": "Protect",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 3,
+      "d": "Enables the user to evade all attacks. Its chance of failing rises if it is used in succession.",
+      "chg": true
+    },
+    "machpunch": {
+      "n": "Mach Punch",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user throws a punch at blinding speed. This move always goes first."
+    },
+    "feintattack": {
+      "n": "Feint Attack",
+      "t": "Dark",
+      "c": "Special",
+      "pow": 80,
+      "acc": null,
+      "pp": 20,
+      "d": "The user approaches the target disarmingly, then throws a sucker punch. This attack never misses.",
+      "chg": true
+    },
+    "bellydrum": {
+      "n": "Belly Drum",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 10,
+      "d": "The user maximizes its Attack stat in exchange for HP equal to half its max HP."
+    },
+    "sludgebomb": {
+      "n": "Sludge Bomb",
+      "t": "Poison",
+      "c": "Physical",
+      "pow": 90,
+      "acc": 100,
+      "pp": 10,
+      "d": "Unsanitary sludge is hurled at the target. This may also poison the target."
+    },
+    "mudslap": {
+      "n": "Mud-Slap",
+      "t": "Ground",
+      "c": "Physical",
+      "pow": 20,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user hurls mud in the targetâ€™s face to inflict damage and lower its accuracy."
+    },
+    "octazooka": {
+      "n": "Octazooka",
+      "t": "Water",
+      "c": "Special",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user attacks by spraying ink in the targetâ€™s face or eyes. This may also lower the targetâ€™s accuracy.",
+      "fx": "50% to drop Atk instead of Acc",
+      "chg": true
+    },
+    "spikes": {
+      "n": "Spikes",
+      "t": "Ground",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user lays a trap of spikes at the opposing teamâ€™s feet. The trap hurts PokÃ©mon that switch into battle."
+    },
+    "zapcannon": {
+      "n": "Zap Cannon",
+      "t": "Electric",
+      "c": "Special",
+      "pow": 130,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user fires an electric blast like a cannon to inflict damage and cause paralysis.",
+      "fx": "now lowers SpAtk by 2 stages",
+      "chg": true
+    },
+    "foresight": {
+      "n": "Foresight",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 40,
+      "d": "Enables a Ghost-type target to be hit by Normal- and Fighting-type attacks. This also enables an evasive target to be hit."
+    },
+    "destinybond": {
+      "n": "Destiny Bond",
+      "t": "Ghost",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "When this move is used, if the user faints, the PokÃ©mon that landed the knockout hit also faints."
+    },
+    "perishsong": {
+      "n": "Perish Song",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "Any PokÃ©mon that hears this song faints in three turns, unless it switches out of battle."
+    },
+    "icywind": {
+      "n": "Icy Wind",
+      "t": "Ice",
+      "c": "Special",
+      "pow": 55,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks with a gust of chilled air. This also lowers the opposing PokÃ©monâ€™s Speed stats.",
+      "chg": true
+    },
+    "detect": {
+      "n": "Detect",
+      "t": "Fighting",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "Enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+    },
+    "outrage": {
+      "n": "Outrage",
+      "t": "Dragon",
+      "c": "Special",
+      "pow": 120,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user rampages and attacks for two to three turns. The user then becomes confused.",
+      "fx": "now 25% recoil",
+      "chg": true
+    },
+    "gigadrain": {
+      "n": "Giga Drain",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 75,
+      "acc": 100,
+      "pp": 10,
+      "d": "A nutrient-draining attack. The userâ€™s HP is restored by half the damage taken by the target.",
+      "chg": true
+    },
+    "endure": {
+      "n": "Endure",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 10,
+      "d": "The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession."
+    },
+    "charm": {
+      "n": "Charm",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user gazes at the target rather charmingly, making it less wary. This harshly lowers its Attack stat."
+    },
+    "rollout": {
+      "n": "Rollout",
+      "t": "Rock",
+      "c": "Physical",
+      "pow": 30,
+      "acc": 90,
+      "pp": 20,
+      "d": "The user continually rolls into the target over five turns. It becomes more powerful each time it hits."
+    },
+    "milkdrink": {
+      "n": "Milk Drink",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user restores its own HP by up to half of its max HP. May also be used in the field to heal HP."
+    },
+    "spark": {
+      "n": "Spark",
+      "t": "Electric",
+      "c": "Special",
+      "pow": 65,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user throws an electrically charged tackle at the target. This may also leave the target with paralysis."
+    },
+    "furycutter": {
+      "n": "Fury Cutter",
+      "t": "Bug",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 20,
+      "d": "The target is slashed with scythes or claws. This attack becomes more powerful if it hits in succession.",
+      "chg": true
+    },
+    "steelwing": {
+      "n": "Steel Wing",
+      "t": "Steel",
+      "c": "Physical",
+      "pow": 70,
+      "acc": 100,
+      "pp": 25,
+      "d": "The target is hit with wings of steel. This may also raise the userâ€™s Defense stat.",
+      "chg": true
+    },
+    "meanlook": {
+      "n": "Mean Look",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user pins the target with a dark, arresting look. The target becomes unable to flee."
+    },
+    "sleeptalk": {
+      "n": "Sleep Talk",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 10,
+      "d": "While it is asleep, the user randomly uses one of the moves it knows."
+    },
+    "healbell": {
+      "n": "Heal Bell",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user makes a soothing bell chime to heal the status conditions of all the party PokÃ©mon."
+    },
+    "return": {
+      "n": "Return",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "A full-power attack that grows more powerful the more the user likes its Trainer.",
+      "fx": "now is just a 102 BP move regardless of friendship",
+      "chg": true
+    },
+    "safeguard": {
+      "n": "Safeguard",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 25,
+      "d": "The user creates a protective field that prevents status conditions for five turns."
+    },
+    "painsplit": {
+      "n": "Pain Split",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user adds its HP to the targetâ€™s HP, then equally shares the combined HP with the target."
+    },
+    "sacredfire": {
+      "n": "Sacred Fire",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 100,
+      "acc": 100,
+      "pp": 5,
+      "d": "The target is razed with a mystical fire of great intensity. This may also leave the target with a burn.",
+      "chg": true
+    },
+    "megahorn": {
+      "n": "Megahorn",
+      "t": "Bug",
+      "c": "Physical",
+      "pow": 120,
+      "acc": 85,
+      "pp": 10,
+      "d": "Using its tough and impressive horn, the user rams into the target with no letup."
+    },
+    "dragonbreath": {
+      "n": "Dragon Breath",
+      "t": "Dragon",
+      "c": "Special",
+      "pow": 60,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user exhales a mighty gust that inflicts damage. This may also leave the target with paralysis."
+    },
+    "batonpass": {
+      "n": "Baton Pass",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 40,
+      "d": "The user switches places with a party PokÃ©mon in waiting and passes along any stat changes."
+    },
+    "encore": {
+      "n": "Encore",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user compels the target to keep using only the move it last used for three turns.",
+      "fx": "PP 5 > 3",
+      "chg": true
+    },
+    "pursuit": {
+      "n": "Pursuit",
+      "t": "Dark",
+      "c": "Special",
+      "pow": 40,
+      "acc": 100,
+      "pp": 20,
+      "d": "An attack move that inflicts double damage if used on a target that is switching out of battle."
+    },
+    "rapidspin": {
+      "n": "Rapid Spin",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 50,
+      "acc": 100,
+      "pp": 40,
+      "d": "A spin attack that can also eliminate such moves as Bind, Wrap, Leech Seed, and Spikes.",
+      "chg": true
+    },
+    "irontail": {
+      "n": "Iron Tail",
+      "t": "Steel",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 15,
+      "d": "The target is slammed with a steel-hard tail. This may also lower the targetâ€™s Defense stat.",
+      "chg": true
+    },
+    "metalclaw": {
+      "n": "Metal Claw",
+      "t": "Steel",
+      "c": "Physical",
+      "pow": 50,
+      "acc": 100,
+      "pp": 35,
+      "d": "The target is raked with steel claws. This may also raise the userâ€™s Attack stat.",
+      "chg": true
+    },
+    "vitalthrow": {
+      "n": "Vital Throw",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 80,
+      "acc": null,
+      "pp": 10,
+      "d": "The user attacks last. In return, this throw move never misses.",
+      "fx": "now neutral priority",
+      "chg": true
+    },
+    "morningsun": {
+      "n": "Morning Sun",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user restores its own HP. The amount of HP regained varies with the weather."
+    },
+    "synthesis": {
+      "n": "Synthesis",
+      "t": "Grass",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user restores its own HP. The amount of HP regained varies with the weather."
+    },
+    "moonlight": {
+      "n": "Moonlight",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user restores its own HP. The amount of HP regained varies with the weather."
+    },
+    "crosschop": {
+      "n": "Cross Chop",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user delivers a double chop with its forearms crossed. Critical hits land more easily.",
+      "chg": true
+    },
+    "twister": {
+      "n": "Twister",
+      "t": "Dragon",
+      "c": "Special",
+      "pow": 40,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user whips up a vicious tornado to tear at the opposing PokÃ©mon. This may also make them flinch."
+    },
+    "raindance": {
+      "n": "Rain Dance",
+      "t": "Water",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user summons a heavy rain that falls for five turns, powering up Water-type moves."
+    },
+    "sunnyday": {
+      "n": "Sunny Day",
+      "t": "Fire",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user intensifies the sun for five turns, powering up Fire-type moves."
+    },
+    "crunch": {
+      "n": "Crunch",
+      "t": "Dark",
+      "c": "Special",
+      "pow": 90,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user crunches up the target with sharp fangs. This may also lower the targetâ€™s Defense stat.",
+      "chg": true
+    },
+    "mirrorcoat": {
+      "n": "Mirror Coat",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "A retaliation move that counters any special attack, inflicting double the damage taken."
+    },
+    "extremespeed": {
+      "n": "Extreme Speed",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 80,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user charges the target at blinding speed. This move always goes first."
+    },
+    "ancientpower": {
+      "n": "Ancient Power",
+      "t": "Rock",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user attacks with a prehistoric power. This may also raise all the userâ€™s stats at once."
+    },
+    "shadowball": {
+      "n": "Shadow Ball",
+      "t": "Ghost",
+      "c": "Physical",
+      "pow": 90,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user hurls a shadowy blob at the target. This may also lower the targetâ€™s Sp. Def stat.",
+      "fx": "now can drop Defense",
+      "chg": true
+    },
+    "futuresight": {
+      "n": "Future Sight",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": 120,
+      "acc": 90,
+      "pp": 15,
+      "d": "Two turns after this move is used, a hunk of psychic energy attacks the target.",
+      "chg": true
+    },
+    "rocksmash": {
+      "n": "Rock Smash",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks with a punch. This may also lower the targetâ€™s Defense stat. This move can also shatter rocks in the field.",
+      "chg": true
+    },
+    "whirlpool": {
+      "n": "Whirlpool",
+      "t": "Water",
+      "c": "Special",
+      "pow": 15,
+      "acc": 70,
+      "pp": 15,
+      "d": "The user traps the target in a violent swirling whirlpool for four to five turns."
+    },
+    "fakeout": {
+      "n": "Fake Out",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 5,
+      "d": "An attack that hits first and makes the target flinch. It only works the first turn the user is in battle.",
+      "chg": true
+    },
+    "uproar": {
+      "n": "Uproar",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 50,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user attacks in an uproar for three turns. During that time, no one can fall asleep."
+    },
+    "heatwave": {
+      "n": "Heat Wave",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user attacks by exhaling hot breath on the opposing PokÃ©mon. This may also leave those PokÃ©mon with a burn.",
+      "chg": true
+    },
+    "hail": {
+      "n": "Hail",
+      "t": "Ice",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 10,
+      "d": "The user summons a hailstorm lasting five turns. It damages all PokÃ©mon except the Ice type."
+    },
+    "willowisp": {
+      "n": "Will-O-Wisp",
+      "t": "Fire",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user shoots a sinister, bluish-white flame at the target to inflict a burn.",
+      "chg": true
+    },
+    "facade": {
+      "n": "Facade",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 70,
+      "acc": 100,
+      "pp": 20,
+      "d": "An attack move that doubles its power if the user is poisoned, burned, or has paralysis."
+    },
+    "focuspunch": {
+      "n": "Focus Punch",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 150,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user focuses its mind before launching a punch. This move fails if the user is hit before it is used."
+    },
+    "naturepower": {
+      "n": "Nature Power",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "An attack that makes use of natureâ€™s power. Its effects vary depending on the userâ€™s environment."
+    },
+    "taunt": {
+      "n": "Taunt",
+      "t": "Dark",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "The target is taunted into a rage that allows it to use only attack moves for three turns."
+    },
+    "helpinghand": {
+      "n": "Helping Hand",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user assists an ally by boosting the power of that allyâ€™s attack."
+    },
+    "trick": {
+      "n": "Trick",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user catches the target off guard and swaps its held item with its own."
+    },
+    "wish": {
+      "n": "Wish",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 10,
+      "d": "One turn after this move is used, the targetâ€™s HP is restored by half the userâ€™s max HP."
+    },
+    "ingrain": {
+      "n": "Ingrain",
+      "t": "Grass",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user lays roots that restore its HP on every turn. Because it is rooted, it canâ€™t switch out."
+    },
+    "superpower": {
+      "n": "Superpower",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 120,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user attacks the target with great power. However, this also lowers the userâ€™s Attack and Defense stats.",
+      "fx": "Now 25% Recoil",
+      "chg": true
+    },
+    "revenge": {
+      "n": "Revenge",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 100,
+      "pp": 10,
+      "d": "An attack move that inflicts double the damage if the user has been hurt by the opponent in the same turn."
+    },
+    "brickbreak": {
+      "n": "Brick Break",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 75,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks with a swift chop. It can also break barriers, such as Light Screen and Reflect."
+    },
+    "yawn": {
+      "n": "Yawn",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 10,
+      "d": "The user lets loose a huge yawn that lulls the target into falling asleep on the next turn."
+    },
+    "knockoff": {
+      "n": "Knock Off",
+      "t": "Dark",
+      "c": "Special",
+      "pow": 60,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user slaps down the targetâ€™s held item, and that item canâ€™t be used in that battle. The move does more damage if the target has a held item.",
+      "chg": true
+    },
+    "eruption": {
+      "n": "Eruption",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 150,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user attacks opposing PokÃ©mon with explosive fury. The lower the userâ€™s HP, the lower the moveâ€™s power."
+    },
+    "armthrust": {
+      "n": "Arm Thrust",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 25,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user lets loose a flurry of open-palmed arm thrusts that hit two to five times in a row.",
+      "chg": true
+    },
+    "tailglow": {
+      "n": "Tail Glow",
+      "t": "Bug",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user stares at flashing lights to focus its mind, drastically raising its Sp. Atk stat."
+    },
+    "lusterpurge": {
+      "n": "Luster Purge",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": 95,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user lets loose a damaging burst of light. This may also lower the targetâ€™s Sp. Def stat."
+    },
+    "mistball": {
+      "n": "Mist Ball",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": 70,
+      "acc": 100,
+      "pp": 5,
+      "d": "A mist-like flurry of down envelops and damages the target. This may also lower the targetâ€™s Sp. Atk stat."
+    },
+    "featherdance": {
+      "n": "Feather Dance",
+      "t": "Flying",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user covers the targetâ€™s body with a mass of down that harshly lowers its Attack stat."
+    },
+    "blazekick": {
+      "n": "Blaze Kick",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user launches a kick that lands a critical hit more easily. This may also leave the target with a burn.",
+      "chg": true
+    },
+    "needlearm": {
+      "n": "Needle Arm",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 100,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks by wildly swinging its thorny arms. This may also make the target flinch.",
+      "chg": true
+    },
+    "slackoff": {
+      "n": "Slack Off",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user slacks off, restoring its own HP by up to half of its max HP."
+    },
+    "hypervoice": {
+      "n": "Hyper Voice",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 90,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user lets loose a horribly echoing shout with the power to inflict damage."
+    },
+    "poisonfang": {
+      "n": "Poison Fang",
+      "t": "Poison",
+      "c": "Physical",
+      "pow": 120,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user bites the target with toxic fangs. This may also leave the target badly poisoned.",
+      "chg": true
+    },
+    "crushclaw": {
+      "n": "Crush Claw",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user slashes the target with hard and sharp claws. This may also lower the targetâ€™s Defense stat.",
+      "fx": "now 10% to lower defense",
+      "chg": true
+    },
+    "blastburn": {
+      "n": "Blast Burn",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 150,
+      "acc": 100,
+      "pp": 5,
+      "d": "The target is razed by a fiery explosion. The user canâ€™t move on the next turn.",
+      "fx": "Recharge > 33% Recoil",
+      "chg": true
+    },
+    "hydrocannon": {
+      "n": "Hydro Cannon",
+      "t": "Water",
+      "c": "Special",
+      "pow": 150,
+      "acc": 100,
+      "pp": 5,
+      "d": "The target is hit with a watery blast. The user canâ€™t move on the next turn.",
+      "fx": "Recharge > 33% Recoil",
+      "chg": true
+    },
+    "meteormash": {
+      "n": "Meteor Mash",
+      "t": "Steel",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "The target is hit with a hard punch fired like a meteor. This may also raise the userâ€™s Attack stat.",
+      "chg": true
+    },
+    "astonish": {
+      "n": "Astonish",
+      "t": "Ghost",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks the target while shouting in a startling fashion. This may also make the target flinch.",
+      "chg": true
+    },
+    "weatherball": {
+      "n": "Weather Ball",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 50,
+      "acc": 100,
+      "pp": 10,
+      "d": "An attack move that varies in power and type depending on the weather."
+    },
+    "faketears": {
+      "n": "Fake Tears",
+      "t": "Dark",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user feigns crying to fluster the target, harshly lowering its Sp. Def stat."
+    },
+    "aircutter": {
+      "n": "Air Cutter",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 55,
+      "acc": 100,
+      "pp": 25,
+      "d": "The user launches razor-like wind to slash the opposing PokÃ©mon. Critical hits land more easily.",
+      "chg": true
+    },
+    "overheat": {
+      "n": "Overheat",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 130,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user attacks the target at full power. The attackâ€™s recoil harshly lowers the userâ€™s Sp. Atk stat.",
+      "chg": true
+    },
+    "odorsleuth": {
+      "n": "Odor Sleuth",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 40,
+      "d": "Enables a Ghost-type target to be hit by Normal- and Fighting-type attacks. This also enables an evasive target to be hit."
+    },
+    "rocktomb": {
+      "n": "Rock Tomb",
+      "t": "Rock",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 100,
+      "pp": 10,
+      "d": "Boulders are hurled at the target. This also lowers the targetâ€™s Speed stat by preventing its movement.",
+      "chg": true
+    },
+    "silverwind": {
+      "n": "Silver Wind",
+      "t": "Bug",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 100,
+      "pp": 5,
+      "d": "The target is attacked with powdery scales blown by wind. This may also raise all the userâ€™s stats."
+    },
+    "metalsound": {
+      "n": "Metal Sound",
+      "t": "Steel",
+      "c": "Status",
+      "pow": null,
+      "acc": 100,
+      "pp": 5,
+      "d": "A horrible sound like scraping metal harshly lowers the targetâ€™s Sp. Def stat.",
+      "chg": true
+    },
+    "grasswhistle": {
+      "n": "Grass Whistle",
+      "t": "Grass",
+      "c": "Status",
+      "pow": null,
+      "acc": 55,
+      "pp": 15,
+      "d": "The user plays a pleasant melody that lulls the target into a deep sleep."
+    },
+    "cosmicpower": {
+      "n": "Cosmic Power",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user absorbs a mystical power from space to raise its Defense and Sp. Def stats."
+    },
+    "waterspout": {
+      "n": "Water Spout",
+      "t": "Water",
+      "c": "Special",
+      "pow": 150,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user spouts water to damage opposing PokÃ©mon. The lower the userâ€™s HP, the lower the moveâ€™s power."
+    },
+    "signalbeam": {
+      "n": "Signal Beam",
+      "t": "Bug",
+      "c": "Physical",
+      "pow": 90,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks with a sinister beam of light. This may also confuse the target.",
+      "chg": true
+    },
+    "shadowpunch": {
+      "n": "Shadow Punch",
+      "t": "Ghost",
+      "c": "Physical",
+      "pow": 80,
+      "acc": null,
+      "pp": 20,
+      "d": "The user throws a punch from the shadows. This attack never misses.",
+      "chg": true
+    },
+    "extrasensory": {
+      "n": "Extrasensory",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": 80,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user attacks with an odd, unseeable power. This may also make the target flinch."
+    },
+    "skyuppercut": {
+      "n": "Sky Uppercut",
+      "t": "Fighting",
+      "c": "Physical",
+      "pow": 100,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks the target with an uppercut thrown skyward with force.",
+      "chg": true
+    },
+    "sheercold": {
+      "n": "Sheer Cold",
+      "t": "Ice",
+      "c": "Special",
+      "pow": 120,
+      "acc": 100,
+      "pp": 5,
+      "d": "The target is attacked with a blast of absolute-zero cold. The target faints instantly if this attack hits.",
+      "fx": "Now 25% Recoil",
+      "chg": true
+    },
+    "muddywater": {
+      "n": "Muddy Water",
+      "t": "Water",
+      "c": "Special",
+      "pow": 100,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user attacks by shooting muddy water at the opposing PokÃ©mon. This may also lower their accuracy.",
+      "fx": "30% to drop Atk instead of Acc",
+      "chg": true
+    },
+    "bulletseed": {
+      "n": "Bullet Seed",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 25,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user forcefully shoots seeds at the target two to five times in a row.",
+      "chg": true
+    },
+    "aerialace": {
+      "n": "Aerial Ace",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 80,
+      "acc": null,
+      "pp": 20,
+      "d": "The user confounds the target with speed, then slashes. This attack never misses.",
+      "chg": true
+    },
+    "iciclespear": {
+      "n": "Icicle Spear",
+      "t": "Ice",
+      "c": "Special",
+      "pow": 25,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user launches sharp icicles at the target two to five times in a row.",
+      "chg": true
+    },
+    "irondefense": {
+      "n": "Iron Defense",
+      "t": "Steel",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 15,
+      "d": "The user hardens its bodyâ€™s surface like iron, sharply raising its Defense stat."
+    },
+    "block": {
+      "n": "Block",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 5,
+      "d": "The user blocks the targetâ€™s way with arms spread wide to prevent escape."
+    },
+    "howl": {
+      "n": "Howl",
+      "t": "Normal",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 40,
+      "d": "The user howls loudly to raise its spirit, which raises its Attack stat."
+    },
+    "dragonclaw": {
+      "n": "Dragon Claw",
+      "t": "Dragon",
+      "c": "Special",
+      "pow": 90,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user slashes the target with huge, sharp claws.",
+      "chg": true
+    },
+    "frenzyplant": {
+      "n": "Frenzy Plant",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 150,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user slams the target with an enormous tree. The user canâ€™t move on the next turn.",
+      "fx": "Recharge > 33% Recoil",
+      "chg": true
+    },
+    "bulkup": {
+      "n": "Bulk Up",
+      "t": "Fighting",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user tenses its muscles to bulk up its body, raising both its Attack and Defense stats."
+    },
+    "bounce": {
+      "n": "Bounce",
+      "t": "Flying",
+      "c": "Physical",
+      "pow": 85,
+      "acc": 85,
+      "pp": 5,
+      "d": "The user bounces up high, then drops on the target on the second turn. This may also leave the target with paralysis."
+    },
+    "mudshot": {
+      "n": "Mud Shot",
+      "t": "Ground",
+      "c": "Physical",
+      "pow": 55,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks by hurling a blob of mud at the target. This also lowers the targetâ€™s Speed stat.",
+      "chg": true
+    },
+    "poisontail": {
+      "n": "Poison Tail",
+      "t": "Poison",
+      "c": "Physical",
+      "pow": 120,
+      "acc": 100,
+      "pp": 25,
+      "d": "The user hits the target with its tail. This may also poison the target. Critical hits land more easily.",
+      "chg": true
+    },
+    "covet": {
+      "n": "Covet",
+      "t": "Normal",
+      "c": "Physical",
+      "pow": 60,
+      "acc": 100,
+      "pp": 40,
+      "d": "The user endearingly approaches the target, then steals the targetâ€™s held item.",
+      "chg": true
+    },
+    "volttackle": {
+      "n": "Volt Tackle",
+      "t": "Electric",
+      "c": "Special",
+      "pow": 120,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user electrifies itself, then charges. This also damages the user quite a lot. This may leave the target with paralysis.",
+      "fx": "33% recoil > 25% recoil",
+      "chg": true
+    },
+    "magicalleaf": {
+      "n": "Magical Leaf",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 80,
+      "acc": null,
+      "pp": 20,
+      "d": "The user scatters curious leaves that chase the target. This attack never misses.",
+      "chg": true
+    },
+    "watersport": {
+      "n": "Water Sport",
+      "t": "Water",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 15,
+      "d": "The user soaks itself with water. This weakens Fire-type moves for five turns."
+    },
+    "calmmind": {
+      "n": "Calm Mind",
+      "t": "Psychic",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats."
+    },
+    "leafblade": {
+      "n": "Leaf Blade",
+      "t": "Grass",
+      "c": "Special",
+      "pow": 90,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user handles a sharp leaf like a sword and attacks by cutting its target. Critical hits land more easily.",
+      "chg": true
+    },
+    "dragondance": {
+      "n": "Dragon Dance",
+      "t": "Dragon",
+      "c": "Status",
+      "pow": null,
+      "acc": null,
+      "pp": 20,
+      "d": "The user vigorously performs a mystic, powerful dance that raises its Attack and Speed stats."
+    },
+    "rockblast": {
+      "n": "Rock Blast",
+      "t": "Rock",
+      "c": "Physical",
+      "pow": 25,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user hurls hard rocks at the target. Two to five rocks are launched in a row.",
+      "chg": true
+    },
+    "shockwave": {
+      "n": "Shock Wave",
+      "t": "Electric",
+      "c": "Special",
+      "pow": 80,
+      "acc": null,
+      "pp": 20,
+      "d": "The user strikes the target with a quick jolt of electricity. This attack never misses.",
+      "chg": true
+    },
+    "waterpulse": {
+      "n": "Water Pulse",
+      "t": "Water",
+      "c": "Special",
+      "pow": 80,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user attacks the target with a pulsing blast of water. This may also confuse the target.",
+      "fx": "now cannot miss instead of having the chance to confuse",
+      "chg": true
+    },
+    "doomdesire": {
+      "n": "Doom Desire",
+      "t": "Steel",
+      "c": "Physical",
+      "pow": 140,
+      "acc": 100,
+      "pp": 5,
+      "d": "Two turns after this move is used, the user blasts the target with a concentrated bundle of light.",
+      "fx": "Now Deals 33% Recoil and hits immediately",
+      "chg": true
+    },
+    "psychoboost": {
+      "n": "Psycho Boost",
+      "t": "Psychic",
+      "c": "Special",
+      "pow": 140,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user attacks the target at full power. The attackâ€™s recoil harshly lowers the userâ€™s Sp. Atk stat.",
+      "fx": "now deals 33% recoil",
+      "chg": true
+    },
+    "suckerpunch": {
+      "n": "Sucker Punch",
+      "t": "Dark",
+      "c": "Special",
+      "pow": 60,
+      "acc": 100,
+      "pp": 5,
+      "d": "This move enables the user to attack first. This move fails if the target is not readying an attack.",
+      "fx": "just priority, opponent doesn’t need to attack for it to work",
+      "chg": true
+    },
+    "bulletpunch": {
+      "n": "Bullet Punch",
+      "t": "Steel",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user strikes the target with tough punches as fast as bullets. This move always goes first.",
+      "chg": true
+    },
+    "iceshard": {
+      "n": "Ice Shard",
+      "t": "Ice",
+      "c": "Special",
+      "pow": 40,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user flash-freezes chunks of ice and hurls them at the target. This move always goes first.",
+      "chg": true
+    },
+    "shadowsneak": {
+      "n": "Shadow Sneak",
+      "t": "Ghost",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 30,
+      "d": "The user extends its shadow and attacks the target from behind. This move always goes first.",
+      "chg": true
+    },
+    "flashcannon": {
+      "n": "Flash Cannon",
+      "t": "Steel",
+      "c": "Physical",
+      "pow": 80,
+      "acc": 100,
+      "pp": 10,
+      "d": "The user gathers all its light energy and releases it at once. This may also lower the targetâ€™s Sp. Def stat.",
+      "fx": "now has a 20% chance to drop Def",
+      "chg": true
+    },
+    "aquajet": {
+      "n": "Aqua Jet",
+      "t": "Water",
+      "c": "Special",
+      "pow": 40,
+      "acc": 100,
+      "pp": 20,
+      "d": "The user lunges at the target at a speed that makes it almost invisible. This move always goes first.",
+      "chg": true
+    },
+    "headsmash": {
+      "n": "Head Smash",
+      "t": "Rock",
+      "c": "Physical",
+      "pow": 150,
+      "acc": 100,
+      "pp": 5,
+      "d": "The user attacks the target with a hazardous, full-power headbutt. This also damages the user terribly.",
+      "fx": "33% recoil",
+      "chg": true
+    },
+    "flameburst": {
+      "n": "Flame Burst",
+      "t": "Fire",
+      "c": "Special",
+      "pow": 70,
+      "acc": 100,
+      "pp": 15,
+      "d": "The user attacks the target with a bursting flame. The bursting flame damages PokÃ©mon next to the target as well."
+    },
+    "nightdaze": {
+      "n": "Night Daze",
+      "t": "Dark",
+      "c": "Special",
+      "pow": 120,
+      "acc": 95,
+      "pp": 10,
+      "d": "The user lets loose a pitch-black shock wave at its target. This may also lower the targetâ€™s accuracy.",
+      "fx": "Acc: 100, PP: 10, 25% recoil",
+      "chg": true
+    },
+    "accelerock": {
+      "n": "Accelerock",
+      "t": "Rock",
+      "c": "Physical",
+      "pow": 40,
+      "acc": 100,
+      "pp": 20,
+      "d": "",
+      "chg": true
+    },
+    "metalbash": {
+      "n": "Metal Bash",
+      "t": "",
+      "c": "",
+      "pow": 65,
+      "acc": null,
+      "pp": null,
+      "d": "",
+      "fx": "Acc: 100, PP: 20, no secondary effect",
+      "chg": true
+    },
+    "shadowslam": {
+      "n": "Shadow Slam",
+      "t": "",
+      "c": "",
+      "pow": 100,
+      "acc": null,
+      "pp": null,
+      "d": "",
+      "fx": "Acc: 100, PP: 5, no secondary effect",
+      "chg": true
+    },
+    "lusterpurgeandmistball": {
+      "n": "Luster Purge and Mist Ball",
+      "t": "",
+      "c": "",
+      "pow": 100,
+      "acc": null,
+      "pp": null,
+      "d": "",
+      "fx": "now 10% for their respective secondary effects",
+      "chg": true
+    },
+    "jumpkickandhighjumpkick": {
+      "n": "Jump Kick and High Jump Kick",
+      "t": "",
+      "c": "",
+      "pow": null,
+      "acc": null,
+      "pp": null,
+      "d": "",
+      "fx": "updated to current BP",
+      "chg": true
+    }
+  },
+  "attacks": {
+    "meta": {
+      "subtitle": "",
+      "blurb": [
+        "Move changes for Rigorous Red (Gen 3: category is type-based, stats are Gen-3 accurate). Power / accuracy / PP tweaks plus type, category, and effect reworks. Every move's base info is shown; changed moves are marked."
+      ]
+    },
+    "entries": [
+      {
+        "name": "Double Slap",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Comet Punch",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "15",
+            "to": "25"
+          }
+        ]
+      },
+      {
+        "name": "Tackle",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "BP 35 > 40"
+          }
+        ]
+      },
+      {
+        "name": "Take Down",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Hyper Beam",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Recharge > 33% Recoil"
+          }
+        ]
+      },
+      {
+        "name": "Double-Edge",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "33% recoil > 25% recoil"
+          }
+        ]
+      },
+      {
+        "name": "Screech",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "PP",
+            "from": "40",
+            "to": "5"
+          }
+        ]
+      },
+      {
+        "name": "Recover",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "PP",
+            "from": "10",
+            "to": "5"
+          }
+        ]
+      },
+      {
+        "name": "Swift",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "80"
+          }
+        ]
+      },
+      {
+        "name": "Soft Boiled",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "PP",
+            "from": "10",
+            "to": "5"
+          }
+        ]
+      },
+      {
+        "name": "Glare",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Hyper Fang",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Tri Attack",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "80",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Protect",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "PP",
+            "from": "10",
+            "to": "3"
+          }
+        ]
+      },
+      {
+        "name": "Fake Out",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "PP",
+            "from": "10",
+            "to": "5"
+          }
+        ]
+      },
+      {
+        "name": "Encore",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "PP 5 > 3"
+          }
+        ]
+      },
+      {
+        "name": "Crush Claw",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "75",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now 10% to lower defense"
+          }
+        ]
+      },
+      {
+        "name": "Return",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now is just a 102 BP move regardless of friendship"
+          }
+        ]
+      },
+      {
+        "name": "Rapid Spin",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "20",
+            "to": "50"
+          }
+        ]
+      },
+      {
+        "name": "Covet",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "40",
+            "to": "60"
+          }
+        ]
+      },
+      {
+        "name": "Disable",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "55",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Egg Bomb",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "75",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Type",
+            "from": "Normal",
+            "to": "Grass"
+          }
+        ]
+      },
+      {
+        "name": "Giga Drain",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "75"
+          },
+          {
+            "kind": "change",
+            "label": "PP",
+            "from": "5",
+            "to": "10"
+          }
+        ]
+      },
+      {
+        "name": "Leech Seed",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Razor Leaf",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Stun Spore",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "75",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Sleep Powder",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "75",
+            "to": "80"
+          }
+        ]
+      },
+      {
+        "name": "Petal Dance",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "70",
+            "to": "130"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Now lowers SpAtk by 2 stages instead of locking you in"
+          }
+        ]
+      },
+      {
+        "name": "Needle Arm",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Bullet Seed",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "10",
+            "to": "25"
+          }
+        ]
+      },
+      {
+        "name": "Frenzy Plant",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Recharge > 33% Recoil"
+          }
+        ]
+      },
+      {
+        "name": "Magical Leaf",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "80"
+          }
+        ]
+      },
+      {
+        "name": "Leaf Blade",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "70",
+            "to": "90"
+          }
+        ]
+      },
+      {
+        "name": "Sacred Fire",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Heat Wave",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Will-O-Wisp",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "75",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Blaze Kick",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "85",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Blast Burn",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Recharge > 33% Recoil"
+          }
+        ]
+      },
+      {
+        "name": "Overheat",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "140",
+            "to": "130"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Crabhammer",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "90",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Octazooka",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "65",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "50% to drop Atk instead of Acc"
+          }
+        ]
+      },
+      {
+        "name": "Hydro Cannon",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Recharge > 33% Recoil"
+          }
+        ]
+      },
+      {
+        "name": "Muddy Water",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "95",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "30% to drop Atk instead of Acc"
+          }
+        ]
+      },
+      {
+        "name": "Water Pulse",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "80"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now cannot miss instead of having the chance to confuse"
+          }
+        ]
+      },
+      {
+        "name": "Metal Bash",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "",
+            "to": "65"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Acc: 100, PP: 20, no secondary effect"
+          },
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Slam"
+          }
+        ]
+      },
+      {
+        "name": "Metal Sound",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "PP",
+            "from": "40",
+            "to": "5"
+          }
+        ]
+      },
+      {
+        "name": "Flash Cannon",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now has a 20% chance to drop Def"
+          },
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Odor Sleuth"
+          }
+        ]
+      },
+      {
+        "name": "Steel Wing",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Iron Tail",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "75",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Metal Claw",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Meteor Mash",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Doom Desire",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "120",
+            "to": "140"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Now Deals 33% Recoil and hits immediately"
+          }
+        ]
+      },
+      {
+        "name": "Head Smash",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "80",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "33% recoil"
+          },
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Mimic"
+          }
+        ]
+      },
+      {
+        "name": "Strength",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "80",
+            "to": "90"
+          },
+          {
+            "kind": "change",
+            "label": "Type",
+            "from": "Normal",
+            "to": "Rock"
+          }
+        ]
+      },
+      {
+        "name": "Rock Throw",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Rock Slide",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Rock Tomb",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "50",
+            "to": "60"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "80",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Rock Blast",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "80",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Fissure",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "",
+            "to": "120"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "30",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Now 25% Recoil"
+          }
+        ]
+      },
+      {
+        "name": "Bone Club",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Bonemerang",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Mud Shot",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Cut",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "50",
+            "to": "60"
+          },
+          {
+            "kind": "change",
+            "label": "Type",
+            "from": "Normal",
+            "to": "Bug"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Acc: 100"
+          }
+        ]
+      },
+      {
+        "name": "Horn Drill",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "",
+            "to": "120"
+          },
+          {
+            "kind": "change",
+            "label": "Type",
+            "from": "Normal",
+            "to": "Bug"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Acc: 100, now 25% recoil"
+          }
+        ]
+      },
+      {
+        "name": "Twineedle",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "25",
+            "to": "50"
+          }
+        ]
+      },
+      {
+        "name": "Pin Missile",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "14",
+            "to": "25"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Leech Life",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "20",
+            "to": "75"
+          }
+        ]
+      },
+      {
+        "name": "Fury Cutter",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "10",
+            "to": "40"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Signal Beam",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "75",
+            "to": "90"
+          }
+        ]
+      },
+      {
+        "name": "Shadow Slam",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Acc: 100, PP: 5, no secondary effect"
+          },
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Mist"
+          }
+        ]
+      },
+      {
+        "name": "Shadow Ball",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "80",
+            "to": "90"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now can drop Defense"
+          }
+        ]
+      },
+      {
+        "name": "Shadow Punch",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "80"
+          }
+        ]
+      },
+      {
+        "name": "Astonish",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "30",
+            "to": "60"
+          }
+        ]
+      },
+      {
+        "name": "Hypnosis",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "60",
+            "to": "70"
+          }
+        ]
+      },
+      {
+        "name": "Future Sight",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "80",
+            "to": "120"
+          }
+        ]
+      },
+      {
+        "name": "Psycho Boost",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now deals 33% recoil"
+          }
+        ]
+      },
+      {
+        "name": "Luster Purge and Mist Ball",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "70",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now 10% for their respective secondary effects"
+          }
+        ]
+      },
+      {
+        "name": "Night Daze",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "85",
+            "to": "120"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Acc: 100, PP: 10, 25% recoil"
+          },
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Spider Web"
+          }
+        ]
+      },
+      {
+        "name": "Sucker Punch",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "70",
+            "to": "60"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "just priority, opponent doesn’t need to attack for it to work"
+          },
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Sing"
+          }
+        ]
+      },
+      {
+        "name": "Feint Attack",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "80"
+          }
+        ]
+      },
+      {
+        "name": "Crunch",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "80",
+            "to": "90"
+          }
+        ]
+      },
+      {
+        "name": "Knock Off",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "20",
+            "to": "60"
+          }
+        ]
+      },
+      {
+        "name": "Thunder",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "70",
+            "to": "85"
+          }
+        ]
+      },
+      {
+        "name": "Zap Cannon",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "100",
+            "to": "130"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "50",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now lowers SpAtk by 2 stages"
+          }
+        ]
+      },
+      {
+        "name": "Shock Wave",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "80"
+          }
+        ]
+      },
+      {
+        "name": "Volt Tackle",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "33% recoil > 25% recoil"
+          }
+        ]
+      },
+      {
+        "name": "Blizzard",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "70",
+            "to": "85"
+          }
+        ]
+      },
+      {
+        "name": "Sheer Cold",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "",
+            "to": "120"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Now 25% Recoil"
+          }
+        ]
+      },
+      {
+        "name": "Icy Wind",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Icicle Spear",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "10",
+            "to": "25"
+          }
+        ]
+      },
+      {
+        "name": "Jump Kick and High Jump Kick",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "updated to current BP"
+          }
+        ]
+      },
+      {
+        "name": "Rolling Kick",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Submission",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "80",
+            "to": "90"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "no longer recoil"
+          }
+        ]
+      },
+      {
+        "name": "Sky Uppercut",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "85",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Vital Throw",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "70",
+            "to": "80"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now neutral priority"
+          }
+        ]
+      },
+      {
+        "name": "Cross Chop",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "80",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Rock Smash",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "20",
+            "to": "60"
+          }
+        ]
+      },
+      {
+        "name": "Superpower",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "Now 25% Recoil"
+          }
+        ]
+      },
+      {
+        "name": "Arm Thrust",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "15",
+            "to": "25"
+          }
+        ]
+      },
+      {
+        "name": "Mega Kick",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "75",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Type",
+            "from": "Normal",
+            "to": "Fighting"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now fighting type"
+          }
+        ]
+      },
+      {
+        "name": "Fly",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "70",
+            "to": "100"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Drill Peck",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "80",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Sky Attack",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "140",
+            "to": "120"
+          },
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "90",
+            "to": "100"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now 25% recoil"
+          }
+        ]
+      },
+      {
+        "name": "Aeroblast",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Air Cutter",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "95",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Aerial Ace",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "60",
+            "to": "80"
+          }
+        ]
+      },
+      {
+        "name": "Outrage",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "90",
+            "to": "120"
+          },
+          {
+            "kind": "note",
+            "label": "Effect",
+            "value": "now 25% recoil"
+          }
+        ]
+      },
+      {
+        "name": "Dragon Claw",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "80",
+            "to": "90"
+          }
+        ]
+      },
+      {
+        "name": "Poison Powder",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "75",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Toxic",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Accuracy",
+            "from": "85",
+            "to": "100"
+          }
+        ]
+      },
+      {
+        "name": "Poison Fang",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "50",
+            "to": "120"
+          }
+        ]
+      },
+      {
+        "name": "Poison Tail",
+        "rows": [
+          {
+            "kind": "change",
+            "label": "Power",
+            "from": "50",
+            "to": "120"
+          }
+        ]
+      },
+      {
+        "name": "Aqua Jet",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Smokescreen"
+          }
+        ]
+      },
+      {
+        "name": "Bullet Punch",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Rage"
+          }
+        ]
+      },
+      {
+        "name": "Accelerock",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Bide"
+          }
+        ]
+      },
+      {
+        "name": "Shadow Sneak",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Supersonic"
+          }
+        ]
+      },
+      {
+        "name": "Ice Shard",
+        "rows": [
+          {
+            "kind": "note",
+            "label": "Replaces",
+            "value": "Bind"
+          }
+        ]
+      }
+    ]
+  }
+}
