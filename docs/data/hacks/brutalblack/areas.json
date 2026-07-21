@@ -8338,11 +8338,11 @@
       "wild": [],
       "rosters": [
         {
-          "title": "Trainers",
-          "kind": "",
+          "title": "Back-to-back",
+          "kind": "gauntlet",
           "reward": "",
-          "note": "",
           "optional": false,
+          "note": "Rival Cheren 4 first, then immediately a tag battle - you and Partner Cheren vs Preschooler Billy & Sarah. You can't switch teams between the two fights.",
           "trainers": [
             {
               "id": "route5claysplit-rivalcheren4-snivy-0",
@@ -8616,14 +8616,15 @@
             },
             {
               "id": "route5claysplit-billy-3",
-              "name": "Billy",
+              "name": "Preschooler Billy",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "",
               "split": "",
               "notes": [
-                "Preschooler Billy and Preschooler Sarah (TAG BATTLE CAN’T SWITCH TEAMS BETWEEN THIS AND CHEREN 4)"
+                "Preschooler Billy and Preschooler Sarah (TAG BATTLE CAN’T SWITCH TEAMS BETWEEN THIS AND CHEREN 4)",
+                "Tag battle - fought together with Preschooler Sarah."
               ],
               "team": [
                 {
@@ -8669,13 +8670,15 @@
             },
             {
               "id": "route5claysplit-sarah-4",
-              "name": "Sarah",
+              "name": "Preschooler Sarah",
               "optional": false,
               "b2b": "",
               "badge": "",
               "choice": "",
               "split": "",
-              "notes": [],
+              "notes": [
+                "Tag battle - fought together with Preschooler Billy."
+              ],
               "team": [
                 {
                   "species": "Hitmonchan",
@@ -8717,7 +8720,16 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Partner Cheren",
+          "kind": "partner",
+          "reward": "",
+          "optional": false,
+          "note": "Your ally in the Billy & Sarah tag battle - Cheren's team depends on your starter.",
+          "trainers": [
             {
               "id": "route5claysplit-partnercheren-snivy-5",
               "name": "Partner Cheren",
